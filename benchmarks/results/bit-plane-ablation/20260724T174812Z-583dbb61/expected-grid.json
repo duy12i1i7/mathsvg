@@ -1,0 +1,223 @@
+{
+  "codecs": [
+    {
+      "codec": "mathzip-balanced-bit-plane-packed-v1",
+      "threads": 1
+    },
+    {
+      "codec": "mathzip-balanced-bit-plane-independent-v2",
+      "threads": 1
+    },
+    {
+      "codec": "zstd-default",
+      "threads": 1
+    }
+  ],
+  "expected_result_count": 42,
+  "inputs": [
+    {
+      "actual_input_sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+      "actual_input_size": 65536,
+      "corpus": "synthetic_bit_plane_ablation",
+      "expected_input_sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+      "expected_input_size": 65536,
+      "input_license": "CC0-1.0",
+      "input_manifest": "datasets/synthetic/manifest.json",
+      "input_manifest_sha256": "c7188cafa911c31e5d80193ab1dae1d468dfe9e6deafecb9be709a46aae23de1",
+      "input_manifest_verified": true,
+      "input_path": "datasets/synthetic/constant_00/s0000065536_n000p000_seed1297748005.bin",
+      "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+      "missing_reason": null
+    },
+    {
+      "actual_input_sha256": "76942cd290464dbb5e869731ffc41017d75f3f144f001405ca24087447b1d60d",
+      "actual_input_size": 31,
+      "corpus": "synthetic_bit_plane_ablation",
+      "expected_input_sha256": "76942cd290464dbb5e869731ffc41017d75f3f144f001405ca24087447b1d60d",
+      "expected_input_size": 31,
+      "input_license": "CC0-1.0",
+      "input_manifest": "datasets/synthetic/manifest.json",
+      "input_manifest_sha256": "c7188cafa911c31e5d80193ab1dae1d468dfe9e6deafecb9be709a46aae23de1",
+      "input_manifest_verified": true,
+      "input_path": "datasets/synthetic/constant_ff/s0000000031_n000p000_seed1297748005.bin",
+      "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+      "missing_reason": null
+    },
+    {
+      "actual_input_sha256": "cfdc61fc52c463c8a77811e53f534ba567e926fcea624535bda3441e6a708e29",
+      "actual_input_size": 31,
+      "corpus": "synthetic_bit_plane_ablation",
+      "expected_input_sha256": "cfdc61fc52c463c8a77811e53f534ba567e926fcea624535bda3441e6a708e29",
+      "expected_input_size": 31,
+      "input_license": "CC0-1.0",
+      "input_manifest": "datasets/synthetic/manifest.json",
+      "input_manifest_sha256": "c7188cafa911c31e5d80193ab1dae1d468dfe9e6deafecb9be709a46aae23de1",
+      "input_manifest_verified": true,
+      "input_path": "datasets/synthetic/lfsr8/s0000000031_n000p000_seed1297748005.bin",
+      "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+      "missing_reason": null
+    },
+    {
+      "actual_input_sha256": "c22f599374ecb687cb2737130592553d274b26414a1c37bb1d36a02a3e7cdb64",
+      "actual_input_size": 65536,
+      "corpus": "synthetic_bit_plane_ablation",
+      "expected_input_sha256": "c22f599374ecb687cb2737130592553d274b26414a1c37bb1d36a02a3e7cdb64",
+      "expected_input_size": 65536,
+      "input_license": "CC0-1.0",
+      "input_manifest": "datasets/synthetic/manifest.json",
+      "input_manifest_sha256": "c7188cafa911c31e5d80193ab1dae1d468dfe9e6deafecb9be709a46aae23de1",
+      "input_manifest_verified": true,
+      "input_path": "datasets/synthetic/lfsr8/s0000065536_n000p000_seed1297748005.bin",
+      "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+      "missing_reason": null
+    },
+    {
+      "actual_input_sha256": "a0880d7da9b6e935a5343dd486ab62522be8d28088400ad4484d6053424e0b4d",
+      "actual_input_size": 31,
+      "corpus": "synthetic_bit_plane_ablation",
+      "expected_input_sha256": "a0880d7da9b6e935a5343dd486ab62522be8d28088400ad4484d6053424e0b4d",
+      "expected_input_size": 31,
+      "input_license": "CC0-1.0",
+      "input_manifest": "datasets/synthetic/manifest.json",
+      "input_manifest_sha256": "c7188cafa911c31e5d80193ab1dae1d468dfe9e6deafecb9be709a46aae23de1",
+      "input_manifest_verified": true,
+      "input_path": "datasets/synthetic/linear/s0000000031_n000p000_seed1297748005.bin",
+      "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+      "missing_reason": null
+    },
+    {
+      "actual_input_sha256": "35171a3b38d84c658143e78203683076d07beca32140221055c899b2dcf1cbc5",
+      "actual_input_size": 65536,
+      "corpus": "synthetic_bit_plane_ablation",
+      "expected_input_sha256": "35171a3b38d84c658143e78203683076d07beca32140221055c899b2dcf1cbc5",
+      "expected_input_size": 65536,
+      "input_license": "CC0-1.0",
+      "input_manifest": "datasets/synthetic/manifest.json",
+      "input_manifest_sha256": "c7188cafa911c31e5d80193ab1dae1d468dfe9e6deafecb9be709a46aae23de1",
+      "input_manifest_verified": true,
+      "input_path": "datasets/synthetic/linear/s0000065536_n000p000_seed1297748005.bin",
+      "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+      "missing_reason": null
+    },
+    {
+      "actual_input_sha256": "fb292808244fb7374006140c7145c87cf743bcf9148ea2ccaa25fcf677f3ebcf",
+      "actual_input_size": 65536,
+      "corpus": "synthetic_bit_plane_ablation",
+      "expected_input_sha256": "fb292808244fb7374006140c7145c87cf743bcf9148ea2ccaa25fcf677f3ebcf",
+      "expected_input_size": 65536,
+      "input_license": "CC0-1.0",
+      "input_manifest": "datasets/synthetic/manifest.json",
+      "input_manifest_sha256": "c7188cafa911c31e5d80193ab1dae1d468dfe9e6deafecb9be709a46aae23de1",
+      "input_manifest_verified": true,
+      "input_path": "datasets/synthetic/multi_periodic/s0000065536_n000p000_seed1297748005.bin",
+      "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+      "missing_reason": null
+    },
+    {
+      "actual_input_sha256": "c1cb6cb182a57de072c7a266f15ea36475f56231f889dff8ebc516ba339f49b0",
+      "actual_input_size": 31,
+      "corpus": "synthetic_bit_plane_ablation",
+      "expected_input_sha256": "c1cb6cb182a57de072c7a266f15ea36475f56231f889dff8ebc516ba339f49b0",
+      "expected_input_size": 31,
+      "input_license": "CC0-1.0",
+      "input_manifest": "datasets/synthetic/manifest.json",
+      "input_manifest_sha256": "c7188cafa911c31e5d80193ab1dae1d468dfe9e6deafecb9be709a46aae23de1",
+      "input_manifest_verified": true,
+      "input_path": "datasets/synthetic/periodic/s0000000031_n000p000_seed1297748005.bin",
+      "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+      "missing_reason": null
+    },
+    {
+      "actual_input_sha256": "742efc49d53b0f51b7a9cdc8afdf6fb69b22e359571f016274fae0b527f1d1c8",
+      "actual_input_size": 65536,
+      "corpus": "synthetic_bit_plane_ablation",
+      "expected_input_sha256": "742efc49d53b0f51b7a9cdc8afdf6fb69b22e359571f016274fae0b527f1d1c8",
+      "expected_input_size": 65536,
+      "input_license": "CC0-1.0",
+      "input_manifest": "datasets/synthetic/manifest.json",
+      "input_manifest_sha256": "c7188cafa911c31e5d80193ab1dae1d468dfe9e6deafecb9be709a46aae23de1",
+      "input_manifest_verified": true,
+      "input_path": "datasets/synthetic/periodic/s0000065536_n000p000_seed1297748005.bin",
+      "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+      "missing_reason": null
+    },
+    {
+      "actual_input_sha256": "a9eed5b582fa42393e69d5b7974ab65ce3ca8752b202ecf832436ebf8ec91664",
+      "actual_input_size": 65536,
+      "corpus": "synthetic_bit_plane_ablation",
+      "expected_input_sha256": "a9eed5b582fa42393e69d5b7974ab65ce3ca8752b202ecf832436ebf8ec91664",
+      "expected_input_size": 65536,
+      "input_license": "CC0-1.0",
+      "input_manifest": "datasets/synthetic/manifest.json",
+      "input_manifest_sha256": "c7188cafa911c31e5d80193ab1dae1d468dfe9e6deafecb9be709a46aae23de1",
+      "input_manifest_verified": true,
+      "input_path": "datasets/synthetic/piecewise_mixed/s0000065536_n001p000_seed1297748005.bin",
+      "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+      "missing_reason": null
+    },
+    {
+      "actual_input_sha256": "84d3c13eee3f79467573fc92d68af063eeeb786852df80299fe4c5e51659f4e3",
+      "actual_input_size": 65536,
+      "corpus": "synthetic_bit_plane_ablation",
+      "expected_input_sha256": "84d3c13eee3f79467573fc92d68af063eeeb786852df80299fe4c5e51659f4e3",
+      "expected_input_size": 65536,
+      "input_license": "CC0-1.0",
+      "input_manifest": "datasets/synthetic/manifest.json",
+      "input_manifest_sha256": "c7188cafa911c31e5d80193ab1dae1d468dfe9e6deafecb9be709a46aae23de1",
+      "input_manifest_verified": true,
+      "input_path": "datasets/synthetic/polynomial_d2/s0000065536_n000p000_seed1297748005.bin",
+      "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+      "missing_reason": null
+    },
+    {
+      "actual_input_sha256": "4309df5a1974d4677d3c4f2440fa22a4bf67e6db40e358ff64142590f6fb746a",
+      "actual_input_size": 31,
+      "corpus": "synthetic_bit_plane_ablation",
+      "expected_input_sha256": "4309df5a1974d4677d3c4f2440fa22a4bf67e6db40e358ff64142590f6fb746a",
+      "expected_input_size": 31,
+      "input_license": "CC0-1.0",
+      "input_manifest": "datasets/synthetic/manifest.json",
+      "input_manifest_sha256": "c7188cafa911c31e5d80193ab1dae1d468dfe9e6deafecb9be709a46aae23de1",
+      "input_manifest_verified": true,
+      "input_path": "datasets/synthetic/random/s0000000031_n000p000_seed1297748005.bin",
+      "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+      "missing_reason": null
+    },
+    {
+      "actual_input_sha256": "9e4d8d3305ce218314fdc3746942be9b9f0df4e3f1673227fcd510319189dbdc",
+      "actual_input_size": 65536,
+      "corpus": "synthetic_bit_plane_ablation",
+      "expected_input_sha256": "9e4d8d3305ce218314fdc3746942be9b9f0df4e3f1673227fcd510319189dbdc",
+      "expected_input_size": 65536,
+      "input_license": "CC0-1.0",
+      "input_manifest": "datasets/synthetic/manifest.json",
+      "input_manifest_sha256": "c7188cafa911c31e5d80193ab1dae1d468dfe9e6deafecb9be709a46aae23de1",
+      "input_manifest_verified": true,
+      "input_path": "datasets/synthetic/random/s0000065536_n000p000_seed1297748005.bin",
+      "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+      "missing_reason": null
+    },
+    {
+      "actual_input_sha256": "8d5944aabf5526f28b79d4b3841ec21dbd86daac0caa96729fec8838039fdd69",
+      "actual_input_size": 65536,
+      "corpus": "synthetic_bit_plane_ablation",
+      "expected_input_sha256": "8d5944aabf5526f28b79d4b3841ec21dbd86daac0caa96729fec8838039fdd69",
+      "expected_input_size": 65536,
+      "input_license": "CC0-1.0",
+      "input_manifest": "datasets/synthetic/manifest.json",
+      "input_manifest_sha256": "c7188cafa911c31e5d80193ab1dae1d468dfe9e6deafecb9be709a46aae23de1",
+      "input_manifest_verified": true,
+      "input_path": "datasets/synthetic/recurrence/s0000065536_n000p000_seed1297748005.bin",
+      "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+      "missing_reason": null
+    }
+  ],
+  "key_fields": [
+    "corpus",
+    "input_path",
+    "codec",
+    "threads"
+  ],
+  "schema_version": "mathzip-benchmark-expected-grid-v1",
+  "sha256": "1b1c1496d81d8477ad0c8e459842ed96d578b69f09af5a7686e0f93d62c8a3ce"
+}

@@ -1,0 +1,469 @@
+{
+  "completed_at_utc": "2026-07-24T13:46:27.950580+00:00",
+  "execution_interval_index": 0,
+  "expected_grid_index": 270,
+  "interval_active_seconds": 32.67297491700447,
+  "key": [
+    "canterbury_files",
+    "datasets/data/canterbury/ptt5",
+    "mathzip-fast",
+    1
+  ],
+  "row": {
+    "actual_residual_coded_bytes": 100450,
+    "archive_sha256": "963826572ef6c3c3821248045805ed999c870185cf44c147e467a010f2a92e8e",
+    "bits_per_byte": 1.5859677017084424,
+    "codec": "mathzip-fast",
+    "codec_family": "mathzip",
+    "codec_level": "fast",
+    "command_lines": [
+      "'<repo>/target/release/mathzip' compress --mode fast --max-input-bytes 8589934592 --no-sync --force '<repo>/datasets/data/canterbury/ptt5' '<work>/archive.mz'",
+      "'<repo>/target/release/mathzip' compress --mode fast --max-input-bytes 8589934592 --no-sync --force --metrics-output '<work>/metrics-probe.mz.metrics.json' '<repo>/datasets/data/canterbury/ptt5' '<work>/metrics-probe.mz'",
+      "'<repo>/target/release/mathzip' decompress --max-archive-bytes 17179869184 --max-output-bytes 8589934592 --max-segments 8388608 --no-sync --force '<work>/archive.mz' '<work>/restored.bin'"
+    ],
+    "compressed_bytes": 101743,
+    "compression_cpu_seconds": 0.2131429999999952,
+    "compression_mbps": 2.3969130665246983,
+    "compression_seconds": 0.21411539999826346,
+    "container_overhead_bytes": 120,
+    "corpus": "canterbury_files",
+    "decompression_cpu_seconds": 0.010927000000002351,
+    "decompression_mbps": 40.6684828026059,
+    "decompression_seconds": 0.012619501998415217,
+    "deterministic_archive": true,
+    "error": null,
+    "estimated_residual_entropy": 1.2803009200446887,
+    "expansion_percent": 0.0,
+    "input_entropy_bits_per_byte": 1.210175941358675,
+    "input_license": "Upstream files retain their original terms; see dataset manifest",
+    "input_manifest": "datasets/data/canterbury/dataset.json",
+    "input_manifest_sha256": "30daaac9157db37ceda0cc444f6c9c304e91cf17e0164d0a12bc354539937151",
+    "input_manifest_verified": true,
+    "input_name": "ptt5",
+    "input_path": "datasets/data/canterbury/ptt5",
+    "input_provenance": "datasets/manifests/canterbury.json",
+    "input_sha256": "0ec3a75089bb52342813496b17e51377bc9eba3cb519a444d67025354841d650",
+    "math_segments_winning_raw": 7,
+    "math_segments_winning_zstd": 0,
+    "mathzip_inspection": {
+      "actual_residual_coded_bytes": 100450,
+      "checksums": {
+        "archive": true,
+        "header": true,
+        "original": true,
+        "segments": true
+      },
+      "compressed_size": 101743,
+      "compression_ratio": 5.04423891569936,
+      "container_overhead_bytes": 120,
+      "estimated_residual_entropy": 1.2803009200446887,
+      "format_version": 1,
+      "math_segments_winning_raw": 7,
+      "math_segments_winning_zstd": 0,
+      "mean_segment_size": 16038.0,
+      "median_segment_size": 16384.0,
+      "metadata_bytes": 1272,
+      "model_distribution": {
+        "raw": 25,
+        "recurrence": 7
+      },
+      "model_parameter_bytes": 21,
+      "original_size": 513216,
+      "partition_metadata_bytes": 1152,
+      "payload_size": 101627,
+      "raw_fallback_percentage": 0.0,
+      "raw_model_percentage": 77.65307394937025,
+      "residual_bytes": 100450,
+      "residual_distribution": {
+        "sparse": 7,
+        "zero_run": 25
+      },
+      "residual_mode_distribution": {
+        "add_modulo": 32
+      },
+      "segment_count": 32,
+      "segment_descriptor_bytes": 1152,
+      "transform_count": 1,
+      "transform_metadata_bytes": 4,
+      "transformed_size": 513216,
+      "transforms": [
+        {
+          "type": "identity"
+        }
+      ]
+    },
+    "mean_segment_size": 16038.0,
+    "median_segment_size": 16384.0,
+    "model_distribution": {
+      "raw": 25,
+      "recurrence": 7
+    },
+    "model_fitting_seconds": 0.009032203,
+    "model_parameter_bytes": 21,
+    "original_bytes": 513216,
+    "partition_metadata_bytes": 1152,
+    "peak_rss_bytes": 5484544.0,
+    "profile": "quick",
+    "ratio": 5.04423891569936,
+    "raw_fallback_percent": 0.0,
+    "raw_model_percent": 77.65307394937025,
+    "requested_repeats": 3,
+    "residual_bytes": 100450,
+    "residual_coding_seconds": 0.174543,
+    "residual_distribution": {
+      "sparse": 7,
+      "zero_run": 25
+    },
+    "restored_sha256": "0ec3a75089bb52342813496b17e51377bc9eba3cb519a444d67025354841d650",
+    "roundtrip_verified": true,
+    "run_id": "20260724T134555Z-8b4c06c2",
+    "savings": 0.8017540372864447,
+    "savings_percent": 80.17540372864447,
+    "schema_version": "mathzip-benchmark-results-v1",
+    "search_seconds": 0.025078906,
+    "segment_count": 32,
+    "status": "ok",
+    "successful_repeats": 3,
+    "tags": {},
+    "threads": 1,
+    "transform": [
+      {
+        "type": "identity"
+      }
+    ],
+    "trials": [
+      {
+        "archive_sha256": "963826572ef6c3c3821248045805ed999c870185cf44c147e467a010f2a92e8e",
+        "compressed_bytes": 101743,
+        "compression_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "<repo>/datasets/data/canterbury/ptt5",
+          "<work>/archive.mz"
+        ],
+        "compression_cpu_seconds": 0.21310100000000176,
+        "compression_metrics": {
+          "model_fitting_seconds": 0.009032203,
+          "residual_coding_seconds": 0.176083252,
+          "search_seconds": 0.025320781
+        },
+        "compression_metrics_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--metrics-output",
+          "<work>/metrics-probe.mz.metrics.json",
+          "<repo>/datasets/data/canterbury/ptt5",
+          "<work>/metrics-probe.mz"
+        ],
+        "compression_metrics_stderr": "compressed 513216 -> 101743 bytes (ratio 5.0442:1) in 0.210s",
+        "compression_peak_rss_bytes": 5484544,
+        "compression_seconds": 0.21411539999826346,
+        "compression_stderr": "compressed 513216 -> 101743 bytes (ratio 5.0442:1) in 0.208s",
+        "decompression_command": [
+          "<repo>/target/release/mathzip",
+          "decompress",
+          "--max-archive-bytes",
+          "17179869184",
+          "--max-output-bytes",
+          "8589934592",
+          "--max-segments",
+          "8388608",
+          "--no-sync",
+          "--force",
+          "<work>/archive.mz",
+          "<work>/restored.bin"
+        ],
+        "decompression_cpu_seconds": 0.01133700000000104,
+        "decompression_peak_rss_bytes": 614400,
+        "decompression_seconds": 0.012619501998415217,
+        "decompression_stderr": "restored 513216 bytes in 0.007s; original SHA-256 verified",
+        "error": null,
+        "index": 0,
+        "inspection": {
+          "actual_residual_coded_bytes": 100450,
+          "checksums": {
+            "archive": true,
+            "header": true,
+            "original": true,
+            "segments": true
+          },
+          "compressed_size": 101743,
+          "compression_ratio": 5.04423891569936,
+          "container_overhead_bytes": 120,
+          "estimated_residual_entropy": 1.2803009200446887,
+          "format_version": 1,
+          "math_segments_winning_raw": 7,
+          "math_segments_winning_zstd": 0,
+          "mean_segment_size": 16038.0,
+          "median_segment_size": 16384.0,
+          "metadata_bytes": 1272,
+          "model_distribution": {
+            "raw": 25,
+            "recurrence": 7
+          },
+          "model_parameter_bytes": 21,
+          "original_size": 513216,
+          "partition_metadata_bytes": 1152,
+          "payload_size": 101627,
+          "raw_fallback_percentage": 0.0,
+          "raw_model_percentage": 77.65307394937025,
+          "residual_bytes": 100450,
+          "residual_distribution": {
+            "sparse": 7,
+            "zero_run": 25
+          },
+          "residual_mode_distribution": {
+            "add_modulo": 32
+          },
+          "segment_count": 32,
+          "segment_descriptor_bytes": 1152,
+          "transform_count": 1,
+          "transform_metadata_bytes": 4,
+          "transformed_size": 513216,
+          "transforms": [
+            {
+              "type": "identity"
+            }
+          ]
+        },
+        "restored_sha256": "0ec3a75089bb52342813496b17e51377bc9eba3cb519a444d67025354841d650",
+        "roundtrip_verified": true,
+        "status": "ok"
+      },
+      {
+        "archive_sha256": "963826572ef6c3c3821248045805ed999c870185cf44c147e467a010f2a92e8e",
+        "compressed_bytes": 101743,
+        "compression_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "<repo>/datasets/data/canterbury/ptt5",
+          "<work>/archive.mz"
+        ],
+        "compression_cpu_seconds": 0.2138150000000003,
+        "compression_metrics": {
+          "model_fitting_seconds": 0.009067256,
+          "residual_coding_seconds": 0.174543,
+          "search_seconds": 0.025030543
+        },
+        "compression_metrics_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--metrics-output",
+          "<work>/metrics-probe.mz.metrics.json",
+          "<repo>/datasets/data/canterbury/ptt5",
+          "<work>/metrics-probe.mz"
+        ],
+        "compression_metrics_stderr": "compressed 513216 -> 101743 bytes (ratio 5.0442:1) in 0.209s",
+        "compression_peak_rss_bytes": 5505024,
+        "compression_seconds": 0.21476654800062533,
+        "compression_stderr": "compressed 513216 -> 101743 bytes (ratio 5.0442:1) in 0.209s",
+        "decompression_command": [
+          "<repo>/target/release/mathzip",
+          "decompress",
+          "--max-archive-bytes",
+          "17179869184",
+          "--max-output-bytes",
+          "8589934592",
+          "--max-segments",
+          "8388608",
+          "--no-sync",
+          "--force",
+          "<work>/archive.mz",
+          "<work>/restored.bin"
+        ],
+        "decompression_cpu_seconds": 0.010836000000001178,
+        "decompression_peak_rss_bytes": 614400,
+        "decompression_seconds": 0.011774406986660324,
+        "decompression_stderr": "restored 513216 bytes in 0.007s; original SHA-256 verified",
+        "error": null,
+        "index": 1,
+        "inspection": {
+          "actual_residual_coded_bytes": 100450,
+          "checksums": {
+            "archive": true,
+            "header": true,
+            "original": true,
+            "segments": true
+          },
+          "compressed_size": 101743,
+          "compression_ratio": 5.04423891569936,
+          "container_overhead_bytes": 120,
+          "estimated_residual_entropy": 1.2803009200446887,
+          "format_version": 1,
+          "math_segments_winning_raw": 7,
+          "math_segments_winning_zstd": 0,
+          "mean_segment_size": 16038.0,
+          "median_segment_size": 16384.0,
+          "metadata_bytes": 1272,
+          "model_distribution": {
+            "raw": 25,
+            "recurrence": 7
+          },
+          "model_parameter_bytes": 21,
+          "original_size": 513216,
+          "partition_metadata_bytes": 1152,
+          "payload_size": 101627,
+          "raw_fallback_percentage": 0.0,
+          "raw_model_percentage": 77.65307394937025,
+          "residual_bytes": 100450,
+          "residual_distribution": {
+            "sparse": 7,
+            "zero_run": 25
+          },
+          "residual_mode_distribution": {
+            "add_modulo": 32
+          },
+          "segment_count": 32,
+          "segment_descriptor_bytes": 1152,
+          "transform_count": 1,
+          "transform_metadata_bytes": 4,
+          "transformed_size": 513216,
+          "transforms": [
+            {
+              "type": "identity"
+            }
+          ]
+        },
+        "restored_sha256": "0ec3a75089bb52342813496b17e51377bc9eba3cb519a444d67025354841d650",
+        "roundtrip_verified": true,
+        "status": "ok"
+      },
+      {
+        "archive_sha256": "963826572ef6c3c3821248045805ed999c870185cf44c147e467a010f2a92e8e",
+        "compressed_bytes": 101743,
+        "compression_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "<repo>/datasets/data/canterbury/ptt5",
+          "<work>/archive.mz"
+        ],
+        "compression_cpu_seconds": 0.2131429999999952,
+        "compression_metrics": {
+          "model_fitting_seconds": 0.009003681,
+          "residual_coding_seconds": 0.173975291,
+          "search_seconds": 0.025078906
+        },
+        "compression_metrics_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--metrics-output",
+          "<work>/metrics-probe.mz.metrics.json",
+          "<repo>/datasets/data/canterbury/ptt5",
+          "<work>/metrics-probe.mz"
+        ],
+        "compression_metrics_stderr": "compressed 513216 -> 101743 bytes (ratio 5.0442:1) in 0.208s",
+        "compression_peak_rss_bytes": 5439488,
+        "compression_seconds": 0.21389258399722166,
+        "compression_stderr": "compressed 513216 -> 101743 bytes (ratio 5.0442:1) in 0.208s",
+        "decompression_command": [
+          "<repo>/target/release/mathzip",
+          "decompress",
+          "--max-archive-bytes",
+          "17179869184",
+          "--max-output-bytes",
+          "8589934592",
+          "--max-segments",
+          "8388608",
+          "--no-sync",
+          "--force",
+          "<work>/archive.mz",
+          "<work>/restored.bin"
+        ],
+        "decompression_cpu_seconds": 0.010927000000002351,
+        "decompression_peak_rss_bytes": 688128,
+        "decompression_seconds": 0.013454251995426603,
+        "decompression_stderr": "restored 513216 bytes in 0.007s; original SHA-256 verified",
+        "error": null,
+        "index": 2,
+        "inspection": {
+          "actual_residual_coded_bytes": 100450,
+          "checksums": {
+            "archive": true,
+            "header": true,
+            "original": true,
+            "segments": true
+          },
+          "compressed_size": 101743,
+          "compression_ratio": 5.04423891569936,
+          "container_overhead_bytes": 120,
+          "estimated_residual_entropy": 1.2803009200446887,
+          "format_version": 1,
+          "math_segments_winning_raw": 7,
+          "math_segments_winning_zstd": 0,
+          "mean_segment_size": 16038.0,
+          "median_segment_size": 16384.0,
+          "metadata_bytes": 1272,
+          "model_distribution": {
+            "raw": 25,
+            "recurrence": 7
+          },
+          "model_parameter_bytes": 21,
+          "original_size": 513216,
+          "partition_metadata_bytes": 1152,
+          "payload_size": 101627,
+          "raw_fallback_percentage": 0.0,
+          "raw_model_percentage": 77.65307394937025,
+          "residual_bytes": 100450,
+          "residual_distribution": {
+            "sparse": 7,
+            "zero_run": 25
+          },
+          "residual_mode_distribution": {
+            "add_modulo": 32
+          },
+          "segment_count": 32,
+          "segment_descriptor_bytes": 1152,
+          "transform_count": 1,
+          "transform_metadata_bytes": 4,
+          "transformed_size": 513216,
+          "transforms": [
+            {
+              "type": "identity"
+            }
+          ]
+        },
+        "restored_sha256": "0ec3a75089bb52342813496b17e51377bc9eba3cb519a444d67025354841d650",
+        "roundtrip_verified": true,
+        "status": "ok"
+      }
+    ],
+    "variant": ""
+  },
+  "schema_version": "mathzip-benchmark-checkpoint-row-v1"
+}

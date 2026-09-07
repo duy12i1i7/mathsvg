@@ -1,0 +1,15 @@
+[package]
+name = "mathsvg-simd"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "Compatibility facade for MathSVG's bit-exact SIMD kernels"
+
+[dependencies]
+mathsvg-kernels = { path = "../mathsvg-kernels" }
+
+[lib]
+path = "src/lib.rs"
+
+[lints.rust]
+unsafe_code = "forbid"

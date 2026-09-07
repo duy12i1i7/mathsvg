@@ -1,0 +1,167 @@
+{
+  "codecs": [
+    {
+      "codec": "mathzip-fast-adaptive",
+      "threads": 1
+    },
+    {
+      "codec": "mathzip-fast-recursive",
+      "threads": 1
+    },
+    {
+      "codec": "zstd-fast",
+      "threads": 1
+    }
+  ],
+  "expected_result_count": 30,
+  "inputs": [
+    {
+      "actual_input_sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+      "actual_input_size": 65536,
+      "corpus": "synthetic_recursive",
+      "expected_input_sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+      "expected_input_size": 65536,
+      "input_license": "CC0-1.0",
+      "input_manifest": "datasets/synthetic/manifest.json",
+      "input_manifest_sha256": "c7188cafa911c31e5d80193ab1dae1d468dfe9e6deafecb9be709a46aae23de1",
+      "input_manifest_verified": true,
+      "input_path": "datasets/synthetic/constant_00/s0000065536_n000p000_seed1297748005.bin",
+      "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+      "missing_reason": null
+    },
+    {
+      "actual_input_sha256": "35171a3b38d84c658143e78203683076d07beca32140221055c899b2dcf1cbc5",
+      "actual_input_size": 65536,
+      "corpus": "synthetic_recursive",
+      "expected_input_sha256": "35171a3b38d84c658143e78203683076d07beca32140221055c899b2dcf1cbc5",
+      "expected_input_size": 65536,
+      "input_license": "CC0-1.0",
+      "input_manifest": "datasets/synthetic/manifest.json",
+      "input_manifest_sha256": "c7188cafa911c31e5d80193ab1dae1d468dfe9e6deafecb9be709a46aae23de1",
+      "input_manifest_verified": true,
+      "input_path": "datasets/synthetic/linear/s0000065536_n000p000_seed1297748005.bin",
+      "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+      "missing_reason": null
+    },
+    {
+      "actual_input_sha256": "6d4dc987463f20cf02ac2d7b5a56d7f1ac84c5d7ed37c15f903ebb76c3362922",
+      "actual_input_size": 65536,
+      "corpus": "synthetic_recursive",
+      "expected_input_sha256": "6d4dc987463f20cf02ac2d7b5a56d7f1ac84c5d7ed37c15f903ebb76c3362922",
+      "expected_input_size": 65536,
+      "input_license": "CC0-1.0",
+      "input_manifest": "datasets/synthetic/manifest.json",
+      "input_manifest_sha256": "c7188cafa911c31e5d80193ab1dae1d468dfe9e6deafecb9be709a46aae23de1",
+      "input_manifest_verified": true,
+      "input_path": "datasets/synthetic/linear/s0000065536_n005p000_seed1297748005.bin",
+      "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+      "missing_reason": null
+    },
+    {
+      "actual_input_sha256": "742efc49d53b0f51b7a9cdc8afdf6fb69b22e359571f016274fae0b527f1d1c8",
+      "actual_input_size": 65536,
+      "corpus": "synthetic_recursive",
+      "expected_input_sha256": "742efc49d53b0f51b7a9cdc8afdf6fb69b22e359571f016274fae0b527f1d1c8",
+      "expected_input_size": 65536,
+      "input_license": "CC0-1.0",
+      "input_manifest": "datasets/synthetic/manifest.json",
+      "input_manifest_sha256": "c7188cafa911c31e5d80193ab1dae1d468dfe9e6deafecb9be709a46aae23de1",
+      "input_manifest_verified": true,
+      "input_path": "datasets/synthetic/periodic/s0000065536_n000p000_seed1297748005.bin",
+      "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+      "missing_reason": null
+    },
+    {
+      "actual_input_sha256": "a9eed5b582fa42393e69d5b7974ab65ce3ca8752b202ecf832436ebf8ec91664",
+      "actual_input_size": 65536,
+      "corpus": "synthetic_recursive",
+      "expected_input_sha256": "a9eed5b582fa42393e69d5b7974ab65ce3ca8752b202ecf832436ebf8ec91664",
+      "expected_input_size": 65536,
+      "input_license": "CC0-1.0",
+      "input_manifest": "datasets/synthetic/manifest.json",
+      "input_manifest_sha256": "c7188cafa911c31e5d80193ab1dae1d468dfe9e6deafecb9be709a46aae23de1",
+      "input_manifest_verified": true,
+      "input_path": "datasets/synthetic/piecewise_mixed/s0000065536_n001p000_seed1297748005.bin",
+      "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+      "missing_reason": null
+    },
+    {
+      "actual_input_sha256": "84d3c13eee3f79467573fc92d68af063eeeb786852df80299fe4c5e51659f4e3",
+      "actual_input_size": 65536,
+      "corpus": "synthetic_recursive",
+      "expected_input_sha256": "84d3c13eee3f79467573fc92d68af063eeeb786852df80299fe4c5e51659f4e3",
+      "expected_input_size": 65536,
+      "input_license": "CC0-1.0",
+      "input_manifest": "datasets/synthetic/manifest.json",
+      "input_manifest_sha256": "c7188cafa911c31e5d80193ab1dae1d468dfe9e6deafecb9be709a46aae23de1",
+      "input_manifest_verified": true,
+      "input_path": "datasets/synthetic/polynomial_d2/s0000065536_n000p000_seed1297748005.bin",
+      "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+      "missing_reason": null
+    },
+    {
+      "actual_input_sha256": "9e4d8d3305ce218314fdc3746942be9b9f0df4e3f1673227fcd510319189dbdc",
+      "actual_input_size": 65536,
+      "corpus": "synthetic_recursive",
+      "expected_input_sha256": "9e4d8d3305ce218314fdc3746942be9b9f0df4e3f1673227fcd510319189dbdc",
+      "expected_input_size": 65536,
+      "input_license": "CC0-1.0",
+      "input_manifest": "datasets/synthetic/manifest.json",
+      "input_manifest_sha256": "c7188cafa911c31e5d80193ab1dae1d468dfe9e6deafecb9be709a46aae23de1",
+      "input_manifest_verified": true,
+      "input_path": "datasets/synthetic/random/s0000065536_n000p000_seed1297748005.bin",
+      "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+      "missing_reason": null
+    },
+    {
+      "actual_input_sha256": "8d5944aabf5526f28b79d4b3841ec21dbd86daac0caa96729fec8838039fdd69",
+      "actual_input_size": 65536,
+      "corpus": "synthetic_recursive",
+      "expected_input_sha256": "8d5944aabf5526f28b79d4b3841ec21dbd86daac0caa96729fec8838039fdd69",
+      "expected_input_size": 65536,
+      "input_license": "CC0-1.0",
+      "input_manifest": "datasets/synthetic/manifest.json",
+      "input_manifest_sha256": "c7188cafa911c31e5d80193ab1dae1d468dfe9e6deafecb9be709a46aae23de1",
+      "input_manifest_verified": true,
+      "input_path": "datasets/synthetic/recurrence/s0000065536_n000p000_seed1297748005.bin",
+      "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+      "missing_reason": null
+    },
+    {
+      "actual_input_sha256": "7467306ee0feed4971260f3c87421154a05be571d944e9cb021a5713700c38f0",
+      "actual_input_size": 152089,
+      "corpus": "canterbury_recursive",
+      "expected_input_sha256": "7467306ee0feed4971260f3c87421154a05be571d944e9cb021a5713700c38f0",
+      "expected_input_size": 152089,
+      "input_license": "Upstream files retain their original terms; see dataset manifest",
+      "input_manifest": "datasets/data/canterbury/dataset.json",
+      "input_manifest_sha256": "30daaac9157db37ceda0cc444f6c9c304e91cf17e0164d0a12bc354539937151",
+      "input_manifest_verified": true,
+      "input_path": "datasets/data/canterbury/alice29.txt",
+      "input_provenance": "datasets/manifests/canterbury.json",
+      "missing_reason": null
+    },
+    {
+      "actual_input_sha256": "ee5733cd76ecc2f9d8ff156adc3c02a7a851051dcf43a2d56ff4ee4ff606bdb3",
+      "actual_input_size": 38240,
+      "corpus": "canterbury_recursive",
+      "expected_input_sha256": "ee5733cd76ecc2f9d8ff156adc3c02a7a851051dcf43a2d56ff4ee4ff606bdb3",
+      "expected_input_size": 38240,
+      "input_license": "Upstream files retain their original terms; see dataset manifest",
+      "input_manifest": "datasets/data/canterbury/dataset.json",
+      "input_manifest_sha256": "30daaac9157db37ceda0cc444f6c9c304e91cf17e0164d0a12bc354539937151",
+      "input_manifest_verified": true,
+      "input_path": "datasets/data/canterbury/sum",
+      "input_provenance": "datasets/manifests/canterbury.json",
+      "missing_reason": null
+    }
+  ],
+  "key_fields": [
+    "corpus",
+    "input_path",
+    "codec",
+    "threads"
+  ],
+  "schema_version": "mathzip-benchmark-expected-grid-v1",
+  "sha256": "23494964780e37f0ac71092ce58935edf4c6bf03cb9090eab599dd2985725a10"
+}

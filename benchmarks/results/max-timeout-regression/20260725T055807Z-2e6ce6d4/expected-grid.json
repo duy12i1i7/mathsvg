@@ -1,0 +1,51 @@
+{
+  "codecs": [
+    {
+      "codec": "mathzip-max",
+      "threads": 1
+    },
+    {
+      "codec": "zstd-max",
+      "threads": 1
+    }
+  ],
+  "expected_result_count": 4,
+  "inputs": [
+    {
+      "actual_input_sha256": "9af47239ca29dfe20e633f80bbbb9a4cc9783d0803d7b2b5626f42e4c3790420",
+      "actual_input_size": 1029744,
+      "corpus": "canterbury_max_timeout_regression",
+      "expected_input_sha256": "9af47239ca29dfe20e633f80bbbb9a4cc9783d0803d7b2b5626f42e4c3790420",
+      "expected_input_size": 1029744,
+      "input_license": "Upstream files retain their original terms; see dataset manifest",
+      "input_manifest": "datasets/data/canterbury/dataset.json",
+      "input_manifest_sha256": "30daaac9157db37ceda0cc444f6c9c304e91cf17e0164d0a12bc354539937151",
+      "input_manifest_verified": true,
+      "input_path": "datasets/data/canterbury/kennedy.xls",
+      "input_provenance": "datasets/manifests/canterbury.json",
+      "missing_reason": null
+    },
+    {
+      "actual_input_sha256": "0ec3a75089bb52342813496b17e51377bc9eba3cb519a444d67025354841d650",
+      "actual_input_size": 513216,
+      "corpus": "canterbury_max_timeout_regression",
+      "expected_input_sha256": "0ec3a75089bb52342813496b17e51377bc9eba3cb519a444d67025354841d650",
+      "expected_input_size": 513216,
+      "input_license": "Upstream files retain their original terms; see dataset manifest",
+      "input_manifest": "datasets/data/canterbury/dataset.json",
+      "input_manifest_sha256": "30daaac9157db37ceda0cc444f6c9c304e91cf17e0164d0a12bc354539937151",
+      "input_manifest_verified": true,
+      "input_path": "datasets/data/canterbury/ptt5",
+      "input_provenance": "datasets/manifests/canterbury.json",
+      "missing_reason": null
+    }
+  ],
+  "key_fields": [
+    "corpus",
+    "input_path",
+    "codec",
+    "threads"
+  ],
+  "schema_version": "mathzip-benchmark-expected-grid-v1",
+  "sha256": "040aa7310efe95daa3720e930e17c567b2eb44002c896d7442288b13616fb9a1"
+}

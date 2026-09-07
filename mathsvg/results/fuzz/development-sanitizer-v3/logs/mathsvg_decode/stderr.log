@@ -1,0 +1,26 @@
+   Compiling mathsvg-entropy v0.1.0 (/home/ase/zipp/mathsvg/crates/mathsvg-entropy)
+   Compiling mathsvg-dsl v0.1.0 (/home/ase/zipp/mathsvg/crates/mathsvg-dsl)
+   Compiling mathsvg-evaluator v0.1.0 (/home/ase/zipp/mathsvg/crates/mathsvg-evaluator)
+   Compiling mathsvg-container v0.1.0 (/home/ase/zipp/mathsvg/crates/mathsvg-container)
+   Compiling mathzip-fuzz v0.0.0 (/home/ase/zipp/fuzz)
+    Finished `release` profile [optimized + debuginfo] target(s) in 6.07s
+    Finished `release` profile [optimized + debuginfo] target(s) in 0.06s
+     Running `fuzz/target/x86_64-unknown-linux-gnu/release/mathsvg_decode -artifact_prefix=/home/ase/zipp/fuzz/artifacts/mathsvg_decode/ -runs=10000 -max_len=65536 -timeout=10 -rss_limit_mb=2048 -print_final_stats=1 -verbosity=0 -artifact_prefix=/tmp/mathsvg-fuzz-campaign-gun80byk/mathsvg_decode/artifacts/ /tmp/mathsvg-fuzz-campaign-gun80byk/mathsvg_decode/corpus`
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO:        4 files found in /tmp/mathsvg-fuzz-campaign-gun80byk/mathsvg_decode/corpus
+INFO: seed corpus: files: 4 min: 5b max: 507b total: 1482b rss: 32Mb
+###### Recommended dictionary. ######
+"\001\000\000\000" # Uses: 127
+"p\000\000\000\000\000\000\000" # Uses: 141
+"\204\000\000\000\000\000\000\000" # Uses: 108
+"\000\000z\177\266\340\002\000" # Uses: 108
+"\000\000\000\000\000\000\000\000" # Uses: 121
+"\035j\335\304" # Uses: 109
+"TFSM" # Uses: 67
+"\001\000\000\000\000\000\000\001" # Uses: 59
+###### End of recommended dictionary. ######
+stat::number_of_executed_units: 10000
+stat::average_exec_per_sec:     0
+stat::new_units_added:          61
+stat::slowest_unit_time_sec:    0
+stat::peak_rss_mb:              47

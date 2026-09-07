@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "profile": "max-timeout-regression",
+  "output_dir": "benchmarks/results/max-timeout-regression",
+  "datasets": [
+    {"name": "canterbury", "enabled": true}
+  ],
+  "benchmark": {
+    "warmups": 1,
+    "repeats": 3,
+    "timeout_seconds": 600,
+    "threads": [1],
+    "collect_mathzip_inspection": true,
+    "record_absolute_paths": false
+  },
+  "codecs": [
+    "mathzip-max",
+    "zstd-max"
+  ],
+  "inputs": [
+    {
+      "corpus": "canterbury_max_timeout_regression",
+      "root": "datasets/data/canterbury",
+      "input_license": "Upstream files retain their original terms; see dataset manifest",
+      "input_provenance": "datasets/manifests/canterbury.json",
+      "patterns": [
+        "kennedy.xls",
+        "ptt5"
+      ],
+      "required": true
+    }
+  ]
+}

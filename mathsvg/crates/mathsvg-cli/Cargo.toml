@@ -1,0 +1,32 @@
+[package]
+name = "mathsvg-cli"
+description = "Strict deterministic command-line interface for MathSVG Absolute"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "mathsvg"
+path = "src/main.rs"
+
+[dependencies]
+anyhow.workspace = true
+clap.workspace = true
+hex.workspace = true
+mathsvg-container.workspace = true
+mathsvg-core.workspace = true
+mathsvg-dsl.workspace = true
+mathsvg-evaluator.workspace = true
+mathsvg-optimizer.workspace = true
+mathsvg-stream.workspace = true
+serde_json.workspace = true
+tempfile.workspace = true
+
+[dev-dependencies]
+serde_json.workspace = true
+sha2.workspace = true
+tempfile.workspace = true
+
+[lints.rust]
+unsafe_code = "forbid"

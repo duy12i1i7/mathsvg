@@ -1,0 +1,523 @@
+{
+  "completed_at_utc": "2026-07-26T13:08:51.491724+00:00",
+  "execution_interval_index": 0,
+  "expected_grid_index": 22406,
+  "interval_active_seconds": 30007.976916576008,
+  "key": [
+    "calgary_files",
+    "datasets/data/calgary/geo",
+    "mathzip-fast",
+    1
+  ],
+  "row": {
+    "actual_residual_coded_bytes": 101182,
+    "archive_sha256": "789b6ea4d636a3a80a30d5bfc37102837cff2a1fbcc3d60dbffcf951b686eedc",
+    "bits_per_byte": 7.936640625,
+    "codec": "mathzip-fast",
+    "codec_family": "mathzip",
+    "codec_level": "fast",
+    "command_lines": [
+      "'<repo>/target/release/mathzip' compress --mode fast --max-input-bytes 8589934592 --no-sync --force --metrics-output '<work>/archive.mz.metrics.json' '<repo>/datasets/data/calgary/geo' '<work>/archive.mz'",
+      "'<repo>/target/release/mathzip' decompress --max-archive-bytes 17179869184 --max-output-bytes 8589934592 --max-segments 8388608 --no-sync --force '<work>/archive.mz' '<work>/restored.bin'"
+    ],
+    "compressed_bytes": 101589,
+    "compression_cpu_seconds": 0.055293999997957144,
+    "compression_mbps": 1.8156084704172768,
+    "compression_seconds": 0.056399824999971315,
+    "container_overhead_bytes": 120,
+    "corpus": "calgary_files",
+    "decompression_cpu_seconds": 0.009075000001757871,
+    "decompression_mbps": 10.28885144577187,
+    "decompression_seconds": 0.00995252002030611,
+    "deterministic_archive": true,
+    "error": null,
+    "estimated_residual_entropy": 7.9568700249696125,
+    "expansion_percent": 0.0,
+    "input_entropy_bits_per_byte": 5.646375764301419,
+    "input_license": "Upstream files retain their original terms; see dataset manifest",
+    "input_manifest": "datasets/data/calgary/dataset.json",
+    "input_manifest_sha256": "83a3c9348bc6c40af11956faf339f4c6287ef14cdb7d5479a8a0a4f84f2b19c7",
+    "input_manifest_verified": true,
+    "input_name": "geo",
+    "input_path": "datasets/data/calgary/geo",
+    "input_provenance": "datasets/manifests/calgary.json",
+    "input_sha256": "913ff6f45610599020c02f543a0d5a1f46cf772412e25a568b683d23db8c447d",
+    "math_segments_winning_raw": 7,
+    "math_segments_winning_zstd": 0,
+    "mathzip_inspection": {
+      "actual_residual_coded_bytes": 101182,
+      "checksums": {
+        "archive": true,
+        "header": true,
+        "original": true,
+        "segments": true
+      },
+      "compressed_size": 101589,
+      "compression_ratio": 1.007983147781748,
+      "container_overhead_bytes": 120,
+      "estimated_residual_entropy": 7.9568700249696125,
+      "format_version": 1,
+      "math_segments_winning_raw": 7,
+      "math_segments_winning_zstd": 0,
+      "mean_segment_size": 14628.57142857143,
+      "median_segment_size": 16384.0,
+      "metadata_bytes": 372,
+      "model_distribution": {
+        "recurrence": 7
+      },
+      "model_parameter_bytes": 35,
+      "original_size": 102400,
+      "partition_metadata_bytes": 252,
+      "payload_size": 101473,
+      "raw_fallback_percentage": 0.0,
+      "raw_model_percentage": 0.0,
+      "residual_bytes": 101182,
+      "residual_distribution": {
+        "zero_run": 7
+      },
+      "residual_mode_distribution": {
+        "add_modulo": 7
+      },
+      "segment_count": 7,
+      "segment_descriptor_bytes": 252,
+      "transform_count": 1,
+      "transform_metadata_bytes": 4,
+      "transformed_size": 102400,
+      "transforms": [
+        {
+          "type": "xor"
+        }
+      ]
+    },
+    "mathzip_search_provenance": {
+      "balanced_frontier_model_mode_finalist_limit": null,
+      "balanced_frontier_regular_anchor_bytes": null,
+      "balanced_frontier_transform_finalist_limit": null,
+      "effective_segmentation": "fixed",
+      "includes_balanced_frontier": false,
+      "primary_model_mode_finalist_limit": null,
+      "primary_regular_anchor_bytes": 16384,
+      "primary_transform_finalist_limit": null,
+      "requested_mode": "fast",
+      "screened_large_input": false,
+      "selected_balanced_frontier": false,
+      "selected_model_mode_finalist_limit": null,
+      "selected_regular_anchor_bytes": 16384,
+      "selected_transform_finalist_limit": null
+    },
+    "mathzip_search_provenance_consistent": true,
+    "mean_segment_size": 14628.57142857143,
+    "median_segment_size": 16384.0,
+    "model_distribution": {
+      "recurrence": 7
+    },
+    "model_fitting_seconds": 0.001201912,
+    "model_parameter_bytes": 35,
+    "original_bytes": 102400,
+    "partition_metadata_bytes": 252,
+    "peak_rss_bytes": 4345856.0,
+    "profile": "full",
+    "ratio": 1.007983147781748,
+    "raw_fallback_percent": 0.0,
+    "raw_model_percent": 0.0,
+    "requested_repeats": 3,
+    "residual_bytes": 101182,
+    "residual_coding_seconds": 0.043398512,
+    "residual_distribution": {
+      "zero_run": 7
+    },
+    "restored_sha256": "913ff6f45610599020c02f543a0d5a1f46cf772412e25a568b683d23db8c447d",
+    "roundtrip_verified": true,
+    "run_id": "20260726T044843Z-213f07c3",
+    "savings": 0.007919921875000013,
+    "savings_percent": 0.7919921875000013,
+    "schema_version": "mathzip-benchmark-results-v1",
+    "search_seconds": 0.007095759,
+    "segment_count": 7,
+    "status": "ok",
+    "successful_repeats": 3,
+    "tags": {},
+    "threads": 1,
+    "transform": [
+      {
+        "type": "xor"
+      }
+    ],
+    "trials": [
+      {
+        "archive_sha256": "789b6ea4d636a3a80a30d5bfc37102837cff2a1fbcc3d60dbffcf951b686eedc",
+        "compressed_bytes": 101589,
+        "compression_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--metrics-output",
+          "<work>/archive.mz.metrics.json",
+          "<repo>/datasets/data/calgary/geo",
+          "<work>/archive.mz"
+        ],
+        "compression_cpu_seconds": 0.055155999998532934,
+        "compression_metrics": {
+          "balanced_frontier_model_mode_finalist_limit": null,
+          "balanced_frontier_regular_anchor_bytes": null,
+          "balanced_frontier_transform_finalist_limit": null,
+          "effective_segmentation": "fixed",
+          "includes_balanced_frontier": false,
+          "model_fitting_seconds": 0.001201912,
+          "primary_model_mode_finalist_limit": null,
+          "primary_regular_anchor_bytes": 16384,
+          "primary_transform_finalist_limit": null,
+          "requested_mode": "fast",
+          "residual_coding_seconds": 0.043260384,
+          "screened_large_input": false,
+          "search_seconds": 0.007095759,
+          "selected_balanced_frontier": false,
+          "selected_model_mode_finalist_limit": null,
+          "selected_regular_anchor_bytes": 16384,
+          "selected_transform_finalist_limit": null
+        },
+        "compression_metrics_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--metrics-output",
+          "<work>/archive.mz.metrics.json",
+          "<repo>/datasets/data/calgary/geo",
+          "<work>/archive.mz"
+        ],
+        "compression_metrics_stderr": "compressed 102400 -> 101589 bytes (ratio 1.0080:1) in 0.052s",
+        "compression_peak_rss_bytes": 4345856,
+        "compression_seconds": 0.056399824999971315,
+        "compression_stderr": "compressed 102400 -> 101589 bytes (ratio 1.0080:1) in 0.052s",
+        "decompression_command": [
+          "<repo>/target/release/mathzip",
+          "decompress",
+          "--max-archive-bytes",
+          "17179869184",
+          "--max-output-bytes",
+          "8589934592",
+          "--max-segments",
+          "8388608",
+          "--no-sync",
+          "--force",
+          "<work>/archive.mz",
+          "<work>/restored.bin"
+        ],
+        "decompression_cpu_seconds": 0.006394000000000233,
+        "decompression_peak_rss_bytes": 651264,
+        "decompression_seconds": 0.007259495003381744,
+        "decompression_stderr": "restored 102400 bytes in 0.002s; original SHA-256 verified",
+        "error": null,
+        "index": 0,
+        "inspection": {
+          "actual_residual_coded_bytes": 101182,
+          "checksums": {
+            "archive": true,
+            "header": true,
+            "original": true,
+            "segments": true
+          },
+          "compressed_size": 101589,
+          "compression_ratio": 1.007983147781748,
+          "container_overhead_bytes": 120,
+          "estimated_residual_entropy": 7.9568700249696125,
+          "format_version": 1,
+          "math_segments_winning_raw": 7,
+          "math_segments_winning_zstd": 0,
+          "mean_segment_size": 14628.57142857143,
+          "median_segment_size": 16384.0,
+          "metadata_bytes": 372,
+          "model_distribution": {
+            "recurrence": 7
+          },
+          "model_parameter_bytes": 35,
+          "original_size": 102400,
+          "partition_metadata_bytes": 252,
+          "payload_size": 101473,
+          "raw_fallback_percentage": 0.0,
+          "raw_model_percentage": 0.0,
+          "residual_bytes": 101182,
+          "residual_distribution": {
+            "zero_run": 7
+          },
+          "residual_mode_distribution": {
+            "add_modulo": 7
+          },
+          "segment_count": 7,
+          "segment_descriptor_bytes": 252,
+          "transform_count": 1,
+          "transform_metadata_bytes": 4,
+          "transformed_size": 102400,
+          "transforms": [
+            {
+              "type": "xor"
+            }
+          ]
+        },
+        "restored_sha256": "913ff6f45610599020c02f543a0d5a1f46cf772412e25a568b683d23db8c447d",
+        "roundtrip_verified": true,
+        "status": "ok"
+      },
+      {
+        "archive_sha256": "789b6ea4d636a3a80a30d5bfc37102837cff2a1fbcc3d60dbffcf951b686eedc",
+        "compressed_bytes": 101589,
+        "compression_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--metrics-output",
+          "<work>/archive.mz.metrics.json",
+          "<repo>/datasets/data/calgary/geo",
+          "<work>/archive.mz"
+        ],
+        "compression_cpu_seconds": 0.055293999997957144,
+        "compression_metrics": {
+          "balanced_frontier_model_mode_finalist_limit": null,
+          "balanced_frontier_regular_anchor_bytes": null,
+          "balanced_frontier_transform_finalist_limit": null,
+          "effective_segmentation": "fixed",
+          "includes_balanced_frontier": false,
+          "model_fitting_seconds": 0.001196952,
+          "primary_model_mode_finalist_limit": null,
+          "primary_regular_anchor_bytes": 16384,
+          "primary_transform_finalist_limit": null,
+          "requested_mode": "fast",
+          "residual_coding_seconds": 0.043398512,
+          "screened_large_input": false,
+          "search_seconds": 0.00683463,
+          "selected_balanced_frontier": false,
+          "selected_model_mode_finalist_limit": null,
+          "selected_regular_anchor_bytes": 16384,
+          "selected_transform_finalist_limit": null
+        },
+        "compression_metrics_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--metrics-output",
+          "<work>/archive.mz.metrics.json",
+          "<repo>/datasets/data/calgary/geo",
+          "<work>/archive.mz"
+        ],
+        "compression_metrics_stderr": "compressed 102400 -> 101589 bytes (ratio 1.0080:1) in 0.051s",
+        "compression_peak_rss_bytes": 4374528,
+        "compression_seconds": 0.0563003679853864,
+        "compression_stderr": "compressed 102400 -> 101589 bytes (ratio 1.0080:1) in 0.051s",
+        "decompression_command": [
+          "<repo>/target/release/mathzip",
+          "decompress",
+          "--max-archive-bytes",
+          "17179869184",
+          "--max-output-bytes",
+          "8589934592",
+          "--max-segments",
+          "8388608",
+          "--no-sync",
+          "--force",
+          "<work>/archive.mz",
+          "<work>/restored.bin"
+        ],
+        "decompression_cpu_seconds": 0.009075000001757871,
+        "decompression_peak_rss_bytes": 352256,
+        "decompression_seconds": 0.00995252002030611,
+        "decompression_stderr": "restored 102400 bytes in 0.003s; original SHA-256 verified",
+        "error": null,
+        "index": 1,
+        "inspection": {
+          "actual_residual_coded_bytes": 101182,
+          "checksums": {
+            "archive": true,
+            "header": true,
+            "original": true,
+            "segments": true
+          },
+          "compressed_size": 101589,
+          "compression_ratio": 1.007983147781748,
+          "container_overhead_bytes": 120,
+          "estimated_residual_entropy": 7.9568700249696125,
+          "format_version": 1,
+          "math_segments_winning_raw": 7,
+          "math_segments_winning_zstd": 0,
+          "mean_segment_size": 14628.57142857143,
+          "median_segment_size": 16384.0,
+          "metadata_bytes": 372,
+          "model_distribution": {
+            "recurrence": 7
+          },
+          "model_parameter_bytes": 35,
+          "original_size": 102400,
+          "partition_metadata_bytes": 252,
+          "payload_size": 101473,
+          "raw_fallback_percentage": 0.0,
+          "raw_model_percentage": 0.0,
+          "residual_bytes": 101182,
+          "residual_distribution": {
+            "zero_run": 7
+          },
+          "residual_mode_distribution": {
+            "add_modulo": 7
+          },
+          "segment_count": 7,
+          "segment_descriptor_bytes": 252,
+          "transform_count": 1,
+          "transform_metadata_bytes": 4,
+          "transformed_size": 102400,
+          "transforms": [
+            {
+              "type": "xor"
+            }
+          ]
+        },
+        "restored_sha256": "913ff6f45610599020c02f543a0d5a1f46cf772412e25a568b683d23db8c447d",
+        "roundtrip_verified": true,
+        "status": "ok"
+      },
+      {
+        "archive_sha256": "789b6ea4d636a3a80a30d5bfc37102837cff2a1fbcc3d60dbffcf951b686eedc",
+        "compressed_bytes": 101589,
+        "compression_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--metrics-output",
+          "<work>/archive.mz.metrics.json",
+          "<repo>/datasets/data/calgary/geo",
+          "<work>/archive.mz"
+        ],
+        "compression_cpu_seconds": 0.062073000000964385,
+        "compression_metrics": {
+          "balanced_frontier_model_mode_finalist_limit": null,
+          "balanced_frontier_regular_anchor_bytes": null,
+          "balanced_frontier_transform_finalist_limit": null,
+          "effective_segmentation": "fixed",
+          "includes_balanced_frontier": false,
+          "model_fitting_seconds": 0.001293806,
+          "primary_model_mode_finalist_limit": null,
+          "primary_regular_anchor_bytes": 16384,
+          "primary_transform_finalist_limit": null,
+          "requested_mode": "fast",
+          "residual_coding_seconds": 0.045494698,
+          "screened_large_input": false,
+          "search_seconds": 0.008781651,
+          "selected_balanced_frontier": false,
+          "selected_model_mode_finalist_limit": null,
+          "selected_regular_anchor_bytes": 16384,
+          "selected_transform_finalist_limit": null
+        },
+        "compression_metrics_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--metrics-output",
+          "<work>/archive.mz.metrics.json",
+          "<repo>/datasets/data/calgary/geo",
+          "<work>/archive.mz"
+        ],
+        "compression_metrics_stderr": "compressed 102400 -> 101589 bytes (ratio 1.0080:1) in 0.056s",
+        "compression_peak_rss_bytes": 4300800,
+        "compression_seconds": 0.06307390501024202,
+        "compression_stderr": "compressed 102400 -> 101589 bytes (ratio 1.0080:1) in 0.056s",
+        "decompression_command": [
+          "<repo>/target/release/mathzip",
+          "decompress",
+          "--max-archive-bytes",
+          "17179869184",
+          "--max-output-bytes",
+          "8589934592",
+          "--max-segments",
+          "8388608",
+          "--no-sync",
+          "--force",
+          "<work>/archive.mz",
+          "<work>/restored.bin"
+        ],
+        "decompression_cpu_seconds": 0.010522999997192528,
+        "decompression_peak_rss_bytes": 409600,
+        "decompression_seconds": 0.011474908009404317,
+        "decompression_stderr": "restored 102400 bytes in 0.004s; original SHA-256 verified",
+        "error": null,
+        "index": 2,
+        "inspection": {
+          "actual_residual_coded_bytes": 101182,
+          "checksums": {
+            "archive": true,
+            "header": true,
+            "original": true,
+            "segments": true
+          },
+          "compressed_size": 101589,
+          "compression_ratio": 1.007983147781748,
+          "container_overhead_bytes": 120,
+          "estimated_residual_entropy": 7.9568700249696125,
+          "format_version": 1,
+          "math_segments_winning_raw": 7,
+          "math_segments_winning_zstd": 0,
+          "mean_segment_size": 14628.57142857143,
+          "median_segment_size": 16384.0,
+          "metadata_bytes": 372,
+          "model_distribution": {
+            "recurrence": 7
+          },
+          "model_parameter_bytes": 35,
+          "original_size": 102400,
+          "partition_metadata_bytes": 252,
+          "payload_size": 101473,
+          "raw_fallback_percentage": 0.0,
+          "raw_model_percentage": 0.0,
+          "residual_bytes": 101182,
+          "residual_distribution": {
+            "zero_run": 7
+          },
+          "residual_mode_distribution": {
+            "add_modulo": 7
+          },
+          "segment_count": 7,
+          "segment_descriptor_bytes": 252,
+          "transform_count": 1,
+          "transform_metadata_bytes": 4,
+          "transformed_size": 102400,
+          "transforms": [
+            {
+              "type": "xor"
+            }
+          ]
+        },
+        "restored_sha256": "913ff6f45610599020c02f543a0d5a1f46cf772412e25a568b683d23db8c447d",
+        "roundtrip_verified": true,
+        "status": "ok"
+      }
+    ],
+    "variant": ""
+  },
+  "schema_version": "mathzip-benchmark-checkpoint-row-v1"
+}

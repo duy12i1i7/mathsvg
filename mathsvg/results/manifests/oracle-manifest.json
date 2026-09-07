@@ -1,0 +1,259 @@
+{
+  "analyzer_sha256": "8f094765d1eeca0847aa179258beb0259b14170a1621ae313eb51cca63e375b0",
+  "balance_eligibility": "origin=real AND primary=true",
+  "catalog": "native-v1:literal,entropy(raw,byte-rle,zero-run,sparse-zero,bit-pack,lz-tokens,canonical-huffman,lz-huffman),const,linear,periodic<=64,recurrence<=4,exceptions,residual-add/xor-depth<=2,symbolic-depth<=2,dag-exact-chunk-activation,segmentation-256B,coordinate-basis",
+  "dataset_manifest": "mathsvg/results/manifests/oracle-development.csv",
+  "dataset_manifest_sha256": "c64a35b33317cd228640e400001e0982c3f4e7fcfc9a9833a71febecf8115a8e",
+  "deterministic": true,
+  "external_evidence": {
+    "captured_runner_sha256": "f2c995ef2bab2d3b19a81a25a5798309b83d556f0424c7645d3bad648ea9e140",
+    "current_workspace_runner_not_inferred": true,
+    "kind": "current-native-development-pilot",
+    "raw_sha256": "565efc74175413c9d4946fcde98e4791b954603cc2739e343fc71aaf078d6eaa",
+    "source": "mathsvg/results/raw/development-pilot-v8-final-binary.jsonl"
+  },
+  "holdout_payload_inspected": false,
+  "inputs": [
+    {
+      "input_id": "real-calgary-pic",
+      "legacy_observed": true,
+      "path": "datasets/data/calgary/pic",
+      "sample_bytes": 4096,
+      "sample_sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7",
+      "source_bytes": 513216,
+      "source_sha256": "0ec3a75089bb52342813496b17e51377bc9eba3cb519a444d67025354841d650",
+      "split": "development"
+    },
+    {
+      "input_id": "real-calgary-progc",
+      "legacy_observed": true,
+      "path": "datasets/data/calgary/progc",
+      "sample_bytes": 4096,
+      "sample_sha256": "7a8e670fceea095c1d884eb93c3d7e45c44d63fbb3c5b5c0ae3312f285fff3b4",
+      "source_bytes": 39611,
+      "source_sha256": "151377a9d6aa9b7e872000269707a15e2b038c826340628e6f4d8b4db9ec3c19",
+      "split": "development"
+    },
+    {
+      "input_id": "real-canterbury-alice",
+      "legacy_observed": true,
+      "path": "datasets/data/canterbury/alice29.txt",
+      "sample_bytes": 4096,
+      "sample_sha256": "bd561b3b45536e67c5dfaaf67c6034fff986973c275841944d69a608f117cddd",
+      "source_bytes": 152089,
+      "source_sha256": "7467306ee0feed4971260f3c87421154a05be571d944e9cb021a5713700c38f0",
+      "split": "development"
+    },
+    {
+      "input_id": "real-canterbury-kennedy",
+      "legacy_observed": true,
+      "path": "datasets/data/canterbury/kennedy.xls",
+      "sample_bytes": 4096,
+      "sample_sha256": "3e232cfd8e58ab1cd4b963b68a7f77374bdae57c9d17a1fc08f19d5b195fe433",
+      "source_bytes": 1029744,
+      "source_sha256": "9af47239ca29dfe20e633f80bbbb9a4cc9783d0803d7b2b5626f42e4c3790420",
+      "split": "development"
+    },
+    {
+      "input_id": "syn-constant",
+      "legacy_observed": true,
+      "path": "datasets/synthetic/constant_00/s0000004096_n000p000_seed1297748005.bin",
+      "sample_bytes": 4096,
+      "sample_sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7",
+      "source_bytes": 4096,
+      "source_sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7",
+      "split": "development"
+    },
+    {
+      "input_id": "syn-linear",
+      "legacy_observed": true,
+      "path": "datasets/synthetic/linear/s0000004096_n000p000_seed1297748005.bin",
+      "sample_bytes": 4096,
+      "sample_sha256": "29ddd8df947f12dda43d4614877c4f839f4bf4339f1f2092ea662911a4fcf139",
+      "source_bytes": 4096,
+      "source_sha256": "29ddd8df947f12dda43d4614877c4f839f4bf4339f1f2092ea662911a4fcf139",
+      "split": "development"
+    },
+    {
+      "input_id": "syn-linear-noise1",
+      "legacy_observed": true,
+      "path": "datasets/synthetic/linear/s0000004096_n001p000_seed1297748005.bin",
+      "sample_bytes": 4096,
+      "sample_sha256": "9fe194c8db72692b5793e17c7c746b6e4712efbcd4967e537e32f8e38c547169",
+      "source_bytes": 4096,
+      "source_sha256": "9fe194c8db72692b5793e17c7c746b6e4712efbcd4967e537e32f8e38c547169",
+      "split": "development"
+    },
+    {
+      "input_id": "syn-periodic",
+      "legacy_observed": true,
+      "path": "datasets/synthetic/periodic/s0000004096_n000p000_seed1297748005.bin",
+      "sample_bytes": 4096,
+      "sample_sha256": "8915369e240a7c1e4e01beaa91ef99ca933311ed3ec5dc26147876e63bfcce31",
+      "source_bytes": 4096,
+      "source_sha256": "8915369e240a7c1e4e01beaa91ef99ca933311ed3ec5dc26147876e63bfcce31",
+      "split": "development"
+    },
+    {
+      "input_id": "syn-periodic-noise1",
+      "legacy_observed": true,
+      "path": "datasets/synthetic/periodic/s0000004096_n001p000_seed1297748005.bin",
+      "sample_bytes": 4096,
+      "sample_sha256": "c3300c259e85ef3377003c5ebc70b31699634b64d71c4042b5d1dc1a676783a2",
+      "source_bytes": 4096,
+      "source_sha256": "c3300c259e85ef3377003c5ebc70b31699634b64d71c4042b5d1dc1a676783a2",
+      "split": "development"
+    },
+    {
+      "input_id": "syn-piecewise",
+      "legacy_observed": true,
+      "path": "datasets/synthetic/piecewise_mixed/s0000004096_n000p000_seed1297748005.bin",
+      "sample_bytes": 4096,
+      "sample_sha256": "d457c5766accb381882199def16f9ea00d16b8d49f10183a0b3d0f20f6dccd46",
+      "source_bytes": 4096,
+      "source_sha256": "d457c5766accb381882199def16f9ea00d16b8d49f10183a0b3d0f20f6dccd46",
+      "split": "development"
+    },
+    {
+      "input_id": "syn-random",
+      "legacy_observed": true,
+      "path": "datasets/synthetic/random/s0000004096_n000p000_seed1297748005.bin",
+      "sample_bytes": 4096,
+      "sample_sha256": "6c6b8fcb18143838e2a9c45cf658f7874a5ae3c8bc2696011804cccac322c168",
+      "source_bytes": 4096,
+      "source_sha256": "6c6b8fcb18143838e2a9c45cf658f7874a5ae3c8bc2696011804cccac322c168",
+      "split": "development"
+    },
+    {
+      "input_id": "syn-recurrence",
+      "legacy_observed": true,
+      "path": "datasets/synthetic/recurrence/s0000004096_n000p000_seed1297748005.bin",
+      "sample_bytes": 4096,
+      "sample_sha256": "e421cc48c94607e9e57e7c690c6859b350dd420e29673666ab3618bdc630d283",
+      "source_bytes": 4096,
+      "source_sha256": "e421cc48c94607e9e57e7c690c6859b350dd420e29673666ab3618bdc630d283",
+      "split": "development"
+    },
+    {
+      "input_id": "syn-recurrence-noise1",
+      "legacy_observed": true,
+      "path": "datasets/synthetic/recurrence/s0000004096_n001p000_seed1297748005.bin",
+      "sample_bytes": 4096,
+      "sample_sha256": "907189eb629d95187257f4ca58d46f7bdc825d7b29b3b5a2a8a5a7a5d6c1b3e1",
+      "source_bytes": 4096,
+      "source_sha256": "907189eb629d95187257f4ca58d46f7bdc825d7b29b3b5a2a8a5a7a5d6c1b3e1",
+      "split": "development"
+    }
+  ],
+  "model_sha256": "4de0d8011ae0752c5378c43c9b8375c925b32d16d2c4826c94070723357f5769",
+  "native_source_sha256": {
+    "Cargo.lock": "14a7f7bc2b47d2141f2d80fcd641b3eaae1483c11441907409075252b9889100",
+    "mathsvg/crates/mathsvg-container/src/lib.rs": "7ef5242f6853fa7b879c6b4761c129028a5be3612dfe86a5f78883dad543a734",
+    "mathsvg/crates/mathsvg-coordinates/src/lib.rs": "fee63fe90ef7190ec9f1493a2c890637af2461761b114ce5bb375ea20b0f538e",
+    "mathsvg/crates/mathsvg-dsl/src/lib.rs": "e4e56a1c0ada11f752378258fc4e33dc7cd7c438c8dd5cf68420eff1cd8deaa6",
+    "mathsvg/crates/mathsvg-entropy/src/lib.rs": "e4fdac3a16609a57deff99f2a7b69feb47390aa0b0cf40dbaf8a151e62ba176e",
+    "mathsvg/crates/mathsvg-evaluator/src/lib.rs": "8be5946798a19b77806775b28810c543a614c546b6dea74fa3dc6cf26327cdb8",
+    "mathsvg/crates/mathsvg-functions/src/lib.rs": "c012adf45092e8a3456fec10c1d85e99eee93c1040627d3b2158a4e0166a7646",
+    "mathsvg/crates/mathsvg-graph/src/lib.rs": "ec91d390e319c844c5e89168cf5233fc650b12a0aaaef9def51bd39b71f4f78a",
+    "mathsvg/crates/mathsvg-optimizer/src/lib.rs": "ecec1c6244ff9857058df50ef15f8736f59ee9724285588540bcd0729e7cb253",
+    "mathsvg/crates/mathsvg-residual/src/lib.rs": "ccc8fcde84e0580471fa4c3f1aa9ed7a3e99db815059878b3fe034b082c70703",
+    "mathsvg/crates/mathsvg-symbolic/src/lib.rs": "f760fba8edeecc24b6efd2b9f7a991d7e40bc0d33306986d8e03f890b99d27b9",
+    "mathsvg/python/oracle/native_probe/Cargo.lock": "e718fdbd3903f78f69dbdf9bcaee5a12ffb7794ac053b6eef7bb0d6aa2208695",
+    "mathsvg/python/oracle/native_probe/Cargo.toml": "a2bba5f4ff35079d141fb90234d856f64a2d18b613eff2097a653a96c3273021",
+    "mathsvg/python/oracle/native_probe/src/main.rs": "be6d9bb3b2d1cf9e54eaacca3e950e9ceca119e9d417912f8583ebde8989b39c"
+  },
+  "outputs": [
+    {
+      "bytes": 4038,
+      "path": "mathsvg/docs/oracle-analysis.md",
+      "sha256": "74533e7b290bab2251938e6faf3410c6bbe497c7b8d303bf7e0317423b86c537"
+    },
+    {
+      "bytes": 3591,
+      "path": "mathsvg/results/manifests/oracle-development.csv",
+      "sha256": "c64a35b33317cd228640e400001e0982c3f4e7fcfc9a9833a71febecf8115a8e"
+    },
+    {
+      "bytes": 27769,
+      "path": "mathsvg/results/oracle/coordinate-oracle.csv",
+      "sha256": "4ccd2d5a191c7f127e2b64f484ed8746df1d15066a43b320e2fdb58524117256"
+    },
+    {
+      "bytes": 27769,
+      "path": "mathsvg/results/oracle/coordinate.csv",
+      "sha256": "4ccd2d5a191c7f127e2b64f484ed8746df1d15066a43b320e2fdb58524117256"
+    },
+    {
+      "bytes": 3849,
+      "path": "mathsvg/results/oracle/dag-sharing-headroom.csv",
+      "sha256": "b603b276b94cf65168debac0beebb8069442165c0a3513f2d1f0e0927a68e156"
+    },
+    {
+      "bytes": 3849,
+      "path": "mathsvg/results/oracle/dag-sharing.csv",
+      "sha256": "b603b276b94cf65168debac0beebb8069442165c0a3513f2d1f0e0927a68e156"
+    },
+    {
+      "bytes": 5401,
+      "path": "mathsvg/results/oracle/external-gap.csv",
+      "sha256": "a31ff493748fcbee76f8d9c33d5b5317f92730414baf140346db01b7391e5504"
+    },
+    {
+      "bytes": 15411,
+      "path": "mathsvg/results/oracle/function-family-headroom.csv",
+      "sha256": "865ebbf899d4c4b96d8d910b3d6bee2913fa11ba3816cd13b388d5dfac0d89ce"
+    },
+    {
+      "bytes": 103045,
+      "path": "mathsvg/results/oracle/native-development-oracle.json",
+      "sha256": "5f35b10474139211cad6eea4fc8188b82dcbda1732bd42b1a00f968647178a4f"
+    },
+    {
+      "bytes": 13086,
+      "path": "mathsvg/results/oracle/residual-oracle.csv",
+      "sha256": "ac44f3fe7b24a67074b0770a9060bb8ca44014d0c9f5bc2e918de02526cde06f"
+    },
+    {
+      "bytes": 13086,
+      "path": "mathsvg/results/oracle/residual.csv",
+      "sha256": "ac44f3fe7b24a67074b0770a9060bb8ca44014d0c9f5bc2e918de02526cde06f"
+    },
+    {
+      "bytes": 8892,
+      "path": "mathsvg/results/oracle/search-oracle.csv",
+      "sha256": "ca5a87468d498fa60a394a26ea57b579112de677d14c07baa38e21da64d1b30e"
+    },
+    {
+      "bytes": 8892,
+      "path": "mathsvg/results/oracle/search.csv",
+      "sha256": "ca5a87468d498fa60a394a26ea57b579112de677d14c07baa38e21da64d1b30e"
+    },
+    {
+      "bytes": 4717,
+      "path": "mathsvg/results/oracle/segmentation-oracle.csv",
+      "sha256": "0cebcc4b114518de65dd59ee0333b27860d105697941a62c84732465256a1b9d"
+    },
+    {
+      "bytes": 4717,
+      "path": "mathsvg/results/oracle/segmentation.csv",
+      "sha256": "0cebcc4b114518de65dd59ee0333b27860d105697941a62c84732465256a1b9d"
+    },
+    {
+      "bytes": 1684,
+      "path": "mathsvg/results/oracle/stop-policy.csv",
+      "sha256": "6be101039b364a8193ada8ae9795086bcdaf9940f432d51c4ff20449fe50a8cc"
+    },
+    {
+      "bytes": 4814,
+      "path": "mathsvg/results/oracle/symbolic-headroom.csv",
+      "sha256": "8986d7e7c94f4c8ca1779b548a265b0ec010967efd89f07b2fd56d9732e751ca"
+    },
+    {
+      "bytes": 4814,
+      "path": "mathsvg/results/oracle/symbolic.csv",
+      "sha256": "8986d7e7c94f4c8ca1779b548a265b0ec010967efd89f07b2fd56d9732e751ca"
+    }
+  ],
+  "schema": "mathsvg-development-oracle-v2",
+  "split": "development"
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "name": "canterbury",
+  "description": "The 11-file Canterbury Corpus.",
+  "homepage": "https://corpus.canterbury.ac.nz/descriptions/",
+  "license": "Upstream files retain their original terms; use for reproducible compression research and do not redistribute without checking each source.",
+  "archive": {
+    "urls": [
+      "https://corpus.canterbury.ac.nz/resources/cantrbry.tar.gz"
+    ],
+    "filename": "cantrbry.tar.gz",
+    "type": "tar.gz",
+    "size_bytes": 739071,
+    "max_download_bytes": 750000,
+    "max_uncompressed_bytes": 3000000,
+    "max_entries": 32,
+    "checksums": {
+      "sha256": "f140e8a5b73d3f53198555a63bfb827889394a42f20825df33c810c3d5e3f8fb"
+    },
+    "members": [
+      "alice29.txt",
+      "asyoulik.txt",
+      "cp.html",
+      "fields.c",
+      "grammar.lsp",
+      "kennedy.xls",
+      "lcet10.txt",
+      "plrabn12.txt",
+      "ptt5",
+      "sum",
+      "xargs.1"
+    ]
+  },
+  "combined": {
+    "output": "combined.bin",
+    "manifest": "combined.manifest.json",
+    "members": [
+      "alice29.txt",
+      "asyoulik.txt",
+      "cp.html",
+      "fields.c",
+      "grammar.lsp",
+      "kennedy.xls",
+      "lcet10.txt",
+      "plrabn12.txt",
+      "ptt5",
+      "sum",
+      "xargs.1"
+    ]
+  }
+}

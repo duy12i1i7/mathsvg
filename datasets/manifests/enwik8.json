@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "name": "enwik8",
+  "description": "The first 100,000,000 bytes of the 2006 English Wikipedia XML dump.",
+  "homepage": "https://www.mattmahoney.net/dc/textdata.html",
+  "license": "Derived from Wikipedia; consult the upstream dump and Wikimedia licensing terms.",
+  "archive": {
+    "urls": [
+      "https://www.mattmahoney.net/dc/enwik8.zip"
+    ],
+    "filename": "enwik8.zip",
+    "type": "zip",
+    "size_bytes": 36445475,
+    "max_download_bytes": 36500000,
+    "max_uncompressed_bytes": 100000000,
+    "max_entries": 4,
+    "checksums": {
+      "sha256": "547994d9980ebed1288380d652999f38a14fe291a6247c157c3d33d4932534bc"
+    },
+    "members": [
+      "enwik8"
+    ]
+  },
+  "expected_files": [
+    {
+      "path": "enwik8",
+      "size_bytes": 100000000,
+      "checksums": {
+        "sha256": "2b49720ec4d78c3c9fabaee6e4179a5e997302b3a70029f30f2d582218c024a8"
+      }
+    }
+  ]
+}

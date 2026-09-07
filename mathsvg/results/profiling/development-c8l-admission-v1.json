@@ -1,0 +1,238 @@
+{
+  "schema": "mathsvg-development-admission-probe-v1",
+  "experiment_id": "development-c8l-admission-v1",
+  "evidence_scope": "development",
+  "status": "complete",
+  "purpose": "Targeted paired pre-admission measurement of the Balanced profile change from C4Lazy to C8Lazy.",
+  "run_date": "2026-08-12",
+  "holdout_payload_inspected": false,
+  "methodology": {
+    "runner": "custom-pre-admission-probe-v1",
+    "official_benchmark_runner": false,
+    "operation": "compress",
+    "profile": "balanced",
+    "threads": 1,
+    "warmup_repetitions_per_input_and_binary": 1,
+    "measured_repetitions_per_input_and_binary": 10,
+    "schedule": "paired, randomized, and interleaved within each development input",
+    "timing_metric": "monotonic wall-clock nanoseconds",
+    "summary_statistic": "median of ten measured repetitions per input and binary",
+    "aggregate_timing_statistic": "sum of the three per-input medians",
+    "correctness": "Every warmup and measured archive was decompressed and checked byte-for-byte against its input.",
+    "archive_identity": "All eleven archives for a given input and binary had the recorded deterministic size and SHA-256."
+  },
+  "source_identity": {
+    "base_git_commit": "36f84685dc00064dae9a239face7e8eff797ed28",
+    "base_git_commit_short": "36f84685dc00",
+    "worktree_state": "dirty",
+    "dirty_disclosure": "The MathSVG implementation and evidence tree were untracked relative to the base commit. The commit alone does not reproduce either benchmark binary; the binary SHA-256 values below are the executable identities used by this probe.",
+    "source_manifest_captured": false
+  },
+  "machine": {
+    "machine_id": "local-x86-64",
+    "architecture": "x86_64",
+    "logical_cpus": 16,
+    "cpu": "Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz",
+    "virtualization": "VMware",
+    "kernel": "Linux 7.0.0-28-generic",
+    "glibc": "2.39",
+    "rustc": "rustc 1.97.1 (8bab26f4f 2026-07-14)",
+    "llvm": "22.1.6"
+  },
+  "variants": {
+    "c4_lazy": {
+      "binary_sha256": "5b5b8c3a8655dd0d5a9f3f9da0ccf7cd468c8306f08e2f2cb2ac1e41764f8ba7",
+      "balanced_lz_parser_policy": "C4L",
+      "balanced_optimizer_work_budget": 50000000,
+      "shared_hotpaths": [
+        "conditional LZ/Huffman payload emission",
+        "chunked Huffman payload writer"
+      ]
+    },
+    "c8_lazy": {
+      "binary_sha256": "997217bcf5afe23ed4db02d2659111bebe4a16632bb36f27ef181784546603aa",
+      "balanced_lz_parser_policy": "C8L",
+      "balanced_optimizer_work_budget": 80000000,
+      "shared_hotpaths": [
+        "conditional LZ/Huffman payload emission",
+        "chunked Huffman payload writer"
+      ]
+    }
+  },
+  "intended_controlled_difference": "The two binaries shared the conditional-emission and chunked-writer hotpaths; the Balanced profile used C4L with a 50,000,000 work budget in the control and C8L with an 80,000,000 work budget in the candidate.",
+  "rows": [
+    {
+      "dataset_id": "dev-silesia-x-ray",
+      "input_path": "datasets/data/silesia/x-ray",
+      "input_bytes": 8474240,
+      "input_sha256": "7de9fce1405dc44ae5e6813ed21cd5751e761bd4265655a005d39b9685d1c9ad",
+      "c4_lazy": {
+        "archive_bytes": 6801499,
+        "archive_sha256": "734bc30dedfc7cdb6cebfcdb43cf028b8aaa5c7d67608fb33363eea654bdb6a8",
+        "compression_wall_ns": [
+          7896795409,
+          7823388804,
+          7889468057,
+          7949775942,
+          8049452801,
+          8023727834,
+          7963160755,
+          7940648871,
+          8074611468,
+          8040578138
+        ],
+        "compression_wall_ns_median": 7956468348.5
+      },
+      "c8_lazy": {
+        "archive_bytes": 6800480,
+        "archive_sha256": "ebdaa101072862703179b1105e11c4d16cd26cfccb524c40e2ef01e060e86ff8",
+        "compression_wall_ns": [
+          7982056013,
+          7992023878,
+          7888969435,
+          8014321259,
+          7977669573,
+          8007066764,
+          8144621795,
+          7941555183,
+          7950629568,
+          8011582020
+        ],
+        "compression_wall_ns_median": 7987039945.5
+      },
+      "c8_minus_c4": {
+        "archive_bytes": -1019,
+        "archive_percent": -0.014981991469821578,
+        "compression_wall_ns_median": 30571597.0,
+        "compression_wall_percent": 0.38423576467520965
+      },
+      "roundtrip_checks": 22,
+      "roundtrip_sha256": "7de9fce1405dc44ae5e6813ed21cd5751e761bd4265655a005d39b9685d1c9ad"
+    },
+    {
+      "dataset_id": "dev-silesia-xml",
+      "input_path": "datasets/data/silesia/xml",
+      "input_bytes": 5345280,
+      "input_sha256": "0e82e54e695c1938e4193448022543845b33020c8be6bf3bf3ead2224903e08c",
+      "c4_lazy": {
+        "archive_bytes": 952523,
+        "archive_sha256": "e1b85b1f942189b2cbbe2d6d9639c40c1cb50ff958aea3b8b189f94bf7a97311",
+        "compression_wall_ns": [
+          2680596474,
+          2648135708,
+          2662151271,
+          2645269426,
+          2651208372,
+          2608597916,
+          2663796519,
+          2654430115,
+          2694375724,
+          2661004389
+        ],
+        "compression_wall_ns_median": 2657717252.0
+      },
+      "c8_lazy": {
+        "archive_bytes": 900805,
+        "archive_sha256": "baee25de6d369a938d4b186dcb6a44e73eb0ec8fc1718cbb134bf8f24c93055c",
+        "compression_wall_ns": [
+          2632421203,
+          2691343597,
+          2691052838,
+          2684211212,
+          2661273405,
+          2666639211,
+          2698568725,
+          2638534201,
+          2647015244,
+          2642816159
+        ],
+        "compression_wall_ns_median": 2663956308.0
+      },
+      "c8_minus_c4": {
+        "archive_bytes": -51718,
+        "archive_percent": -5.429580178116434,
+        "compression_wall_ns_median": 6239056.0,
+        "compression_wall_percent": 0.23475243633629392
+      },
+      "roundtrip_checks": 22,
+      "roundtrip_sha256": "0e82e54e695c1938e4193448022543845b33020c8be6bf3bf3ead2224903e08c"
+    },
+    {
+      "dataset_id": "dev-silesia-osdb",
+      "input_path": "datasets/data/silesia/osdb",
+      "input_bytes": 10085684,
+      "input_sha256": "60f027179302ca3ad87c58ac90b6be72ec23588aaa7a3b7fe8ecc0f11def3fa3",
+      "c4_lazy": {
+        "archive_bytes": 4108520,
+        "archive_sha256": "d7591e998e1d4f96d1d6476c5447456c65852e5af9bd80b52905b910e238522c",
+        "compression_wall_ns": [
+          7476059248,
+          7636960675,
+          7443435503,
+          7629626550,
+          7587851358,
+          7449986840,
+          7497999446,
+          7606854537,
+          7522832550,
+          7421109366
+        ],
+        "compression_wall_ns_median": 7510415998.0
+      },
+      "c8_lazy": {
+        "archive_bytes": 4083821,
+        "archive_sha256": "4d126d5d3b997a1cc2a615171ee3f326b6c8ea6b9c1057e31cae2a9fa40ba214",
+        "compression_wall_ns": [
+          7702729686,
+          7802552470,
+          7756129281,
+          7872302302,
+          7683594160,
+          7774774567,
+          7875232672,
+          7808049659,
+          7781533504,
+          7788422341
+        ],
+        "compression_wall_ns_median": 7784977922.5
+      },
+      "c8_minus_c4": {
+        "archive_bytes": -24699,
+        "archive_percent": -0.6011653831550047,
+        "compression_wall_ns_median": 274561924.5,
+        "compression_wall_percent": 3.655748557378379
+      },
+      "roundtrip_checks": 22,
+      "roundtrip_sha256": "60f027179302ca3ad87c58ac90b6be72ec23588aaa7a3b7fe8ecc0f11def3fa3"
+    }
+  ],
+  "aggregate": {
+    "input_count": 3,
+    "measured_compressions_per_variant": 30,
+    "warmup_compressions_per_variant": 3,
+    "roundtrip_checks": 66,
+    "c4_lazy_archive_bytes": 11862542,
+    "c8_lazy_archive_bytes": 11785106,
+    "c8_minus_c4_archive_bytes": -77436,
+    "c8_minus_c4_archive_percent": -0.6527774569733873,
+    "c4_lazy_sum_of_compression_medians_ns": 18124601598.5,
+    "c8_lazy_sum_of_compression_medians_ns": 18435974176.0,
+    "c8_minus_c4_sum_of_compression_medians_ns": 311372577.5,
+    "c8_minus_c4_compression_percent": 1.7179554309528622
+  },
+  "admission": {
+    "decision": "keep-c8l",
+    "maximum_allowed_compression_regression_percent": 15.0,
+    "observed_compression_regression_percent": 1.7179554309528622,
+    "observed_archive_reduction_bytes": 77436,
+    "observed_archive_reduction_percent": 0.6527774569733873,
+    "reason": "C8L reduced the aggregate archive size on all three targeted development inputs while the aggregate compression-time regression remained below the 15% admission ceiling."
+  },
+  "limitations": [
+    "This is a custom targeted pre-admission probe, not an output of the official benchmark runner.",
+    "The three inputs were selected development cases, so this artifact is not a corpus-wide benchmark or dominance certificate.",
+    "The probe did not measure decompression time, peak RSS, statistical confidence intervals, baselines, validation data, ARM64, or a second machine.",
+    "The dirty source worktree was not captured as a complete content-addressed source manifest; binary hashes are authoritative for executable identity.",
+    "The admission decision requires subsequent official development and validation benchmark/gate regeneration."
+  ]
+}

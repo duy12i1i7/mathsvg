@@ -1,0 +1,35 @@
+{
+  "aggregates": [
+    {
+      "bits_per_byte": 2.7529838751490643,
+      "codec": "mathzip-max",
+      "compressed_bytes": 530968,
+      "compression_mbps": 0.0029276644819966036,
+      "corpus": "canterbury_max_timeout_regression",
+      "decompression_mbps": 44.280714759777325,
+      "failed_rows": 0,
+      "original_bytes": 1542960,
+      "peak_rss_bytes": 11571200,
+      "profile": "max-timeout-regression",
+      "ratio": 2.9059378342950986,
+      "successful_rows": 2,
+      "threads": 1
+    },
+    {
+      "bits_per_byte": 0.5868719863120236,
+      "codec": "zstd-max",
+      "compressed_bytes": 113190,
+      "compression_mbps": 1.306045719975049,
+      "corpus": "canterbury_max_timeout_regression",
+      "decompression_mbps": 69.8606820555467,
+      "failed_rows": 0,
+      "original_bytes": 1542960,
+      "peak_rss_bytes": 22106112,
+      "profile": "max-timeout-regression",
+      "ratio": 13.631592896899019,
+      "successful_rows": 2,
+      "threads": 1
+    }
+  ],
+  "run_id": "20260725T055807Z-2e6ce6d4"
+}

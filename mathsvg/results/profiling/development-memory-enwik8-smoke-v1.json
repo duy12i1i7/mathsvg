@@ -1,0 +1,272 @@
+{
+  "binary": {
+    "path": "/home/ase/zipp/target/release/mathsvg",
+    "sha256": "c5c433301bf3bffaa1a75b00d10eca2866a1f5e6f412a031d562199e59f64a06",
+    "version": "mathsvg 0.1.0"
+  },
+  "evidence_scope": "development",
+  "experiment_id": "development-memory-enwik8-smoke-v1",
+  "gate": "Gate 3 - Memory",
+  "gate_reasons": [
+    "Gate 3 requires the canonical 1,000,000,000-byte enwik9",
+    "benchmark methodology requires at least 5 repetitions",
+    "benchmark methodology requires a warm-up"
+  ],
+  "gate_status": "incomplete",
+  "holdout_payload_inspected": false,
+  "immutable_inputs_sha256": "062c112dd3800b8ab75852fa089db7efe9d29d59bf3a5aaee0eb294cc5a92b45",
+  "immutable_inputs_stable": true,
+  "input": {
+    "bytes": 100000000,
+    "dataset_id": "dev-enwik8-enwik8",
+    "manifest_canonical_sha256": "88ed376ce82fbd9301fe2fce71dd0e3a4af5f837450b50b8489d678b19d5fca7",
+    "manifest_file_sha256": "e94bcc95b681519f4784b11b410d59a703882ebfaa971e251b5c714be2ba59a2",
+    "manifest_path": "mathsvg/results/manifests/development.csv",
+    "path": "datasets/data/enwik8/enwik8",
+    "sha256": "2b49720ec4d78c3c9fabaee6e4179a5e997302b3a70029f30f2d582218c024a8",
+    "split": "development"
+  },
+  "machine": {
+    "architecture": "x86_64",
+    "logical_cpus": 16,
+    "machine_id": "local-x86-64",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  },
+  "measurement": {
+    "interleaved_profile_order": true,
+    "limitations": [
+      "GNU time %M is process peak RSS in KiB multiplied by 1024",
+      "filesystem cache is not dropped between trials",
+      "CPU frequency/governor is not controlled",
+      "this report contains one machine/architecture only"
+    ],
+    "method": "gnu-time-v1-monotonic-wall",
+    "native_limit_policy": {
+      "max_archive_bytes": 201048590,
+      "max_input_bytes": 100000007,
+      "max_output_bytes": 100000007
+    },
+    "repetitions": 1,
+    "seed": 1297748005,
+    "strict_threshold_operator": "<",
+    "time_path": "/usr/bin/time",
+    "time_sha256": "3b11dec50514a8473e9f6efa7a34d584d0657538c09988f61b72d38ad4991a10",
+    "time_version": "time (GNU Time) UNKNOWN | Copyright (C) 2018 Free Software Foundation, Inc. | License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>. | This is free software: you are free to change and redistribute it. | There is NO WARRANTY, to the extent permitted by law. |  | Written by David Keppel, David MacKenzie, and Assaf Gordon.",
+    "warmups": 0
+  },
+  "rows": [
+    {
+      "archive_bytes": 46245202,
+      "archive_sha256": "ffa3c12c0517f5c30001a3655a041dcbc530013997417e23b02ae7b531f861ec",
+      "backend": "scalar",
+      "compress_command": [
+        "/home/ase/zipp/target/release/mathsvg",
+        "compress",
+        "--profile",
+        "max",
+        "--threads",
+        "1",
+        "--max-input-bytes",
+        "100000007",
+        "/home/ase/zipp/datasets/data/enwik8/enwik8",
+        "/tmp/mathsvg-memory-gate-3pg00bxt/0000-max/archive.msvg"
+      ],
+      "compression": {
+        "cpu_ns": 431070000000,
+        "peak_rss_bytes": 53694464,
+        "returncode": 0,
+        "stderr_excerpt": "mathsvg: compressed input_bytes=100000000 archive_bytes=46245202 blocks=48 profile=max ablation=none selection=native-optimized threads=1 maximum_inflight_input_bytes=2097152 original_sha256=2b49720ec4d78c3c9fabaee6e4179a5e997302b3a70029f30f2d582218c024a8 streamed=true\n",
+        "stdout_excerpt": "",
+        "wall_ns": 431440309885
+      },
+      "decoder_rss_limit_bytes_exclusive": 268435456,
+      "decoder_within_limit": true,
+      "decompress_command": [
+        "/home/ase/zipp/target/release/mathsvg",
+        "decompress",
+        "--backend",
+        "scalar",
+        "--max-archive-bytes",
+        "201048590",
+        "--max-output-bytes",
+        "100000007",
+        "/tmp/mathsvg-memory-gate-3pg00bxt/0000-max/archive.msvg",
+        "/tmp/mathsvg-memory-gate-3pg00bxt/0000-max/restored.bin"
+      ],
+      "decompression": {
+        "cpu_ns": 9400000000,
+        "peak_rss_bytes": 8073216,
+        "returncode": 0,
+        "stderr_excerpt": "mathsvg: restored output_bytes=100000000 blocks=48 backend=scalar original_sha256=2b49720ec4d78c3c9fabaee6e4179a5e997302b3a70029f30f2d582218c024a8 verified=true streamed=true\n",
+        "stdout_excerpt": "",
+        "wall_ns": 9663897104
+      },
+      "encoder_rss_limit_bytes_exclusive": 1073741824,
+      "encoder_within_limit": true,
+      "profile": "max",
+      "reason": "",
+      "repetition": 0,
+      "restored_sha256": "2b49720ec4d78c3c9fabaee6e4179a5e997302b3a70029f30f2d582218c024a8",
+      "roundtrip_ok": true,
+      "schedule_order": 0,
+      "sequence": 0,
+      "status": "ok",
+      "threads": 1,
+      "warmup": false
+    },
+    {
+      "archive_bytes": 46358239,
+      "archive_sha256": "30755d92e4d5582312cf1600cc7f1e6a0dae25986d312fdd1297d913de5f1f60",
+      "backend": "scalar",
+      "compress_command": [
+        "/home/ase/zipp/target/release/mathsvg",
+        "compress",
+        "--profile",
+        "balanced",
+        "--threads",
+        "1",
+        "--max-input-bytes",
+        "100000007",
+        "/home/ase/zipp/datasets/data/enwik8/enwik8",
+        "/tmp/mathsvg-memory-gate-3pg00bxt/0001-balanced/archive.msvg"
+      ],
+      "compression": {
+        "cpu_ns": 89030000000,
+        "peak_rss_bytes": 24494080,
+        "returncode": 0,
+        "stderr_excerpt": "mathsvg: compressed input_bytes=100000000 archive_bytes=46358239 blocks=96 profile=balanced ablation=none selection=native-optimized threads=1 maximum_inflight_input_bytes=1048576 original_sha256=2b49720ec4d78c3c9fabaee6e4179a5e997302b3a70029f30f2d582218c024a8 streamed=true\n",
+        "stdout_excerpt": "",
+        "wall_ns": 89117276966
+      },
+      "decoder_rss_limit_bytes_exclusive": 268435456,
+      "decoder_within_limit": true,
+      "decompress_command": [
+        "/home/ase/zipp/target/release/mathsvg",
+        "decompress",
+        "--backend",
+        "scalar",
+        "--max-archive-bytes",
+        "201048590",
+        "--max-output-bytes",
+        "100000007",
+        "/tmp/mathsvg-memory-gate-3pg00bxt/0001-balanced/archive.msvg",
+        "/tmp/mathsvg-memory-gate-3pg00bxt/0001-balanced/restored.bin"
+      ],
+      "decompression": {
+        "cpu_ns": 9300000000,
+        "peak_rss_bytes": 5570560,
+        "returncode": 0,
+        "stderr_excerpt": "mathsvg: restored output_bytes=100000000 blocks=96 backend=scalar original_sha256=2b49720ec4d78c3c9fabaee6e4179a5e997302b3a70029f30f2d582218c024a8 verified=true streamed=true\n",
+        "stdout_excerpt": "",
+        "wall_ns": 9339969984
+      },
+      "encoder_rss_limit_bytes_exclusive": 536870912,
+      "encoder_within_limit": true,
+      "profile": "balanced",
+      "reason": "",
+      "repetition": 0,
+      "restored_sha256": "2b49720ec4d78c3c9fabaee6e4179a5e997302b3a70029f30f2d582218c024a8",
+      "roundtrip_ok": true,
+      "schedule_order": 1,
+      "sequence": 1,
+      "status": "ok",
+      "threads": 1,
+      "warmup": false
+    },
+    {
+      "archive_bytes": 98117633,
+      "archive_sha256": "21bc93a0f461ad9b41aab45661f6dab9c180d440a22ea6e62f9ae92f8e91132e",
+      "backend": "scalar",
+      "compress_command": [
+        "/home/ase/zipp/target/release/mathsvg",
+        "compress",
+        "--profile",
+        "fast",
+        "--threads",
+        "1",
+        "--max-input-bytes",
+        "100000007",
+        "/home/ase/zipp/datasets/data/enwik8/enwik8",
+        "/tmp/mathsvg-memory-gate-3pg00bxt/0002-fast/archive.msvg"
+      ],
+      "compression": {
+        "cpu_ns": 34430000000,
+        "peak_rss_bytes": 24358912,
+        "returncode": 0,
+        "stderr_excerpt": "mathsvg: compressed input_bytes=100000000 archive_bytes=98117633 blocks=96 profile=fast ablation=none selection=mixed-native threads=1 maximum_inflight_input_bytes=1048576 original_sha256=2b49720ec4d78c3c9fabaee6e4179a5e997302b3a70029f30f2d582218c024a8 streamed=true\n",
+        "stdout_excerpt": "",
+        "wall_ns": 34472624825
+      },
+      "decoder_rss_limit_bytes_exclusive": 268435456,
+      "decoder_within_limit": true,
+      "decompress_command": [
+        "/home/ase/zipp/target/release/mathsvg",
+        "decompress",
+        "--backend",
+        "scalar",
+        "--max-archive-bytes",
+        "201048590",
+        "--max-output-bytes",
+        "100000007",
+        "/tmp/mathsvg-memory-gate-3pg00bxt/0002-fast/archive.msvg",
+        "/tmp/mathsvg-memory-gate-3pg00bxt/0002-fast/restored.bin"
+      ],
+      "decompression": {
+        "cpu_ns": 4510000000,
+        "peak_rss_bytes": 8241152,
+        "returncode": 0,
+        "stderr_excerpt": "mathsvg: restored output_bytes=100000000 blocks=96 backend=scalar original_sha256=2b49720ec4d78c3c9fabaee6e4179a5e997302b3a70029f30f2d582218c024a8 verified=true streamed=true\n",
+        "stdout_excerpt": "",
+        "wall_ns": 4542039294
+      },
+      "encoder_rss_limit_bytes_exclusive": 268435456,
+      "encoder_within_limit": true,
+      "profile": "fast",
+      "reason": "",
+      "repetition": 0,
+      "restored_sha256": "2b49720ec4d78c3c9fabaee6e4179a5e997302b3a70029f30f2d582218c024a8",
+      "roundtrip_ok": true,
+      "schedule_order": 2,
+      "sequence": 2,
+      "status": "ok",
+      "threads": 1,
+      "warmup": false
+    }
+  ],
+  "runner_sha256": "9b4966385fb8fadde8acb9d099132dcfe84053f2ddafb302b330709ee8a7a19f",
+  "runtime_profiles": {
+    "balanced": {
+      "config_file_sha256": "789657f7674a0a8204ac320674c039f0068fda5a762b47cbbd72419188df4438",
+      "config_path": "mathsvg/configs/balanced/profile.toml",
+      "measurement_config_sha256": "ee0fa0603e5dba8a2c32e36a98cbb515ddc493f4c079e8d6833cc058077be7cc",
+      "runtime_profile_sha256": "d2f471f0cb672e93d3bcc45dd98b2668e7e084c86fee4054490d93bf9d89cc94"
+    },
+    "fast": {
+      "config_file_sha256": "2fcdfe499de207695bea921b0dcbff979430a61039ee1cc1a0d84ae99e38b585",
+      "config_path": "mathsvg/configs/fast/profile.toml",
+      "measurement_config_sha256": "adeb8a21be815905b8e37f225597d31144a564a7937d5cf4fc3a97d71ed40527",
+      "runtime_profile_sha256": "d627e08f2b9ad4ddf87a5770d92afa736cc88182c43d79ac2ce19eaee7a8bba9"
+    },
+    "max": {
+      "config_file_sha256": "50df8f1fe107a8d448db12f55475cb9bb088d85113e76c02a60a69038b3367d2",
+      "config_path": "mathsvg/configs/max/profile.toml",
+      "measurement_config_sha256": "b4e5c91899475ab6125f469b88aa43942249ec7fcaf3d39e6f46591217d7091e",
+      "runtime_profile_sha256": "5650fbfa7fb097e2ccdd282a5ed464e1d0aa92965cc4c102ee6e8c33c7196024"
+    }
+  },
+  "schema_version": 1,
+  "source_after": {
+    "branch": "mathsvg-absolute",
+    "commit": "36f84685dc00064dae9a239face7e8eff797ed28",
+    "dirty": true,
+    "status_sha256": "ddff7ae3c0582db24a0ffcc24fda94f42f8d60269366e73cc3c6e359eeee3681"
+  },
+  "source_before": {
+    "branch": "mathsvg-absolute",
+    "commit": "36f84685dc00064dae9a239face7e8eff797ed28",
+    "dirty": true,
+    "status_sha256": "ddff7ae3c0582db24a0ffcc24fda94f42f8d60269366e73cc3c6e359eeee3681"
+  },
+  "source_stable_during_campaign": true
+}

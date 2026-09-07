@@ -1,0 +1,55 @@
+   Compiling mathzip-fuzz v0.0.0 (/home/ase/zipp/fuzz)
+    Finished `release` profile [optimized + debuginfo] target(s) in 0.66s
+    Finished `release` profile [optimized + debuginfo] target(s) in 0.06s
+     Running `fuzz/target/x86_64-unknown-linux-gnu/release/mathsvg_entropy -artifact_prefix=/home/ase/zipp/fuzz/artifacts/mathsvg_entropy/ -runs=10000 -max_len=16384 -timeout=10 -rss_limit_mb=2048 -print_final_stats=1 -verbosity=0 -artifact_prefix=/tmp/mathsvg-fuzz-campaign-t6rs2n0z/mathsvg_entropy/artifacts/ /tmp/mathsvg-fuzz-campaign-t6rs2n0z/mathsvg_entropy/corpus`
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO:        1 files found in /tmp/mathsvg-fuzz-campaign-t6rs2n0z/mathsvg_entropy/corpus
+INFO: seed corpus: files: 1 min: 56b max: 56b total: 56b rss: 32Mb
+	NEW_FUNC[1/3]: 0x55f9293d5d90  (/home/ase/zipp/fuzz/target/x86_64-unknown-linux-gnu/release/mathsvg_entropy+0x171d90) (BuildId: 0ef90b573525c2bfbae9c1346851127761b877a6)
+	NEW_FUNC[2/3]: 0x55f9293dede0  (/home/ase/zipp/fuzz/target/x86_64-unknown-linux-gnu/release/mathsvg_entropy+0x17ade0) (BuildId: 0ef90b573525c2bfbae9c1346851127761b877a6)
+	NEW_FUNC[1/1]: 0x55f9293e4360  (/home/ase/zipp/fuzz/target/x86_64-unknown-linux-gnu/release/mathsvg_entropy+0x180360) (BuildId: 0ef90b573525c2bfbae9c1346851127761b877a6)
+	NEW_FUNC[1/1]: 0x55f9293e45e0  (/home/ase/zipp/fuzz/target/x86_64-unknown-linux-gnu/release/mathsvg_entropy+0x1805e0) (BuildId: 0ef90b573525c2bfbae9c1346851127761b877a6)
+	NEW_FUNC[1/6]: 0x55f9293e08c0  (/home/ase/zipp/fuzz/target/x86_64-unknown-linux-gnu/release/mathsvg_entropy+0x17c8c0) (BuildId: 0ef90b573525c2bfbae9c1346851127761b877a6)
+	NEW_FUNC[2/6]: 0x55f9293e4980  (/home/ase/zipp/fuzz/target/x86_64-unknown-linux-gnu/release/mathsvg_entropy+0x180980) (BuildId: 0ef90b573525c2bfbae9c1346851127761b877a6)
+	NEW_FUNC[1/2]: 0x55f9293bcc20  (/home/ase/zipp/fuzz/target/x86_64-unknown-linux-gnu/release/mathsvg_entropy+0x158c20) (BuildId: 0ef90b573525c2bfbae9c1346851127761b877a6)
+	NEW_FUNC[2/2]: 0x55f9293d0940  (/home/ase/zipp/fuzz/target/x86_64-unknown-linux-gnu/release/mathsvg_entropy+0x16c940) (BuildId: 0ef90b573525c2bfbae9c1346851127761b877a6)
+###### Recommended dictionary. ######
+"\000\000\000\000\000\000\000-" # Uses: 22
+"\377\377\377)" # Uses: 44
+"(\000\000\000\000\000\000\000" # Uses: 21
+"\377\377\377\377\377\377\377\003" # Uses: 32
+"\000\000\000\035" # Uses: 40
+"\024\000\000\000" # Uses: 29
+"!\000\000\000" # Uses: 29
+"\001\000\000\000\000\000\000#" # Uses: 35
+"\376\377\377\377" # Uses: 33
+"\001\000\000\000\000\000\0008" # Uses: 30
+"\012\000\000\000" # Uses: 32
+"\377\377\377\377" # Uses: 25
+"$\000\000\000\000\000\000\000" # Uses: 29
+"\024Ma\000" # Uses: 20
+"\000\000\000\000\000\000\000\012" # Uses: 17
+"\000\000\000\021" # Uses: 28
+"$\000\000\000" # Uses: 27
+"\001\000\000\000\000\000\0002" # Uses: 18
+"\010\000\000\000\000\000\000\000" # Uses: 11
+"\377\377\377\026" # Uses: 17
+"\000\000\000\000" # Uses: 24
+"\001\000\000\000\000\000\000\001" # Uses: 17
+"\377\377\3772" # Uses: 20
+"\001\000\000\000" # Uses: 17
+"\377\377\377\377\377\377\377\016" # Uses: 22
+"\362\377\377\377\377\377\377\377" # Uses: 21
+"\377\377\377\377\377\377\377\377" # Uses: 21
+"\001\000\000\000\000\000\000\000" # Uses: 29
+".\000\000\000" # Uses: 17
+"\031\000\000\000" # Uses: 14
+"\377\377\377\377\377\377\377\211" # Uses: 8
+"\001\000\000\026" # Uses: 10
+"#\000\000\000\000\000\000\000" # Uses: 5
+###### End of recommended dictionary. ######
+stat::number_of_executed_units: 10000
+stat::average_exec_per_sec:     909
+stat::new_units_added:          356
+stat::slowest_unit_time_sec:    0
+stat::peak_rss_mb:              345

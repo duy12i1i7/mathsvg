@@ -1,0 +1,211 @@
+{
+  "artifacts_sha256": {
+    "ablation_comparison.png": "3c5a3276c50760704b42143e528639928b0b0e5946f200200a1b852386892db1",
+    "bits_per_byte_by_dataset.png": "4dc10aaa00d0ce8756a17d017070d4e0e8eb29b9d1417213f85150e69ef7b6ac",
+    "compression_ratio_by_dataset.png": "089495e9d845f4841032f85f5290ad91ac232a1da3290a6a64902de9651ec65c",
+    "compression_throughput.png": "15e95be56c9b302b0a8d442e9e79e39f4407ec9eee1c2f7176aa2fbbbf8c7e88",
+    "decompression_throughput.png": "dbd54283fbf82dc70fe90cd7695072230dcc70e534fce7c0ac212c0ba252f6f4",
+    "file_entropy_vs_mathzip_gain.png": "2ad8ca6c8ecece9981c3a61af830a536282de17ae2d63475e8df9762d07d25be",
+    "mathzip_gain_vs_zstd.png": "2630353d606072ea0a679e0334e43dfe6ff3cf8763fb5ea50392d4ac43183bcb",
+    "model_distribution.png": "67d2d01fa7a837b6b8dc4201f04e7b4d67b25c13b25a2a9ac046f44b80482b82",
+    "peak_memory.png": "1a89119c6a2e5b9633a7a2dead4755274253abbef5832dba764f9a8951c0818e",
+    "plot_data.json": "1cb675297dd08f4c8b6c146000c97211d588cbb3def076864324031c145029b3",
+    "ratio_vs_compression_speed.png": "08c9366ef356af56fc064981ef1872c17bf88ab177ad6bd5255468344e115028",
+    "ratio_vs_decompression_speed.png": "af65236d55bbc7171e81a0bd0d13796089b84a4624f3caa2c747bb0f488482a7",
+    "residual_entropy_vs_encoded_size.png": "93c93ce08d8d69b66e826833a00160c7242dc97947459fe93f460b0efc2beee6",
+    "segment_size_histogram.png": "c19f5f72c3d590347452269b92144bb7046129740ad7a02494587b600487f893",
+    "storage_breakdown.png": "34f62a431a80eb8a1c1147f9afe18ac4dd3e24a7c1f163cd74e3723b01ee1425",
+    "synthetic_noise_vs_ratio.png": "98b23f8419fe03b19d0f69ba021a47c5dac0a4cc78edc913829aa31761d620c7"
+  },
+  "comparison_choices": {
+    "ablation_comparison": {
+      "aggregation": "median ratio among successful rows",
+      "coverage": [
+        {
+          "median_successful_ratio": 0.9976252816172441,
+          "successful_rows": 12,
+          "threads": 1,
+          "total_rows": 12,
+          "variant": "01 raw only"
+        },
+        {
+          "median_successful_ratio": 1.0648740431015464,
+          "successful_rows": 12,
+          "threads": 1,
+          "total_rows": 12,
+          "variant": "02 residual coder only"
+        },
+        {
+          "median_successful_ratio": 1.0648740431015464,
+          "successful_rows": 12,
+          "threads": 1,
+          "total_rows": 12,
+          "variant": "03 fixed segmentation + constant"
+        },
+        {
+          "median_successful_ratio": 6.519708910367708,
+          "successful_rows": 12,
+          "threads": 1,
+          "total_rows": 12,
+          "variant": "04 fixed segmentation + all models"
+        },
+        {
+          "median_successful_ratio": 1.0710518818798678,
+          "successful_rows": 12,
+          "threads": 1,
+          "total_rows": 12,
+          "variant": "05 adaptive segmentation + constant"
+        },
+        {
+          "median_successful_ratio": 1.3350425976278637,
+          "successful_rows": 12,
+          "threads": 1,
+          "total_rows": 12,
+          "variant": "06 adaptive + constant/linear"
+        },
+        {
+          "median_successful_ratio": 1.6800827129387097,
+          "successful_rows": 12,
+          "threads": 1,
+          "total_rows": 12,
+          "variant": "07 add polynomial"
+        },
+        {
+          "median_successful_ratio": 3.808606447918233,
+          "successful_rows": 12,
+          "threads": 1,
+          "total_rows": 12,
+          "variant": "08 add periodic"
+        },
+        {
+          "median_successful_ratio": 7.4235231827127235,
+          "successful_rows": 12,
+          "threads": 1,
+          "total_rows": 12,
+          "variant": "09 add recurrence"
+        },
+        {
+          "median_successful_ratio": 7.4235231827127235,
+          "successful_rows": 12,
+          "threads": 1,
+          "total_rows": 12,
+          "variant": "10 add bit-plane"
+        },
+        {
+          "median_successful_ratio": 7.4235231827127235,
+          "successful_rows": 12,
+          "threads": 1,
+          "total_rows": 12,
+          "variant": "11 add stride transpose"
+        },
+        {
+          "median_successful_ratio": 7.4291902387122875,
+          "successful_rows": 12,
+          "threads": 1,
+          "total_rows": 12,
+          "variant": "12 add copy/reference"
+        },
+        {
+          "median_successful_ratio": 7.4291902387122875,
+          "successful_rows": 12,
+          "threads": 1,
+          "total_rows": 12,
+          "variant": "13 custom residual coders"
+        },
+        {
+          "median_successful_ratio": 9.585432233475554,
+          "successful_rows": 12,
+          "threads": 1,
+          "total_rows": 12,
+          "variant": "14 Zstd residual coder"
+        },
+        {
+          "median_successful_ratio": 7.4291902387122875,
+          "successful_rows": 12,
+          "threads": 1,
+          "total_rows": 12,
+          "variant": "15 identity transform only"
+        },
+        {
+          "median_successful_ratio": 6.959635161729204,
+          "successful_rows": 12,
+          "threads": 1,
+          "total_rows": 12,
+          "variant": "16 fixed partition"
+        },
+        {
+          "median_successful_ratio": 7.4291902387122875,
+          "successful_rows": 12,
+          "threads": 1,
+          "total_rows": 12,
+          "variant": "17 no raw fallback"
+        },
+        {
+          "median_successful_ratio": 7.314864814000038,
+          "successful_rows": 12,
+          "threads": 1,
+          "total_rows": 12,
+          "variant": "18 fast mode"
+        },
+        {
+          "median_successful_ratio": 7.4291902387122875,
+          "successful_rows": 12,
+          "threads": 1,
+          "total_rows": 12,
+          "variant": "19 balanced mode"
+        },
+        {
+          "median_successful_ratio": 7.235904542273895,
+          "successful_rows": 12,
+          "threads": 1,
+          "total_rows": 12,
+          "variant": "20 max mode"
+        }
+      ]
+    },
+    "file_entropy_vs_mathzip_gain": {
+      "baseline_codec": "zstd-default",
+      "mathzip_codec": "ablation-19-balanced"
+    },
+    "mathzip_gain_vs_xz": {
+      "aggregation": "corpus/thread weighted total compressed bytes",
+      "baseline_codec": null,
+      "mathzip_codec": "ablation-19-balanced"
+    },
+    "mathzip_gain_vs_zstd": {
+      "aggregation": "corpus/thread weighted total compressed bytes",
+      "baseline_codec": "zstd-default",
+      "mathzip_codec": "ablation-19-balanced"
+    }
+  },
+  "failure_count": 0,
+  "generated": [
+    "compression_ratio_by_dataset.png",
+    "bits_per_byte_by_dataset.png",
+    "compression_throughput.png",
+    "decompression_throughput.png",
+    "ratio_vs_compression_speed.png",
+    "ratio_vs_decompression_speed.png",
+    "peak_memory.png",
+    "storage_breakdown.png",
+    "model_distribution.png",
+    "segment_size_histogram.png",
+    "residual_entropy_vs_encoded_size.png",
+    "ablation_comparison.png",
+    "synthetic_noise_vs_ratio.png",
+    "file_entropy_vs_mathzip_gain.png",
+    "mathzip_gain_vs_zstd.png"
+  ],
+  "plot_generator": "python/mathzip_bench/plots.py",
+  "plot_generator_sha256": "7a06354c6089971069ffa6c41ced95062c78d3e5c43a0a93f8e36356432013cc",
+  "profile": "ablation",
+  "result_count": 252,
+  "result_document_hash_method": "canonical-json-v1",
+  "result_document_sha256": "437ed8c89f8bccefeff56926aa675264071e8615bd405f86163aec30483f09b6",
+  "run_id": "20260725T170925Z-dde3921f",
+  "schema_version": "mathzip-plot-manifest-v1",
+  "skipped_for_missing_metrics": [
+    "mathzip_gain_vs_xz"
+  ],
+  "status": "generated"
+}

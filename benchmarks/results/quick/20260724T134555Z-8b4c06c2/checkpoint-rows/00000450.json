@@ -1,0 +1,489 @@
+{
+  "completed_at_utc": "2026-07-24T13:52:51.885679+00:00",
+  "execution_interval_index": 0,
+  "expected_grid_index": 450,
+  "interval_active_seconds": 416.60807463400124,
+  "key": [
+    "silesia_quick_subset",
+    "datasets/data/silesia/mozilla",
+    "mathzip-fast",
+    1
+  ],
+  "row": {
+    "actual_residual_coded_bytes": 45070136,
+    "archive_sha256": "ee4a876bfb1943884f15db1c7ee52725b548e10585994ed33aad4b05cbcfc30f",
+    "bits_per_byte": 7.0574187512495,
+    "codec": "mathzip-fast",
+    "codec_family": "mathzip",
+    "codec_level": "fast",
+    "command_lines": [
+      "'<repo>/target/release/mathzip' compress --mode fast --max-input-bytes 8589934592 --no-sync --force '<repo>/datasets/data/silesia/mozilla' '<work>/archive.mz'",
+      "'<repo>/target/release/mathzip' compress --mode fast --max-input-bytes 8589934592 --no-sync --force --metrics-output '<work>/metrics-probe.mz.metrics.json' '<repo>/datasets/data/silesia/mozilla' '<work>/metrics-probe.mz'",
+      "'<repo>/target/release/mathzip' decompress --max-archive-bytes 17179869184 --max-output-bytes 8589934592 --max-segments 8388608 --no-sync --force '<work>/archive.mz' '<work>/restored.bin'"
+    ],
+    "compressed_bytes": 45185547,
+    "compression_cpu_seconds": 29.182675999999958,
+    "compression_mbps": 1.7540486871849084,
+    "compression_seconds": 29.2012874980137,
+    "container_overhead_bytes": 120,
+    "corpus": "silesia_quick_subset",
+    "decompression_cpu_seconds": 1.0609650000000101,
+    "decompression_mbps": 48.19083900768417,
+    "decompression_seconds": 1.062867570988601,
+    "deterministic_archive": true,
+    "error": null,
+    "estimated_residual_entropy": 6.321875020062975,
+    "expansion_percent": 0.0,
+    "input_entropy_bits_per_byte": 6.222428869049127,
+    "input_license": "Per-file upstream terms; see Silesia provenance",
+    "input_manifest": "datasets/data/silesia/dataset.json",
+    "input_manifest_sha256": "7b9daf7c42ff8dff9effce4fef13077fe99c06d23a7969f92fbeec67c7701f30",
+    "input_manifest_verified": true,
+    "input_name": "mozilla",
+    "input_path": "datasets/data/silesia/mozilla",
+    "input_provenance": "datasets/manifests/silesia.json",
+    "input_sha256": "657fc3764b0c75ac9de9623125705831ebbfbe08fed248df73bc2dc66e2a963b",
+    "math_segments_winning_raw": 399,
+    "math_segments_winning_zstd": 0,
+    "mathzip_inspection": {
+      "actual_residual_coded_bytes": 45070136,
+      "checksums": {
+        "archive": true,
+        "header": true,
+        "original": true,
+        "segments": true
+      },
+      "compressed_size": 45185547,
+      "compression_ratio": 1.1335589231662948,
+      "container_overhead_bytes": 120,
+      "estimated_residual_entropy": 6.321875020062975,
+      "format_version": 1,
+      "math_segments_winning_raw": 399,
+      "math_segments_winning_zstd": 0,
+      "mean_segment_size": 16380.070354972817,
+      "median_segment_size": 16384.0,
+      "metadata_bytes": 112692,
+      "model_distribution": {
+        "constant": 4,
+        "periodic": 144,
+        "raw": 2728,
+        "recurrence": 251
+      },
+      "model_parameter_bytes": 2719,
+      "original_size": 51220480,
+      "partition_metadata_bytes": 112572,
+      "payload_size": 45185431,
+      "raw_fallback_percentage": 48.49260295881648,
+      "raw_model_percentage": 87.23710515793682,
+      "residual_bytes": 45070136,
+      "residual_distribution": {
+        "bit_pack": 185,
+        "raw": 1516,
+        "sparse": 42,
+        "zero_run": 1384
+      },
+      "residual_mode_distribution": {
+        "add_modulo": 3127
+      },
+      "segment_count": 3127,
+      "segment_descriptor_bytes": 112572,
+      "transform_count": 1,
+      "transform_metadata_bytes": 4,
+      "transformed_size": 51220480,
+      "transforms": [
+        {
+          "type": "identity"
+        }
+      ]
+    },
+    "mean_segment_size": 16380.070354972817,
+    "median_segment_size": 16384.0,
+    "model_distribution": {
+      "constant": 4,
+      "periodic": 144,
+      "raw": 2728,
+      "recurrence": 251
+    },
+    "model_fitting_seconds": 0.577637581,
+    "model_parameter_bytes": 2719,
+    "original_bytes": 51220480,
+    "partition_metadata_bytes": 112572,
+    "peak_rss_bytes": 344739840.0,
+    "profile": "quick",
+    "ratio": 1.1335589231662948,
+    "raw_fallback_percent": 48.49260295881648,
+    "raw_model_percent": 87.23710515793682,
+    "requested_repeats": 3,
+    "residual_bytes": 45070136,
+    "residual_coding_seconds": 24.281779276,
+    "residual_distribution": {
+      "bit_pack": 185,
+      "raw": 1516,
+      "sparse": 42,
+      "zero_run": 1384
+    },
+    "restored_sha256": "657fc3764b0c75ac9de9623125705831ebbfbe08fed248df73bc2dc66e2a963b",
+    "roundtrip_verified": true,
+    "run_id": "20260724T134555Z-8b4c06c2",
+    "savings": 0.11782265609381248,
+    "savings_percent": 11.782265609381248,
+    "schema_version": "mathzip-benchmark-results-v1",
+    "search_seconds": 4.162063028,
+    "segment_count": 3127,
+    "status": "ok",
+    "successful_repeats": 3,
+    "tags": {},
+    "threads": 1,
+    "transform": [
+      {
+        "type": "identity"
+      }
+    ],
+    "trials": [
+      {
+        "archive_sha256": "ee4a876bfb1943884f15db1c7ee52725b548e10585994ed33aad4b05cbcfc30f",
+        "compressed_bytes": 45185547,
+        "compression_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "<repo>/datasets/data/silesia/mozilla",
+          "<work>/archive.mz"
+        ],
+        "compression_cpu_seconds": 29.106450999999993,
+        "compression_metrics": {
+          "model_fitting_seconds": 0.577637581,
+          "residual_coding_seconds": 24.281779276,
+          "search_seconds": 4.189907024
+        },
+        "compression_metrics_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--metrics-output",
+          "<work>/metrics-probe.mz.metrics.json",
+          "<repo>/datasets/data/silesia/mozilla",
+          "<work>/metrics-probe.mz"
+        ],
+        "compression_metrics_stderr": "compressed 51220480 -> 45185547 bytes (ratio 1.1336:1) in 29.049s",
+        "compression_peak_rss_bytes": 344739840,
+        "compression_seconds": 29.124216837008134,
+        "compression_stderr": "compressed 51220480 -> 45185547 bytes (ratio 1.1336:1) in 28.988s",
+        "decompression_command": [
+          "<repo>/target/release/mathzip",
+          "decompress",
+          "--max-archive-bytes",
+          "17179869184",
+          "--max-output-bytes",
+          "8589934592",
+          "--max-segments",
+          "8388608",
+          "--no-sync",
+          "--force",
+          "<work>/archive.mz",
+          "<work>/restored.bin"
+        ],
+        "decompression_cpu_seconds": 1.0575760000000116,
+        "decompression_peak_rss_bytes": 149413888,
+        "decompression_seconds": 1.0589149500010535,
+        "decompression_stderr": "restored 51220480 bytes in 0.941s; original SHA-256 verified",
+        "error": null,
+        "index": 0,
+        "inspection": {
+          "actual_residual_coded_bytes": 45070136,
+          "checksums": {
+            "archive": true,
+            "header": true,
+            "original": true,
+            "segments": true
+          },
+          "compressed_size": 45185547,
+          "compression_ratio": 1.1335589231662948,
+          "container_overhead_bytes": 120,
+          "estimated_residual_entropy": 6.321875020062975,
+          "format_version": 1,
+          "math_segments_winning_raw": 399,
+          "math_segments_winning_zstd": 0,
+          "mean_segment_size": 16380.070354972817,
+          "median_segment_size": 16384.0,
+          "metadata_bytes": 112692,
+          "model_distribution": {
+            "constant": 4,
+            "periodic": 144,
+            "raw": 2728,
+            "recurrence": 251
+          },
+          "model_parameter_bytes": 2719,
+          "original_size": 51220480,
+          "partition_metadata_bytes": 112572,
+          "payload_size": 45185431,
+          "raw_fallback_percentage": 48.49260295881648,
+          "raw_model_percentage": 87.23710515793682,
+          "residual_bytes": 45070136,
+          "residual_distribution": {
+            "bit_pack": 185,
+            "raw": 1516,
+            "sparse": 42,
+            "zero_run": 1384
+          },
+          "residual_mode_distribution": {
+            "add_modulo": 3127
+          },
+          "segment_count": 3127,
+          "segment_descriptor_bytes": 112572,
+          "transform_count": 1,
+          "transform_metadata_bytes": 4,
+          "transformed_size": 51220480,
+          "transforms": [
+            {
+              "type": "identity"
+            }
+          ]
+        },
+        "restored_sha256": "657fc3764b0c75ac9de9623125705831ebbfbe08fed248df73bc2dc66e2a963b",
+        "roundtrip_verified": true,
+        "status": "ok"
+      },
+      {
+        "archive_sha256": "ee4a876bfb1943884f15db1c7ee52725b548e10585994ed33aad4b05cbcfc30f",
+        "compressed_bytes": 45185547,
+        "compression_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "<repo>/datasets/data/silesia/mozilla",
+          "<work>/archive.mz"
+        ],
+        "compression_cpu_seconds": 29.20196199999998,
+        "compression_metrics": {
+          "model_fitting_seconds": 0.579091128,
+          "residual_coding_seconds": 24.328363415,
+          "search_seconds": 4.162063028
+        },
+        "compression_metrics_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--metrics-output",
+          "<work>/metrics-probe.mz.metrics.json",
+          "<repo>/datasets/data/silesia/mozilla",
+          "<work>/metrics-probe.mz"
+        ],
+        "compression_metrics_stderr": "compressed 51220480 -> 45185547 bytes (ratio 1.1336:1) in 29.070s",
+        "compression_peak_rss_bytes": 344723456,
+        "compression_seconds": 29.215921380004147,
+        "compression_stderr": "compressed 51220480 -> 45185547 bytes (ratio 1.1336:1) in 29.084s",
+        "decompression_command": [
+          "<repo>/target/release/mathzip",
+          "decompress",
+          "--max-archive-bytes",
+          "17179869184",
+          "--max-output-bytes",
+          "8589934592",
+          "--max-segments",
+          "8388608",
+          "--no-sync",
+          "--force",
+          "<work>/archive.mz",
+          "<work>/restored.bin"
+        ],
+        "decompression_cpu_seconds": 1.0768589999999563,
+        "decompression_peak_rss_bytes": 150765568,
+        "decompression_seconds": 1.0787253330054227,
+        "decompression_stderr": "restored 51220480 bytes in 0.950s; original SHA-256 verified",
+        "error": null,
+        "index": 1,
+        "inspection": {
+          "actual_residual_coded_bytes": 45070136,
+          "checksums": {
+            "archive": true,
+            "header": true,
+            "original": true,
+            "segments": true
+          },
+          "compressed_size": 45185547,
+          "compression_ratio": 1.1335589231662948,
+          "container_overhead_bytes": 120,
+          "estimated_residual_entropy": 6.321875020062975,
+          "format_version": 1,
+          "math_segments_winning_raw": 399,
+          "math_segments_winning_zstd": 0,
+          "mean_segment_size": 16380.070354972817,
+          "median_segment_size": 16384.0,
+          "metadata_bytes": 112692,
+          "model_distribution": {
+            "constant": 4,
+            "periodic": 144,
+            "raw": 2728,
+            "recurrence": 251
+          },
+          "model_parameter_bytes": 2719,
+          "original_size": 51220480,
+          "partition_metadata_bytes": 112572,
+          "payload_size": 45185431,
+          "raw_fallback_percentage": 48.49260295881648,
+          "raw_model_percentage": 87.23710515793682,
+          "residual_bytes": 45070136,
+          "residual_distribution": {
+            "bit_pack": 185,
+            "raw": 1516,
+            "sparse": 42,
+            "zero_run": 1384
+          },
+          "residual_mode_distribution": {
+            "add_modulo": 3127
+          },
+          "segment_count": 3127,
+          "segment_descriptor_bytes": 112572,
+          "transform_count": 1,
+          "transform_metadata_bytes": 4,
+          "transformed_size": 51220480,
+          "transforms": [
+            {
+              "type": "identity"
+            }
+          ]
+        },
+        "restored_sha256": "657fc3764b0c75ac9de9623125705831ebbfbe08fed248df73bc2dc66e2a963b",
+        "roundtrip_verified": true,
+        "status": "ok"
+      },
+      {
+        "archive_sha256": "ee4a876bfb1943884f15db1c7ee52725b548e10585994ed33aad4b05cbcfc30f",
+        "compressed_bytes": 45185547,
+        "compression_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "<repo>/datasets/data/silesia/mozilla",
+          "<work>/archive.mz"
+        ],
+        "compression_cpu_seconds": 29.182675999999958,
+        "compression_metrics": {
+          "model_fitting_seconds": 0.577158529,
+          "residual_coding_seconds": 24.268931877,
+          "search_seconds": 4.141982631
+        },
+        "compression_metrics_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--metrics-output",
+          "<work>/metrics-probe.mz.metrics.json",
+          "<repo>/datasets/data/silesia/mozilla",
+          "<work>/metrics-probe.mz"
+        ],
+        "compression_metrics_stderr": "compressed 51220480 -> 45185547 bytes (ratio 1.1336:1) in 28.988s",
+        "compression_peak_rss_bytes": 344748032,
+        "compression_seconds": 29.2012874980137,
+        "compression_stderr": "compressed 51220480 -> 45185547 bytes (ratio 1.1336:1) in 29.061s",
+        "decompression_command": [
+          "<repo>/target/release/mathzip",
+          "decompress",
+          "--max-archive-bytes",
+          "17179869184",
+          "--max-output-bytes",
+          "8589934592",
+          "--max-segments",
+          "8388608",
+          "--no-sync",
+          "--force",
+          "<work>/archive.mz",
+          "<work>/restored.bin"
+        ],
+        "decompression_cpu_seconds": 1.0609650000000101,
+        "decompression_peak_rss_bytes": 144994304,
+        "decompression_seconds": 1.062867570988601,
+        "decompression_stderr": "restored 51220480 bytes in 0.942s; original SHA-256 verified",
+        "error": null,
+        "index": 2,
+        "inspection": {
+          "actual_residual_coded_bytes": 45070136,
+          "checksums": {
+            "archive": true,
+            "header": true,
+            "original": true,
+            "segments": true
+          },
+          "compressed_size": 45185547,
+          "compression_ratio": 1.1335589231662948,
+          "container_overhead_bytes": 120,
+          "estimated_residual_entropy": 6.321875020062975,
+          "format_version": 1,
+          "math_segments_winning_raw": 399,
+          "math_segments_winning_zstd": 0,
+          "mean_segment_size": 16380.070354972817,
+          "median_segment_size": 16384.0,
+          "metadata_bytes": 112692,
+          "model_distribution": {
+            "constant": 4,
+            "periodic": 144,
+            "raw": 2728,
+            "recurrence": 251
+          },
+          "model_parameter_bytes": 2719,
+          "original_size": 51220480,
+          "partition_metadata_bytes": 112572,
+          "payload_size": 45185431,
+          "raw_fallback_percentage": 48.49260295881648,
+          "raw_model_percentage": 87.23710515793682,
+          "residual_bytes": 45070136,
+          "residual_distribution": {
+            "bit_pack": 185,
+            "raw": 1516,
+            "sparse": 42,
+            "zero_run": 1384
+          },
+          "residual_mode_distribution": {
+            "add_modulo": 3127
+          },
+          "segment_count": 3127,
+          "segment_descriptor_bytes": 112572,
+          "transform_count": 1,
+          "transform_metadata_bytes": 4,
+          "transformed_size": 51220480,
+          "transforms": [
+            {
+              "type": "identity"
+            }
+          ]
+        },
+        "restored_sha256": "657fc3764b0c75ac9de9623125705831ebbfbe08fed248df73bc2dc66e2a963b",
+        "roundtrip_verified": true,
+        "status": "ok"
+      }
+    ],
+    "variant": ""
+  },
+  "schema_version": "mathzip-benchmark-checkpoint-row-v1"
+}

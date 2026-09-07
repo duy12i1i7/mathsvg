@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "evidence_scope": "development-and-open-validation",
+  "status": "acceptance_incomplete",
+  "source": {
+    "branch": "mathsvg-absolute",
+    "commit": "36f84685dc00064dae9a239face7e8eff797ed28",
+    "dirty": true,
+    "note": "All campaigns record stable source identity within their own run. The user-owned YeuCau.md remains modified, so this is not a clean publishable freeze."
+  },
+  "binary": {
+    "path": "target/release/mathsvg",
+    "sha256": "8f1ca1238a4c2d6495b7cff729ce6ecb34da3f844a557ea7b90b0d9d52a10787",
+    "version": "mathsvg 0.1.0"
+  },
+  "holdout_payload_inspected": false,
+  "canonical_aliases": [
+    {
+      "path": "mathsvg/results/raw/benchmark.jsonl",
+      "source": "mathsvg/results/raw/validation-v4-final-binary.jsonl",
+      "bytes": 5063787,
+      "sha256": "c405f8a6362492073b9d5d6e7818215b31f5755ed80ab1a05b164f575a776788"
+    },
+    {
+      "path": "mathsvg/results/raw/benchmark-run.json",
+      "source": "mathsvg/results/raw/validation-v4-final-binary-run.json",
+      "bytes": 15072,
+      "sha256": "052d8c9570972f8e1e416f788e95d75d626e8f21d00f3257420251c5869d3277"
+    },
+    {
+      "path": "mathsvg/results/summary/benchmark.csv",
+      "source": "mathsvg/results/summary/validation-v4-final-binary-benchmark.csv",
+      "bytes": 275255,
+      "sha256": "9ddeaa6967e3433f08f5a0214d1e1070425406797d0b9fd237e411595488ca9f"
+    },
+    {
+      "path": "mathsvg/results/summary/procedural-breakdown.csv",
+      "source": "mathsvg/results/summary/validation-v4-final-binary-procedural.csv",
+      "bytes": 27595,
+      "sha256": "5bb39f8d017464319011b6498f0b12725df8a870defc294868b8b11e524201f8"
+    },
+    {
+      "path": "mathsvg/results/ablation/ablation.csv",
+      "source": "mathsvg/results/ablation/development-pilot-v2-retry.csv",
+      "bytes": 158746,
+      "sha256": "5fabf8ee977b9306fe855350e69b71fb0d090611205db6dc8258522ffe11321d"
+    },
+    {
+      "path": "mathsvg/results/dominance/per-file.csv",
+      "source": "mathsvg/results/dominance/validation-v4-final-binary/per-file.csv",
+      "bytes": 183219,
+      "sha256": "48a00f1815efdfe4e0f4a9ad6b934ff2068449248d45ee3c1d2f042b4e2c2494"
+    },
+    {
+      "path": "mathsvg/results/dominance/per-corpus.csv",
+      "source": "mathsvg/results/dominance/validation-v4-final-binary/per-corpus.csv",
+      "bytes": 4773,
+      "sha256": "5c904cfaf49a4b5ec96f9d8877d43e99bcd0b66ff2ab2748248cc485ef481fe7"
+    },
+    {
+      "path": "mathsvg/results/dominance/pareto-envelope.csv",
+      "source": "mathsvg/results/dominance/validation-v4-final-binary/pareto-envelope.csv",
+      "bytes": 187086,
+      "sha256": "b55081d3f7cb3562fcc3906ea1e45971e867681fddab5d93cd181a62598083da"
+    },
+    {
+      "path": "mathsvg/results/dominance/failures.csv",
+      "source": "mathsvg/results/dominance/validation-v4-final-binary/failures.csv",
+      "bytes": 187086,
+      "sha256": "b55081d3f7cb3562fcc3906ea1e45971e867681fddab5d93cd181a62598083da"
+    },
+    {
+      "path": "mathsvg/results/determinism/results.csv",
+      "source": "mathsvg/results/determinism/determinism-development-v4-final-binary.csv",
+      "bytes": 4627956,
+      "sha256": "a9d3427fbe56493158b989e8fb59a0b7e449bca6bcf11d2ab5db5ea6bc155f43"
+    }
+  ],
+  "gate_artifacts": [
+    {
+      "gate": "correctness-local",
+      "status": "pass-local-matrix-incomplete",
+      "path": "mathsvg/results/determinism/determinism-development-v4-final-binary.json",
+      "bytes": 4004,
+      "sha256": "e1758baaee330ca57153ddbd387eb450530f6aa283f19d60d818a8f5a3d2eb99"
+    },
+    {
+      "gate": "literal-safety",
+      "status": "pass",
+      "path": "mathsvg/results/profiling/development-validation-literal-safety-v4-final-binary.json",
+      "bytes": 155577,
+      "sha256": "58ae3fc3161e06ea51f35aa554c84886894a2f2563d3eef298838b71653e17f8"
+    },
+    {
+      "gate": "memory",
+      "status": "pass",
+      "path": "mathsvg/results/profiling/development-memory-enwik9-threads8-v1-pruned-max.json",
+      "bytes": 45119,
+      "sha256": "23b1c415685a2499b185d218c55b8df5a6464d53e13f9fb3ac6fd7b2933940ae"
+    },
+    {
+      "gate": "procedural-proof",
+      "status": "fail",
+      "path": "mathsvg/results/profiling/development-procedural-gate-v4-final-binary.json",
+      "bytes": 36068,
+      "sha256": "f2c5d47530b0a1ab8627b3915b423144d104146f999190da6a1a071dad6b3d10"
+    },
+    {
+      "gate": "sanitizer-development",
+      "status": "pass",
+      "path": "mathsvg/results/fuzz/development-sanitizer-v6-final-binary/report.json",
+      "bytes": 13426,
+      "sha256": "73344d5417a8944560e120a8b3bbdd3f5713eb450f5641ca7efb33a2d8c7b2e6"
+    },
+    {
+      "gate": "oracle-stop-policy",
+      "status": "bounded-inconclusive",
+      "path": "mathsvg/results/manifests/oracle-manifest.json",
+      "bytes": 11597,
+      "sha256": "88bb98dd41910e0885d71dcd48c83e198e1cd942e1623b07c2a4b7e8ec9e02ae"
+    },
+    {
+      "gate": "baseline-inventory",
+      "status": "partial-12-available-9-unavailable",
+      "path": "mathsvg/results/manifests/baseline-inventory.json",
+      "bytes": 7687,
+      "sha256": "ba6469bd1cf0dd5864f96f564ab5fc5ad98350c314a961d91683b6e3392655e0"
+    }
+  ],
+  "acceptance": {
+    "dominance_certificate_pass": false,
+    "finite_oracle_proves_no_remaining_headroom": false,
+    "clean_freeze": false,
+    "independent_second_machine": false,
+    "arm64_matrix": false,
+    "holdout_authorized": false
+  }
+}

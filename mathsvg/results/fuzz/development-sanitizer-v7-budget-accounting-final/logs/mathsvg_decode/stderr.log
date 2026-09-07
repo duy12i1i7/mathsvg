@@ -1,0 +1,26 @@
+   Compiling mathsvg-entropy v0.1.0 (/home/ase/zipp/mathsvg/crates/mathsvg-entropy)
+   Compiling mathsvg-dsl v0.1.0 (/home/ase/zipp/mathsvg/crates/mathsvg-dsl)
+   Compiling mathsvg-evaluator v0.1.0 (/home/ase/zipp/mathsvg/crates/mathsvg-evaluator)
+   Compiling mathsvg-container v0.1.0 (/home/ase/zipp/mathsvg/crates/mathsvg-container)
+   Compiling mathzip-fuzz v0.0.0 (/home/ase/zipp/fuzz)
+    Finished `release` profile [optimized + debuginfo] target(s) in 7.63s
+    Finished `release` profile [optimized + debuginfo] target(s) in 0.05s
+     Running `fuzz/target/x86_64-unknown-linux-gnu/release/mathsvg_decode -artifact_prefix=/home/ase/zipp/fuzz/artifacts/mathsvg_decode/ -runs=10000 -max_len=65536 -timeout=10 -rss_limit_mb=2048 -print_final_stats=1 -verbosity=0 -artifact_prefix=/tmp/mathsvg-fuzz-campaign-u3pxhn0j/mathsvg_decode/artifacts/ /tmp/mathsvg-fuzz-campaign-u3pxhn0j/mathsvg_decode/corpus`
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO:        4 files found in /tmp/mathsvg-fuzz-campaign-u3pxhn0j/mathsvg_decode/corpus
+INFO: seed corpus: files: 4 min: 5b max: 507b total: 1482b rss: 32Mb
+###### Recommended dictionary. ######
+"\377\377\377\377" # Uses: 212
+"\237R\375g\315\246\263d\362\354#[\200\206}\256:\024\004\357Z\006\366\302\375\032r\371)Ds\362" # Uses: 98
+"\001\000\000L" # Uses: 114
+"\032\346\035\016\005-\222\325\245\023\273\221\212\342\323\205\203\234#\002.`\012\325&W\000{t\264,\207" # Uses: 87
+"\000\000\000\000\000\000\000\000" # Uses: 75
+"\330x\233\226dv\031-\024\217\345\024d|\3078\352\266\221}\024\347\013\2758~<\200\200\216\217\202" # Uses: 64
+"\245a\3532\332\346\240\027#\021?A\322\011Q\211\001\2464\364\337\372OL\252x9\307`\223R^" # Uses: 51
+"\377\377\377\377\377\377\377\004" # Uses: 43
+###### End of recommended dictionary. ######
+stat::number_of_executed_units: 10000
+stat::average_exec_per_sec:     0
+stat::new_units_added:          61
+stat::slowest_unit_time_sec:    0
+stat::peak_rss_mb:              47

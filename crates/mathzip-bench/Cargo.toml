@@ -1,0 +1,20 @@
+[package]
+name = "mathzip-bench"
+description = "Small Rust-side benchmark and corpus validation helpers for MathZip"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "mathzip-bench"
+path = "src/main.rs"
+
+[dependencies]
+anyhow.workspace = true
+clap.workspace = true
+hex.workspace = true
+mathzip-core.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sha2.workspace = true

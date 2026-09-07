@@ -1,0 +1,17 @@
+[package]
+name = "mathsvg-symbolic"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "Bounded residual-sensitive symbolic enumeration for MathSVG"
+
+[dependencies]
+mathsvg-core.workspace = true
+mathsvg-dsl.workspace = true
+mathsvg-evaluator.workspace = true
+mathsvg-functions.workspace = true
+
+[lints.rust]
+unsafe_code = "forbid"

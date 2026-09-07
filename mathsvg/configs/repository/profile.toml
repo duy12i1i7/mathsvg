@@ -1,0 +1,54 @@
+schema_version = 1
+profile = "repository"
+status = "development"
+dsl_version = 1
+container_version = 1
+
+[blocks]
+superblock_bytes = 1048576
+block_bytes = 1048576
+microblock_bytes = 4096
+
+[limits]
+encoder_rss_bytes = 1073741823
+decoder_rss_bytes = 268435455
+max_nodes_per_block = 1048576
+max_graph_depth = 64
+max_dependency_depth = 32
+max_candidate_descriptors = 65536
+max_decode_work_per_output_byte = 1024
+
+[search]
+function_catalog = ["literal", "entropy_literal", "const", "linear", "periodic", "recurrence", "exceptions"]
+coordinate_catalog = ["identity", "stride", "byte_plane", "bit_plane"]
+whole_block_entropy = true
+whole_block_functions = true
+interval_functions = true
+coordinate_depth = 1
+residual_depth = 0
+symbolic_depth = 0
+dag_sharing = false
+multi_object_sharing = false
+version_delta = false
+function_basis = false
+procedural_grammar = false
+candidate_budget = 65536
+work_budget = 1000000000
+minimum_serialized_gain_bytes = 1
+
+[parallel]
+default_threads = 1
+deterministic_merge = true
+
+[entropy]
+baseline_policy = "G1"
+add_only_policy = "C8L"
+chain_depth = 8
+one_byte_lazy = true
+parser_scratch_bytes = 524288
+maximum_additional_work_per_input_byte_per_walk = 25
+maximum_policy_walks = 2
+
+[stop]
+minimum_oracle_gain_fraction = 0.005
+maximum_search_multiplier_below_threshold = 2.0

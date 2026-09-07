@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "name": "pizza_chili",
+  "description": "A resource-bounded Pizza & Chili Repetitive Corpus subset: world_leaders.",
+  "homepage": "https://pizzachili.dcc.uchile.cl/repcorpus.html",
+  "license": "The selected source has upstream provenance and terms; consult Pizza & Chili before redistribution.",
+  "archive": {
+    "urls": [
+      "https://pizzachili.dcc.uchile.cl/repcorpus/real/world_leaders.gz"
+    ],
+    "filename": "world_leaders.gz",
+    "type": "gzip",
+    "output_name": "world_leaders",
+    "size_bytes": 8287665,
+    "max_download_bytes": 8300000,
+    "max_uncompressed_bytes": 46968181,
+    "max_entries": 1,
+    "checksums": {
+      "sha256": "9bb5e541067e1c63387dc600458f676efcb509452800c7fc45a3369fe7979052"
+    }
+  },
+  "expected_files": [
+    {
+      "path": "world_leaders",
+      "size_bytes": 46968181,
+      "checksums": {
+        "sha256": "ba646c174ebd92e3f13cb603d47a8d8f18008d38b840fc44f24c7ab0ebcdb3c6"
+      }
+    }
+  ]
+}

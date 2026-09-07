@@ -1,0 +1,528 @@
+{
+  "added_rows": {
+    "development": 14,
+    "validation": 14
+  },
+  "development": {
+    "all": {
+      "balance_eligibility": "origin=real AND primary=true",
+      "bytes": 1396010270,
+      "files": 69,
+      "non_synthetic_byte_fraction": 0.9991850016977311,
+      "non_synthetic_bytes": 1394872524,
+      "non_synthetic_file_fraction": 0.7101449275362319,
+      "non_synthetic_files": 49,
+      "passes_70_percent_rule": true
+    },
+    "by_split": {
+      "development": {
+        "balance_eligibility": "origin=real AND primary=true",
+        "bytes": 1396010270,
+        "files": 69,
+        "non_synthetic_byte_fraction": 0.9991850016977311,
+        "non_synthetic_bytes": 1394872524,
+        "non_synthetic_file_fraction": 0.7101449275362319,
+        "non_synthetic_files": 49,
+        "passes_70_percent_rule": true
+      },
+      "holdout": {
+        "balance_eligibility": "origin=real AND primary=true",
+        "bytes": 0,
+        "files": 0,
+        "non_synthetic_byte_fraction": 0.0,
+        "non_synthetic_bytes": 0,
+        "non_synthetic_file_fraction": 0.0,
+        "non_synthetic_files": 0,
+        "passes_70_percent_rule": false
+      },
+      "validation": {
+        "balance_eligibility": "origin=real AND primary=true",
+        "bytes": 0,
+        "files": 0,
+        "non_synthetic_byte_fraction": 0.0,
+        "non_synthetic_bytes": 0,
+        "non_synthetic_file_fraction": 0.0,
+        "non_synthetic_files": 0,
+        "passes_70_percent_rule": false
+      }
+    },
+    "holdout_payload_inspected": false,
+    "manifest_sha256": "88ed376ce82fbd9301fe2fce71dd0e3a4af5f837450b50b8489d678b19d5fca7",
+    "schema_version": 1
+  },
+  "development_validation_merge": {
+    "canonical_manifest_sha256": "37bb32037abcf3fc58a9d2aba2c2e7fdf503d2cc615465be503c4358a90f4a2b",
+    "composition": {
+      "balance_eligibility": "origin=real AND primary=true",
+      "bytes": 1475488095,
+      "files": 109,
+      "non_synthetic_byte_fraction": 0.9991756897232031,
+      "non_synthetic_bytes": 1474271835,
+      "non_synthetic_file_fraction": 0.7889908256880734,
+      "non_synthetic_files": 86,
+      "passes_70_percent_rule": true
+    },
+    "development_rows": 69,
+    "validation_rows": 40
+  },
+  "direct_sources": [
+    {
+      "bytes": 1938305,
+      "cache_name": "usgs-ofr-2006-1216-digital-elevation.tif",
+      "content_profile": null,
+      "dataset_id": "development-usgs-ofr-2006-1216-geotiff",
+      "domain": "real-raster-gis-uncompressed-geotiff",
+      "license": "U.S. Government Work (public domain)",
+      "origin": "real",
+      "output_relative": "usgs-ofr-2006-1216/digital_elevation.tif",
+      "primary": true,
+      "sha256": "d3411ad7d005b32c3850c63d8a8aa87111620a373799df261c383d482b4707dd",
+      "source_url": "https://pubs.usgs.gov/of/2006/1216/downloads/IMAGES/GEOTIFF/digital_elevation.tif",
+      "split": "development",
+      "split_group": "usgs-ofr-2006-1216",
+      "version": "USGS Open-File Report 2006-1216, version 1.0"
+    },
+    {
+      "bytes": 452576,
+      "cache_name": "usgs-fs-2010-3086.pdf",
+      "content_profile": "pdf-1.5-usgs-fact-sheet",
+      "dataset_id": "development-usgs-fs-2010-3086-pdf",
+      "domain": "real-world-pdf-report",
+      "license": "U.S. Government Work (public domain)",
+      "origin": "real",
+      "output_relative": "usgs-fs-2010-3086/fs2010-3086.pdf",
+      "primary": true,
+      "sha256": "2542a8a5b4394db449db5d1baa3d289e14da40070c9a51bd4df10431d6dae317",
+      "source_url": "https://pubs.usgs.gov/fs/2010/3086/pdf/fs2010-3086.pdf",
+      "split": "development",
+      "split_group": "usgs-fs-2010-3086",
+      "version": "USGS Fact Sheet 2010-3086; Pennsylvania StreamStats: A Water-Resources Web Application; PDF 1.5, 2 pages"
+    },
+    {
+      "bytes": 4288512,
+      "cache_name": "geoserver-2.28.2-natural-earth.gpkg",
+      "content_profile": "geopackage-natural-earth-2.28.2",
+      "dataset_id": "validation-geoserver-2-28-2-natural-earth-gpkg",
+      "domain": "real-world-sqlite-ogc-geopackage-natural-earth",
+      "license": "Natural Earth data: public domain; GeoServer packaging/code: GPL-2.0-or-later",
+      "origin": "real",
+      "output_relative": "geoserver-2.28.2/natural_earth.gpkg",
+      "primary": true,
+      "sha256": "141750d37ba1d561eab77700e5d9da197f768ac296bf4b2bc01070071c286433",
+      "source_url": "https://raw.githubusercontent.com/geoserver/geoserver/2abcae00385ff91d2fdcefe13b112ad91d0d3804/build/cite/ogcapi-features10/release/data/ne/natural_earth.gpkg",
+      "split": "validation",
+      "split_group": "geoserver-2-28-2-natural-earth",
+      "version": "GeoServer 2.28.2; commit 2abcae00385ff91d2fdcefe13b112ad91d0d3804; Natural Earth OGC GeoPackage sample"
+    },
+    {
+      "bytes": 21687376,
+      "cache_name": "noaa-globaltemp-v5.1.0.nc",
+      "content_profile": null,
+      "dataset_id": "development-noaa-globaltemp-v5-1-0-netcdf",
+      "domain": "real-climate-gridded-float-array-netcdf",
+      "license": "U.S. Government Work (NOAA public data)",
+      "origin": "real",
+      "output_relative": "noaa-globaltemp-v5.1.0/NOAAGlobalTemp_v5.1.0_gridded_s185001_e202312_c20240108T150239.nc",
+      "primary": true,
+      "sha256": "fd14db28556b2d054774eebb02af4daf2da45d864ed5f293b2979209b0dffd59",
+      "source_url": "https://www.ncei.noaa.gov/data/noaa-global-surface-temperature/v5.1/access/gridded/NOAAGlobalTemp_v5.1.0_gridded_s185001_e202312_c20240108T150239.nc",
+      "split": "development",
+      "split_group": "noaa-globaltemp-v5-1-0",
+      "version": "NOAAGlobalTemp v5.1.0; DOI 10.25921/2tj4-0e21; file creation 2024-01-08T15:02:39"
+    },
+    {
+      "bytes": 315511,
+      "cache_name": "linux-v6.10-kernel-sched-core.c",
+      "content_profile": null,
+      "dataset_id": "validation-linux-v6-10-kernel-sched-core-c",
+      "domain": "real-world-linux-source",
+      "license": "GPL-2.0-only",
+      "origin": "real",
+      "output_relative": "linux-v6.10/kernel/sched/core.c",
+      "primary": true,
+      "sha256": "d9f511f3ea2902bf1f5e583e12b5e988e80f012f268bf79be4f9f88357fd81fa",
+      "source_url": "https://raw.githubusercontent.com/torvalds/linux/0c3836482481200ead7b416ca80c68a29cfdaabd/kernel/sched/core.c",
+      "split": "validation",
+      "split_group": "linux-v6-10",
+      "version": "Linux v6.10; commit 0c3836482481200ead7b416ca80c68a29cfdaabd"
+    },
+    {
+      "bytes": 72100,
+      "cache_name": "llvm-18.1.8-Function.cpp",
+      "content_profile": null,
+      "dataset_id": "validation-llvm-18-1-8-function-cpp",
+      "domain": "real-world-llvm-source",
+      "license": "Apache-2.0 WITH LLVM-exception",
+      "origin": "real",
+      "output_relative": "llvm-18.1.8/llvm/lib/IR/Function.cpp",
+      "primary": true,
+      "sha256": "60d7d14f5fb19b05919b5fa5e2f9f8160c2f5180d593459d603f9432b908bcfc",
+      "source_url": "https://raw.githubusercontent.com/llvm/llvm-project/3b5b5c1ec4a3095ab096dd780e84d7ab81f3d7ff/llvm/lib/IR/Function.cpp",
+      "split": "validation",
+      "split_group": "llvm-18-1-8",
+      "version": "llvmorg-18.1.8; commit 3b5b5c1ec4a3095ab096dd780e84d7ab81f3d7ff"
+    },
+    {
+      "bytes": 2415,
+      "cache_name": "docker-hello-world-amd64-layer.tar.gz",
+      "content_profile": null,
+      "dataset_id": "validation-docker-official-hello-world-amd64-layer",
+      "domain": "real-world-oci-container-layer-gzip",
+      "license": "MIT",
+      "origin": "real",
+      "output_relative": "docker-official/hello-world/4f55086f7dd096d48b0e49be066971a8.layer.tar.gz",
+      "primary": true,
+      "sha256": "4f55086f7dd096d48b0e49be066971a8ed996521c2e190aa21b2435a847198b4",
+      "source_url": "https://registry-1.docker.io/v2/library/hello-world/blobs/sha256:4f55086f7dd096d48b0e49be066971a8ed996521c2e190aa21b2435a847198b4",
+      "split": "validation",
+      "split_group": "docker-official-hello-world-c3cbe1cc-amd64",
+      "version": "Docker Official Image hello-world; OCI index sha256:c3cbe1cc1aa588a64951ac6286e0df7b27fe2e6324b1001c619bb358770c0178; linux/amd64 manifest sha256:d1a8d0a4eeb63aff09f5f34d4d80505e0ba81905f36158cc3970d8e07179e59e; layer digest equals file SHA-256"
+    },
+    {
+      "bytes": 43200,
+      "cache_name": "nasa-fos-y19g0309t-c2f.fits",
+      "content_profile": "fits-hst-fos-2x2064-float32",
+      "dataset_id": "validation-nasa-hst-fos-y19g0309t-fits",
+      "domain": "real-astronomy-fits-float32-spectrum",
+      "license": "Upstream rights retained; publicly distributed NASA/MAST sample",
+      "origin": "real",
+      "output_relative": "nasa-fits/FOSy19g0309t_c2f.fits",
+      "primary": true,
+      "sha256": "059710c4f988f6319e0146f932a68a0ec6ba09d82293b978a294da0c58281086",
+      "source_url": "https://fits.gsfc.nasa.gov/samples/FOSy19g0309t_c2f.fits",
+      "split": "validation",
+      "split_group": "nasa-hst-fos-y19g0309t",
+      "version": "NASA FITS Support Office HST/FOS sample y19g0309t; 2x2064 primary spectrum containing flux and wavelength arrays plus a two-row table extension"
+    },
+    {
+      "bytes": 133552,
+      "cache_name": "idc-cptac-sar-ct.dcm",
+      "content_profile": "dicom-ct-implicit-vr-little-endian",
+      "dataset_id": "validation-idc-cptac-sar-ct-dicom",
+      "domain": "real-dicom-ct-pixel-uncompressed-implicit-vr-little-endian",
+      "license": "CC BY 4.0",
+      "origin": "real",
+      "output_relative": "idc-cptac-sar/e740f507-0387-4d39-a09c-8527fac58c52.dcm",
+      "primary": true,
+      "sha256": "1470b19381a0b28d1937ab9a8b443db3b4c6df22b13d792adc9e0639cae88e62",
+      "source_url": "https://idc-open-data.s3.amazonaws.com/28dfda52-b261-4505-bb06-824d5a9b1f90/e740f507-0387-4d39-a09c-8527fac58c52.dcm",
+      "split": "validation",
+      "split_group": "idc-cptac-sar-ct-instance",
+      "version": "IDC index release 24.2.2, collection cptac_sar; DOI 10.7937/tcia.2019.9bt23r95; CT Image Storage 1.2.840.10008.5.1.4.1.1.2; Transfer Syntax 1.2.840.10008.1.2 (uncompressed)"
+    },
+    {
+      "bytes": 4442620,
+      "cache_name": "nyc-yellow-trip-2020-04.parquet",
+      "content_profile": null,
+      "dataset_id": "validation-nyc-tlc-yellow-trip-2020-04-parquet",
+      "domain": "real-tabular-integer-float-columns-parquet",
+      "license": "NYC Open Data Terms of Use",
+      "origin": "real",
+      "output_relative": "nyc-tlc/yellow_tripdata_2020-04.parquet",
+      "primary": true,
+      "sha256": "3104e1e5548ade630988a4a8b9ec76c51a057b88159f78676c7d344f48491450",
+      "source_url": "https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2020-04.parquet",
+      "split": "validation",
+      "split_group": "nyc-tlc-yellow-trip-2020-04",
+      "version": "NYC TLC Yellow Taxi Trip Records, 2020-04"
+    },
+    {
+      "bytes": 4812,
+      "cache_name": "fsdd-v1.0.9-0_george_0.wav",
+      "content_profile": null,
+      "dataset_id": "validation-fsdd-v1-0-9-0-george-0-wav",
+      "domain": "real-recorded-speech-pcm16-wav",
+      "license": "CC BY-SA 4.0",
+      "origin": "real",
+      "output_relative": "fsdd-v1.0.9/recordings/0_george_0.wav",
+      "primary": true,
+      "sha256": "228ab63fccdf262d2e05817b6ec918b15e7d9e4bfb6bb20183c46ae088405240",
+      "source_url": "https://raw.githubusercontent.com/Jakobovski/free-spoken-digit-dataset/2b2c7c40d93a401feccf428247dcd2317431fdd6/recordings/0_george_0.wav",
+      "split": "validation",
+      "split_group": "fsdd-v1-0-9",
+      "version": "Free Spoken Digit Dataset v1.0.9; commit 2b2c7c40d93a401feccf428247dcd2317431fdd6"
+    },
+    {
+      "bytes": 2048,
+      "cache_name": "earthscope-iu-anmo-20100227.mseed",
+      "content_profile": null,
+      "dataset_id": "validation-earthscope-iu-anmo-bhz-20100227-mseed",
+      "domain": "real-seismic-fixed-record-miniseed",
+      "license": "CC BY 4.0 (EarthScope Data)",
+      "origin": "real",
+      "output_relative": "earthscope/IU.ANMO.00.BHZ_20100227T063000_60s.mseed",
+      "primary": true,
+      "sha256": "ae1457bb8db83cdec15858f370217ea15cc651da267bd66c3d019a42ab06e23a",
+      "source_url": "https://service.earthscope.org/fdsnws/dataselect/1/query?net=IU&sta=ANMO&loc=00&cha=BHZ&starttime=2010-02-27T06:30:00&endtime=2010-02-27T06:31:00&format=miniseed",
+      "split": "validation",
+      "split_group": "earthscope-iu-anmo-2010-02-27",
+      "version": "FDSN dataselect service v1; IU.ANMO.00.BHZ; 2010-02-27T06:30:00Z/60s"
+    },
+    {
+      "bytes": 52326,
+      "cache_name": "zenodo-15978325-sem-tem.bmp",
+      "content_profile": "bmp-rgb24-132x132",
+      "dataset_id": "validation-zenodo-15978325-sem-tem-bmp",
+      "domain": "real-sem-tem-rgb24-bmp",
+      "license": "CC BY 4.0",
+      "origin": "real",
+      "output_relative": "zenodo-15978325/8a-sem-tem.bmp",
+      "primary": true,
+      "sha256": "7a7cc8f6a12aba4d3a55da02dbb685374fe86ee76ce69779b6d7fe72922d1826",
+      "source_url": "https://zenodo.org/api/records/15978325/files/8a_Live%20Live%20Spim_HADF_ADF_Analog.bmp/content",
+      "split": "validation",
+      "split_group": "zenodo-15978325-sem-tem",
+      "version": "Zenodo record 15978325; DOI 10.5281/zenodo.15978325; SEM/TEM image 8a; 132x132 RGB24 BMP"
+    },
+    {
+      "bytes": 64282180,
+      "cache_name": "gnulib-20250729.bundle",
+      "content_profile": "git-bundle-gnulib-20250729",
+      "dataset_id": "validation-gnu-gnulib-20250729-git-bundle",
+      "domain": "real-world-git-complete-history-bundle",
+      "license": "Mixed/per-file GNU project licenses; see bundled history",
+      "origin": "real",
+      "output_relative": "gnu/gnulib-20250729.bundle",
+      "primary": true,
+      "sha256": "f01e423a7ef6b48e947fabd24bb11744204f4549342416e15dc64f427caa32e2",
+      "source_url": "https://ftp.gnu.org/gnu/gnulib/gnulib-20250729.bundle",
+      "split": "validation",
+      "split_group": "gnu-gnulib-20250729",
+      "version": "GNU gnulib bundle 2025-07-29; detached GNU OpenPGP signature verified for Simon Josefsson fingerprint A3CC9C870B9D310ABAD4CF2F51722B08FE4745A2; complete SHA-1 history, 336 refs"
+    },
+    {
+      "bytes": 21132,
+      "cache_name": "libavif-v1.2.1-paris.avif",
+      "content_profile": null,
+      "dataset_id": "validation-control-libavif-v1-2-1-avif",
+      "domain": "incompressible-control-avif",
+      "license": "BSD-2-Clause",
+      "origin": "control",
+      "output_relative": "controls/libavif-v1.2.1/paris_icc_exif_xmp.avif",
+      "primary": false,
+      "sha256": "961bc38b61e60b7651fa20efa24269ae2f35e4958822a81c908c9bbf9b3f66e1",
+      "source_url": "https://raw.githubusercontent.com/AOMediaCodec/libavif/fcb084c9387e367750f5375e462005ce298f57cc/tests/data/paris_icc_exif_xmp.avif",
+      "split": "validation",
+      "split_group": "libavif-v1-2-1-test-data",
+      "version": "libavif v1.2.1; commit fcb084c9387e367750f5375e462005ce298f57cc"
+    },
+    {
+      "bytes": 47782,
+      "cache_name": "flac-test-aa7b0c6-mono-audio.flac",
+      "content_profile": null,
+      "dataset_id": "validation-control-ietf-flac-mono-audio",
+      "domain": "incompressible-control-flac",
+      "license": "CC0-1.0",
+      "origin": "control",
+      "output_relative": "controls/flac-test/60-mono-audio.flac",
+      "primary": false,
+      "sha256": "20539fbbd6ae28cea2b2182a4c60c6c70cbb710a136199fc83200c4e5fa00b1c",
+      "source_url": "https://raw.githubusercontent.com/ietf-wg-cellar/flac-test-files/aa7b0c6cf32994c106ae517a08134c28a96ff5b2/subset/60%20-%20mono%20audio.flac",
+      "split": "validation",
+      "split_group": "ietf-cellar-flac-test-aa7b0c6",
+      "version": "IETF CELLAR flac-test-files commit aa7b0c6cf32994c106ae517a08134c28a96ff5b2"
+    },
+    {
+      "bytes": 9600,
+      "cache_name": "minimp3-ea99364-ILL2_layer3.bit",
+      "content_profile": null,
+      "dataset_id": "validation-control-minimp3-ill2-layer3",
+      "domain": "incompressible-control-mp3",
+      "license": "CC0-1.0",
+      "origin": "control",
+      "output_relative": "controls/minimp3/ILL2_layer3.bit",
+      "primary": false,
+      "sha256": "5af6ab144de30aa837b63608c850611b0b4ae40a640404130be324805f0f0337",
+      "source_url": "https://raw.githubusercontent.com/lieff/minimp3/ea99364f61c14656440e8d77e9c233ccf3124633/vectors/ILL2_layer3.bit",
+      "split": "validation",
+      "split_group": "minimp3-conformance-ea99364",
+      "version": "minimp3 MPEG Layer III conformance vector; commit ea99364f61c14656440e8d77e9c233ccf3124633"
+    }
+  ],
+  "download_cap_bytes": 104857600,
+  "gzip_sources": [
+    {
+      "archive_bytes": 1136926,
+      "archive_sha256": "4cc571bd1665dc64ad38b9ea9b2fa778b7eaf00a604ca7578b1afb9eff2a810a",
+      "cache_name": "enwiki-20260701-protected_titles.sql.gz",
+      "content_profile": "wikimedia-protected-titles-mariadb-sql",
+      "dataset_id": "development-wikimedia-enwiki-20260701-protected-titles-sql",
+      "domain": "real-world-mariadb-database-dump-sql",
+      "license": "CC BY-SA 4.0 / GFDL as applicable; see Wikimedia Foundation licensing terms",
+      "origin": "real",
+      "output_bytes": 4455489,
+      "output_relative": "wikimedia/enwiki-20260701-protected_titles.sql",
+      "output_sha256": "660ee2daf1e2ab9a435b484d924b0bb892f461682cf598d77becfef2a28ea364",
+      "primary": true,
+      "source_url": "https://dumps.wikimedia.org/enwiki/20260701/enwiki-20260701-protected_titles.sql.gz",
+      "split": "development",
+      "split_group": "wikimedia-enwiki-20260701-protected-titles",
+      "version": "English Wikipedia database dump 2026-07-01; protected_titles table; MariaDB dump completed 2026-07-07T17:40:54Z"
+    }
+  ],
+  "holdout_payload_inspected": false,
+  "local_controls": [
+    {
+      "dataset_id": "development-control-generated-zstd",
+      "domain": "incompressible-control-zstd",
+      "manifest_relative": "files/sample.zst"
+    },
+    {
+      "dataset_id": "development-control-generated-png",
+      "domain": "incompressible-control-png",
+      "manifest_relative": "files/sample.png"
+    },
+    {
+      "dataset_id": "development-control-generated-jpeg",
+      "domain": "incompressible-control-jpeg",
+      "manifest_relative": "files/sample.jpg"
+    },
+    {
+      "dataset_id": "development-control-generated-mp4",
+      "domain": "incompressible-control-mp4-av1",
+      "manifest_relative": "files/sample.mp4"
+    }
+  ],
+  "retired_rows": {
+    "development": 1,
+    "validation": 1
+  },
+  "schema_version": 1,
+  "selected_source_download_bytes": 104278573,
+  "source_directory_recorded": false,
+  "tar_sources": [
+    {
+      "archive_bytes": 4894286,
+      "archive_root": "bunny",
+      "archive_sha256": "a5720bd96d158df403d153381b8411a727a1d73cff2f33dc9b212d6f75455b84",
+      "cache_name": "stanford-bunny.tar.gz",
+      "catalogue_entries": 21,
+      "catalogue_file_bytes": 22233698,
+      "dataset_prefix": "development-stanford-bunny-1994",
+      "domain": "real-laser-range-scan-ply",
+      "license": "Stanford 3D Scanning Repository research/non-commercial terms; attribution required",
+      "members": [
+        {
+          "bytes": 1988159,
+          "name": "bunny/data/bun000.ply",
+          "sha256": "7d48f9fdf917311de680d074edce8aff25a4b9bfd87be9301822dace811209fb"
+        }
+      ],
+      "source_url": "https://graphics.stanford.edu/pub/3Dscanrep/bunny.tar.gz",
+      "split_group": "stanford-3d-scanrep-bunny-1994",
+      "version": "Stanford Bunny raw Cyberware 3030 MS range scan; scanned 1994; archive modified 1998-12-05"
+    }
+  ],
+  "validation": {
+    "all": {
+      "balance_eligibility": "origin=real AND primary=true",
+      "bytes": 79477825,
+      "files": 40,
+      "non_synthetic_byte_fraction": 0.9990121269674906,
+      "non_synthetic_bytes": 79399311,
+      "non_synthetic_file_fraction": 0.925,
+      "non_synthetic_files": 37,
+      "passes_70_percent_rule": true
+    },
+    "by_split": {
+      "development": {
+        "balance_eligibility": "origin=real AND primary=true",
+        "bytes": 0,
+        "files": 0,
+        "non_synthetic_byte_fraction": 0.0,
+        "non_synthetic_bytes": 0,
+        "non_synthetic_file_fraction": 0.0,
+        "non_synthetic_files": 0,
+        "passes_70_percent_rule": false
+      },
+      "holdout": {
+        "balance_eligibility": "origin=real AND primary=true",
+        "bytes": 0,
+        "files": 0,
+        "non_synthetic_byte_fraction": 0.0,
+        "non_synthetic_bytes": 0,
+        "non_synthetic_file_fraction": 0.0,
+        "non_synthetic_files": 0,
+        "passes_70_percent_rule": false
+      },
+      "validation": {
+        "balance_eligibility": "origin=real AND primary=true",
+        "bytes": 79477825,
+        "files": 40,
+        "non_synthetic_byte_fraction": 0.9990121269674906,
+        "non_synthetic_bytes": 79399311,
+        "non_synthetic_file_fraction": 0.925,
+        "non_synthetic_files": 37,
+        "passes_70_percent_rule": true
+      }
+    },
+    "holdout_payload_inspected": false,
+    "manifest_sha256": "eb89ca9bad1783e5aada0b0b7b949e1097f0f3dfb84dcd87dd1006670a8e8e5e",
+    "schema_version": 1
+  },
+  "zip_sources": [
+    {
+      "archive_bytes": 451314,
+      "archive_sha256": "1949faaaec8c0b521f506f60442d9a2cced5d626dabecb8135ea950dc2aaff17",
+      "cache_name": "zenodo-15912415.zip",
+      "catalogue_compressed_bytes": 246604,
+      "catalogue_entries": 788,
+      "catalogue_files": 785,
+      "catalogue_uncompressed_bytes": 774677,
+      "license": "CC BY 4.0",
+      "members": [
+        {
+          "bytes": 439,
+          "compressed_bytes": 232,
+          "dataset_id": "development-zenodo-uav-drone1-message-1752507115773",
+          "domain": "real-uav-flight-telemetry-json",
+          "name": "UAV_telemetry_dataset/flightplan_drone1/message_1752507115773.json",
+          "output_relative": "zenodo-15912415/flightplan_drone1/message_1752507115773.json",
+          "sha256": "b15aa63a0618532cc18c271c759185ddaba330284c10d96f1a8dc6ab2ed7b097"
+        },
+        {
+          "bytes": 922,
+          "compressed_bytes": 314,
+          "dataset_id": "development-zenodo-uav-drone1-message-1752507288092",
+          "domain": "real-uav-flight-telemetry-json",
+          "name": "UAV_telemetry_dataset/flightplan_drone1/message_1752507288092.json",
+          "output_relative": "zenodo-15912415/flightplan_drone1/message_1752507288092.json",
+          "sha256": "e34464977a5b2f056e9927939824b3cf7d3cfb1c0c9af4967a21cb96ee979abb"
+        },
+        {
+          "bytes": 1121,
+          "compressed_bytes": 328,
+          "dataset_id": "development-zenodo-uav-drone2-message-1752507693033",
+          "domain": "real-uav-flight-telemetry-json",
+          "name": "UAV_telemetry_dataset/flightplan_drone2/message_1752507693033.json",
+          "output_relative": "zenodo-15912415/flightplan_drone2/message_1752507693033.json",
+          "sha256": "38f939f81b0a10ccaff1729ee384b0b61e9e998e8a70a7a87c9d40012c43e4d3"
+        },
+        {
+          "bytes": 1099,
+          "compressed_bytes": 324,
+          "dataset_id": "development-zenodo-uav-drone2-message-1752507889384",
+          "domain": "real-uav-flight-telemetry-json",
+          "name": "UAV_telemetry_dataset/flightplan_drone2/message_1752507889384.json",
+          "output_relative": "zenodo-15912415/flightplan_drone2/message_1752507889384.json",
+          "sha256": "68e41ba218faf5f47e402801a277d2ecd190f5b0d4b0ab9689278047a1c8eeff"
+        },
+        {
+          "bytes": 1087,
+          "compressed_bytes": 312,
+          "dataset_id": "development-zenodo-uav-drone2-message-1752508085725",
+          "domain": "real-uav-flight-telemetry-json",
+          "name": "UAV_telemetry_dataset/flightplan_drone2/message_1752508085725.json",
+          "output_relative": "zenodo-15912415/flightplan_drone2/message_1752508085725.json",
+          "sha256": "f46f51858e66110443b5ae43f849bb2a7bdc1e919773e734090296c4cfb13618"
+        }
+      ],
+      "origin": "real",
+      "primary": true,
+      "source_url": "https://zenodo.org/api/records/15912415/files/telemetry_UAV_plan.zip/content",
+      "split": "development",
+      "split_group": "zenodo-15912415-uav-telemetry",
+      "version": "Zenodo record 15912415; DOI 10.5281/zenodo.15912415; published 2025-07-15"
+    }
+  ]
+}

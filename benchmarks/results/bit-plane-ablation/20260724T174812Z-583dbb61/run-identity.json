@@ -1,0 +1,461 @@
+{
+  "codec_definitions": [
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "1703b73f3ef51753ed1f92ea5e2ce28da9bcdf22"
+      },
+      "compression_command_template": [
+        "<repo>/target/release/mathzip",
+        "compress",
+        "--mode",
+        "balanced",
+        "--max-input-bytes",
+        "8589934592",
+        "--no-sync",
+        "--force",
+        "--models",
+        "raw,constant,affine,polynomial,periodic,recurrence,piecewise-linear,run,sparse",
+        "--residual-coders",
+        "raw,rle,zero-run,sparse,bit-pack",
+        "--transforms",
+        "bit-plane-packed",
+        "--segmentation",
+        "adaptive",
+        "--no-raw-fallback",
+        "{input}",
+        "{archive}"
+      ],
+      "decompression_command_template": [
+        "<repo>/target/release/mathzip",
+        "decompress",
+        "--max-archive-bytes",
+        "17179869184",
+        "--max-output-bytes",
+        "8589934592",
+        "--max-segments",
+        "8388608",
+        "--no-sync",
+        "--force",
+        "{archive}",
+        "{restored}"
+      ],
+      "executable": "<repo>/target/release/mathzip",
+      "executable_sha256": "237c4515d958afcc373078badbec902e7736a3582891b734fd4ba555a326094f",
+      "family": "mathzip",
+      "level": "balanced",
+      "name": "mathzip-balanced-bit-plane-packed-v1",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "Packed bit-plane representation (format v1)"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "1703b73f3ef51753ed1f92ea5e2ce28da9bcdf22"
+      },
+      "compression_command_template": [
+        "<repo>/target/release/mathzip",
+        "compress",
+        "--mode",
+        "balanced",
+        "--max-input-bytes",
+        "8589934592",
+        "--no-sync",
+        "--force",
+        "--models",
+        "raw,constant,affine,polynomial,periodic,recurrence,piecewise-linear,run,sparse",
+        "--residual-coders",
+        "raw,rle,zero-run,sparse,bit-pack",
+        "--transforms",
+        "bit-plane-independent",
+        "--segmentation",
+        "adaptive",
+        "--no-raw-fallback",
+        "{input}",
+        "{archive}"
+      ],
+      "decompression_command_template": [
+        "<repo>/target/release/mathzip",
+        "decompress",
+        "--max-archive-bytes",
+        "17179869184",
+        "--max-output-bytes",
+        "8589934592",
+        "--max-segments",
+        "8388608",
+        "--no-sync",
+        "--force",
+        "{archive}",
+        "{restored}"
+      ],
+      "executable": "<repo>/target/release/mathzip",
+      "executable_sha256": "237c4515d958afcc373078badbec902e7736a3582891b734fd4ba555a326094f",
+      "family": "mathzip",
+      "level": "balanced",
+      "name": "mathzip-balanced-bit-plane-independent-v2",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "Independently segmented padded bit planes (format v2)"
+    },
+    {
+      "available": true,
+      "compression_command_template": [
+        "<external>/zstd",
+        "-q",
+        "-f",
+        "-T1",
+        "-3",
+        "-c",
+        "{input}"
+      ],
+      "decompression_command_template": [
+        "<external>/zstd",
+        "-q",
+        "-d",
+        "-c",
+        "{archive}"
+      ],
+      "executable": "<external>/zstd",
+      "executable_sha256": "7c5468b370f7c47eda07281e3437fafc568f95d10420051e3aa522709f9342c5",
+      "family": "zstd",
+      "level": "default",
+      "name": "zstd-default",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": ""
+    }
+  ],
+  "codecs": [
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "1703b73f3ef51753ed1f92ea5e2ce28da9bcdf22"
+      },
+      "codec": "mathzip-balanced-bit-plane-packed-v1",
+      "executable_path_sha256": "f407543aa5b03eece467b942a235f70bb47cca3d8974befce366cd2a81475d59",
+      "executable_sha256": "237c4515d958afcc373078badbec902e7736a3582891b734fd4ba555a326094f",
+      "family": "mathzip",
+      "level": "balanced",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "Packed bit-plane representation (format v1)"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "1703b73f3ef51753ed1f92ea5e2ce28da9bcdf22"
+      },
+      "codec": "mathzip-balanced-bit-plane-independent-v2",
+      "executable_path_sha256": "f407543aa5b03eece467b942a235f70bb47cca3d8974befce366cd2a81475d59",
+      "executable_sha256": "237c4515d958afcc373078badbec902e7736a3582891b734fd4ba555a326094f",
+      "family": "mathzip",
+      "level": "balanced",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "Independently segmented padded bit planes (format v2)"
+    },
+    {
+      "available": true,
+      "build_info": null,
+      "codec": "zstd-default",
+      "executable_path_sha256": "2dba966a29744162c7d83f3696368dd6bb8a02ae694cae6a195eb86a21f09611",
+      "executable_sha256": "7c5468b370f7c47eda07281e3437fafc568f95d10420051e3aa522709f9342c5",
+      "family": "zstd",
+      "level": "default",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": ""
+    }
+  ],
+  "config_sha256": "583dbb61df0f6cf0fd1813c81eb468b97ebee334070acdafa6a9f0b15df78ec7",
+  "config_snapshot": {
+    "benchmark": {
+      "collect_mathzip_inspection": true,
+      "record_absolute_paths": false,
+      "repeats": 3,
+      "threads": [
+        1
+      ],
+      "timeout_seconds": 600,
+      "warmups": 1
+    },
+    "codecs": [
+      {
+        "base": "mathzip-balanced",
+        "compress_args": [
+          "--models",
+          "raw,constant,affine,polynomial,periodic,recurrence,piecewise-linear,run,sparse",
+          "--residual-coders",
+          "raw,rle,zero-run,sparse,bit-pack",
+          "--transforms",
+          "bit-plane-packed",
+          "--segmentation",
+          "adaptive",
+          "--no-raw-fallback"
+        ],
+        "name": "mathzip-balanced-bit-plane-packed-v1",
+        "variant": "Packed bit-plane representation (format v1)"
+      },
+      {
+        "base": "mathzip-balanced",
+        "compress_args": [
+          "--models",
+          "raw,constant,affine,polynomial,periodic,recurrence,piecewise-linear,run,sparse",
+          "--residual-coders",
+          "raw,rle,zero-run,sparse,bit-pack",
+          "--transforms",
+          "bit-plane-independent",
+          "--segmentation",
+          "adaptive",
+          "--no-raw-fallback"
+        ],
+        "name": "mathzip-balanced-bit-plane-independent-v2",
+        "variant": "Independently segmented padded bit planes (format v2)"
+      },
+      "zstd-default"
+    ],
+    "datasets": [],
+    "inputs": [
+      {
+        "corpus": "synthetic_bit_plane_ablation",
+        "input_license": "CC0-1.0",
+        "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+        "patterns": [
+          "constant_ff/s0000000031_n000p000_*.bin",
+          "linear/s0000000031_n000p000_*.bin",
+          "periodic/s0000000031_n000p000_*.bin",
+          "lfsr8/s0000000031_n000p000_*.bin",
+          "random/s0000000031_n000p000_*.bin",
+          "constant_00/s0000065536_n000p000_*.bin",
+          "linear/s0000065536_n000p000_*.bin",
+          "polynomial_d2/s0000065536_n000p000_*.bin",
+          "periodic/s0000065536_n000p000_*.bin",
+          "multi_periodic/s0000065536_n000p000_*.bin",
+          "recurrence/s0000065536_n000p000_*.bin",
+          "lfsr8/s0000065536_n000p000_*.bin",
+          "piecewise_mixed/s0000065536_n001p000_*.bin",
+          "random/s0000065536_n000p000_*.bin"
+        ],
+        "required": true,
+        "root": "datasets/synthetic"
+      }
+    ],
+    "output_dir": "benchmarks/results/bit-plane-ablation",
+    "profile": "bit-plane-ablation",
+    "schema_version": 1,
+    "synthetic": {
+      "noise_densities": [
+        0.0,
+        0.01
+      ],
+      "output": "datasets/synthetic",
+      "seed": 1297748005,
+      "sizes": [
+        31,
+        65536
+      ]
+    }
+  },
+  "expected_grid_sha256": "1b1c1496d81d8477ad0c8e459842ed96d578b69f09af5a7686e0f93d62c8a3ce",
+  "host": {
+    "cpu_model": "Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz",
+    "execution_state_sha256": "171099918ff6326b92a04c253616b28f60081dce68d24cc6f528b75e47605280",
+    "hostname_sha256": "2b9c15eb89efe0e0ad2c7b3279bf92247e35e4a92160ca8678d974e11a10ac6b",
+    "logical_cores": 16,
+    "os": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "physical_cores": 16,
+    "ram_bytes": 16715317248
+  },
+  "initial_source_metadata": {
+    "git_dirty": false,
+    "git_revision": "1703b73f3ef51753ed1f92ea5e2ce28da9bcdf22",
+    "git_status_entry_count": 0,
+    "revision_available": true,
+    "selection_method": "git ls-files (tracked plus untracked, Git-ignored excluded)",
+    "source_dirty": false,
+    "source_file_count": 965,
+    "source_revision": "1703b73f3ef51753ed1f92ea5e2ce28da9bcdf22",
+    "source_tree_manifest": null,
+    "source_tree_manifest_reason": "omitted because a Git revision identifies the clean base; tree hash still recorded",
+    "source_tree_sha256": "612a5cf7d57a2607bfc8c297bf9bf08214ac25e065ea4d9a08ee881ddac733ac"
+  },
+  "initial_system_metadata": {
+    "architecture": "x86_64",
+    "cargo_version": "cargo 1.97.1 (c980f4866 2026-06-30)",
+    "cc_version": "cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "collected_at_utc": "2026-07-24T17:48:12.714912+00:00",
+    "compressors": {
+      "7z": {
+        "path": null,
+        "version": null
+      },
+      "7zz": {
+        "path": null,
+        "version": null
+      },
+      "brotli": {
+        "path": null,
+        "version": null
+      },
+      "bzip2": {
+        "path": "<external>/bzip2",
+        "version": "bzip2, a block-sorting file compressor.  Version 1.0.8, 13-Jul-2019."
+      },
+      "gzip": {
+        "path": "<external>/gzip",
+        "version": "gzip 1.12"
+      },
+      "lz4": {
+        "path": null,
+        "version": null
+      },
+      "xz": {
+        "path": "<external>/xz",
+        "version": "xz (XZ Utils) 5.4.5"
+      },
+      "zstd": {
+        "path": "<external>/zstd",
+        "version": "*** Zstandard CLI (64-bit) v1.5.5, by Yann Collet ***"
+      }
+    },
+    "container": {
+      "cgroup": "0::/init.scope",
+      "detected": false,
+      "image_digest": null,
+      "image_digest_capture": "unavailable: runtime did not expose an image digest"
+    },
+    "cpu_affinity": {
+      "logical_cpu_count": 16,
+      "logical_cpu_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "cpu_governors": null,
+    "cpu_model": "Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz",
+    "hostname": "redacted",
+    "kernel": "7.0.0-28-generic",
+    "logical_cores": 16,
+    "metric_unavailable": [
+      {
+        "field": "cpu_governors",
+        "reason": "cpufreq governor files unavailable"
+      },
+      {
+        "field": "container.image_digest",
+        "reason": "container runtime did not expose an image digest"
+      }
+    ],
+    "os": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "physical_cores": 16,
+    "power_supplies": [
+      {
+        "capacity": null,
+        "name": "ACAD",
+        "online": "1",
+        "status": null,
+        "type": "Mains"
+      }
+    ],
+    "python_executable": "<external>/python3",
+    "python_version": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+    "ram_bytes": 16715317248,
+    "relevant_environment": {
+      "BZIP": null,
+      "BZIP2": null,
+      "CFLAGS": null,
+      "CPPFLAGS": null,
+      "CXXFLAGS": null,
+      "GLIBC_TUNABLES": null,
+      "GZIP": null,
+      "LANG": "C.UTF-8",
+      "LC_ALL": "C.UTF-8",
+      "LC_NUMERIC": null,
+      "LDFLAGS": null,
+      "LD_LIBRARY_PATH": null,
+      "LD_PRELOAD": null,
+      "MALLOC_ARENA_MAX": null,
+      "MALLOC_CONF": null,
+      "MATHZIP_THREADS": null,
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "PYTHONHASHSEED": null,
+      "RAYON_NUM_THREADS": null,
+      "RUSTDOCFLAGS": null,
+      "RUSTFLAGS": null,
+      "TZ": null,
+      "XZ_DEFAULTS": null,
+      "XZ_OPT": null,
+      "ZSTD_NBTHREADS": null
+    },
+    "rustc_version": "rustc 1.97.1 (8bab26f4f 2026-07-14)",
+    "storage": {
+      "filesystem_type": "ext4",
+      "free_bytes": 69958103040,
+      "measured_path": "<repo>/.",
+      "mount_point": "<external>/",
+      "mount_source": "<external>/sda2",
+      "total_bytes": 104384327680,
+      "used_bytes": 29904773120
+    },
+    "swap_bytes": 4054839296
+  },
+  "methodology_policy": {
+    "allow_short_run": false,
+    "codec_thread_keys": [
+      [
+        "mathzip-balanced-bit-plane-packed-v1",
+        1
+      ],
+      [
+        "mathzip-balanced-bit-plane-independent-v2",
+        1
+      ],
+      [
+        "zstd-default",
+        1
+      ]
+    ],
+    "collect_mathzip_inspection": true,
+    "configured_threads": [
+      1
+    ],
+    "record_absolute_paths": false,
+    "repeats": 3,
+    "require_publication_evidence": true,
+    "selected_codecs": null,
+    "timeout_seconds_per_operation": 600.0,
+    "warmups": 1
+  },
+  "schema_version": "mathzip-benchmark-run-identity-v1",
+  "source": {
+    "source_dirty": false,
+    "source_file_count": 965,
+    "source_revision": "1703b73f3ef51753ed1f92ea5e2ce28da9bcdf22",
+    "source_tree_sha256": "612a5cf7d57a2607bfc8c297bf9bf08214ac25e065ea4d9a08ee881ddac733ac"
+  }
+}

@@ -1,0 +1,19 @@
+[package]
+name = "mathsvg-stream"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "Bounded streaming compression and decompression for MathSVG v1"
+
+[dependencies]
+mathsvg-container = { path = "../mathsvg-container" }
+mathsvg-core = { path = "../mathsvg-core" }
+mathsvg-dsl = { path = "../mathsvg-dsl" }
+mathsvg-evaluator = { path = "../mathsvg-evaluator" }
+mathsvg-optimizer = { path = "../mathsvg-optimizer" }
+
+[lib]
+path = "src/lib.rs"
+
+[lints.rust]
+unsafe_code = "forbid"

@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "name": "calgary",
+  "description": "The canonical 14-file Calgary Corpus; the four retired paper3-paper6 members in the upstream tarball are deliberately excluded.",
+  "homepage": "https://corpus.canterbury.ac.nz/descriptions/#calgary",
+  "license": "Upstream files retain their original terms; use for reproducible compression research and do not redistribute without checking each source.",
+  "archive": {
+    "urls": [
+      "https://corpus.canterbury.ac.nz/resources/calgary.tar.gz"
+    ],
+    "filename": "calgary.tar.gz",
+    "type": "tar.gz",
+    "size_bytes": 1070276,
+    "max_download_bytes": 1100000,
+    "max_uncompressed_bytes": 4000000,
+    "max_entries": 32,
+    "checksums": {
+      "sha256": "e109eebdc19c5cee533c58bd6a49a4be3a77cc52f84ba234a089148a4f2093b7"
+    },
+    "members": [
+      "bib",
+      "book1",
+      "book2",
+      "geo",
+      "news",
+      "obj1",
+      "obj2",
+      "paper1",
+      "paper2",
+      "pic",
+      "progc",
+      "progl",
+      "progp",
+      "trans"
+    ]
+  },
+  "combined": {
+    "output": "combined.bin",
+    "manifest": "combined.manifest.json",
+    "members": [
+      "bib",
+      "book1",
+      "book2",
+      "geo",
+      "news",
+      "obj1",
+      "obj2",
+      "paper1",
+      "paper2",
+      "pic",
+      "progc",
+      "progl",
+      "progp",
+      "trans"
+    ]
+  }
+}

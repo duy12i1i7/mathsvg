@@ -1,0 +1,53 @@
+    Finished `release` profile [optimized + debuginfo] target(s) in 0.06s
+    Finished `release` profile [optimized + debuginfo] target(s) in 0.06s
+     Running `fuzz/target/x86_64-unknown-linux-gnu/release/mathsvg_entropy -artifact_prefix=/home/ase/zipp/fuzz/artifacts/mathsvg_entropy/ -runs=10000 -max_len=16384 -timeout=10 -rss_limit_mb=2048 -print_final_stats=1 -verbosity=0 -artifact_prefix=/tmp/mathsvg-fuzz-campaign-re2h7r3m/mathsvg_entropy/artifacts/ /tmp/mathsvg-fuzz-campaign-re2h7r3m/mathsvg_entropy/corpus`
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO:        1 files found in /tmp/mathsvg-fuzz-campaign-re2h7r3m/mathsvg_entropy/corpus
+INFO: seed corpus: files: 1 min: 56b max: 56b total: 56b rss: 32Mb
+	NEW_FUNC[1/3]: 0x566586fffd90  (/home/ase/zipp/fuzz/target/x86_64-unknown-linux-gnu/release/mathsvg_entropy+0x171d90) (BuildId: 0ef90b573525c2bfbae9c1346851127761b877a6)
+	NEW_FUNC[2/3]: 0x566587008de0  (/home/ase/zipp/fuzz/target/x86_64-unknown-linux-gnu/release/mathsvg_entropy+0x17ade0) (BuildId: 0ef90b573525c2bfbae9c1346851127761b877a6)
+	NEW_FUNC[1/1]: 0x56658700e360  (/home/ase/zipp/fuzz/target/x86_64-unknown-linux-gnu/release/mathsvg_entropy+0x180360) (BuildId: 0ef90b573525c2bfbae9c1346851127761b877a6)
+	NEW_FUNC[1/1]: 0x56658700e5e0  (/home/ase/zipp/fuzz/target/x86_64-unknown-linux-gnu/release/mathsvg_entropy+0x1805e0) (BuildId: 0ef90b573525c2bfbae9c1346851127761b877a6)
+	NEW_FUNC[1/6]: 0x56658700a8c0  (/home/ase/zipp/fuzz/target/x86_64-unknown-linux-gnu/release/mathsvg_entropy+0x17c8c0) (BuildId: 0ef90b573525c2bfbae9c1346851127761b877a6)
+	NEW_FUNC[2/6]: 0x56658700e980  (/home/ase/zipp/fuzz/target/x86_64-unknown-linux-gnu/release/mathsvg_entropy+0x180980) (BuildId: 0ef90b573525c2bfbae9c1346851127761b877a6)
+###### Recommended dictionary. ######
+"\001\000\000\000" # Uses: 48
+"\000\000\000\034" # Uses: 56
+"\000\000\000\000" # Uses: 53
+"\377\377\377\026" # Uses: 59
+"\032\000\000\000" # Uses: 47
+"\031\000\000\000" # Uses: 44
+"\377\377\377\377\377\377\377\377" # Uses: 36
+"\024\000\000\000\000\000\000\000" # Uses: 32
+"\000\000\000:" # Uses: 30
+"\377\377\377\377\377\377\377\001" # Uses: 31
+"e\317\317\317" # Uses: 28
+"\377\377" # Uses: 31
+"\000\000\000\000\000\000\0002" # Uses: 30
+"\377\377\377\032" # Uses: 23
+"\"\000\000\000\000\000\000\000" # Uses: 22
+"0\000\000\000\000\000\000\000" # Uses: 25
+"\000\000\000\000\000\000\000\015" # Uses: 13
+"\377\377\377\377\377\377\377\025" # Uses: 13
+"\004\000\000\000\000\000\000\000" # Uses: 15
+"\376\377\377\377" # Uses: 25
+"\013\000\000\000\000\000\000\000" # Uses: 18
+"\001\000\000\000\000\000\000\001" # Uses: 23
+"\377\377\377\377" # Uses: 21
+"\023\000\000\000" # Uses: 19
+"\000\000\000\000\000\000\000\031" # Uses: 18
+"\377\377\377)" # Uses: 13
+"\000\000\000\000\000\376\377\377" # Uses: 11
+"\377\377\377\000" # Uses: 12
+"\015\000\000\000\000\000\000\000" # Uses: 10
+"\362\000\000\000\000\000\000\000" # Uses: 4
+"\000\000\000\032" # Uses: 2
+"\001\000\000\000\000\000\000\006" # Uses: 5
+"\022\000\000\000" # Uses: 2
+"\000\000\000\020" # Uses: 1
+###### End of recommended dictionary. ######
+stat::number_of_executed_units: 10000
+stat::average_exec_per_sec:     1000
+stat::new_units_added:          370
+stat::slowest_unit_time_sec:    0
+stat::peak_rss_mb:              344

@@ -1,0 +1,32 @@
+{
+  "active_elapsed_seconds": 768.1782141449949,
+  "checkpoint_rows_directory": "checkpoint-rows",
+  "completed_at_utc": "2026-07-24T13:58:44.131544+00:00",
+  "completed_result_count": 477,
+  "execution_intervals": [
+    {
+      "active_seconds": 768.1782141449949,
+      "checkpointed_through_utc": "2026-07-24T13:58:43.455814+00:00",
+      "completed_at_utc": "2026-07-24T13:58:43.455814+00:00",
+      "ended_at_utc": "2026-07-24T13:58:43.455814+00:00",
+      "index": 0,
+      "interrupted": false,
+      "resumed": false,
+      "started_at_utc": "2026-07-24T13:45:55.277604+00:00"
+    }
+  ],
+  "expected_grid_file": "expected-grid.json",
+  "expected_grid_sha256": "42624773f6e1c76d9e7b0f39a24ea0a3f592f7d6acdd7fdd0f6b9a065238b7c0",
+  "expected_result_count": 477,
+  "profile": "quick",
+  "results_csv_sha256": "871fc2e0ee10cf10a96c5f4ab1fdf74173110275c635b75b40c4c03f6bb3daca",
+  "results_json_sha256": "ef485b1033bfa8da6ffba46ece377753fce4d5a0844e95163d8f69a51d3ea461",
+  "resume_count": 0,
+  "run_id": "20260724T134555Z-8b4c06c2",
+  "run_identity_file": "run-identity.json",
+  "run_identity_sha256": "7320b0a7020994e92acc140a2dadcc08390a92435b0d4eab799c18f208520c0f",
+  "schema_version": "mathzip-benchmark-checkpoint-v1",
+  "started_at_utc": "2026-07-24T13:45:55.277604+00:00",
+  "state": "complete",
+  "updated_at_utc": "2026-07-24T13:58:43.455814+00:00"
+}

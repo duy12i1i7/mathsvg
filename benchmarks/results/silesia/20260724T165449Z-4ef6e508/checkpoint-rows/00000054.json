@@ -1,0 +1,484 @@
+{
+  "completed_at_utc": "2026-07-24T17:08:44.075007+00:00",
+  "execution_interval_index": 0,
+  "expected_grid_index": 54,
+  "interval_active_seconds": 834.3320287359966,
+  "key": [
+    "silesia",
+    "datasets/data/silesia/reymont",
+    "mathzip-fast",
+    1
+  ],
+  "row": {
+    "actual_residual_coded_bytes": 5802397,
+    "archive_sha256": "63dc36e74ba3b62f2ffdcdc0455fe2c3674040ce84280f4ab672ab3d80199276",
+    "bits_per_byte": 7.022122458316496,
+    "codec": "mathzip-fast",
+    "codec_family": "mathzip",
+    "codec_level": "fast",
+    "command_lines": [
+      "'<repo>/target/release/mathzip' compress --mode fast --max-input-bytes 8589934592 --no-sync --force '<repo>/datasets/data/silesia/reymont' '<work>/archive.mz'",
+      "'<repo>/target/release/mathzip' compress --mode fast --max-input-bytes 8589934592 --no-sync --force --metrics-output '<work>/metrics-probe.mz.metrics.json' '<repo>/datasets/data/silesia/reymont' '<work>/metrics-probe.mz'",
+      "'<repo>/target/release/mathzip' decompress --max-archive-bytes 17179869184 --max-output-bytes 8589934592 --max-segments 8388608 --no-sync --force '<work>/archive.mz' '<work>/restored.bin'"
+    ],
+    "compressed_bytes": 5817128,
+    "compression_cpu_seconds": 4.803358999999887,
+    "compression_mbps": 1.3787268937506647,
+    "compression_seconds": 4.806754717006697,
+    "container_overhead_bytes": 120,
+    "corpus": "silesia",
+    "decompression_cpu_seconds": 0.20623599999998987,
+    "decompression_mbps": 31.464376729028885,
+    "decompression_seconds": 0.2106255609978689,
+    "deterministic_archive": true,
+    "error": null,
+    "estimated_residual_entropy": 4.898532903375478,
+    "expansion_percent": 0.0,
+    "input_entropy_bits_per_byte": 4.8421685530417635,
+    "input_license": "Per-file upstream terms; see Silesia provenance",
+    "input_manifest": "datasets/data/silesia/dataset.json",
+    "input_manifest_sha256": "7b9daf7c42ff8dff9effce4fef13077fe99c06d23a7969f92fbeec67c7701f30",
+    "input_manifest_verified": true,
+    "input_name": "reymont",
+    "input_path": "datasets/data/silesia/reymont",
+    "input_provenance": "datasets/manifests/silesia.json",
+    "input_sha256": "0eac0114a3dfe6e2ee1f345a0f79d653cb26c3bc9f0ed79238af4933422b7578",
+    "math_segments_winning_raw": 7,
+    "math_segments_winning_zstd": 0,
+    "mathzip_inspection": {
+      "actual_residual_coded_bytes": 5802397,
+      "checksums": {
+        "archive": true,
+        "header": true,
+        "original": true,
+        "segments": true
+      },
+      "compressed_size": 5817128,
+      "compression_ratio": 1.1392566916182694,
+      "container_overhead_bytes": 120,
+      "estimated_residual_entropy": 4.898532903375478,
+      "format_version": 1,
+      "math_segments_winning_raw": 7,
+      "math_segments_winning_zstd": 0,
+      "mean_segment_size": 16363.461728395061,
+      "median_segment_size": 16384.0,
+      "metadata_bytes": 14700,
+      "model_distribution": {
+        "constant": 2,
+        "periodic": 1,
+        "raw": 398,
+        "recurrence": 4
+      },
+      "model_parameter_bytes": 31,
+      "original_size": 6627202,
+      "partition_metadata_bytes": 14580,
+      "payload_size": 5817012,
+      "raw_fallback_percentage": 0.24722348888716536,
+      "raw_model_percentage": 98.39494857709181,
+      "residual_bytes": 5802397,
+      "residual_distribution": {
+        "bit_pack": 397,
+        "raw": 1,
+        "zero_run": 7
+      },
+      "residual_mode_distribution": {
+        "add_modulo": 405
+      },
+      "segment_count": 405,
+      "segment_descriptor_bytes": 14580,
+      "transform_count": 1,
+      "transform_metadata_bytes": 4,
+      "transformed_size": 6627202,
+      "transforms": [
+        {
+          "type": "identity"
+        }
+      ]
+    },
+    "mean_segment_size": 16363.461728395061,
+    "median_segment_size": 16384.0,
+    "model_distribution": {
+      "constant": 2,
+      "periodic": 1,
+      "raw": 398,
+      "recurrence": 4
+    },
+    "model_fitting_seconds": 0.071985639,
+    "model_parameter_bytes": 31,
+    "original_bytes": 6627202,
+    "partition_metadata_bytes": 14580,
+    "peak_rss_bytes": 49045504.0,
+    "profile": "silesia",
+    "ratio": 1.1392566916182694,
+    "raw_fallback_percent": 0.24722348888716536,
+    "raw_model_percent": 98.39494857709181,
+    "requested_repeats": 3,
+    "residual_bytes": 5802397,
+    "residual_coding_seconds": 4.215004785,
+    "residual_distribution": {
+      "bit_pack": 397,
+      "raw": 1,
+      "zero_run": 7
+    },
+    "restored_sha256": "0eac0114a3dfe6e2ee1f345a0f79d653cb26c3bc9f0ed79238af4933422b7578",
+    "roundtrip_verified": true,
+    "run_id": "20260724T165449Z-4ef6e508",
+    "savings": 0.12223469271043796,
+    "savings_percent": 12.223469271043797,
+    "schema_version": "mathzip-benchmark-results-v1",
+    "search_seconds": 0.486159318,
+    "segment_count": 405,
+    "status": "ok",
+    "successful_repeats": 3,
+    "tags": {},
+    "threads": 1,
+    "transform": [
+      {
+        "type": "identity"
+      }
+    ],
+    "trials": [
+      {
+        "archive_sha256": "63dc36e74ba3b62f2ffdcdc0455fe2c3674040ce84280f4ab672ab3d80199276",
+        "compressed_bytes": 5817128,
+        "compression_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "<repo>/datasets/data/silesia/reymont",
+          "<work>/archive.mz"
+        ],
+        "compression_cpu_seconds": 4.808149000000071,
+        "compression_metrics": {
+          "model_fitting_seconds": 0.071727233,
+          "residual_coding_seconds": 4.205374706,
+          "search_seconds": 0.48437249
+        },
+        "compression_metrics_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--metrics-output",
+          "<work>/metrics-probe.mz.metrics.json",
+          "<repo>/datasets/data/silesia/reymont",
+          "<work>/metrics-probe.mz"
+        ],
+        "compression_metrics_stderr": "compressed 6627202 -> 5817128 bytes (ratio 1.1393:1) in 4.761s",
+        "compression_peak_rss_bytes": 49045504,
+        "compression_seconds": 4.810933439002838,
+        "compression_stderr": "compressed 6627202 -> 5817128 bytes (ratio 1.1393:1) in 4.783s",
+        "decompression_command": [
+          "<repo>/target/release/mathzip",
+          "decompress",
+          "--max-archive-bytes",
+          "17179869184",
+          "--max-output-bytes",
+          "8589934592",
+          "--max-segments",
+          "8388608",
+          "--no-sync",
+          "--force",
+          "<work>/archive.mz",
+          "<work>/restored.bin"
+        ],
+        "decompression_cpu_seconds": 0.20623599999998987,
+        "decompression_peak_rss_bytes": 16478208,
+        "decompression_seconds": 0.2106255609978689,
+        "decompression_stderr": "restored 6627202 bytes in 0.189s; original SHA-256 verified",
+        "error": null,
+        "index": 0,
+        "inspection": {
+          "actual_residual_coded_bytes": 5802397,
+          "checksums": {
+            "archive": true,
+            "header": true,
+            "original": true,
+            "segments": true
+          },
+          "compressed_size": 5817128,
+          "compression_ratio": 1.1392566916182694,
+          "container_overhead_bytes": 120,
+          "estimated_residual_entropy": 4.898532903375478,
+          "format_version": 1,
+          "math_segments_winning_raw": 7,
+          "math_segments_winning_zstd": 0,
+          "mean_segment_size": 16363.461728395061,
+          "median_segment_size": 16384.0,
+          "metadata_bytes": 14700,
+          "model_distribution": {
+            "constant": 2,
+            "periodic": 1,
+            "raw": 398,
+            "recurrence": 4
+          },
+          "model_parameter_bytes": 31,
+          "original_size": 6627202,
+          "partition_metadata_bytes": 14580,
+          "payload_size": 5817012,
+          "raw_fallback_percentage": 0.24722348888716536,
+          "raw_model_percentage": 98.39494857709181,
+          "residual_bytes": 5802397,
+          "residual_distribution": {
+            "bit_pack": 397,
+            "raw": 1,
+            "zero_run": 7
+          },
+          "residual_mode_distribution": {
+            "add_modulo": 405
+          },
+          "segment_count": 405,
+          "segment_descriptor_bytes": 14580,
+          "transform_count": 1,
+          "transform_metadata_bytes": 4,
+          "transformed_size": 6627202,
+          "transforms": [
+            {
+              "type": "identity"
+            }
+          ]
+        },
+        "restored_sha256": "0eac0114a3dfe6e2ee1f345a0f79d653cb26c3bc9f0ed79238af4933422b7578",
+        "roundtrip_verified": true,
+        "status": "ok"
+      },
+      {
+        "archive_sha256": "63dc36e74ba3b62f2ffdcdc0455fe2c3674040ce84280f4ab672ab3d80199276",
+        "compressed_bytes": 5817128,
+        "compression_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "<repo>/datasets/data/silesia/reymont",
+          "<work>/archive.mz"
+        ],
+        "compression_cpu_seconds": 4.803358999999887,
+        "compression_metrics": {
+          "model_fitting_seconds": 0.071985639,
+          "residual_coding_seconds": 4.215004785,
+          "search_seconds": 0.508334006
+        },
+        "compression_metrics_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--metrics-output",
+          "<work>/metrics-probe.mz.metrics.json",
+          "<repo>/datasets/data/silesia/reymont",
+          "<work>/metrics-probe.mz"
+        ],
+        "compression_metrics_stderr": "compressed 6627202 -> 5817128 bytes (ratio 1.1393:1) in 4.795s",
+        "compression_peak_rss_bytes": 49098752,
+        "compression_seconds": 4.806754717006697,
+        "compression_stderr": "compressed 6627202 -> 5817128 bytes (ratio 1.1393:1) in 4.779s",
+        "decompression_command": [
+          "<repo>/target/release/mathzip",
+          "decompress",
+          "--max-archive-bytes",
+          "17179869184",
+          "--max-output-bytes",
+          "8589934592",
+          "--max-segments",
+          "8388608",
+          "--no-sync",
+          "--force",
+          "<work>/archive.mz",
+          "<work>/restored.bin"
+        ],
+        "decompression_cpu_seconds": 0.20531700000015007,
+        "decompression_peak_rss_bytes": 20164608,
+        "decompression_seconds": 0.20646041999862064,
+        "decompression_stderr": "restored 6627202 bytes in 0.188s; original SHA-256 verified",
+        "error": null,
+        "index": 1,
+        "inspection": {
+          "actual_residual_coded_bytes": 5802397,
+          "checksums": {
+            "archive": true,
+            "header": true,
+            "original": true,
+            "segments": true
+          },
+          "compressed_size": 5817128,
+          "compression_ratio": 1.1392566916182694,
+          "container_overhead_bytes": 120,
+          "estimated_residual_entropy": 4.898532903375478,
+          "format_version": 1,
+          "math_segments_winning_raw": 7,
+          "math_segments_winning_zstd": 0,
+          "mean_segment_size": 16363.461728395061,
+          "median_segment_size": 16384.0,
+          "metadata_bytes": 14700,
+          "model_distribution": {
+            "constant": 2,
+            "periodic": 1,
+            "raw": 398,
+            "recurrence": 4
+          },
+          "model_parameter_bytes": 31,
+          "original_size": 6627202,
+          "partition_metadata_bytes": 14580,
+          "payload_size": 5817012,
+          "raw_fallback_percentage": 0.24722348888716536,
+          "raw_model_percentage": 98.39494857709181,
+          "residual_bytes": 5802397,
+          "residual_distribution": {
+            "bit_pack": 397,
+            "raw": 1,
+            "zero_run": 7
+          },
+          "residual_mode_distribution": {
+            "add_modulo": 405
+          },
+          "segment_count": 405,
+          "segment_descriptor_bytes": 14580,
+          "transform_count": 1,
+          "transform_metadata_bytes": 4,
+          "transformed_size": 6627202,
+          "transforms": [
+            {
+              "type": "identity"
+            }
+          ]
+        },
+        "restored_sha256": "0eac0114a3dfe6e2ee1f345a0f79d653cb26c3bc9f0ed79238af4933422b7578",
+        "roundtrip_verified": true,
+        "status": "ok"
+      },
+      {
+        "archive_sha256": "63dc36e74ba3b62f2ffdcdc0455fe2c3674040ce84280f4ab672ab3d80199276",
+        "compressed_bytes": 5817128,
+        "compression_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "<repo>/datasets/data/silesia/reymont",
+          "<work>/archive.mz"
+        ],
+        "compression_cpu_seconds": 4.795071999999891,
+        "compression_metrics": {
+          "model_fitting_seconds": 0.072289981,
+          "residual_coding_seconds": 4.248276736,
+          "search_seconds": 0.486159318
+        },
+        "compression_metrics_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--metrics-output",
+          "<work>/metrics-probe.mz.metrics.json",
+          "<repo>/datasets/data/silesia/reymont",
+          "<work>/metrics-probe.mz"
+        ],
+        "compression_metrics_stderr": "compressed 6627202 -> 5817128 bytes (ratio 1.1393:1) in 4.807s",
+        "compression_peak_rss_bytes": 49012736,
+        "compression_seconds": 4.799126884012367,
+        "compression_stderr": "compressed 6627202 -> 5817128 bytes (ratio 1.1393:1) in 4.764s",
+        "decompression_command": [
+          "<repo>/target/release/mathzip",
+          "decompress",
+          "--max-archive-bytes",
+          "17179869184",
+          "--max-output-bytes",
+          "8589934592",
+          "--max-segments",
+          "8388608",
+          "--no-sync",
+          "--force",
+          "<work>/archive.mz",
+          "<work>/restored.bin"
+        ],
+        "decompression_cpu_seconds": 0.20887000000004718,
+        "decompression_peak_rss_bytes": 18874368,
+        "decompression_seconds": 0.21131147800770123,
+        "decompression_stderr": "restored 6627202 bytes in 0.190s; original SHA-256 verified",
+        "error": null,
+        "index": 2,
+        "inspection": {
+          "actual_residual_coded_bytes": 5802397,
+          "checksums": {
+            "archive": true,
+            "header": true,
+            "original": true,
+            "segments": true
+          },
+          "compressed_size": 5817128,
+          "compression_ratio": 1.1392566916182694,
+          "container_overhead_bytes": 120,
+          "estimated_residual_entropy": 4.898532903375478,
+          "format_version": 1,
+          "math_segments_winning_raw": 7,
+          "math_segments_winning_zstd": 0,
+          "mean_segment_size": 16363.461728395061,
+          "median_segment_size": 16384.0,
+          "metadata_bytes": 14700,
+          "model_distribution": {
+            "constant": 2,
+            "periodic": 1,
+            "raw": 398,
+            "recurrence": 4
+          },
+          "model_parameter_bytes": 31,
+          "original_size": 6627202,
+          "partition_metadata_bytes": 14580,
+          "payload_size": 5817012,
+          "raw_fallback_percentage": 0.24722348888716536,
+          "raw_model_percentage": 98.39494857709181,
+          "residual_bytes": 5802397,
+          "residual_distribution": {
+            "bit_pack": 397,
+            "raw": 1,
+            "zero_run": 7
+          },
+          "residual_mode_distribution": {
+            "add_modulo": 405
+          },
+          "segment_count": 405,
+          "segment_descriptor_bytes": 14580,
+          "transform_count": 1,
+          "transform_metadata_bytes": 4,
+          "transformed_size": 6627202,
+          "transforms": [
+            {
+              "type": "identity"
+            }
+          ]
+        },
+        "restored_sha256": "0eac0114a3dfe6e2ee1f345a0f79d653cb26c3bc9f0ed79238af4933422b7578",
+        "roundtrip_verified": true,
+        "status": "ok"
+      }
+    ],
+    "variant": ""
+  },
+  "schema_version": "mathzip-benchmark-checkpoint-row-v1"
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "profile": "bit-plane-ablation",
+  "output_dir": "benchmarks/results/bit-plane-ablation",
+  "datasets": [],
+  "synthetic": {
+    "output": "datasets/synthetic",
+    "seed": 1297748005,
+    "sizes": [31, 65536],
+    "noise_densities": [0.0, 0.01]
+  },
+  "benchmark": {
+    "warmups": 1,
+    "repeats": 3,
+    "timeout_seconds": 600,
+    "threads": [1],
+    "collect_mathzip_inspection": true,
+    "record_absolute_paths": false
+  },
+  "codecs": [
+    {
+      "name": "mathzip-balanced-bit-plane-packed-v1",
+      "base": "mathzip-balanced",
+      "variant": "Packed bit-plane representation (format v1)",
+      "compress_args": [
+        "--models",
+        "raw,constant,affine,polynomial,periodic,recurrence,piecewise-linear,run,sparse",
+        "--residual-coders",
+        "raw,rle,zero-run,sparse,bit-pack",
+        "--transforms",
+        "bit-plane-packed",
+        "--segmentation",
+        "adaptive",
+        "--no-raw-fallback"
+      ]
+    },
+    {
+      "name": "mathzip-balanced-bit-plane-independent-v2",
+      "base": "mathzip-balanced",
+      "variant": "Independently segmented padded bit planes (format v2)",
+      "compress_args": [
+        "--models",
+        "raw,constant,affine,polynomial,periodic,recurrence,piecewise-linear,run,sparse",
+        "--residual-coders",
+        "raw,rle,zero-run,sparse,bit-pack",
+        "--transforms",
+        "bit-plane-independent",
+        "--segmentation",
+        "adaptive",
+        "--no-raw-fallback"
+      ]
+    },
+    "zstd-default"
+  ],
+  "inputs": [
+    {
+      "corpus": "synthetic_bit_plane_ablation",
+      "root": "datasets/synthetic",
+      "input_license": "CC0-1.0",
+      "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+      "patterns": [
+        "constant_ff/s0000000031_n000p000_*.bin",
+        "linear/s0000000031_n000p000_*.bin",
+        "periodic/s0000000031_n000p000_*.bin",
+        "lfsr8/s0000000031_n000p000_*.bin",
+        "random/s0000000031_n000p000_*.bin",
+        "constant_00/s0000065536_n000p000_*.bin",
+        "linear/s0000065536_n000p000_*.bin",
+        "polynomial_d2/s0000065536_n000p000_*.bin",
+        "periodic/s0000065536_n000p000_*.bin",
+        "multi_periodic/s0000065536_n000p000_*.bin",
+        "recurrence/s0000065536_n000p000_*.bin",
+        "lfsr8/s0000065536_n000p000_*.bin",
+        "piecewise_mixed/s0000065536_n001p000_*.bin",
+        "random/s0000065536_n000p000_*.bin"
+      ],
+      "required": true
+    }
+  ]
+}

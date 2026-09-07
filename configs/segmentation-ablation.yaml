@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "profile": "segmentation-ablation",
+  "output_dir": "benchmarks/results/segmentation-ablation",
+  "datasets": [
+    {"name": "canterbury", "enabled": true}
+  ],
+  "benchmark": {
+    "warmups": 1,
+    "repeats": 3,
+    "timeout_seconds": 600,
+    "threads": [1],
+    "collect_mathzip_inspection": true,
+    "record_absolute_paths": false
+  },
+  "codecs": [
+    {
+      "name": "mathzip-fast-fixed-256b",
+      "base": "mathzip-fast",
+      "variant": "Fixed segmentation, 256 B",
+      "compress_args": ["--segmentation", "fixed", "--segment-size", "256"]
+    },
+    {
+      "name": "mathzip-fast-fixed-1kib",
+      "base": "mathzip-fast",
+      "variant": "Fixed segmentation, 1 KiB",
+      "compress_args": ["--segmentation", "fixed", "--segment-size", "1024"]
+    },
+    {
+      "name": "mathzip-fast-fixed-4kib",
+      "base": "mathzip-fast",
+      "variant": "Fixed segmentation, 4 KiB",
+      "compress_args": ["--segmentation", "fixed", "--segment-size", "4096"]
+    },
+    {
+      "name": "mathzip-fast-fixed-16kib",
+      "base": "mathzip-fast",
+      "variant": "Fixed segmentation, 16 KiB",
+      "compress_args": ["--segmentation", "fixed", "--segment-size", "16384"]
+    },
+    {
+      "name": "mathzip-fast-fixed-64kib",
+      "base": "mathzip-fast",
+      "variant": "Fixed segmentation, 64 KiB",
+      "compress_args": ["--segmentation", "fixed", "--segment-size", "65536"]
+    },
+    {
+      "name": "mathzip-fast-fixed-256kib",
+      "base": "mathzip-fast",
+      "variant": "Fixed segmentation, 256 KiB",
+      "compress_args": ["--segmentation", "fixed", "--segment-size", "262144"]
+    },
+    {
+      "name": "mathzip-fast-change-point-4kib",
+      "base": "mathzip-fast",
+      "variant": "Change-point segmentation, 4 KiB anchor",
+      "compress_args": ["--segmentation", "change-point", "--segment-size", "4096"]
+    },
+    {
+      "name": "mathzip-fast-adaptive-4kib",
+      "base": "mathzip-fast",
+      "variant": "Adaptive segmentation, 4 KiB anchor",
+      "compress_args": ["--segmentation", "adaptive", "--segment-size", "4096"]
+    },
+    "zstd-fast"
+  ],
+  "inputs": [
+    {
+      "corpus": "synthetic_segmentation",
+      "root": "datasets/synthetic",
+      "input_license": "CC0-1.0",
+      "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+      "patterns": [
+        "constant_00/s0000065536_n000p000_*.bin",
+        "linear/s0000065536_n000p000_*.bin",
+        "linear/s0000065536_n005p000_*.bin",
+        "polynomial_d2/s0000065536_n000p000_*.bin",
+        "periodic/s0000065536_n000p000_*.bin",
+        "recurrence/s0000065536_n000p000_*.bin",
+        "piecewise_mixed/s0000065536_n001p000_*.bin",
+        "random/s0000065536_n000p000_*.bin"
+      ],
+      "required": true
+    },
+    {
+      "corpus": "canterbury_segmentation",
+      "root": "datasets/data/canterbury",
+      "input_license": "Upstream files retain their original terms; see dataset manifest",
+      "input_provenance": "datasets/manifests/canterbury.json",
+      "patterns": [
+        "alice29.txt",
+        "sum"
+      ],
+      "required": true
+    }
+  ]
+}

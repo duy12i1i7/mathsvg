@@ -1,0 +1,85 @@
+{
+  "artifacts_sha256": {
+    "ablation_comparison.png": "b3a54608e9a08a980e8cfd8bdee84150a3b8d14bccdc615440f837078be7faea",
+    "bits_per_byte_by_dataset.png": "fc009f7e4779d50318e9b12ed8fd122acb0f06128a965ac523422afbb855b23b",
+    "compression_ratio_by_dataset.png": "6a7dbb42704387a2599f6a7683660df0ad409691c3e4e09baf8a61f5a0d24a25",
+    "compression_throughput.png": "541c04f65c60158015b25827eb0c5e6d8ab6259d32f7002b4ec7e73e21f04ffa",
+    "decompression_throughput.png": "e22db98c2cd99234ce56aa4ac9d007ab919f11419126f6f035472e7798639fed",
+    "file_entropy_vs_mathzip_gain.png": "ad3dd7a21e2493c8a32dc79681785ea18e825cf27cc9635db5972ec69b98ba8e",
+    "mathzip_gain_vs_zstd.png": "22567c038fb5f95e4330ac6b8d4833c050760c5e78e726bbacae87354cbcdb90",
+    "model_distribution.png": "ac5b4270429d8a382cf2656b885bb77917b7bfb12fa23ad23e7780c833303846",
+    "peak_memory.png": "69369e42d0c5e5993d7d259b8079c922f165944975947ae433de1d800f05654e",
+    "plot_data.json": "bce2445c95dc3ffd59c1e4d8b28466d698c548cfc73430200eba63b66e8d5d9a",
+    "ratio_vs_compression_speed.png": "0be47b0bba6d440c2d84a26d4682f6bdff0798f647757cd1924e7d9f5a7aef91",
+    "ratio_vs_decompression_speed.png": "f8fb96beabf5b6c631059ad3055cf3b7f605d6671b08ffa24521dd8cd9fa573a",
+    "residual_entropy_vs_encoded_size.png": "8bc2742242530eb7a9e9af5450c05269823c59e711b532837ec41e2eacb95fe9",
+    "segment_size_histogram.png": "ba24aa79232e2218d071a8e597199fcb46f6c080af9e5ef4636b2af500dae4ea",
+    "storage_breakdown.png": "d40418103c7efb308ed8bad620caaced5b1ffdccc060702a74c37b1cb9775765",
+    "synthetic_noise_vs_ratio.png": "f1445815bd9197211162b53d89a31176e0f01fcf71997e10cf12793c889d02fa"
+  },
+  "comparison_choices": {
+    "ablation_comparison": {
+      "aggregation": "median ratio among successful rows",
+      "coverage": [
+        {
+          "median_successful_ratio": 7.424556402154307,
+          "successful_rows": 12,
+          "threads": 1,
+          "total_rows": 12,
+          "variant": "Custom residual coders"
+        },
+        {
+          "median_successful_ratio": 9.697678198827616,
+          "successful_rows": 12,
+          "threads": 1,
+          "total_rows": 12,
+          "variant": "Zstd residual coder"
+        }
+      ]
+    },
+    "file_entropy_vs_mathzip_gain": {
+      "baseline_codec": "zstd-default",
+      "mathzip_codec": "mathzip-balanced-custom-residual"
+    },
+    "mathzip_gain_vs_xz": {
+      "aggregation": "corpus/thread weighted total compressed bytes",
+      "baseline_codec": null,
+      "mathzip_codec": "mathzip-balanced-custom-residual"
+    },
+    "mathzip_gain_vs_zstd": {
+      "aggregation": "corpus/thread weighted total compressed bytes",
+      "baseline_codec": "zstd-default",
+      "mathzip_codec": "mathzip-balanced-custom-residual"
+    }
+  },
+  "failure_count": 0,
+  "generated": [
+    "compression_ratio_by_dataset.png",
+    "bits_per_byte_by_dataset.png",
+    "compression_throughput.png",
+    "decompression_throughput.png",
+    "ratio_vs_compression_speed.png",
+    "ratio_vs_decompression_speed.png",
+    "peak_memory.png",
+    "storage_breakdown.png",
+    "model_distribution.png",
+    "segment_size_histogram.png",
+    "residual_entropy_vs_encoded_size.png",
+    "ablation_comparison.png",
+    "synthetic_noise_vs_ratio.png",
+    "file_entropy_vs_mathzip_gain.png",
+    "mathzip_gain_vs_zstd.png"
+  ],
+  "plot_generator": "python/mathzip_bench/plots.py",
+  "plot_generator_sha256": "7a06354c6089971069ffa6c41ced95062c78d3e5c43a0a93f8e36356432013cc",
+  "profile": "residual-ablation",
+  "result_count": 36,
+  "result_document_hash_method": "canonical-json-v1",
+  "result_document_sha256": "2b4f6854d1bb5f0c65bd428e378fc26f34a5a8b80257ef6f8370d894e96a689f",
+  "run_id": "20260724T143401Z-3bb520a6",
+  "schema_version": "mathzip-plot-manifest-v1",
+  "skipped_for_missing_metrics": [
+    "mathzip_gain_vs_xz"
+  ],
+  "status": "generated"
+}

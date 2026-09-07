@@ -1,0 +1,47 @@
+{
+  "all": {
+    "balance_eligibility": "origin=real AND primary=true",
+    "bytes": 1365350857,
+    "files": 55,
+    "non_synthetic_byte_fraction": 0.9992639943097058,
+    "non_synthetic_bytes": 1364345951,
+    "non_synthetic_file_fraction": 0.7090909090909091,
+    "non_synthetic_files": 39,
+    "passes_70_percent_rule": true
+  },
+  "by_split": {
+    "development": {
+      "balance_eligibility": "origin=real AND primary=true",
+      "bytes": 1365350857,
+      "files": 55,
+      "non_synthetic_byte_fraction": 0.9992639943097058,
+      "non_synthetic_bytes": 1364345951,
+      "non_synthetic_file_fraction": 0.7090909090909091,
+      "non_synthetic_files": 39,
+      "passes_70_percent_rule": true
+    },
+    "holdout": {
+      "balance_eligibility": "origin=real AND primary=true",
+      "bytes": 0,
+      "files": 0,
+      "non_synthetic_byte_fraction": 0.0,
+      "non_synthetic_bytes": 0,
+      "non_synthetic_file_fraction": 0.0,
+      "non_synthetic_files": 0,
+      "passes_70_percent_rule": false
+    },
+    "validation": {
+      "balance_eligibility": "origin=real AND primary=true",
+      "bytes": 0,
+      "files": 0,
+      "non_synthetic_byte_fraction": 0.0,
+      "non_synthetic_bytes": 0,
+      "non_synthetic_file_fraction": 0.0,
+      "non_synthetic_files": 0,
+      "passes_70_percent_rule": false
+    }
+  },
+  "holdout_payload_inspected": false,
+  "manifest_sha256": "c5afa44babaa1c619bdfecc064fbeb67aec1b7fe82fb2444d74c170eb49ccda5",
+  "schema_version": 1
+}

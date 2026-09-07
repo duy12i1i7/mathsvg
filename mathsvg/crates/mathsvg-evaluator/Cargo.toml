@@ -1,0 +1,19 @@
+[package]
+name = "mathsvg-evaluator"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "Deterministic bounded evaluator for the MathSVG procedural DSL"
+
+[dependencies]
+mathsvg-core = { path = "../mathsvg-core" }
+mathsvg-coordinates = { path = "../mathsvg-coordinates" }
+mathsvg-dsl = { path = "../mathsvg-dsl" }
+mathsvg-entropy = { path = "../mathsvg-entropy" }
+mathsvg-kernels = { path = "../mathsvg-kernels" }
+
+[lib]
+path = "src/lib.rs"
+
+[lints.rust]
+unsafe_code = "forbid"

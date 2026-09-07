@@ -1,0 +1,353 @@
+{
+  "evidence_scope": "development",
+  "experiment_id": "development-sanitizer-v6-final-binary",
+  "failure_count": 0,
+  "fuzz_lockfile_sha256": "b0a86169e3a728ed567faa65e79e080ecaf394fd5d021606e6ed925ad8312e75",
+  "fuzz_manifest_sha256": "7d0176caa46a9bc6ebcb26ef5114b1586b03fd866f7bbab7e2f20c8e5ba34ae5",
+  "holdout_payload_inspected": false,
+  "immutable_inputs_sha256": "69c1b6318cd68e4ed2310cf15738bc32bbfb2bad2808c72fb5e9de3f77d4763c",
+  "immutable_inputs_stable": true,
+  "limitations": [
+    "finite run counts do not prove absence of all defects",
+    "coverage maps and the ephemeral generated corpus are not retained",
+    "this single-machine dirty-tree campaign is development evidence"
+  ],
+  "machine": {
+    "architecture": "x86_64",
+    "logical_cpus": 16,
+    "machine_id": "local-x86",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  },
+  "runner_sha256": "fe8b39daf2cc0978f757989b8158fc0b9395c406e56e0ecc4bb0b1f6dc1b5539",
+  "schema_version": 1,
+  "source_after": {
+    "branch": "mathsvg-absolute",
+    "commit": "36f84685dc00064dae9a239face7e8eff797ed28",
+    "dirty": true,
+    "status_sha256": "a9fdcb2b38de8fe707852050bfd6570524b939d5ddcf383c6e4917ed4c74efa9"
+  },
+  "source_before": {
+    "branch": "mathsvg-absolute",
+    "commit": "36f84685dc00064dae9a239face7e8eff797ed28",
+    "dirty": true,
+    "status_sha256": "a9fdcb2b38de8fe707852050bfd6570524b939d5ddcf383c6e4917ed4c74efa9"
+  },
+  "source_stable_during_campaign": true,
+  "status": "development-pass",
+  "targets": [
+    {
+      "artifacts": {
+        "bytes": 0,
+        "files": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "campaign_wall_timeout_seconds": 900.0,
+      "command": [
+        "/home/ase/.cargo/bin/cargo-fuzz",
+        "run",
+        "--sanitizer",
+        "address",
+        "--fuzz-dir",
+        "/home/ase/zipp/fuzz",
+        "mathsvg_decode",
+        "/tmp/mathsvg-fuzz-campaign-6swr2_jb/mathsvg_decode/corpus",
+        "--",
+        "-runs=10000",
+        "-max_len=65536",
+        "-timeout=10",
+        "-rss_limit_mb=2048",
+        "-print_final_stats=1",
+        "-verbosity=0",
+        "-artifact_prefix=/tmp/mathsvg-fuzz-campaign-6swr2_jb/mathsvg_decode/artifacts/"
+      ],
+      "elapsed_ns": 519996150,
+      "exit_code": 0,
+      "final_ephemeral_corpus": {
+        "bytes": 8834,
+        "files": 27,
+        "preserved": false,
+        "sha256": "fa16d946a888b237a0561586ae33963f4b4dd0de5f0eb4c1c27da79ffbdb1eb4"
+      },
+      "generated_valid_seeds": [
+        {
+          "archive_bytes": 483,
+          "archive_sha256": "b6a4c487a3757025763fb0f1139c6d3eeb1a5956dd3087618ec068ac0f49195c",
+          "compress_command": [
+            "/home/ase/zipp/target/release/mathsvg",
+            "compress",
+            "--profile",
+            "fast",
+            "--threads",
+            "1",
+            "--max-input-bytes",
+            "4096",
+            "/tmp/mathsvg-fuzz-campaign-6swr2_jb/mathsvg_decode/valid-seed-generation/constant.bin",
+            "/tmp/mathsvg-fuzz-campaign-6swr2_jb/mathsvg_decode/corpus/valid-constant.msvg"
+          ],
+          "generator": "constant",
+          "inspect_command": [
+            "/home/ase/zipp/target/release/mathsvg",
+            "inspect",
+            "--verify",
+            "--max-archive-bytes",
+            "65536",
+            "--max-output-bytes",
+            "4096",
+            "/tmp/mathsvg-fuzz-campaign-6swr2_jb/mathsvg_decode/corpus/valid-constant.msvg"
+          ],
+          "source_bytes": 4096,
+          "source_sha256": "0e78dafef09420534b54408540081bafe357f62155cefe6d6ebc79562dcd815a"
+        },
+        {
+          "archive_bytes": 487,
+          "archive_sha256": "5c0616f0b556f0a3794de811d745613d8b25de408904978cf57988663f4df853",
+          "compress_command": [
+            "/home/ase/zipp/target/release/mathsvg",
+            "compress",
+            "--profile",
+            "fast",
+            "--threads",
+            "1",
+            "--max-input-bytes",
+            "4096",
+            "/tmp/mathsvg-fuzz-campaign-6swr2_jb/mathsvg_decode/valid-seed-generation/linear.bin",
+            "/tmp/mathsvg-fuzz-campaign-6swr2_jb/mathsvg_decode/corpus/valid-linear.msvg"
+          ],
+          "generator": "linear",
+          "inspect_command": [
+            "/home/ase/zipp/target/release/mathsvg",
+            "inspect",
+            "--verify",
+            "--max-archive-bytes",
+            "65536",
+            "--max-output-bytes",
+            "4096",
+            "/tmp/mathsvg-fuzz-campaign-6swr2_jb/mathsvg_decode/corpus/valid-linear.msvg"
+          ],
+          "source_bytes": 4096,
+          "source_sha256": "699d02c2828b1d41d3ef7e3910a025609911a897e4ea0d50278800ca4a01e4e7"
+        },
+        {
+          "archive_bytes": 507,
+          "archive_sha256": "d992c9c810eada159ace98eda3820f16c01935e914cded867a3816292f1e442a",
+          "compress_command": [
+            "/home/ase/zipp/target/release/mathsvg",
+            "compress",
+            "--profile",
+            "fast",
+            "--threads",
+            "1",
+            "--max-input-bytes",
+            "4096",
+            "/tmp/mathsvg-fuzz-campaign-6swr2_jb/mathsvg_decode/valid-seed-generation/periodic.bin",
+            "/tmp/mathsvg-fuzz-campaign-6swr2_jb/mathsvg_decode/corpus/valid-periodic.msvg"
+          ],
+          "generator": "periodic",
+          "inspect_command": [
+            "/home/ase/zipp/target/release/mathsvg",
+            "inspect",
+            "--verify",
+            "--max-archive-bytes",
+            "65536",
+            "--max-output-bytes",
+            "4096",
+            "/tmp/mathsvg-fuzz-campaign-6swr2_jb/mathsvg_decode/corpus/valid-periodic.msvg"
+          ],
+          "source_bytes": 4096,
+          "source_sha256": "828044b19bea4b48466c91b48c9412e3505538eecc63121cabbc9652a12bc28b"
+        }
+      ],
+      "initial_seed_corpus": {
+        "bytes": 5,
+        "files": 1,
+        "sha256": "f880ae498fb429dc9d539bb9723dd15d1b19dff7f200314c83fe925af3edd68a"
+      },
+      "max_input_bytes": 65536,
+      "per_input_timeout_seconds": 10,
+      "planned_runs": 10000,
+      "reason": "",
+      "reported_executed_units": 10000,
+      "rss_limit_mb": 2048,
+      "sanitizer": "address",
+      "seed_path": "fuzz/seeds/mathsvg_decode",
+      "source_path": "fuzz/fuzz_targets/mathsvg_decode.rs",
+      "source_sha256": "9a182d2e08079097e9c12bfff56131e525cb4db0fca16398f3eed4cb52bfea90",
+      "status": "ok",
+      "stderr_log": {
+        "bytes": 1108,
+        "sha256": "3516e652068ea6a2884f0e8c10d2a8e12ec87fb2839578e704244a3ff19afaeb"
+      },
+      "stdout_log": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "target": "mathsvg_decode",
+      "timed_out": false,
+      "toolchain_environment": {
+        "CARGO": "/home/ase/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/cargo",
+        "RUSTC": "/home/ase/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/rustc",
+        "RUSTUP_TOOLCHAIN": "nightly"
+      }
+    },
+    {
+      "artifacts": {
+        "bytes": 0,
+        "files": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "campaign_wall_timeout_seconds": 900.0,
+      "command": [
+        "/home/ase/.cargo/bin/cargo-fuzz",
+        "run",
+        "--sanitizer",
+        "address",
+        "--fuzz-dir",
+        "/home/ase/zipp/fuzz",
+        "mathsvg_entropy",
+        "/tmp/mathsvg-fuzz-campaign-6swr2_jb/mathsvg_entropy/corpus",
+        "--",
+        "-runs=10000",
+        "-max_len=16384",
+        "-timeout=10",
+        "-rss_limit_mb=2048",
+        "-print_final_stats=1",
+        "-verbosity=0",
+        "-artifact_prefix=/tmp/mathsvg-fuzz-campaign-6swr2_jb/mathsvg_entropy/artifacts/"
+      ],
+      "elapsed_ns": 11459116161,
+      "exit_code": 0,
+      "final_ephemeral_corpus": {
+        "bytes": 8169,
+        "files": 251,
+        "preserved": false,
+        "sha256": "d834f6d59c4b50bed05183511b2625ca6ea8a2fb0413e6f0d0b05423b8d22131"
+      },
+      "generated_valid_seeds": [],
+      "initial_seed_corpus": {
+        "bytes": 56,
+        "files": 1,
+        "sha256": "015dbe32e340abacfc9de5ebc8f57942df78031c075b375d25bb75f1dca5b8f7"
+      },
+      "max_input_bytes": 16384,
+      "per_input_timeout_seconds": 10,
+      "planned_runs": 10000,
+      "reason": "",
+      "reported_executed_units": 10000,
+      "rss_limit_mb": 2048,
+      "sanitizer": "address",
+      "seed_path": "fuzz/seeds/mathsvg_entropy",
+      "source_path": "fuzz/fuzz_targets/mathsvg_entropy.rs",
+      "source_sha256": "5992f8a70e25dd7f5fcad809d95ece568b16a6a1b361d16d9ae6b2f95062fd11",
+      "status": "ok",
+      "stderr_log": {
+        "bytes": 3090,
+        "sha256": "ac72292d0bd1b96f3060dd7f5b2df4831324d33827c0790263e3492f71ca2c64"
+      },
+      "stdout_log": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "target": "mathsvg_entropy",
+      "timed_out": false,
+      "toolchain_environment": {
+        "CARGO": "/home/ase/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/cargo",
+        "RUSTC": "/home/ase/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/rustc",
+        "RUSTUP_TOOLCHAIN": "nightly"
+      }
+    },
+    {
+      "artifacts": {
+        "bytes": 0,
+        "files": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "campaign_wall_timeout_seconds": 900.0,
+      "command": [
+        "/home/ase/.cargo/bin/cargo-fuzz",
+        "run",
+        "--sanitizer",
+        "address",
+        "--fuzz-dir",
+        "/home/ase/zipp/fuzz",
+        "mathsvg_roundtrip",
+        "/tmp/mathsvg-fuzz-campaign-6swr2_jb/mathsvg_roundtrip/corpus",
+        "--",
+        "-runs=10000",
+        "-max_len=4096",
+        "-timeout=10",
+        "-rss_limit_mb=2048",
+        "-print_final_stats=1",
+        "-verbosity=0",
+        "-artifact_prefix=/tmp/mathsvg-fuzz-campaign-6swr2_jb/mathsvg_roundtrip/artifacts/"
+      ],
+      "elapsed_ns": 3031009649,
+      "exit_code": 0,
+      "final_ephemeral_corpus": {
+        "bytes": 868,
+        "files": 25,
+        "preserved": false,
+        "sha256": "06f9054d15691c249dd6ca70284aaebf731ecde25e1554041e694b949468d086"
+      },
+      "generated_valid_seeds": [],
+      "initial_seed_corpus": {
+        "bytes": 37,
+        "files": 1,
+        "sha256": "02148808c5581998ed909045825b2f9d4707f4bb08c69b95b3a55a99708c8c84"
+      },
+      "max_input_bytes": 4096,
+      "per_input_timeout_seconds": 10,
+      "planned_runs": 10000,
+      "reason": "",
+      "reported_executed_units": 10000,
+      "rss_limit_mb": 2048,
+      "sanitizer": "address",
+      "seed_path": "fuzz/seeds/mathsvg_roundtrip",
+      "source_path": "fuzz/fuzz_targets/mathsvg_roundtrip.rs",
+      "source_sha256": "8f8fb15d62b1eb93fdcb13ee3e858a55c89723ed4fde25e428ca1d2987153a0b",
+      "status": "ok",
+      "stderr_log": {
+        "bytes": 920,
+        "sha256": "1116138a8735273ab7ecfb1e1e42415ec6d57c02bef128153bc9ba2afe824c3d"
+      },
+      "stdout_log": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "target": "mathsvg_roundtrip",
+      "timed_out": false,
+      "toolchain_environment": {
+        "CARGO": "/home/ase/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/cargo",
+        "RUSTC": "/home/ase/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/rustc",
+        "RUSTUP_TOOLCHAIN": "nightly"
+      }
+    }
+  ],
+  "toolchain_environment": {
+    "CARGO": "/home/ase/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/cargo",
+    "RUSTC": "/home/ase/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/rustc",
+    "RUSTUP_TOOLCHAIN": "nightly"
+  },
+  "tools": {
+    "cargo": {
+      "path": "/home/ase/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/cargo",
+      "sha256": "17ea49aa6cfe60ac075faa6e896b1bd2bea2a1422b9142cf2d77fb5f1e60cc47",
+      "version": "cargo 1.99.0-nightly (3efb1f477 2026-07-17) | release: 1.99.0-nightly | commit-hash: 3efb1f477e99b42974b982d939fd100303cdf7db | commit-date: 2026-07-17 | host: x86_64-unknown-linux-gnu | libgit2: 1.9.4 (sys:0.21.0 vendored) | libcurl: 8.21.0-DEV (sys:0.4.90+curl-8.21.0 vendored ssl:OpenSSL/3.6.3) | ssl: OpenSSL 3.6.3 9 Jun 2026 | os: Ubuntu 24.4.0 (noble) [64-bit]"
+    },
+    "cargo_fuzz": {
+      "path": "/home/ase/.cargo/bin/cargo-fuzz",
+      "sha256": "22cf6124adbdd2c1d544f24d0faf1c7a5713499a89015cfbd38fe39e4607a9f8",
+      "version": "cargo-fuzz 0.13.2"
+    },
+    "mathsvg_bootstrap_binary": {
+      "path": "/home/ase/zipp/target/release/mathsvg",
+      "purpose": "generate valid constant/linear/periodic archives so mutational decode fuzzing reaches strict DSL/evaluator paths",
+      "sha256": "8f1ca1238a4c2d6495b7cff729ce6ecb34da3f844a557ea7b90b0d9d52a10787"
+    },
+    "nightly_rustc": {
+      "path": "/home/ase/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/rustc",
+      "sha256": "2186437f639d3574c2e7cee86bc8bd9b39a1c0e7bef61bc1fd51f736fb79f6c0",
+      "version": "rustc 1.99.0-nightly (6f72b5dd5 2026-07-22) | binary: rustc | commit-hash: 6f72b5dd5f82226a2773d40efea7bab941892a73 | commit-date: 2026-07-22 | host: x86_64-unknown-linux-gnu | release: 1.99.0-nightly | LLVM version: 22.1.8"
+    }
+  }
+}

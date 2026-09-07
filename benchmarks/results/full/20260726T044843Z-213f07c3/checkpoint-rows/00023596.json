@@ -1,0 +1,528 @@
+{
+  "completed_at_utc": "2026-07-27T16:03:10.354613+00:00",
+  "execution_interval_index": 0,
+  "expected_grid_index": 23596,
+  "interval_active_seconds": 126866.83980635102,
+  "key": [
+    "mixed_generated",
+    "datasets/generated/mixed/files/sample.gz",
+    "mathzip-fast",
+    1
+  ],
+  "row": {
+    "actual_residual_coded_bytes": 19178,
+    "archive_sha256": "4aa702c7411c84a1e6954d33964476ac1fc4774dbd5599a136a0b3910e5ea29f",
+    "bits_per_byte": 8.065074564605277,
+    "codec": "mathzip-fast",
+    "codec_family": "mathzip",
+    "codec_level": "fast",
+    "command_lines": [
+      "'<repo>/target/release/mathzip' compress --mode fast --max-input-bytes 8589934592 --no-sync --force --metrics-output '<work>/archive.mz.metrics.json' '<repo>/datasets/generated/mixed/files/sample.gz' '<work>/archive.mz'",
+      "'<repo>/target/release/mathzip' decompress --max-archive-bytes 17179869184 --max-output-bytes 8589934592 --max-segments 8388608 --no-sync --force '<work>/archive.mz' '<work>/restored.bin'"
+    ],
+    "compressed_bytes": 19334,
+    "compression_cpu_seconds": 0.01371799997286871,
+    "compression_mbps": 1.3054422374161485,
+    "compression_seconds": 0.014690807031001896,
+    "container_overhead_bytes": 120,
+    "corpus": "mixed_generated",
+    "decompression_cpu_seconds": 0.006261000002268702,
+    "decompression_mbps": 2.635898298537308,
+    "decompression_seconds": 0.007275698008015752,
+    "deterministic_archive": true,
+    "error": null,
+    "estimated_residual_entropy": 7.698004913893979,
+    "expansion_percent": 0.8134320575659659,
+    "input_entropy_bits_per_byte": 7.698004913893976,
+    "input_license": "CC0-1.0 generated source/data; toolchain outputs derive from CC0 source",
+    "input_manifest": "datasets/generated/mixed/manifest.json",
+    "input_manifest_sha256": "ad410d074a33eccf0720bdfac0d391edb1f0a60fd58f241add39b56f82bf5c7d",
+    "input_manifest_verified": true,
+    "input_name": "sample.gz",
+    "input_path": "datasets/generated/mixed/files/sample.gz",
+    "input_provenance": "python/mathzip_bench/auxiliary.py and datasets/generated/mixed/manifest.json",
+    "input_sha256": "aa0a5987de405f8d893279cb368b58048a6cde393210c39a903cac826bb1f3a1",
+    "math_segments_winning_raw": 0,
+    "math_segments_winning_zstd": 0,
+    "mathzip_inspection": {
+      "actual_residual_coded_bytes": 19178,
+      "checksums": {
+        "archive": true,
+        "header": true,
+        "original": true,
+        "segments": true
+      },
+      "compressed_size": 19334,
+      "compression_ratio": 0.9919313127133547,
+      "container_overhead_bytes": 120,
+      "estimated_residual_entropy": 7.698004913893979,
+      "format_version": 1,
+      "math_segments_winning_raw": 0,
+      "math_segments_winning_zstd": 0,
+      "mean_segment_size": 19178.0,
+      "median_segment_size": 19178.0,
+      "metadata_bytes": 156,
+      "model_distribution": {
+        "raw": 1
+      },
+      "model_parameter_bytes": 0,
+      "original_size": 19178,
+      "partition_metadata_bytes": 36,
+      "payload_size": 19218,
+      "raw_fallback_percentage": 100.0,
+      "raw_model_percentage": 100.0,
+      "residual_bytes": 19178,
+      "residual_distribution": {
+        "raw": 1
+      },
+      "residual_mode_distribution": {
+        "add_modulo": 1
+      },
+      "segment_count": 1,
+      "segment_descriptor_bytes": 36,
+      "transform_count": 1,
+      "transform_metadata_bytes": 4,
+      "transformed_size": 19178,
+      "transforms": [
+        {
+          "type": "identity"
+        }
+      ]
+    },
+    "mathzip_search_provenance": {
+      "balanced_frontier_model_mode_finalist_limit": null,
+      "balanced_frontier_regular_anchor_bytes": null,
+      "balanced_frontier_transform_finalist_limit": null,
+      "effective_segmentation": "fixed",
+      "includes_balanced_frontier": false,
+      "primary_model_mode_finalist_limit": null,
+      "primary_regular_anchor_bytes": 16384,
+      "primary_transform_finalist_limit": null,
+      "requested_mode": "fast",
+      "screened_large_input": false,
+      "selected_balanced_frontier": false,
+      "selected_model_mode_finalist_limit": null,
+      "selected_regular_anchor_bytes": 16384,
+      "selected_transform_finalist_limit": null
+    },
+    "mathzip_search_provenance_consistent": true,
+    "mean_segment_size": 19178.0,
+    "median_segment_size": 19178.0,
+    "model_distribution": {
+      "raw": 1
+    },
+    "model_fitting_seconds": 0.000303574,
+    "model_parameter_bytes": 0,
+    "original_bytes": 19178,
+    "partition_metadata_bytes": 36,
+    "peak_rss_bytes": 3575808.0,
+    "profile": "full",
+    "ratio": 0.9919313127133547,
+    "raw_fallback_percent": 100.0,
+    "raw_model_percent": 100.0,
+    "requested_repeats": 3,
+    "residual_bytes": 19178,
+    "residual_coding_seconds": 0.00771122,
+    "residual_distribution": {
+      "raw": 1
+    },
+    "restored_sha256": "aa0a5987de405f8d893279cb368b58048a6cde393210c39a903cac826bb1f3a1",
+    "roundtrip_verified": true,
+    "run_id": "20260726T044843Z-213f07c3",
+    "savings": -0.00813432057565966,
+    "savings_percent": -0.8134320575659659,
+    "schema_version": "mathzip-benchmark-results-v1",
+    "search_seconds": 0.001326721,
+    "segment_count": 1,
+    "status": "ok",
+    "successful_repeats": 3,
+    "tags": {
+      "family": null,
+      "noise_density": null,
+      "seed": null,
+      "size_requested": null
+    },
+    "threads": 1,
+    "transform": [
+      {
+        "type": "identity"
+      }
+    ],
+    "trials": [
+      {
+        "archive_sha256": "4aa702c7411c84a1e6954d33964476ac1fc4774dbd5599a136a0b3910e5ea29f",
+        "compressed_bytes": 19334,
+        "compression_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--metrics-output",
+          "<work>/archive.mz.metrics.json",
+          "<repo>/datasets/generated/mixed/files/sample.gz",
+          "<work>/archive.mz"
+        ],
+        "compression_cpu_seconds": 0.018561000004410744,
+        "compression_metrics": {
+          "balanced_frontier_model_mode_finalist_limit": null,
+          "balanced_frontier_regular_anchor_bytes": null,
+          "balanced_frontier_transform_finalist_limit": null,
+          "effective_segmentation": "fixed",
+          "includes_balanced_frontier": false,
+          "model_fitting_seconds": 0.000375542,
+          "primary_model_mode_finalist_limit": null,
+          "primary_regular_anchor_bytes": 16384,
+          "primary_transform_finalist_limit": null,
+          "requested_mode": "fast",
+          "residual_coding_seconds": 0.010291808,
+          "screened_large_input": false,
+          "search_seconds": 0.001727444,
+          "selected_balanced_frontier": false,
+          "selected_model_mode_finalist_limit": null,
+          "selected_regular_anchor_bytes": 16384,
+          "selected_transform_finalist_limit": null
+        },
+        "compression_metrics_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--metrics-output",
+          "<work>/archive.mz.metrics.json",
+          "<repo>/datasets/generated/mixed/files/sample.gz",
+          "<work>/archive.mz"
+        ],
+        "compression_metrics_stderr": "compressed 19178 -> 19334 bytes (ratio 0.9919:1) in 0.012s",
+        "compression_peak_rss_bytes": 3575808,
+        "compression_seconds": 0.01947502000257373,
+        "compression_stderr": "compressed 19178 -> 19334 bytes (ratio 0.9919:1) in 0.012s",
+        "decompression_command": [
+          "<repo>/target/release/mathzip",
+          "decompress",
+          "--max-archive-bytes",
+          "17179869184",
+          "--max-output-bytes",
+          "8589934592",
+          "--max-segments",
+          "8388608",
+          "--no-sync",
+          "--force",
+          "<work>/archive.mz",
+          "<work>/restored.bin"
+        ],
+        "decompression_cpu_seconds": 0.0071189999871421605,
+        "decompression_peak_rss_bytes": 327680,
+        "decompression_seconds": 0.00816566898720339,
+        "decompression_stderr": "restored 19178 bytes in 0.001s; original SHA-256 verified",
+        "error": null,
+        "index": 0,
+        "inspection": {
+          "actual_residual_coded_bytes": 19178,
+          "checksums": {
+            "archive": true,
+            "header": true,
+            "original": true,
+            "segments": true
+          },
+          "compressed_size": 19334,
+          "compression_ratio": 0.9919313127133547,
+          "container_overhead_bytes": 120,
+          "estimated_residual_entropy": 7.698004913893979,
+          "format_version": 1,
+          "math_segments_winning_raw": 0,
+          "math_segments_winning_zstd": 0,
+          "mean_segment_size": 19178.0,
+          "median_segment_size": 19178.0,
+          "metadata_bytes": 156,
+          "model_distribution": {
+            "raw": 1
+          },
+          "model_parameter_bytes": 0,
+          "original_size": 19178,
+          "partition_metadata_bytes": 36,
+          "payload_size": 19218,
+          "raw_fallback_percentage": 100.0,
+          "raw_model_percentage": 100.0,
+          "residual_bytes": 19178,
+          "residual_distribution": {
+            "raw": 1
+          },
+          "residual_mode_distribution": {
+            "add_modulo": 1
+          },
+          "segment_count": 1,
+          "segment_descriptor_bytes": 36,
+          "transform_count": 1,
+          "transform_metadata_bytes": 4,
+          "transformed_size": 19178,
+          "transforms": [
+            {
+              "type": "identity"
+            }
+          ]
+        },
+        "restored_sha256": "aa0a5987de405f8d893279cb368b58048a6cde393210c39a903cac826bb1f3a1",
+        "roundtrip_verified": true,
+        "status": "ok"
+      },
+      {
+        "archive_sha256": "4aa702c7411c84a1e6954d33964476ac1fc4774dbd5599a136a0b3910e5ea29f",
+        "compressed_bytes": 19334,
+        "compression_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--metrics-output",
+          "<work>/archive.mz.metrics.json",
+          "<repo>/datasets/generated/mixed/files/sample.gz",
+          "<work>/archive.mz"
+        ],
+        "compression_cpu_seconds": 0.01371799997286871,
+        "compression_metrics": {
+          "balanced_frontier_model_mode_finalist_limit": null,
+          "balanced_frontier_regular_anchor_bytes": null,
+          "balanced_frontier_transform_finalist_limit": null,
+          "effective_segmentation": "fixed",
+          "includes_balanced_frontier": false,
+          "model_fitting_seconds": 0.000302033,
+          "primary_model_mode_finalist_limit": null,
+          "primary_regular_anchor_bytes": 16384,
+          "primary_transform_finalist_limit": null,
+          "requested_mode": "fast",
+          "residual_coding_seconds": 0.00771122,
+          "screened_large_input": false,
+          "search_seconds": 0.001299547,
+          "selected_balanced_frontier": false,
+          "selected_model_mode_finalist_limit": null,
+          "selected_regular_anchor_bytes": 16384,
+          "selected_transform_finalist_limit": null
+        },
+        "compression_metrics_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--metrics-output",
+          "<work>/archive.mz.metrics.json",
+          "<repo>/datasets/generated/mixed/files/sample.gz",
+          "<work>/archive.mz"
+        ],
+        "compression_metrics_stderr": "compressed 19178 -> 19334 bytes (ratio 0.9919:1) in 0.009s",
+        "compression_peak_rss_bytes": 3624960,
+        "compression_seconds": 0.014690807031001896,
+        "compression_stderr": "compressed 19178 -> 19334 bytes (ratio 0.9919:1) in 0.009s",
+        "decompression_command": [
+          "<repo>/target/release/mathzip",
+          "decompress",
+          "--max-archive-bytes",
+          "17179869184",
+          "--max-output-bytes",
+          "8589934592",
+          "--max-segments",
+          "8388608",
+          "--no-sync",
+          "--force",
+          "<work>/archive.mz",
+          "<work>/restored.bin"
+        ],
+        "decompression_cpu_seconds": 0.003731000004336238,
+        "decompression_peak_rss_bytes": 643072,
+        "decompression_seconds": 0.0048063399735838175,
+        "decompression_stderr": "restored 19178 bytes in 0.000s; original SHA-256 verified",
+        "error": null,
+        "index": 1,
+        "inspection": {
+          "actual_residual_coded_bytes": 19178,
+          "checksums": {
+            "archive": true,
+            "header": true,
+            "original": true,
+            "segments": true
+          },
+          "compressed_size": 19334,
+          "compression_ratio": 0.9919313127133547,
+          "container_overhead_bytes": 120,
+          "estimated_residual_entropy": 7.698004913893979,
+          "format_version": 1,
+          "math_segments_winning_raw": 0,
+          "math_segments_winning_zstd": 0,
+          "mean_segment_size": 19178.0,
+          "median_segment_size": 19178.0,
+          "metadata_bytes": 156,
+          "model_distribution": {
+            "raw": 1
+          },
+          "model_parameter_bytes": 0,
+          "original_size": 19178,
+          "partition_metadata_bytes": 36,
+          "payload_size": 19218,
+          "raw_fallback_percentage": 100.0,
+          "raw_model_percentage": 100.0,
+          "residual_bytes": 19178,
+          "residual_distribution": {
+            "raw": 1
+          },
+          "residual_mode_distribution": {
+            "add_modulo": 1
+          },
+          "segment_count": 1,
+          "segment_descriptor_bytes": 36,
+          "transform_count": 1,
+          "transform_metadata_bytes": 4,
+          "transformed_size": 19178,
+          "transforms": [
+            {
+              "type": "identity"
+            }
+          ]
+        },
+        "restored_sha256": "aa0a5987de405f8d893279cb368b58048a6cde393210c39a903cac826bb1f3a1",
+        "roundtrip_verified": true,
+        "status": "ok"
+      },
+      {
+        "archive_sha256": "4aa702c7411c84a1e6954d33964476ac1fc4774dbd5599a136a0b3910e5ea29f",
+        "compressed_bytes": 19334,
+        "compression_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--metrics-output",
+          "<work>/archive.mz.metrics.json",
+          "<repo>/datasets/generated/mixed/files/sample.gz",
+          "<work>/archive.mz"
+        ],
+        "compression_cpu_seconds": 0.012790999986464158,
+        "compression_metrics": {
+          "balanced_frontier_model_mode_finalist_limit": null,
+          "balanced_frontier_regular_anchor_bytes": null,
+          "balanced_frontier_transform_finalist_limit": null,
+          "effective_segmentation": "fixed",
+          "includes_balanced_frontier": false,
+          "model_fitting_seconds": 0.000303574,
+          "primary_model_mode_finalist_limit": null,
+          "primary_regular_anchor_bytes": 16384,
+          "primary_transform_finalist_limit": null,
+          "requested_mode": "fast",
+          "residual_coding_seconds": 0.00769548,
+          "screened_large_input": false,
+          "search_seconds": 0.001326721,
+          "selected_balanced_frontier": false,
+          "selected_model_mode_finalist_limit": null,
+          "selected_regular_anchor_bytes": 16384,
+          "selected_transform_finalist_limit": null
+        },
+        "compression_metrics_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--metrics-output",
+          "<work>/archive.mz.metrics.json",
+          "<repo>/datasets/generated/mixed/files/sample.gz",
+          "<work>/archive.mz"
+        ],
+        "compression_metrics_stderr": "compressed 19178 -> 19334 bytes (ratio 0.9919:1) in 0.009s",
+        "compression_peak_rss_bytes": 3551232,
+        "compression_seconds": 0.01411087199812755,
+        "compression_stderr": "compressed 19178 -> 19334 bytes (ratio 0.9919:1) in 0.009s",
+        "decompression_command": [
+          "<repo>/target/release/mathzip",
+          "decompress",
+          "--max-archive-bytes",
+          "17179869184",
+          "--max-output-bytes",
+          "8589934592",
+          "--max-segments",
+          "8388608",
+          "--no-sync",
+          "--force",
+          "<work>/archive.mz",
+          "<work>/restored.bin"
+        ],
+        "decompression_cpu_seconds": 0.006261000002268702,
+        "decompression_peak_rss_bytes": 401408,
+        "decompression_seconds": 0.007275698008015752,
+        "decompression_stderr": "restored 19178 bytes in 0.001s; original SHA-256 verified",
+        "error": null,
+        "index": 2,
+        "inspection": {
+          "actual_residual_coded_bytes": 19178,
+          "checksums": {
+            "archive": true,
+            "header": true,
+            "original": true,
+            "segments": true
+          },
+          "compressed_size": 19334,
+          "compression_ratio": 0.9919313127133547,
+          "container_overhead_bytes": 120,
+          "estimated_residual_entropy": 7.698004913893979,
+          "format_version": 1,
+          "math_segments_winning_raw": 0,
+          "math_segments_winning_zstd": 0,
+          "mean_segment_size": 19178.0,
+          "median_segment_size": 19178.0,
+          "metadata_bytes": 156,
+          "model_distribution": {
+            "raw": 1
+          },
+          "model_parameter_bytes": 0,
+          "original_size": 19178,
+          "partition_metadata_bytes": 36,
+          "payload_size": 19218,
+          "raw_fallback_percentage": 100.0,
+          "raw_model_percentage": 100.0,
+          "residual_bytes": 19178,
+          "residual_distribution": {
+            "raw": 1
+          },
+          "residual_mode_distribution": {
+            "add_modulo": 1
+          },
+          "segment_count": 1,
+          "segment_descriptor_bytes": 36,
+          "transform_count": 1,
+          "transform_metadata_bytes": 4,
+          "transformed_size": 19178,
+          "transforms": [
+            {
+              "type": "identity"
+            }
+          ]
+        },
+        "restored_sha256": "aa0a5987de405f8d893279cb368b58048a6cde393210c39a903cac826bb1f3a1",
+        "roundtrip_verified": true,
+        "status": "ok"
+      }
+    ],
+    "variant": ""
+  },
+  "schema_version": "mathzip-benchmark-checkpoint-row-v1"
+}

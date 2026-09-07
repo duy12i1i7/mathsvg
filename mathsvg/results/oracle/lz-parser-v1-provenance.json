@@ -1,0 +1,240 @@
+{
+  "analysis_sources": [
+    {
+      "bytes": 26885,
+      "path": "mathsvg/python/oracle/lz_parser.py",
+      "sha256": "55f916c65b6e1b203b497e9e9b8032ec30aa8399dfe2f9cd14e7cc9a9ef0da44"
+    }
+  ],
+  "development_manifest": {
+    "bytes": 27837,
+    "path": "mathsvg/results/manifests/development.csv",
+    "sha256": "e94bcc95b681519f4784b11b410d59a703882ebfaa971e251b5c714be2ba59a2"
+  },
+  "evidence_scope": "development-real-only",
+  "holdout_payload_inspected": false,
+  "probe_contract": {
+    "block_bytes": 1048576,
+    "engine": "mathsvg-entropy opcode-0x07 add-only parser-policy competition",
+    "policies": [
+      "C4",
+      "C8",
+      "C16",
+      "C4L",
+      "C8L",
+      "C16L"
+    ],
+    "repetitions": 1,
+    "schema": "mathsvg-lzh-chain-lazy-oracle-v1",
+    "warmups": 1
+  },
+  "retention": {
+    "decisions": {
+      "C16": {
+        "baseline_full_archive_bytes": 13427974,
+        "baseline_search_ns_median": null,
+        "block_count": 30,
+        "budget_stop_blocks": 0,
+        "complete": true,
+        "gain_fraction": 0.04923400953859458,
+        "input_bytes": 26408635,
+        "portfolio_full_archive_bytes": 12766861,
+        "portfolio_search_ns_median": null,
+        "retention_pass": true,
+        "retention_reason": "pass: exact archive gain and real-win gates passed",
+        "saved_full_archive_bytes": 661113,
+        "search_slowdown": null,
+        "winning_blocks": 21,
+        "winning_files": 7
+      },
+      "C16L": {
+        "baseline_full_archive_bytes": 13427974,
+        "baseline_search_ns_median": 1905989914,
+        "block_count": 30,
+        "budget_stop_blocks": 0,
+        "complete": true,
+        "gain_fraction": 0.0661592731710681,
+        "input_bytes": 26408635,
+        "portfolio_full_archive_bytes": 12539589,
+        "portfolio_search_ns_median": 5629582307,
+        "retention_pass": true,
+        "retention_reason": "pass: exact archive gain and real-win gates passed",
+        "saved_full_archive_bytes": 888385,
+        "search_slowdown": 2.9536264938493266,
+        "winning_blocks": 24,
+        "winning_files": 8
+      },
+      "C4": {
+        "baseline_full_archive_bytes": 13427974,
+        "baseline_search_ns_median": 1902949042,
+        "block_count": 30,
+        "budget_stop_blocks": 0,
+        "complete": true,
+        "gain_fraction": 0.03775990331825188,
+        "input_bytes": 26408635,
+        "portfolio_full_archive_bytes": 12920935,
+        "portfolio_search_ns_median": 4332033507,
+        "retention_pass": true,
+        "retention_reason": "pass: exact archive gain and real-win gates passed",
+        "saved_full_archive_bytes": 507039,
+        "search_slowdown": 2.276484241767731,
+        "winning_blocks": 21,
+        "winning_files": 7
+      },
+      "C4L": {
+        "baseline_full_archive_bytes": 13427974,
+        "baseline_search_ns_median": 1903711203,
+        "block_count": 30,
+        "budget_stop_blocks": 0,
+        "complete": true,
+        "gain_fraction": 0.05582152601725324,
+        "input_bytes": 26408635,
+        "portfolio_full_archive_bytes": 12678404,
+        "portfolio_search_ns_median": 4715468000,
+        "retention_pass": true,
+        "retention_reason": "pass: exact archive gain and real-win gates passed",
+        "saved_full_archive_bytes": 749570,
+        "search_slowdown": 2.4769870516962023,
+        "winning_blocks": 24,
+        "winning_files": 8
+      },
+      "C8": {
+        "baseline_full_archive_bytes": 13427974,
+        "baseline_search_ns_median": null,
+        "block_count": 30,
+        "budget_stop_blocks": 0,
+        "complete": true,
+        "gain_fraction": 0.04509533604995065,
+        "input_bytes": 26408635,
+        "portfolio_full_archive_bytes": 12822435,
+        "portfolio_search_ns_median": null,
+        "retention_pass": true,
+        "retention_reason": "pass: exact archive gain and real-win gates passed",
+        "saved_full_archive_bytes": 605539,
+        "search_slowdown": null,
+        "winning_blocks": 21,
+        "winning_files": 7
+      },
+      "C8L": {
+        "baseline_full_archive_bytes": 13427974,
+        "baseline_search_ns_median": 1909486598,
+        "block_count": 30,
+        "budget_stop_blocks": 0,
+        "complete": true,
+        "gain_fraction": 0.062371434439774755,
+        "input_bytes": 26408635,
+        "portfolio_full_archive_bytes": 12590452,
+        "portfolio_search_ns_median": 5202557377,
+        "retention_pass": true,
+        "retention_reason": "pass: exact archive gain and real-win gates passed",
+        "saved_full_archive_bytes": 837522,
+        "search_slowdown": 2.724584389567944,
+        "winning_blocks": 24,
+        "winning_files": 8
+      }
+    },
+    "maximum_search_multiplier_below_threshold": 2.0,
+    "retention_pass": true,
+    "selected_policy": "C8L",
+    "selection_policy": "sequential-incremental-exact-gain-v1",
+    "selection_reason": "C8L is the deepest timed policy reached by sequential 0.5 percentage-point exact-gain admission: C4->C4L: incremental exact archive gain 0.018061622699; C4L->C8L: incremental exact archive gain 0.006549908423; C8L->C16L: incremental exact archive gain 0.003787838731 is below 0.005000000000",
+    "threshold_gain_fraction": 0.005,
+    "timing_evidence_status": "development-directional-gui-host"
+  },
+  "sample_dataset_ids": [
+    "dev-canterbury-alice29-txt",
+    "dev-canterbury-kennedy-xls",
+    "dev-calgary-progc",
+    "dev-calgary-pic",
+    "dev-calgary-book1",
+    "dev-silesia-xml",
+    "dev-silesia-osdb",
+    "dev-silesia-x-ray"
+  ],
+  "schema": "mathsvg-lzh-chain-lazy-provenance-v3",
+  "selection_policy": "sequential-incremental-exact-gain-v1",
+  "size_evidence": {
+    "probe_binary": {
+      "bytes": 831024,
+      "path": "mathsvg/python/oracle/lz_parser_probe/target/release/mathsvg-lz-parser-oracle-probe",
+      "sha256": "4800c851b6e5c86fd067f2146ef78db9a35f82e9c0c56efddb3559907c202607"
+    },
+    "raw": {
+      "bytes": 180550,
+      "path": "mathsvg/results/oracle/lz-parser-v1-raw.json",
+      "sha256": "ce288720d42a2eba7e0223b169aa3161a7e075c421ad5fd1e4c185b9c32e3000"
+    },
+    "timing_reason": "the size run overlapped unrelated project workloads; its exact bytes/work/roundtrip evidence remains usable",
+    "timing_usable": false
+  },
+  "summary_csv": {
+    "bytes": 10424,
+    "path": "mathsvg/results/oracle/lz-parser.csv",
+    "sha256": "44c1a259b439e5647db779d6c1e2e27d5a4d2e25de82b1eba1160a1168fd6ba4"
+  },
+  "timing_evidence": {
+    "probe": {
+      "affinity_pinned": false,
+      "background_processes_quiesced": false,
+      "binary": {
+        "bytes": 878568,
+        "path": "/home/ase/zipp/mathsvg/python/oracle/lz_parser_probe/target/release/mathsvg-lz-parser-oracle-probe",
+        "sha256": "d3810cd68e18ebe071de7d994e1218623cdb6e42a8beab51457680d2365fd6a0"
+      },
+      "host_end": {
+        "load_average": "5.08 5.47 5.65 20/1331 617223",
+        "logical_parallelism": 16
+      },
+      "host_start": {
+        "load_average": "3.69 5.00 5.51 1/1326 613697",
+        "logical_parallelism": 16
+      },
+      "limitations": [
+        "GUI host is not resource-isolated.",
+        "CPU affinity and frequency were not pinned.",
+        "Exact size, work, determinism and roundtrip evidence are unaffected; timing is directional."
+      ],
+      "project_workloads_quiesced_by_coordinator": true,
+      "resource_isolation": false,
+      "sources": [
+        {
+          "bytes": 78474,
+          "path": "/home/ase/zipp/mathsvg/crates/mathsvg-entropy/src/lib.rs",
+          "sha256": "7ac43320af924bf38898f4e8a9981f1175bb107fa1d885b95fee80e8c84cb27d"
+        },
+        {
+          "bytes": 29380,
+          "path": "/home/ase/zipp/mathsvg/crates/mathsvg-entropy/src/huffman.rs",
+          "sha256": "c138dc053e0affa46015c19aacd915dbd6ba2cdb40d3456b1cc5dbe0ff03213d"
+        },
+        {
+          "bytes": 560,
+          "path": "/home/ase/zipp/mathsvg/python/oracle/lz_parser_probe/Cargo.toml",
+          "sha256": "358a3fa109adf0dc9ae9ab7cbfc9e51e05733783c748420c2d8d54505b9d8b43"
+        },
+        {
+          "bytes": 5927,
+          "path": "/home/ase/zipp/mathsvg/python/oracle/lz_parser_probe/Cargo.lock",
+          "sha256": "1654e043bccdba2cb6a1cfc0aeba4a045b8011ac6fc07b140ace97756664e978"
+        },
+        {
+          "bytes": 21317,
+          "path": "/home/ase/zipp/mathsvg/python/oracle/lz_parser_probe/src/main.rs",
+          "sha256": "df6aefcd1be17d342a57e5bc111e9455cfb9c9f1bbec9917842761b09f39a0e5"
+        },
+        {
+          "bytes": 20952,
+          "path": "/home/ase/zipp/mathsvg/results/manifests/development.csv",
+          "sha256": "a18322026e06c8b5d22462f97e3cf6d992f0b203b5c31a028a523bb9997c0fca"
+        }
+      ],
+      "timing_evidence_status": "development-directional-gui-host"
+    },
+    "raw": {
+      "bytes": 123561,
+      "path": "mathsvg/results/oracle/lz-parser-v1-timing-raw.json",
+      "sha256": "f52c617e5d39be2ce3df1bac162c497ecc20e55dc8651fb59a27063a5b4d8e5b"
+    },
+    "use": "directional policy selection only"
+  }
+}

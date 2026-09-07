@@ -1,0 +1,1886 @@
+{
+  "codec_definitions": [
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "compression_command_template": [
+        "<repo>/target/release/mathzip",
+        "compress",
+        "--mode",
+        "balanced",
+        "--max-input-bytes",
+        "8589934592",
+        "--no-sync",
+        "--force",
+        "--models",
+        "raw",
+        "--residual-coders",
+        "raw",
+        "--transforms",
+        "identity",
+        "--segmentation",
+        "fixed",
+        "--metrics-output",
+        "{archive}.metrics.json",
+        "{input}",
+        "{archive}"
+      ],
+      "decompression_command_template": [
+        "<repo>/target/release/mathzip",
+        "decompress",
+        "--max-archive-bytes",
+        "17179869184",
+        "--max-output-bytes",
+        "8589934592",
+        "--max-segments",
+        "8388608",
+        "--no-sync",
+        "--force",
+        "{archive}",
+        "{restored}"
+      ],
+      "executable": "<repo>/target/release/mathzip",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "name": "ablation-01-raw-only",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "01 raw only"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "compression_command_template": [
+        "<repo>/target/release/mathzip",
+        "compress",
+        "--mode",
+        "balanced",
+        "--max-input-bytes",
+        "8589934592",
+        "--no-sync",
+        "--force",
+        "--models",
+        "raw",
+        "--residual-coders",
+        "raw,rle,zero-run,sparse,bit-pack",
+        "--transforms",
+        "identity",
+        "--segmentation",
+        "fixed",
+        "--metrics-output",
+        "{archive}.metrics.json",
+        "{input}",
+        "{archive}"
+      ],
+      "decompression_command_template": [
+        "<repo>/target/release/mathzip",
+        "decompress",
+        "--max-archive-bytes",
+        "17179869184",
+        "--max-output-bytes",
+        "8589934592",
+        "--max-segments",
+        "8388608",
+        "--no-sync",
+        "--force",
+        "{archive}",
+        "{restored}"
+      ],
+      "executable": "<repo>/target/release/mathzip",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "name": "ablation-02-residual-only",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "02 residual coder only"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "compression_command_template": [
+        "<repo>/target/release/mathzip",
+        "compress",
+        "--mode",
+        "balanced",
+        "--max-input-bytes",
+        "8589934592",
+        "--no-sync",
+        "--force",
+        "--models",
+        "raw,constant",
+        "--transforms",
+        "identity",
+        "--segmentation",
+        "fixed",
+        "--segment-size",
+        "4096",
+        "--metrics-output",
+        "{archive}.metrics.json",
+        "{input}",
+        "{archive}"
+      ],
+      "decompression_command_template": [
+        "<repo>/target/release/mathzip",
+        "decompress",
+        "--max-archive-bytes",
+        "17179869184",
+        "--max-output-bytes",
+        "8589934592",
+        "--max-segments",
+        "8388608",
+        "--no-sync",
+        "--force",
+        "{archive}",
+        "{restored}"
+      ],
+      "executable": "<repo>/target/release/mathzip",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "name": "ablation-03-fixed-constant",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "03 fixed segmentation + constant"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "compression_command_template": [
+        "<repo>/target/release/mathzip",
+        "compress",
+        "--mode",
+        "balanced",
+        "--max-input-bytes",
+        "8589934592",
+        "--no-sync",
+        "--force",
+        "--models",
+        "raw,constant,affine,polynomial,periodic,recurrence,piecewise-linear,run,sparse,copy",
+        "--transforms",
+        "identity",
+        "--segmentation",
+        "fixed",
+        "--segment-size",
+        "4096",
+        "--metrics-output",
+        "{archive}.metrics.json",
+        "{input}",
+        "{archive}"
+      ],
+      "decompression_command_template": [
+        "<repo>/target/release/mathzip",
+        "decompress",
+        "--max-archive-bytes",
+        "17179869184",
+        "--max-output-bytes",
+        "8589934592",
+        "--max-segments",
+        "8388608",
+        "--no-sync",
+        "--force",
+        "{archive}",
+        "{restored}"
+      ],
+      "executable": "<repo>/target/release/mathzip",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "name": "ablation-04-fixed-all-models",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "04 fixed segmentation + all models"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "compression_command_template": [
+        "<repo>/target/release/mathzip",
+        "compress",
+        "--mode",
+        "balanced",
+        "--max-input-bytes",
+        "8589934592",
+        "--no-sync",
+        "--force",
+        "--models",
+        "raw,constant",
+        "--transforms",
+        "identity",
+        "--segmentation",
+        "adaptive",
+        "--metrics-output",
+        "{archive}.metrics.json",
+        "{input}",
+        "{archive}"
+      ],
+      "decompression_command_template": [
+        "<repo>/target/release/mathzip",
+        "decompress",
+        "--max-archive-bytes",
+        "17179869184",
+        "--max-output-bytes",
+        "8589934592",
+        "--max-segments",
+        "8388608",
+        "--no-sync",
+        "--force",
+        "{archive}",
+        "{restored}"
+      ],
+      "executable": "<repo>/target/release/mathzip",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "name": "ablation-05-adaptive-constant",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "05 adaptive segmentation + constant"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "compression_command_template": [
+        "<repo>/target/release/mathzip",
+        "compress",
+        "--mode",
+        "balanced",
+        "--max-input-bytes",
+        "8589934592",
+        "--no-sync",
+        "--force",
+        "--models",
+        "raw,constant,affine",
+        "--transforms",
+        "identity",
+        "--segmentation",
+        "adaptive",
+        "--metrics-output",
+        "{archive}.metrics.json",
+        "{input}",
+        "{archive}"
+      ],
+      "decompression_command_template": [
+        "<repo>/target/release/mathzip",
+        "decompress",
+        "--max-archive-bytes",
+        "17179869184",
+        "--max-output-bytes",
+        "8589934592",
+        "--max-segments",
+        "8388608",
+        "--no-sync",
+        "--force",
+        "{archive}",
+        "{restored}"
+      ],
+      "executable": "<repo>/target/release/mathzip",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "name": "ablation-06-adaptive-linear",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "06 adaptive + constant/linear"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "compression_command_template": [
+        "<repo>/target/release/mathzip",
+        "compress",
+        "--mode",
+        "balanced",
+        "--max-input-bytes",
+        "8589934592",
+        "--no-sync",
+        "--force",
+        "--models",
+        "raw,constant,affine,polynomial",
+        "--transforms",
+        "identity",
+        "--segmentation",
+        "adaptive",
+        "--metrics-output",
+        "{archive}.metrics.json",
+        "{input}",
+        "{archive}"
+      ],
+      "decompression_command_template": [
+        "<repo>/target/release/mathzip",
+        "decompress",
+        "--max-archive-bytes",
+        "17179869184",
+        "--max-output-bytes",
+        "8589934592",
+        "--max-segments",
+        "8388608",
+        "--no-sync",
+        "--force",
+        "{archive}",
+        "{restored}"
+      ],
+      "executable": "<repo>/target/release/mathzip",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "name": "ablation-07-add-polynomial",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "07 add polynomial"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "compression_command_template": [
+        "<repo>/target/release/mathzip",
+        "compress",
+        "--mode",
+        "balanced",
+        "--max-input-bytes",
+        "8589934592",
+        "--no-sync",
+        "--force",
+        "--models",
+        "raw,constant,affine,polynomial,periodic",
+        "--transforms",
+        "identity",
+        "--segmentation",
+        "adaptive",
+        "--metrics-output",
+        "{archive}.metrics.json",
+        "{input}",
+        "{archive}"
+      ],
+      "decompression_command_template": [
+        "<repo>/target/release/mathzip",
+        "decompress",
+        "--max-archive-bytes",
+        "17179869184",
+        "--max-output-bytes",
+        "8589934592",
+        "--max-segments",
+        "8388608",
+        "--no-sync",
+        "--force",
+        "{archive}",
+        "{restored}"
+      ],
+      "executable": "<repo>/target/release/mathzip",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "name": "ablation-08-add-periodic",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "08 add periodic"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "compression_command_template": [
+        "<repo>/target/release/mathzip",
+        "compress",
+        "--mode",
+        "balanced",
+        "--max-input-bytes",
+        "8589934592",
+        "--no-sync",
+        "--force",
+        "--models",
+        "raw,constant,affine,polynomial,periodic,recurrence",
+        "--transforms",
+        "identity",
+        "--segmentation",
+        "adaptive",
+        "--metrics-output",
+        "{archive}.metrics.json",
+        "{input}",
+        "{archive}"
+      ],
+      "decompression_command_template": [
+        "<repo>/target/release/mathzip",
+        "decompress",
+        "--max-archive-bytes",
+        "17179869184",
+        "--max-output-bytes",
+        "8589934592",
+        "--max-segments",
+        "8388608",
+        "--no-sync",
+        "--force",
+        "{archive}",
+        "{restored}"
+      ],
+      "executable": "<repo>/target/release/mathzip",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "name": "ablation-09-add-recurrence",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "09 add recurrence"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "compression_command_template": [
+        "<repo>/target/release/mathzip",
+        "compress",
+        "--mode",
+        "balanced",
+        "--max-input-bytes",
+        "8589934592",
+        "--no-sync",
+        "--force",
+        "--models",
+        "raw,constant,affine,polynomial,periodic,recurrence",
+        "--transforms",
+        "identity,bit-plane",
+        "--segmentation",
+        "adaptive",
+        "--metrics-output",
+        "{archive}.metrics.json",
+        "{input}",
+        "{archive}"
+      ],
+      "decompression_command_template": [
+        "<repo>/target/release/mathzip",
+        "decompress",
+        "--max-archive-bytes",
+        "17179869184",
+        "--max-output-bytes",
+        "8589934592",
+        "--max-segments",
+        "8388608",
+        "--no-sync",
+        "--force",
+        "{archive}",
+        "{restored}"
+      ],
+      "executable": "<repo>/target/release/mathzip",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "name": "ablation-10-add-bit-plane",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "10 add bit-plane"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "compression_command_template": [
+        "<repo>/target/release/mathzip",
+        "compress",
+        "--mode",
+        "balanced",
+        "--max-input-bytes",
+        "8589934592",
+        "--no-sync",
+        "--force",
+        "--models",
+        "raw,constant,affine,polynomial,periodic,recurrence",
+        "--transforms",
+        "identity,bit-plane,stride",
+        "--segmentation",
+        "adaptive",
+        "--metrics-output",
+        "{archive}.metrics.json",
+        "{input}",
+        "{archive}"
+      ],
+      "decompression_command_template": [
+        "<repo>/target/release/mathzip",
+        "decompress",
+        "--max-archive-bytes",
+        "17179869184",
+        "--max-output-bytes",
+        "8589934592",
+        "--max-segments",
+        "8388608",
+        "--no-sync",
+        "--force",
+        "{archive}",
+        "{restored}"
+      ],
+      "executable": "<repo>/target/release/mathzip",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "name": "ablation-11-add-stride",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "11 add stride transpose"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "compression_command_template": [
+        "<repo>/target/release/mathzip",
+        "compress",
+        "--mode",
+        "balanced",
+        "--max-input-bytes",
+        "8589934592",
+        "--no-sync",
+        "--force",
+        "--models",
+        "raw,constant,affine,polynomial,periodic,recurrence,copy",
+        "--transforms",
+        "identity,bit-plane,stride",
+        "--segmentation",
+        "adaptive",
+        "--metrics-output",
+        "{archive}.metrics.json",
+        "{input}",
+        "{archive}"
+      ],
+      "decompression_command_template": [
+        "<repo>/target/release/mathzip",
+        "decompress",
+        "--max-archive-bytes",
+        "17179869184",
+        "--max-output-bytes",
+        "8589934592",
+        "--max-segments",
+        "8388608",
+        "--no-sync",
+        "--force",
+        "{archive}",
+        "{restored}"
+      ],
+      "executable": "<repo>/target/release/mathzip",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "name": "ablation-12-add-copy",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "12 add copy/reference"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "compression_command_template": [
+        "<repo>/target/release/mathzip",
+        "compress",
+        "--mode",
+        "balanced",
+        "--max-input-bytes",
+        "8589934592",
+        "--no-sync",
+        "--force",
+        "--residual-coders",
+        "raw,rle,zero-run,sparse,bit-pack",
+        "--metrics-output",
+        "{archive}.metrics.json",
+        "{input}",
+        "{archive}"
+      ],
+      "decompression_command_template": [
+        "<repo>/target/release/mathzip",
+        "decompress",
+        "--max-archive-bytes",
+        "17179869184",
+        "--max-output-bytes",
+        "8589934592",
+        "--max-segments",
+        "8388608",
+        "--no-sync",
+        "--force",
+        "{archive}",
+        "{restored}"
+      ],
+      "executable": "<repo>/target/release/mathzip",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "name": "ablation-13-custom-residual",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "13 custom residual coders"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "compression_command_template": [
+        "<repo>/target/release/mathzip",
+        "compress",
+        "--mode",
+        "balanced",
+        "--max-input-bytes",
+        "8589934592",
+        "--no-sync",
+        "--force",
+        "--residual-coders",
+        "zstd",
+        "--metrics-output",
+        "{archive}.metrics.json",
+        "{input}",
+        "{archive}"
+      ],
+      "decompression_command_template": [
+        "<repo>/target/release/mathzip",
+        "decompress",
+        "--max-archive-bytes",
+        "17179869184",
+        "--max-output-bytes",
+        "8589934592",
+        "--max-segments",
+        "8388608",
+        "--no-sync",
+        "--force",
+        "{archive}",
+        "{restored}"
+      ],
+      "executable": "<repo>/target/release/mathzip",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "name": "ablation-14-zstd-residual",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "14 Zstd residual coder"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "compression_command_template": [
+        "<repo>/target/release/mathzip",
+        "compress",
+        "--mode",
+        "balanced",
+        "--max-input-bytes",
+        "8589934592",
+        "--no-sync",
+        "--force",
+        "--transforms",
+        "identity",
+        "--metrics-output",
+        "{archive}.metrics.json",
+        "{input}",
+        "{archive}"
+      ],
+      "decompression_command_template": [
+        "<repo>/target/release/mathzip",
+        "decompress",
+        "--max-archive-bytes",
+        "17179869184",
+        "--max-output-bytes",
+        "8589934592",
+        "--max-segments",
+        "8388608",
+        "--no-sync",
+        "--force",
+        "{archive}",
+        "{restored}"
+      ],
+      "executable": "<repo>/target/release/mathzip",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "name": "ablation-15-no-transform",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "15 identity transform only"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "compression_command_template": [
+        "<repo>/target/release/mathzip",
+        "compress",
+        "--mode",
+        "balanced",
+        "--max-input-bytes",
+        "8589934592",
+        "--no-sync",
+        "--force",
+        "--segmentation",
+        "fixed",
+        "--segment-size",
+        "4096",
+        "--metrics-output",
+        "{archive}.metrics.json",
+        "{input}",
+        "{archive}"
+      ],
+      "decompression_command_template": [
+        "<repo>/target/release/mathzip",
+        "decompress",
+        "--max-archive-bytes",
+        "17179869184",
+        "--max-output-bytes",
+        "8589934592",
+        "--max-segments",
+        "8388608",
+        "--no-sync",
+        "--force",
+        "{archive}",
+        "{restored}"
+      ],
+      "executable": "<repo>/target/release/mathzip",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "name": "ablation-16-no-adaptive-partition",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "16 fixed partition"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "compression_command_template": [
+        "<repo>/target/release/mathzip",
+        "compress",
+        "--mode",
+        "balanced",
+        "--max-input-bytes",
+        "8589934592",
+        "--no-sync",
+        "--force",
+        "--no-raw-fallback",
+        "--metrics-output",
+        "{archive}.metrics.json",
+        "{input}",
+        "{archive}"
+      ],
+      "decompression_command_template": [
+        "<repo>/target/release/mathzip",
+        "decompress",
+        "--max-archive-bytes",
+        "17179869184",
+        "--max-output-bytes",
+        "8589934592",
+        "--max-segments",
+        "8388608",
+        "--no-sync",
+        "--force",
+        "{archive}",
+        "{restored}"
+      ],
+      "executable": "<repo>/target/release/mathzip",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "name": "ablation-17-no-raw-fallback",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "17 no raw fallback"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "compression_command_template": [
+        "<repo>/target/release/mathzip",
+        "compress",
+        "--mode",
+        "fast",
+        "--max-input-bytes",
+        "8589934592",
+        "--no-sync",
+        "--force",
+        "--metrics-output",
+        "{archive}.metrics.json",
+        "{input}",
+        "{archive}"
+      ],
+      "decompression_command_template": [
+        "<repo>/target/release/mathzip",
+        "decompress",
+        "--max-archive-bytes",
+        "17179869184",
+        "--max-output-bytes",
+        "8589934592",
+        "--max-segments",
+        "8388608",
+        "--no-sync",
+        "--force",
+        "{archive}",
+        "{restored}"
+      ],
+      "executable": "<repo>/target/release/mathzip",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "fast",
+      "name": "ablation-18-fast",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "18 fast mode"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "compression_command_template": [
+        "<repo>/target/release/mathzip",
+        "compress",
+        "--mode",
+        "balanced",
+        "--max-input-bytes",
+        "8589934592",
+        "--no-sync",
+        "--force",
+        "--metrics-output",
+        "{archive}.metrics.json",
+        "{input}",
+        "{archive}"
+      ],
+      "decompression_command_template": [
+        "<repo>/target/release/mathzip",
+        "decompress",
+        "--max-archive-bytes",
+        "17179869184",
+        "--max-output-bytes",
+        "8589934592",
+        "--max-segments",
+        "8388608",
+        "--no-sync",
+        "--force",
+        "{archive}",
+        "{restored}"
+      ],
+      "executable": "<repo>/target/release/mathzip",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "name": "ablation-19-balanced",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "19 balanced mode"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "compression_command_template": [
+        "<repo>/target/release/mathzip",
+        "compress",
+        "--mode",
+        "max",
+        "--max-input-bytes",
+        "8589934592",
+        "--no-sync",
+        "--force",
+        "--metrics-output",
+        "{archive}.metrics.json",
+        "{input}",
+        "{archive}"
+      ],
+      "decompression_command_template": [
+        "<repo>/target/release/mathzip",
+        "decompress",
+        "--max-archive-bytes",
+        "17179869184",
+        "--max-output-bytes",
+        "8589934592",
+        "--max-segments",
+        "8388608",
+        "--no-sync",
+        "--force",
+        "{archive}",
+        "{restored}"
+      ],
+      "executable": "<repo>/target/release/mathzip",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "max",
+      "name": "ablation-20-max",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "20 max mode"
+    },
+    {
+      "available": true,
+      "compression_command_template": [
+        "<external>/zstd",
+        "-q",
+        "-f",
+        "-T1",
+        "-3",
+        "-c",
+        "{input}"
+      ],
+      "decompression_command_template": [
+        "<external>/zstd",
+        "-q",
+        "-d",
+        "-c",
+        "{archive}"
+      ],
+      "executable": "<external>/zstd",
+      "executable_sha256": "7c5468b370f7c47eda07281e3437fafc568f95d10420051e3aa522709f9342c5",
+      "family": "zstd",
+      "level": "default",
+      "name": "zstd-default",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": ""
+    }
+  ],
+  "codecs": [
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "codec": "ablation-01-raw-only",
+      "executable_path_sha256": "f407543aa5b03eece467b942a235f70bb47cca3d8974befce366cd2a81475d59",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "01 raw only"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "codec": "ablation-02-residual-only",
+      "executable_path_sha256": "f407543aa5b03eece467b942a235f70bb47cca3d8974befce366cd2a81475d59",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "02 residual coder only"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "codec": "ablation-03-fixed-constant",
+      "executable_path_sha256": "f407543aa5b03eece467b942a235f70bb47cca3d8974befce366cd2a81475d59",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "03 fixed segmentation + constant"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "codec": "ablation-04-fixed-all-models",
+      "executable_path_sha256": "f407543aa5b03eece467b942a235f70bb47cca3d8974befce366cd2a81475d59",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "04 fixed segmentation + all models"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "codec": "ablation-05-adaptive-constant",
+      "executable_path_sha256": "f407543aa5b03eece467b942a235f70bb47cca3d8974befce366cd2a81475d59",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "05 adaptive segmentation + constant"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "codec": "ablation-06-adaptive-linear",
+      "executable_path_sha256": "f407543aa5b03eece467b942a235f70bb47cca3d8974befce366cd2a81475d59",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "06 adaptive + constant/linear"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "codec": "ablation-07-add-polynomial",
+      "executable_path_sha256": "f407543aa5b03eece467b942a235f70bb47cca3d8974befce366cd2a81475d59",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "07 add polynomial"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "codec": "ablation-08-add-periodic",
+      "executable_path_sha256": "f407543aa5b03eece467b942a235f70bb47cca3d8974befce366cd2a81475d59",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "08 add periodic"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "codec": "ablation-09-add-recurrence",
+      "executable_path_sha256": "f407543aa5b03eece467b942a235f70bb47cca3d8974befce366cd2a81475d59",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "09 add recurrence"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "codec": "ablation-10-add-bit-plane",
+      "executable_path_sha256": "f407543aa5b03eece467b942a235f70bb47cca3d8974befce366cd2a81475d59",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "10 add bit-plane"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "codec": "ablation-11-add-stride",
+      "executable_path_sha256": "f407543aa5b03eece467b942a235f70bb47cca3d8974befce366cd2a81475d59",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "11 add stride transpose"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "codec": "ablation-12-add-copy",
+      "executable_path_sha256": "f407543aa5b03eece467b942a235f70bb47cca3d8974befce366cd2a81475d59",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "12 add copy/reference"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "codec": "ablation-13-custom-residual",
+      "executable_path_sha256": "f407543aa5b03eece467b942a235f70bb47cca3d8974befce366cd2a81475d59",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "13 custom residual coders"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "codec": "ablation-14-zstd-residual",
+      "executable_path_sha256": "f407543aa5b03eece467b942a235f70bb47cca3d8974befce366cd2a81475d59",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "14 Zstd residual coder"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "codec": "ablation-15-no-transform",
+      "executable_path_sha256": "f407543aa5b03eece467b942a235f70bb47cca3d8974befce366cd2a81475d59",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "15 identity transform only"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "codec": "ablation-16-no-adaptive-partition",
+      "executable_path_sha256": "f407543aa5b03eece467b942a235f70bb47cca3d8974befce366cd2a81475d59",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "16 fixed partition"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "codec": "ablation-17-no-raw-fallback",
+      "executable_path_sha256": "f407543aa5b03eece467b942a235f70bb47cca3d8974befce366cd2a81475d59",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "17 no raw fallback"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "codec": "ablation-18-fast",
+      "executable_path_sha256": "f407543aa5b03eece467b942a235f70bb47cca3d8974befce366cd2a81475d59",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "fast",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "18 fast mode"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "codec": "ablation-19-balanced",
+      "executable_path_sha256": "f407543aa5b03eece467b942a235f70bb47cca3d8974befce366cd2a81475d59",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "balanced",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "19 balanced mode"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137"
+      },
+      "codec": "ablation-20-max",
+      "executable_path_sha256": "f407543aa5b03eece467b942a235f70bb47cca3d8974befce366cd2a81475d59",
+      "executable_sha256": "728494e5c0d1ba0aad42a039b056d26372cd60b9a744c0a4ad1744552084cd30",
+      "family": "mathzip",
+      "level": "max",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "20 max mode"
+    },
+    {
+      "available": true,
+      "build_info": null,
+      "codec": "zstd-default",
+      "executable_path_sha256": "2dba966a29744162c7d83f3696368dd6bb8a02ae694cae6a195eb86a21f09611",
+      "executable_sha256": "7c5468b370f7c47eda07281e3437fafc568f95d10420051e3aa522709f9342c5",
+      "family": "zstd",
+      "level": "default",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": ""
+    }
+  ],
+  "config_sha256": "dde3921fbeb0f6da03206cd7c3339575c9659ea4d97eb0bcf249f0adc68af85d",
+  "config_snapshot": {
+    "benchmark": {
+      "collect_mathzip_inspection": true,
+      "mathzip_metrics_mode": "inline",
+      "record_absolute_paths": false,
+      "repeats": 3,
+      "threads": [
+        1
+      ],
+      "timeout_seconds": 600,
+      "warmups": 1
+    },
+    "codecs": [
+      {
+        "base": "mathzip-balanced",
+        "compress_args": [
+          "--models",
+          "raw",
+          "--residual-coders",
+          "raw",
+          "--transforms",
+          "identity",
+          "--segmentation",
+          "fixed"
+        ],
+        "name": "ablation-01-raw-only",
+        "variant": "01 raw only"
+      },
+      {
+        "base": "mathzip-balanced",
+        "compress_args": [
+          "--models",
+          "raw",
+          "--residual-coders",
+          "raw,rle,zero-run,sparse,bit-pack",
+          "--transforms",
+          "identity",
+          "--segmentation",
+          "fixed"
+        ],
+        "name": "ablation-02-residual-only",
+        "variant": "02 residual coder only"
+      },
+      {
+        "base": "mathzip-balanced",
+        "compress_args": [
+          "--models",
+          "raw,constant",
+          "--transforms",
+          "identity",
+          "--segmentation",
+          "fixed",
+          "--segment-size",
+          "4096"
+        ],
+        "name": "ablation-03-fixed-constant",
+        "variant": "03 fixed segmentation + constant"
+      },
+      {
+        "base": "mathzip-balanced",
+        "compress_args": [
+          "--models",
+          "raw,constant,affine,polynomial,periodic,recurrence,piecewise-linear,run,sparse,copy",
+          "--transforms",
+          "identity",
+          "--segmentation",
+          "fixed",
+          "--segment-size",
+          "4096"
+        ],
+        "name": "ablation-04-fixed-all-models",
+        "variant": "04 fixed segmentation + all models"
+      },
+      {
+        "base": "mathzip-balanced",
+        "compress_args": [
+          "--models",
+          "raw,constant",
+          "--transforms",
+          "identity",
+          "--segmentation",
+          "adaptive"
+        ],
+        "name": "ablation-05-adaptive-constant",
+        "variant": "05 adaptive segmentation + constant"
+      },
+      {
+        "base": "mathzip-balanced",
+        "compress_args": [
+          "--models",
+          "raw,constant,affine",
+          "--transforms",
+          "identity",
+          "--segmentation",
+          "adaptive"
+        ],
+        "name": "ablation-06-adaptive-linear",
+        "variant": "06 adaptive + constant/linear"
+      },
+      {
+        "base": "mathzip-balanced",
+        "compress_args": [
+          "--models",
+          "raw,constant,affine,polynomial",
+          "--transforms",
+          "identity",
+          "--segmentation",
+          "adaptive"
+        ],
+        "name": "ablation-07-add-polynomial",
+        "variant": "07 add polynomial"
+      },
+      {
+        "base": "mathzip-balanced",
+        "compress_args": [
+          "--models",
+          "raw,constant,affine,polynomial,periodic",
+          "--transforms",
+          "identity",
+          "--segmentation",
+          "adaptive"
+        ],
+        "name": "ablation-08-add-periodic",
+        "variant": "08 add periodic"
+      },
+      {
+        "base": "mathzip-balanced",
+        "compress_args": [
+          "--models",
+          "raw,constant,affine,polynomial,periodic,recurrence",
+          "--transforms",
+          "identity",
+          "--segmentation",
+          "adaptive"
+        ],
+        "name": "ablation-09-add-recurrence",
+        "variant": "09 add recurrence"
+      },
+      {
+        "base": "mathzip-balanced",
+        "compress_args": [
+          "--models",
+          "raw,constant,affine,polynomial,periodic,recurrence",
+          "--transforms",
+          "identity,bit-plane",
+          "--segmentation",
+          "adaptive"
+        ],
+        "name": "ablation-10-add-bit-plane",
+        "variant": "10 add bit-plane"
+      },
+      {
+        "base": "mathzip-balanced",
+        "compress_args": [
+          "--models",
+          "raw,constant,affine,polynomial,periodic,recurrence",
+          "--transforms",
+          "identity,bit-plane,stride",
+          "--segmentation",
+          "adaptive"
+        ],
+        "name": "ablation-11-add-stride",
+        "variant": "11 add stride transpose"
+      },
+      {
+        "base": "mathzip-balanced",
+        "compress_args": [
+          "--models",
+          "raw,constant,affine,polynomial,periodic,recurrence,copy",
+          "--transforms",
+          "identity,bit-plane,stride",
+          "--segmentation",
+          "adaptive"
+        ],
+        "name": "ablation-12-add-copy",
+        "variant": "12 add copy/reference"
+      },
+      {
+        "base": "mathzip-balanced",
+        "compress_args": [
+          "--residual-coders",
+          "raw,rle,zero-run,sparse,bit-pack"
+        ],
+        "name": "ablation-13-custom-residual",
+        "variant": "13 custom residual coders"
+      },
+      {
+        "base": "mathzip-balanced",
+        "compress_args": [
+          "--residual-coders",
+          "zstd"
+        ],
+        "name": "ablation-14-zstd-residual",
+        "variant": "14 Zstd residual coder"
+      },
+      {
+        "base": "mathzip-balanced",
+        "compress_args": [
+          "--transforms",
+          "identity"
+        ],
+        "name": "ablation-15-no-transform",
+        "variant": "15 identity transform only"
+      },
+      {
+        "base": "mathzip-balanced",
+        "compress_args": [
+          "--segmentation",
+          "fixed",
+          "--segment-size",
+          "4096"
+        ],
+        "name": "ablation-16-no-adaptive-partition",
+        "variant": "16 fixed partition"
+      },
+      {
+        "base": "mathzip-balanced",
+        "compress_args": [
+          "--no-raw-fallback"
+        ],
+        "name": "ablation-17-no-raw-fallback",
+        "variant": "17 no raw fallback"
+      },
+      {
+        "base": "mathzip-fast",
+        "name": "ablation-18-fast",
+        "variant": "18 fast mode"
+      },
+      {
+        "base": "mathzip-balanced",
+        "name": "ablation-19-balanced",
+        "variant": "19 balanced mode"
+      },
+      {
+        "base": "mathzip-max",
+        "name": "ablation-20-max",
+        "variant": "20 max mode"
+      },
+      "zstd-default"
+    ],
+    "datasets": [
+      {
+        "enabled": true,
+        "name": "canterbury"
+      }
+    ],
+    "inputs": [
+      {
+        "corpus": "synthetic_ablation",
+        "input_license": "CC0-1.0",
+        "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+        "patterns": [
+          "constant_00/s0000065536_n000p000_*.bin",
+          "linear/s0000065536_n000p000_*.bin",
+          "linear/s0000065536_n005p000_*.bin",
+          "polynomial_d2/s0000065536_n000p000_*.bin",
+          "periodic/s0000065536_n000p000_*.bin",
+          "recurrence/s0000065536_n000p000_*.bin",
+          "piecewise_mixed/s0000065536_n001p000_*.bin",
+          "random/s0000065536_n000p000_*.bin"
+        ],
+        "required": true,
+        "root": "datasets/synthetic"
+      },
+      {
+        "corpus": "canterbury_ablation",
+        "input_license": "Upstream files retain their original terms; see dataset manifest",
+        "input_provenance": "datasets/manifests/canterbury.json",
+        "patterns": [
+          "alice29.txt",
+          "kennedy.xls",
+          "ptt5",
+          "sum"
+        ],
+        "required": true,
+        "root": "datasets/data/canterbury"
+      }
+    ],
+    "output_dir": "benchmarks/results/ablation",
+    "profile": "ablation",
+    "schema_version": 1
+  },
+  "expected_grid_sha256": "590d718df748f3b82c171fe501317310e0895a7a0059d533708b3c052edddcae",
+  "host": {
+    "cpu_model": "Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz",
+    "execution_state_sha256": "171099918ff6326b92a04c253616b28f60081dce68d24cc6f528b75e47605280",
+    "hostname_sha256": "2b9c15eb89efe0e0ad2c7b3279bf92247e35e4a92160ca8678d974e11a10ac6b",
+    "logical_cores": 16,
+    "os": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "physical_cores": 16,
+    "ram_bytes": 16715317248
+  },
+  "initial_source_metadata": {
+    "git_dirty": false,
+    "git_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137",
+    "git_status_entry_count": 0,
+    "revision_available": true,
+    "selection_method": "git ls-files (tracked plus untracked, Git-ignored excluded)",
+    "source_dirty": false,
+    "source_file_count": 1178,
+    "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137",
+    "source_tree_manifest": null,
+    "source_tree_manifest_reason": "omitted because a Git revision identifies the clean base; tree hash still recorded",
+    "source_tree_sha256": "e3813b1523ee29c09f8b60b9d7a06844219e21c20114e3a3ce5762ae75b5323a"
+  },
+  "initial_system_metadata": {
+    "architecture": "x86_64",
+    "cargo_version": "cargo 1.97.1 (c980f4866 2026-06-30)",
+    "cc_version": "cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "collected_at_utc": "2026-07-25T17:09:25.483388+00:00",
+    "compressors": {
+      "7z": {
+        "path": null,
+        "version": null
+      },
+      "7zz": {
+        "path": "<external>/7zz",
+        "version": "7-Zip (z) 23.01 (x64) : Copyright (c) 1999-2023 Igor Pavlov : 2023-06-20"
+      },
+      "brotli": {
+        "path": "<external>/brotli",
+        "version": "brotli 1.1.0"
+      },
+      "bzip2": {
+        "path": "<external>/bzip2",
+        "version": "bzip2, a block-sorting file compressor.  Version 1.0.8, 13-Jul-2019."
+      },
+      "gzip": {
+        "path": "<external>/gzip",
+        "version": "gzip 1.12"
+      },
+      "lz4": {
+        "path": "<external>/lz4",
+        "version": "*** LZ4 command line interface 64-bits v1.9.4, by Yann Collet ***"
+      },
+      "xz": {
+        "path": "<external>/xz",
+        "version": "xz (XZ Utils) 5.4.5"
+      },
+      "zstd": {
+        "path": "<external>/zstd",
+        "version": "*** Zstandard CLI (64-bit) v1.5.5, by Yann Collet ***"
+      }
+    },
+    "container": {
+      "cgroup": "0::/init.scope",
+      "detected": false,
+      "image_digest": null,
+      "image_digest_capture": "unavailable: runtime did not expose an image digest"
+    },
+    "cpu_affinity": {
+      "logical_cpu_count": 16,
+      "logical_cpu_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "cpu_governors": null,
+    "cpu_model": "Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz",
+    "hostname": "redacted",
+    "kernel": "7.0.0-28-generic",
+    "logical_cores": 16,
+    "metric_unavailable": [
+      {
+        "field": "cpu_governors",
+        "reason": "cpufreq governor files unavailable"
+      },
+      {
+        "field": "container.image_digest",
+        "reason": "container runtime did not expose an image digest"
+      }
+    ],
+    "os": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "physical_cores": 16,
+    "power_supplies": [
+      {
+        "capacity": null,
+        "name": "ACAD",
+        "online": "1",
+        "status": null,
+        "type": "Mains"
+      }
+    ],
+    "python_executable": "<external>/python3",
+    "python_version": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+    "ram_bytes": 16715317248,
+    "relevant_environment": {
+      "BZIP": null,
+      "BZIP2": null,
+      "CFLAGS": null,
+      "CPPFLAGS": null,
+      "CXXFLAGS": null,
+      "GLIBC_TUNABLES": null,
+      "GZIP": null,
+      "LANG": "C.UTF-8",
+      "LC_ALL": "C.UTF-8",
+      "LC_NUMERIC": null,
+      "LDFLAGS": null,
+      "LD_LIBRARY_PATH": null,
+      "LD_PRELOAD": null,
+      "MALLOC_ARENA_MAX": null,
+      "MALLOC_CONF": null,
+      "MATHZIP_THREADS": null,
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "PYTHONHASHSEED": null,
+      "RAYON_NUM_THREADS": null,
+      "RUSTDOCFLAGS": null,
+      "RUSTFLAGS": null,
+      "TZ": null,
+      "XZ_DEFAULTS": null,
+      "XZ_OPT": null,
+      "ZSTD_NBTHREADS": null
+    },
+    "rustc_version": "rustc 1.97.1 (8bab26f4f 2026-07-14)",
+    "storage": {
+      "filesystem_type": "ext4",
+      "free_bytes": 68550508544,
+      "measured_path": "<repo>/.",
+      "mount_point": "<external>/",
+      "mount_source": "<external>/sda2",
+      "total_bytes": 104384327680,
+      "used_bytes": 31312367616
+    },
+    "swap_bytes": 4054839296
+  },
+  "methodology_policy": {
+    "allow_short_run": false,
+    "codec_thread_keys": [
+      [
+        "ablation-01-raw-only",
+        1
+      ],
+      [
+        "ablation-02-residual-only",
+        1
+      ],
+      [
+        "ablation-03-fixed-constant",
+        1
+      ],
+      [
+        "ablation-04-fixed-all-models",
+        1
+      ],
+      [
+        "ablation-05-adaptive-constant",
+        1
+      ],
+      [
+        "ablation-06-adaptive-linear",
+        1
+      ],
+      [
+        "ablation-07-add-polynomial",
+        1
+      ],
+      [
+        "ablation-08-add-periodic",
+        1
+      ],
+      [
+        "ablation-09-add-recurrence",
+        1
+      ],
+      [
+        "ablation-10-add-bit-plane",
+        1
+      ],
+      [
+        "ablation-11-add-stride",
+        1
+      ],
+      [
+        "ablation-12-add-copy",
+        1
+      ],
+      [
+        "ablation-13-custom-residual",
+        1
+      ],
+      [
+        "ablation-14-zstd-residual",
+        1
+      ],
+      [
+        "ablation-15-no-transform",
+        1
+      ],
+      [
+        "ablation-16-no-adaptive-partition",
+        1
+      ],
+      [
+        "ablation-17-no-raw-fallback",
+        1
+      ],
+      [
+        "ablation-18-fast",
+        1
+      ],
+      [
+        "ablation-19-balanced",
+        1
+      ],
+      [
+        "ablation-20-max",
+        1
+      ],
+      [
+        "zstd-default",
+        1
+      ]
+    ],
+    "collect_mathzip_inspection": true,
+    "configured_threads": [
+      1
+    ],
+    "mathzip_metrics_in_compression_timing": true,
+    "mathzip_metrics_mode": "inline",
+    "record_absolute_paths": false,
+    "repeats": 3,
+    "require_publication_evidence": true,
+    "selected_codecs": null,
+    "timeout_seconds_per_operation": 600.0,
+    "warmups": 1
+  },
+  "schema_version": "mathzip-benchmark-run-identity-v1",
+  "source": {
+    "source_dirty": false,
+    "source_file_count": 1178,
+    "source_revision": "e5366fa7c5c1cd5801bb9cc86b19a09592403137",
+    "source_tree_sha256": "e3813b1523ee29c09f8b60b9d7a06844219e21c20114e3a3ce5762ae75b5323a"
+  }
+}

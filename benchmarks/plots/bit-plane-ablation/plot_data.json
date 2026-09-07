@@ -1,0 +1,50 @@
+{
+  "aggregates": [
+    {
+      "bits_per_byte": 2.0719788331449087,
+      "codec": "mathzip-balanced-bit-plane-independent-v2",
+      "compressed_bytes": 152803,
+      "compression_mbps": 0.7998450945956672,
+      "corpus": "synthetic_bit_plane_ablation",
+      "decompression_mbps": 6.797381431954148,
+      "failed_rows": 0,
+      "original_bytes": 589979,
+      "peak_rss_bytes": 3813376,
+      "profile": "bit-plane-ablation",
+      "ratio": 3.8610433041236103,
+      "successful_rows": 14,
+      "threads": 1
+    },
+    {
+      "bits_per_byte": 2.013264878919419,
+      "codec": "mathzip-balanced-bit-plane-packed-v1",
+      "compressed_bytes": 148473,
+      "compression_mbps": 0.0930091168248794,
+      "corpus": "synthetic_bit_plane_ablation",
+      "decompression_mbps": 6.6627040666640385,
+      "failed_rows": 0,
+      "original_bytes": 589979,
+      "peak_rss_bytes": 4276224,
+      "profile": "bit-plane-ablation",
+      "ratio": 3.9736450398388934,
+      "successful_rows": 14,
+      "threads": 1
+    },
+    {
+      "bits_per_byte": 1.1105615623606941,
+      "codec": "zstd-default",
+      "compressed_bytes": 81901,
+      "compression_mbps": 8.014159217991972,
+      "corpus": "synthetic_bit_plane_ablation",
+      "decompression_mbps": 8.20248604908323,
+      "failed_rows": 0,
+      "original_bytes": 589979,
+      "peak_rss_bytes": 1398784,
+      "profile": "bit-plane-ablation",
+      "ratio": 7.203562838060585,
+      "successful_rows": 14,
+      "threads": 1
+    }
+  ],
+  "run_id": "20260724T174812Z-583dbb61"
+}

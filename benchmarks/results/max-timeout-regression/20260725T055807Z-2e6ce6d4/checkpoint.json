@@ -1,0 +1,32 @@
+{
+  "active_elapsed_seconds": 3697.920207702002,
+  "checkpoint_rows_directory": "checkpoint-rows",
+  "completed_at_utc": "2026-07-25T06:59:45.986775+00:00",
+  "completed_result_count": 4,
+  "execution_intervals": [
+    {
+      "active_seconds": 3697.920207702002,
+      "checkpointed_through_utc": "2026-07-25T06:59:45.583541+00:00",
+      "completed_at_utc": "2026-07-25T06:59:45.583541+00:00",
+      "ended_at_utc": "2026-07-25T06:59:45.583541+00:00",
+      "index": 0,
+      "interrupted": false,
+      "resumed": false,
+      "started_at_utc": "2026-07-25T05:58:07.663340+00:00"
+    }
+  ],
+  "expected_grid_file": "expected-grid.json",
+  "expected_grid_sha256": "040aa7310efe95daa3720e930e17c567b2eb44002c896d7442288b13616fb9a1",
+  "expected_result_count": 4,
+  "profile": "max-timeout-regression",
+  "results_csv_sha256": "f5f825a0c9caf054dd66a4bd4093828179b0f7ce6bb75a79e6dee0e43df7fa00",
+  "results_json_sha256": "1dbf7c104089a852c55d8f2c97bae82b4f0d06f623a5af8a6eeea66fe09d5aae",
+  "resume_count": 0,
+  "run_id": "20260725T055807Z-2e6ce6d4",
+  "run_identity_file": "run-identity.json",
+  "run_identity_sha256": "48b853d0d9019d528cc73b62645eca3e584ed00525c6166e3b2406eeee3074e4",
+  "schema_version": "mathzip-benchmark-checkpoint-v1",
+  "started_at_utc": "2026-07-25T05:58:07.663340+00:00",
+  "state": "complete",
+  "updated_at_utc": "2026-07-25T06:59:45.583541+00:00"
+}

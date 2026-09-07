@@ -1,0 +1,88 @@
+{
+  "archive_sha256": "8d15c228d945c3857233c58c017039aa794bb9e1521d68a85bc14ca914c6d89d",
+  "builds": {
+    "debug": {
+      "measurement_config_sha256": "ee0fa0603e5dba8a2c32e36a98cbb515ddc493f4c079e8d6833cc058077be7cc",
+      "path": "/home/ase/zipp/target/debug/mathsvg",
+      "runtime_profile_sha256": "d2f471f0cb672e93d3bcc45dd98b2668e7e084c86fee4054490d93bf9d89cc94",
+      "sha256": "6b4d9266b42218421b626cd6c7eea146492e07a4e04e0aa4ee2b9aca5ee4869e",
+      "version": "mathsvg 0.1.0"
+    },
+    "release": {
+      "measurement_config_sha256": "ee0fa0603e5dba8a2c32e36a98cbb515ddc493f4c079e8d6833cc058077be7cc",
+      "path": "/home/ase/zipp/target/release/mathsvg",
+      "runtime_profile_sha256": "d2f471f0cb672e93d3bcc45dd98b2668e7e084c86fee4054490d93bf9d89cc94",
+      "sha256": "ab97034b57f903c5b9a509737b12da0980892412e2c38dfe00ba1ff077eabbbf",
+      "version": "mathsvg 0.1.0"
+    }
+  },
+  "compiler": {
+    "blocker": "no build-time manifest cryptographically links this compiler identity to both pre-existing binaries",
+    "path": "/home/ase/.cargo/bin/rustup",
+    "provenance_status": "unverified",
+    "sha256": "4acc9acc76d5079515b46346a485974457b5a79893cfb01112423c89aeb5aa10",
+    "version": "rustup 1.29.0 (28d1352db 2026-03-05)"
+  },
+  "csv_path": "mathsvg/results/determinism/determinism-development-v2.csv",
+  "csv_sha256": "9e460c7b15cdbc6d7248e450f5433f5ffd57c680ec2a79d1f1e1a9f7c4e2f050",
+  "evidence_scope": "development",
+  "evidence_status": "incomplete",
+  "experiment_id": "determinism-development-v2",
+  "failed_rows": 0,
+  "holdout_payload_inspected": false,
+  "immutable_inputs_sha256": "ef1ef5aeff288bc1964636f91a08587463dba87f3962010eb3404a99068fca8e",
+  "immutable_inputs_stable": true,
+  "input": {
+    "bytes": 65536,
+    "dataset_id": "dev-synthetic-constant-00",
+    "manifest_canonical_sha256": "88ed376ce82fbd9301fe2fce71dd0e3a4af5f837450b50b8489d678b19d5fca7",
+    "manifest_file_sha256": "e94bcc95b681519f4784b11b410d59a703882ebfaa971e251b5c714be2ba59a2",
+    "manifest_path": "mathsvg/results/manifests/development.csv",
+    "path": "datasets/synthetic/constant_00/s0000065536_n000p000_seed1297748005.bin",
+    "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+    "split": "development"
+  },
+  "limitations": [
+    "the selected compiler executable is identified, but this development runner has no cryptographic build attestation linking it to the pre-existing debug/release binaries",
+    "the campaign covers one machine and one architecture",
+    "fewer than 100 repetitions remains incomplete",
+    "dirty-source evidence cannot satisfy the publishable gate"
+  ],
+  "machine": {
+    "architecture": "x86_64",
+    "machine_id": "local-x86-64",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39"
+  },
+  "matrix_reasons": [
+    "source tree is dirty",
+    "fewer than two compiler binaries are represented",
+    "fewer than two compiler versions are represented",
+    "fewer than two architectures are represented",
+    "fewer than two machines are represented"
+  ],
+  "matrix_status": "incomplete",
+  "ok_rows": 3200,
+  "profile": {
+    "config_path": "mathsvg/configs/balanced/profile.toml",
+    "config_sha256": "789657f7674a0a8204ac320674c039f0068fda5a762b47cbbd72419188df4438",
+    "name": "balanced",
+    "runtime_profile_sha256": "d2f471f0cb672e93d3bcc45dd98b2668e7e084c86fee4054490d93bf9d89cc94"
+  },
+  "rows": 3200,
+  "schema_version": 1,
+  "source_after": {
+    "branch": "mathsvg-absolute",
+    "commit": "36f84685dc00064dae9a239face7e8eff797ed28",
+    "dirty": true,
+    "status_sha256": "c2eafadaf19e2f684b9da4db67862f6b1ddd970ffc1af50d5c9d82e0697aa818"
+  },
+  "source_before": {
+    "branch": "mathsvg-absolute",
+    "commit": "36f84685dc00064dae9a239face7e8eff797ed28",
+    "dirty": true,
+    "status_sha256": "c2eafadaf19e2f684b9da4db67862f6b1ddd970ffc1af50d5c9d82e0697aa818"
+  },
+  "source_stable_during_campaign": true,
+  "timeout_rows": 0,
+  "unavailable_rows": 0
+}

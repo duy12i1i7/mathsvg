@@ -1,0 +1,58 @@
+[package]
+name = "mathzip-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+mathzip-core = { path = "../crates/mathzip-core" }
+mathsvg-container = { path = "../mathsvg/crates/mathsvg-container" }
+mathsvg-core = { path = "../mathsvg/crates/mathsvg-core" }
+mathsvg-entropy = { path = "../mathsvg/crates/mathsvg-entropy" }
+mathsvg-evaluator = { path = "../mathsvg/crates/mathsvg-evaluator" }
+
+[[bin]]
+name = "decode"
+path = "fuzz_targets/decode.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "inspect"
+path = "fuzz_targets/inspect.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "roundtrip"
+path = "fuzz_targets/roundtrip.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "mathsvg_decode"
+path = "fuzz_targets/mathsvg_decode.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "mathsvg_entropy"
+path = "fuzz_targets/mathsvg_entropy.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "mathsvg_roundtrip"
+path = "fuzz_targets/mathsvg_roundtrip.rs"
+test = false
+doc = false
+bench = false

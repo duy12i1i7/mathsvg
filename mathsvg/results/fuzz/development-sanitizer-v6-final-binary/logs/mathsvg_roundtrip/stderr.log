@@ -1,0 +1,11 @@
+    Finished `release` profile [optimized + debuginfo] target(s) in 0.05s
+    Finished `release` profile [optimized + debuginfo] target(s) in 0.06s
+     Running `fuzz/target/x86_64-unknown-linux-gnu/release/mathsvg_roundtrip -artifact_prefix=/home/ase/zipp/fuzz/artifacts/mathsvg_roundtrip/ -runs=10000 -max_len=4096 -timeout=10 -rss_limit_mb=2048 -print_final_stats=1 -verbosity=0 -artifact_prefix=/tmp/mathsvg-fuzz-campaign-6swr2_jb/mathsvg_roundtrip/artifacts/ /tmp/mathsvg-fuzz-campaign-6swr2_jb/mathsvg_roundtrip/corpus`
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO:        1 files found in /tmp/mathsvg-fuzz-campaign-6swr2_jb/mathsvg_roundtrip/corpus
+INFO: seed corpus: files: 1 min: 37b max: 37b total: 37b rss: 33Mb
+stat::number_of_executed_units: 10000
+stat::average_exec_per_sec:     5000
+stat::new_units_added:          46
+stat::slowest_unit_time_sec:    0
+stat::peak_rss_mb:              142

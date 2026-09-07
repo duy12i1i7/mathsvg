@@ -1,0 +1,19 @@
+[package]
+name = "mathsvg-residual"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "Oracle-gated bounded recursive residual search for MathSVG"
+
+[dependencies]
+mathsvg-container = { path = "../mathsvg-container" }
+mathsvg-core = { path = "../mathsvg-core" }
+mathsvg-dsl = { path = "../mathsvg-dsl" }
+mathsvg-evaluator = { path = "../mathsvg-evaluator" }
+mathsvg-functions = { path = "../mathsvg-functions" }
+
+[lib]
+path = "src/lib.rs"
+
+[lints.rust]
+unsafe_code = "forbid"

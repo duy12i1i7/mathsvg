@@ -1,0 +1,85 @@
+{
+  "artifacts_sha256": {
+    "ablation_comparison.png": "0f02d1ace0b736a89f6e680393c7420f8e6459a920c23c91a04b905c8ffa13fb",
+    "bits_per_byte_by_dataset.png": "0ef68552c4105e07c6892314eb71738d5299329b841a74cde26c335d6e37add7",
+    "compression_ratio_by_dataset.png": "7048fedbec5347d043cae2a10d288119b0b0fd06c25a1fbebf3dececc55b862d",
+    "compression_throughput.png": "005a3c461813bd2d63ecaa40b51e4c08e83e4252fe15e9b106720820935ebfc0",
+    "decompression_throughput.png": "26b24d784b233988baace36a0f9c649c5042a0e6c203c7b653fd5f3172b551d7",
+    "file_entropy_vs_mathzip_gain.png": "66ef98a9760c07ed81b0cfd74ad7b26ab6fa66423d01124f3242bba06134236f",
+    "mathzip_gain_vs_zstd.png": "fe94936888a74d057964f9fad98294eb1f65d227577e832e80abdc2729ec221b",
+    "model_distribution.png": "715754d53efc7e031e71ca6f5cdf9980cd745014c937c71454948f38bbc0d559",
+    "peak_memory.png": "4d59956931480668389ff4fda38b04f22197f5b2632c1262507f6f5429a42d30",
+    "plot_data.json": "318fdec7a2114a617d2490f99778afb9bfc83208e5b080276d5eaf1a42a47289",
+    "ratio_vs_compression_speed.png": "5811596c0d783a9800de430fe6bc0a6ed540ea446dcbf30312d103d1d9285967",
+    "ratio_vs_decompression_speed.png": "1194a7054edc498e8607ae895450f386e2246c7b03747bb18c13298479ecfcd7",
+    "residual_entropy_vs_encoded_size.png": "afbceec13b99a113682125f04f1206b0994b62913f305b87742f256351fde58e",
+    "segment_size_histogram.png": "24d75abb9bed718d54107b95d9cbfdcf2f761831aa5eeccc443de5eb4ddb9c02",
+    "storage_breakdown.png": "a70601b54e2844d18acf0544380e5247baa7c6a3f6073dd6288bb1895a691bbc",
+    "synthetic_noise_vs_ratio.png": "35a3b3e91a6a10ed16ea8e8b53bdf19c237844adf8ec0dd13409a9b93b400373"
+  },
+  "comparison_choices": {
+    "ablation_comparison": {
+      "aggregation": "median ratio among successful rows",
+      "coverage": [
+        {
+          "median_successful_ratio": 160.88758465647618,
+          "successful_rows": 10,
+          "threads": 1,
+          "total_rows": 10,
+          "variant": "Adaptive segmentation"
+        },
+        {
+          "median_successful_ratio": 203.4723077131295,
+          "successful_rows": 10,
+          "threads": 1,
+          "total_rows": 10,
+          "variant": "Recursive segmentation, depth 4"
+        }
+      ]
+    },
+    "file_entropy_vs_mathzip_gain": {
+      "baseline_codec": "zstd-fast",
+      "mathzip_codec": "mathzip-fast-adaptive"
+    },
+    "mathzip_gain_vs_xz": {
+      "aggregation": "corpus/thread weighted total compressed bytes",
+      "baseline_codec": null,
+      "mathzip_codec": "mathzip-fast-adaptive"
+    },
+    "mathzip_gain_vs_zstd": {
+      "aggregation": "corpus/thread weighted total compressed bytes",
+      "baseline_codec": "zstd-fast",
+      "mathzip_codec": "mathzip-fast-adaptive"
+    }
+  },
+  "failure_count": 0,
+  "generated": [
+    "compression_ratio_by_dataset.png",
+    "bits_per_byte_by_dataset.png",
+    "compression_throughput.png",
+    "decompression_throughput.png",
+    "ratio_vs_compression_speed.png",
+    "ratio_vs_decompression_speed.png",
+    "peak_memory.png",
+    "storage_breakdown.png",
+    "model_distribution.png",
+    "segment_size_histogram.png",
+    "residual_entropy_vs_encoded_size.png",
+    "ablation_comparison.png",
+    "synthetic_noise_vs_ratio.png",
+    "file_entropy_vs_mathzip_gain.png",
+    "mathzip_gain_vs_zstd.png"
+  ],
+  "plot_generator": "python/mathzip_bench/plots.py",
+  "plot_generator_sha256": "7a06354c6089971069ffa6c41ced95062c78d3e5c43a0a93f8e36356432013cc",
+  "profile": "recursive-ablation",
+  "result_count": 30,
+  "result_document_hash_method": "canonical-json-v1",
+  "result_document_sha256": "e7298dae8f322fc97d894d8b0b0fb689ce8865dfe859e64ca24be63ddffa15de",
+  "run_id": "20260724T161541Z-70dfeff6",
+  "schema_version": "mathzip-plot-manifest-v1",
+  "skipped_for_missing_metrics": [
+    "mathzip_gain_vs_xz"
+  ],
+  "status": "generated"
+}

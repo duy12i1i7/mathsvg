@@ -1,0 +1,12 @@
+[package]
+name = "mathsvg-core"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "Deterministic, bounded primitives for the MathSVG native codec"
+
+[lib]
+path = "src/lib.rs"
+
+[lints.rust]
+unsafe_code = "forbid"

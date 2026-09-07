@@ -1,0 +1,27 @@
+[package]
+name = "mathsvg-optimizer"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "Bounded exact segmentation optimizer for MathSVG"
+
+[dependencies]
+mathsvg-container = { path = "../mathsvg-container" }
+mathsvg-coordinates = { path = "../mathsvg-coordinates" }
+mathsvg-core = { path = "../mathsvg-core" }
+mathsvg-dsl = { path = "../mathsvg-dsl" }
+mathsvg-entropy = { path = "../mathsvg-entropy" }
+mathsvg-evaluator = { path = "../mathsvg-evaluator" }
+mathsvg-functions = { path = "../mathsvg-functions" }
+mathsvg-graph = { path = "../mathsvg-graph" }
+mathsvg-residual = { path = "../mathsvg-residual" }
+mathsvg-symbolic = { path = "../mathsvg-symbolic" }
+
+[dev-dependencies]
+sha2 = "0.10"
+
+[lib]
+path = "src/lib.rs"
+
+[lints.rust]
+unsafe_code = "forbid"

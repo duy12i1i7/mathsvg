@@ -1,0 +1,637 @@
+{
+  "codec_definitions": [
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "0e3bd26e9883b7b6d6ed51def05b1822efbda6bf"
+      },
+      "compression_command_template": [
+        "<repo>/target/release/mathzip",
+        "compress",
+        "--mode",
+        "fast",
+        "--max-input-bytes",
+        "8589934592",
+        "--no-sync",
+        "--force",
+        "{input}",
+        "{archive}"
+      ],
+      "decompression_command_template": [
+        "<repo>/target/release/mathzip",
+        "decompress",
+        "--max-archive-bytes",
+        "17179869184",
+        "--max-output-bytes",
+        "8589934592",
+        "--max-segments",
+        "8388608",
+        "--no-sync",
+        "--force",
+        "{archive}",
+        "{restored}"
+      ],
+      "executable": "<repo>/target/release/mathzip",
+      "executable_sha256": "485c9cdd7533e34d1a18592bd6652d4ba590b62e6188e0a1a63558614152d154",
+      "family": "mathzip",
+      "level": "fast",
+      "name": "mathzip-fast",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": ""
+    },
+    {
+      "available": true,
+      "compression_command_template": [
+        "stdlib:shutil.copyfile"
+      ],
+      "decompression_command_template": [
+        "stdlib:shutil.copyfile"
+      ],
+      "executable": null,
+      "executable_sha256": null,
+      "family": "raw",
+      "level": "default",
+      "name": "raw",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": ""
+    },
+    {
+      "available": true,
+      "compression_command_template": [
+        "<external>/gzip",
+        "-n",
+        "-c",
+        "-1",
+        "{input}"
+      ],
+      "decompression_command_template": [
+        "<external>/gzip",
+        "-d",
+        "-c",
+        "{archive}"
+      ],
+      "executable": "<external>/gzip",
+      "executable_sha256": "afea077ce127d4fa9ad410d3066ba2b54dea19c0b44f04adf56c72d5f7b7a9bb",
+      "family": "gzip",
+      "level": "fast",
+      "name": "gzip-fast",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": ""
+    },
+    {
+      "available": true,
+      "compression_command_template": [
+        "<external>/bzip2",
+        "-c",
+        "-1"
+      ],
+      "compression_stdin_template": "{input}",
+      "decompression_command_template": [
+        "<external>/bzip2",
+        "-d",
+        "-c",
+        "{archive}"
+      ],
+      "executable": "<external>/bzip2",
+      "executable_sha256": "8e728b8ed28f67c4b70e06366d9d9d7a97db6f7996bd481ad7a346b459f4e6ee",
+      "family": "bzip2",
+      "level": "fast",
+      "name": "bzip2-fast",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": ""
+    },
+    {
+      "available": true,
+      "compression_command_template": [
+        "<external>/xz",
+        "-c",
+        "--threads=1",
+        "-1",
+        "{input}"
+      ],
+      "decompression_command_template": [
+        "<external>/xz",
+        "-d",
+        "-c",
+        "--threads=1",
+        "{archive}"
+      ],
+      "executable": "<external>/xz",
+      "executable_sha256": "b5b163eb273291934556377ab883b4b2a5d4da50bd0dc0a91774ecc234ccd8d0",
+      "family": "xz",
+      "level": "fast",
+      "name": "xz-fast",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": ""
+    },
+    {
+      "available": true,
+      "compression_command_template": [
+        "<external>/zstd",
+        "-q",
+        "-f",
+        "-T1",
+        "-1",
+        "-c",
+        "{input}"
+      ],
+      "decompression_command_template": [
+        "<external>/zstd",
+        "-q",
+        "-d",
+        "-c",
+        "{archive}"
+      ],
+      "executable": "<external>/zstd",
+      "executable_sha256": "7c5468b370f7c47eda07281e3437fafc568f95d10420051e3aa522709f9342c5",
+      "family": "zstd",
+      "level": "fast",
+      "name": "zstd-fast",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": ""
+    },
+    {
+      "available": true,
+      "compression_command_template": [
+        "<tmp>/mathzip-baselines.1ujJRr/extracted/usr/bin/lz4",
+        "-q",
+        "-f",
+        "-1",
+        "{input}",
+        "{archive}"
+      ],
+      "decompression_command_template": [
+        "<tmp>/mathzip-baselines.1ujJRr/extracted/usr/bin/lz4",
+        "-q",
+        "-d",
+        "-f",
+        "{archive}",
+        "{restored}"
+      ],
+      "executable": "<tmp>/mathzip-baselines.1ujJRr/extracted/usr/bin/lz4",
+      "executable_sha256": "87c0d5d060fd36c685b98a38611b7bd6c4614d40b36d29be84edcd6c173f8160",
+      "family": "lz4",
+      "level": "fast",
+      "name": "lz4-fast",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": ""
+    },
+    {
+      "available": true,
+      "compression_command_template": [
+        "<tmp>/mathzip-baselines.1ujJRr/extracted/usr/bin/brotli",
+        "-f",
+        "-q",
+        "4",
+        "-o",
+        "{archive}",
+        "{input}"
+      ],
+      "decompression_command_template": [
+        "<tmp>/mathzip-baselines.1ujJRr/extracted/usr/bin/brotli",
+        "-f",
+        "-d",
+        "-o",
+        "{restored}",
+        "{archive}"
+      ],
+      "executable": "<tmp>/mathzip-baselines.1ujJRr/extracted/usr/bin/brotli",
+      "executable_sha256": "01969d4716e4ecc585ab1302e0a0d4e0fa9619017ab17409a54173dac5fbacef",
+      "family": "brotli",
+      "level": "fast",
+      "name": "brotli-fast",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": ""
+    },
+    {
+      "available": true,
+      "compression_command_template": [
+        "<tmp>/mathzip-baselines.1ujJRr/extracted/usr/lib/7zip/7z",
+        "a",
+        "-y",
+        "-bd",
+        "-bso0",
+        "-bsp0",
+        "-t7z",
+        "-m0=lzma2",
+        "-mx=1",
+        "-mmt=1",
+        "{archive}",
+        "{input}"
+      ],
+      "decompression_command_template": [
+        "<tmp>/mathzip-baselines.1ujJRr/extracted/usr/lib/7zip/7z",
+        "e",
+        "-so",
+        "-bd",
+        "-mmt=1",
+        "{archive}"
+      ],
+      "executable": "<tmp>/mathzip-baselines.1ujJRr/extracted/usr/lib/7zip/7z",
+      "executable_sha256": "b2a12fa672bc38fc33af43a99fa499533253236feb30e4f755a73fb64f01861d",
+      "family": "7z",
+      "level": "fast",
+      "name": "7z-fast",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": ""
+    }
+  ],
+  "codecs": [
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "0e3bd26e9883b7b6d6ed51def05b1822efbda6bf"
+      },
+      "codec": "mathzip-fast",
+      "executable_path_sha256": "f407543aa5b03eece467b942a235f70bb47cca3d8974befce366cd2a81475d59",
+      "executable_sha256": "485c9cdd7533e34d1a18592bd6652d4ba590b62e6188e0a1a63558614152d154",
+      "family": "mathzip",
+      "level": "fast",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": ""
+    },
+    {
+      "available": true,
+      "build_info": null,
+      "codec": "raw",
+      "executable_path_sha256": null,
+      "executable_sha256": null,
+      "family": "raw",
+      "level": "default",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": ""
+    },
+    {
+      "available": true,
+      "build_info": null,
+      "codec": "gzip-fast",
+      "executable_path_sha256": "ea41f9ad464acabadd71562873fd79165e2a4854f9ebf992ee35029abe3c3517",
+      "executable_sha256": "afea077ce127d4fa9ad410d3066ba2b54dea19c0b44f04adf56c72d5f7b7a9bb",
+      "family": "gzip",
+      "level": "fast",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": ""
+    },
+    {
+      "available": true,
+      "build_info": null,
+      "codec": "bzip2-fast",
+      "executable_path_sha256": "16aa0aeda96b062ae30cf1a66245139cf0c743aff2415d90af095c42a3c45dcf",
+      "executable_sha256": "8e728b8ed28f67c4b70e06366d9d9d7a97db6f7996bd481ad7a346b459f4e6ee",
+      "family": "bzip2",
+      "level": "fast",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": ""
+    },
+    {
+      "available": true,
+      "build_info": null,
+      "codec": "xz-fast",
+      "executable_path_sha256": "a1fb0e174435e358e8d917b8ea02635cda8ea61fa883ffd648f8c08367d3844e",
+      "executable_sha256": "b5b163eb273291934556377ab883b4b2a5d4da50bd0dc0a91774ecc234ccd8d0",
+      "family": "xz",
+      "level": "fast",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": ""
+    },
+    {
+      "available": true,
+      "build_info": null,
+      "codec": "zstd-fast",
+      "executable_path_sha256": "2dba966a29744162c7d83f3696368dd6bb8a02ae694cae6a195eb86a21f09611",
+      "executable_sha256": "7c5468b370f7c47eda07281e3437fafc568f95d10420051e3aa522709f9342c5",
+      "family": "zstd",
+      "level": "fast",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": ""
+    },
+    {
+      "available": true,
+      "build_info": null,
+      "codec": "lz4-fast",
+      "executable_path_sha256": "8e3a26e1e2e369598b50387dfcd342dc2aed92afca95378de0ceb6011286a63f",
+      "executable_sha256": "87c0d5d060fd36c685b98a38611b7bd6c4614d40b36d29be84edcd6c173f8160",
+      "family": "lz4",
+      "level": "fast",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": ""
+    },
+    {
+      "available": true,
+      "build_info": null,
+      "codec": "brotli-fast",
+      "executable_path_sha256": "3721472468206df1ea6f3ba396a2da7d56ab849fe0cf99b21104689c897cdc89",
+      "executable_sha256": "01969d4716e4ecc585ab1302e0a0d4e0fa9619017ab17409a54173dac5fbacef",
+      "family": "brotli",
+      "level": "fast",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": ""
+    },
+    {
+      "available": true,
+      "build_info": null,
+      "codec": "7z-fast",
+      "executable_path_sha256": "3dd9afaf931b36e1a3637d3ec9ee10bcdffc204c199684fed8fd213e408820c9",
+      "executable_sha256": "b2a12fa672bc38fc33af43a99fa499533253236feb30e4f755a73fb64f01861d",
+      "family": "7z",
+      "level": "fast",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": ""
+    }
+  ],
+  "config_sha256": "4ef6e508882c5a13c61fcae49162cda90fd25e310ed1be1e674f5c9da6167298",
+  "config_snapshot": {
+    "benchmark": {
+      "collect_mathzip_inspection": true,
+      "record_absolute_paths": false,
+      "repeats": 3,
+      "threads": [
+        1
+      ],
+      "timeout_seconds": 3600,
+      "warmups": 1
+    },
+    "codecs": [
+      "mathzip-fast",
+      "raw",
+      "gzip-fast",
+      "bzip2-fast",
+      "xz-fast",
+      "zstd-fast",
+      "lz4-fast",
+      "brotli-fast",
+      "7z-fast"
+    ],
+    "datasets": [
+      {
+        "enabled": true,
+        "name": "silesia"
+      }
+    ],
+    "inputs": [
+      {
+        "corpus": "silesia",
+        "input_license": "Per-file upstream terms; see Silesia provenance",
+        "input_provenance": "datasets/manifests/silesia.json",
+        "patterns": [
+          "dickens",
+          "mozilla",
+          "mr",
+          "nci",
+          "ooffice",
+          "osdb",
+          "reymont",
+          "samba",
+          "sao",
+          "webster",
+          "x-ray",
+          "xml"
+        ],
+        "required": true,
+        "root": "datasets/data/silesia"
+      }
+    ],
+    "output_dir": "benchmarks/results/silesia",
+    "profile": "silesia",
+    "schema_version": 1
+  },
+  "expected_grid_sha256": "f6bcd1cbd16a92f50a9e820578a70305140e73172c65a43d692d127298d5a618",
+  "host": {
+    "cpu_model": "Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz",
+    "execution_state_sha256": "171099918ff6326b92a04c253616b28f60081dce68d24cc6f528b75e47605280",
+    "hostname_sha256": "2b9c15eb89efe0e0ad2c7b3279bf92247e35e4a92160ca8678d974e11a10ac6b",
+    "logical_cores": 16,
+    "os": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "physical_cores": 16,
+    "ram_bytes": 16715317248
+  },
+  "initial_source_metadata": {
+    "git_dirty": false,
+    "git_revision": "0e3bd26e9883b7b6d6ed51def05b1822efbda6bf",
+    "git_status_entry_count": 0,
+    "revision_available": true,
+    "selection_method": "git ls-files (tracked plus untracked, Git-ignored excluded)",
+    "source_dirty": false,
+    "source_file_count": 831,
+    "source_revision": "0e3bd26e9883b7b6d6ed51def05b1822efbda6bf",
+    "source_tree_manifest": null,
+    "source_tree_manifest_reason": "omitted because a Git revision identifies the clean base; tree hash still recorded",
+    "source_tree_sha256": "dd883471e0a661461fd56cf892f01dfbc90a8ec2e9d192d87f07b8e0b5e4cfad"
+  },
+  "initial_system_metadata": {
+    "architecture": "x86_64",
+    "cargo_version": "cargo 1.97.1 (c980f4866 2026-06-30)",
+    "cc_version": "cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "collected_at_utc": "2026-07-24T16:54:50.005370+00:00",
+    "compressors": {
+      "7z": {
+        "path": "<tmp>/mathzip-baselines.1ujJRr/extracted/usr/lib/7zip/7z",
+        "version": "7-Zip 23.01 (x64) : Copyright (c) 1999-2023 Igor Pavlov : 2023-06-20"
+      },
+      "7zz": {
+        "path": null,
+        "version": null
+      },
+      "brotli": {
+        "path": "<tmp>/mathzip-baselines.1ujJRr/extracted/usr/bin/brotli",
+        "version": "brotli 1.1.0"
+      },
+      "bzip2": {
+        "path": "<external>/bzip2",
+        "version": "bzip2, a block-sorting file compressor.  Version 1.0.8, 13-Jul-2019."
+      },
+      "gzip": {
+        "path": "<external>/gzip",
+        "version": "gzip 1.12"
+      },
+      "lz4": {
+        "path": "<tmp>/mathzip-baselines.1ujJRr/extracted/usr/bin/lz4",
+        "version": "*** LZ4 command line interface 64-bits v1.9.4, by Yann Collet ***"
+      },
+      "xz": {
+        "path": "<external>/xz",
+        "version": "xz (XZ Utils) 5.4.5"
+      },
+      "zstd": {
+        "path": "<external>/zstd",
+        "version": "*** Zstandard CLI (64-bit) v1.5.5, by Yann Collet ***"
+      }
+    },
+    "container": {
+      "cgroup": "0::/init.scope",
+      "detected": false,
+      "image_digest": null,
+      "image_digest_capture": "unavailable: runtime did not expose an image digest"
+    },
+    "cpu_affinity": {
+      "logical_cpu_count": 16,
+      "logical_cpu_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "cpu_governors": null,
+    "cpu_model": "Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz",
+    "hostname": "redacted",
+    "kernel": "7.0.0-28-generic",
+    "logical_cores": 16,
+    "metric_unavailable": [
+      {
+        "field": "cpu_governors",
+        "reason": "cpufreq governor files unavailable"
+      },
+      {
+        "field": "container.image_digest",
+        "reason": "container runtime did not expose an image digest"
+      }
+    ],
+    "os": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "physical_cores": 16,
+    "power_supplies": [
+      {
+        "capacity": null,
+        "name": "ACAD",
+        "online": "1",
+        "status": null,
+        "type": "Mains"
+      }
+    ],
+    "python_executable": "<external>/python3",
+    "python_version": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+    "ram_bytes": 16715317248,
+    "relevant_environment": {
+      "BZIP": null,
+      "BZIP2": null,
+      "CFLAGS": null,
+      "CPPFLAGS": null,
+      "CXXFLAGS": null,
+      "GLIBC_TUNABLES": null,
+      "GZIP": null,
+      "LANG": "C.UTF-8",
+      "LC_ALL": "C.UTF-8",
+      "LC_NUMERIC": null,
+      "LDFLAGS": null,
+      "LD_LIBRARY_PATH": null,
+      "LD_PRELOAD": null,
+      "MALLOC_ARENA_MAX": null,
+      "MALLOC_CONF": null,
+      "MATHZIP_THREADS": null,
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "PYTHONHASHSEED": null,
+      "RAYON_NUM_THREADS": null,
+      "RUSTDOCFLAGS": null,
+      "RUSTFLAGS": null,
+      "TZ": null,
+      "XZ_DEFAULTS": null,
+      "XZ_OPT": null,
+      "ZSTD_NBTHREADS": null
+    },
+    "rustc_version": "rustc 1.97.1 (8bab26f4f 2026-07-14)",
+    "storage": {
+      "filesystem_type": "ext4",
+      "free_bytes": 70618349568,
+      "measured_path": "<repo>/.",
+      "mount_point": "<external>/",
+      "mount_source": "<external>/sda2",
+      "total_bytes": 104384327680,
+      "used_bytes": 29244526592
+    },
+    "swap_bytes": 4054839296
+  },
+  "methodology_policy": {
+    "allow_short_run": false,
+    "codec_thread_keys": [
+      [
+        "mathzip-fast",
+        1
+      ],
+      [
+        "raw",
+        1
+      ],
+      [
+        "gzip-fast",
+        1
+      ],
+      [
+        "bzip2-fast",
+        1
+      ],
+      [
+        "xz-fast",
+        1
+      ],
+      [
+        "zstd-fast",
+        1
+      ],
+      [
+        "lz4-fast",
+        1
+      ],
+      [
+        "brotli-fast",
+        1
+      ],
+      [
+        "7z-fast",
+        1
+      ]
+    ],
+    "collect_mathzip_inspection": true,
+    "configured_threads": [
+      1
+    ],
+    "record_absolute_paths": false,
+    "repeats": 3,
+    "require_publication_evidence": true,
+    "selected_codecs": null,
+    "timeout_seconds_per_operation": 3600.0,
+    "warmups": 1
+  },
+  "schema_version": "mathzip-benchmark-run-identity-v1",
+  "source": {
+    "source_dirty": false,
+    "source_file_count": 831,
+    "source_revision": "0e3bd26e9883b7b6d6ed51def05b1822efbda6bf",
+    "source_tree_sha256": "dd883471e0a661461fd56cf892f01dfbc90a8ec2e9d192d87f07b8e0b5e4cfad"
+  }
+}

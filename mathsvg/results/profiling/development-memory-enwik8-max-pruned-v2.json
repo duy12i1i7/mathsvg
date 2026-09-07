@@ -1,0 +1,143 @@
+{
+  "binary": {
+    "path": "/home/ase/zipp/target/release/mathsvg",
+    "sha256": "07bd81ab37f59de424a12d7d4aa1717b772611faad5cbaf8feb44f660bde2043",
+    "version": "mathsvg 0.1.0"
+  },
+  "evidence_scope": "development",
+  "experiment_id": "development-memory-enwik8-max-pruned-v2",
+  "gate": "Gate 3 - Memory",
+  "gate_reasons": [
+    "Gate 3 requires the canonical 1,000,000,000-byte enwik9",
+    "Gate 3 requires Fast, Balanced, and Max profiles",
+    "benchmark methodology requires at least 5 repetitions",
+    "benchmark methodology requires a warm-up"
+  ],
+  "gate_status": "incomplete",
+  "holdout_payload_inspected": false,
+  "immutable_inputs_sha256": "602c8c3d0e44fd424dd1140196c3634ab6f9f64b7b65be9553341142305b02e6",
+  "immutable_inputs_stable": true,
+  "input": {
+    "bytes": 100000000,
+    "dataset_id": "dev-enwik8-enwik8",
+    "manifest_canonical_sha256": "88ed376ce82fbd9301fe2fce71dd0e3a4af5f837450b50b8489d678b19d5fca7",
+    "manifest_file_sha256": "e94bcc95b681519f4784b11b410d59a703882ebfaa971e251b5c714be2ba59a2",
+    "manifest_path": "mathsvg/results/manifests/development.csv",
+    "path": "datasets/data/enwik8/enwik8",
+    "sha256": "2b49720ec4d78c3c9fabaee6e4179a5e997302b3a70029f30f2d582218c024a8",
+    "split": "development"
+  },
+  "machine": {
+    "architecture": "x86_64",
+    "logical_cpus": 16,
+    "machine_id": "local-x86-64",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  },
+  "measurement": {
+    "interleaved_profile_order": true,
+    "limitations": [
+      "GNU time %M is process peak RSS in KiB multiplied by 1024",
+      "filesystem cache is not dropped between trials",
+      "CPU frequency/governor is not controlled",
+      "this report contains one machine/architecture only"
+    ],
+    "method": "gnu-time-v1-monotonic-wall",
+    "native_limit_policy": {
+      "max_archive_bytes": 201048590,
+      "max_input_bytes": 100000007,
+      "max_output_bytes": 100000007
+    },
+    "repetitions": 1,
+    "seed": 1297748005,
+    "strict_threshold_operator": "<",
+    "time_path": "/usr/bin/time",
+    "time_sha256": "3b11dec50514a8473e9f6efa7a34d584d0657538c09988f61b72d38ad4991a10",
+    "time_version": "time (GNU Time) UNKNOWN | Copyright (C) 2018 Free Software Foundation, Inc. | License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>. | This is free software: you are free to change and redistribute it. | There is NO WARRANTY, to the extent permitted by law. |  | Written by David Keppel, David MacKenzie, and Assaf Gordon.",
+    "warmups": 0
+  },
+  "rows": [
+    {
+      "archive_bytes": 46245202,
+      "archive_sha256": "ffa3c12c0517f5c30001a3655a041dcbc530013997417e23b02ae7b531f861ec",
+      "backend": "scalar",
+      "compress_command": [
+        "/home/ase/zipp/target/release/mathsvg",
+        "compress",
+        "--profile",
+        "max",
+        "--threads",
+        "1",
+        "--max-input-bytes",
+        "100000007",
+        "/home/ase/zipp/datasets/data/enwik8/enwik8",
+        "/tmp/mathsvg-memory-gate-0kmbgcg4/0000-max/archive.msvg"
+      ],
+      "compression": {
+        "cpu_ns": 89390000000,
+        "peak_rss_bytes": 47460352,
+        "returncode": 0,
+        "stderr_excerpt": "mathsvg: compressed input_bytes=100000000 archive_bytes=46245202 blocks=48 profile=max ablation=none selection=native-optimized threads=1 maximum_inflight_input_bytes=2097152 original_sha256=2b49720ec4d78c3c9fabaee6e4179a5e997302b3a70029f30f2d582218c024a8 streamed=true\n",
+        "stdout_excerpt": "",
+        "wall_ns": 89501036087
+      },
+      "decoder_rss_limit_bytes_exclusive": 268435456,
+      "decoder_within_limit": true,
+      "decompress_command": [
+        "/home/ase/zipp/target/release/mathsvg",
+        "decompress",
+        "--backend",
+        "scalar",
+        "--max-archive-bytes",
+        "201048590",
+        "--max-output-bytes",
+        "100000007",
+        "/tmp/mathsvg-memory-gate-0kmbgcg4/0000-max/archive.msvg",
+        "/tmp/mathsvg-memory-gate-0kmbgcg4/0000-max/restored.bin"
+      ],
+      "decompression": {
+        "cpu_ns": 9240000000,
+        "peak_rss_bytes": 8052736,
+        "returncode": 0,
+        "stderr_excerpt": "mathsvg: restored output_bytes=100000000 blocks=48 backend=scalar original_sha256=2b49720ec4d78c3c9fabaee6e4179a5e997302b3a70029f30f2d582218c024a8 verified=true streamed=true\n",
+        "stdout_excerpt": "",
+        "wall_ns": 9271022331
+      },
+      "encoder_rss_limit_bytes_exclusive": 1073741824,
+      "encoder_within_limit": true,
+      "profile": "max",
+      "reason": "",
+      "repetition": 0,
+      "restored_sha256": "2b49720ec4d78c3c9fabaee6e4179a5e997302b3a70029f30f2d582218c024a8",
+      "roundtrip_ok": true,
+      "schedule_order": 0,
+      "sequence": 0,
+      "status": "ok",
+      "threads": 1,
+      "warmup": false
+    }
+  ],
+  "runner_sha256": "9b4966385fb8fadde8acb9d099132dcfe84053f2ddafb302b330709ee8a7a19f",
+  "runtime_profiles": {
+    "max": {
+      "config_file_sha256": "3db0011978fff3c95c9c3d9cda404fa4d5f0a962086a9d31641efe0a239f8407",
+      "config_path": "mathsvg/configs/max/profile.toml",
+      "measurement_config_sha256": "54867e217047e1822b3c5bfdb558b3407413056a507c521899d610ca1fb5cefe",
+      "runtime_profile_sha256": "9bb5585e0efe903b35c211ff27a2a0f5d0aa912e47d09be557a296dd1c862e22"
+    }
+  },
+  "schema_version": 1,
+  "source_after": {
+    "branch": "mathsvg-absolute",
+    "commit": "36f84685dc00064dae9a239face7e8eff797ed28",
+    "dirty": true,
+    "status_sha256": "7249d426b516fe886650b484ffd88f12af4299bdfb9a896110b51d1228f103b7"
+  },
+  "source_before": {
+    "branch": "mathsvg-absolute",
+    "commit": "36f84685dc00064dae9a239face7e8eff797ed28",
+    "dirty": true,
+    "status_sha256": "7249d426b516fe886650b484ffd88f12af4299bdfb9a896110b51d1228f103b7"
+  },
+  "source_stable_during_campaign": true
+}

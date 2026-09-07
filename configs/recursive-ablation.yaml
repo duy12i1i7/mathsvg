@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "profile": "recursive-ablation",
+  "output_dir": "benchmarks/results/recursive-ablation",
+  "datasets": [
+    {"name": "canterbury", "enabled": true}
+  ],
+  "benchmark": {
+    "warmups": 1,
+    "repeats": 3,
+    "timeout_seconds": 600,
+    "threads": [1],
+    "collect_mathzip_inspection": true,
+    "record_absolute_paths": false
+  },
+  "codecs": [
+    {
+      "name": "mathzip-fast-adaptive",
+      "base": "mathzip-fast",
+      "variant": "Adaptive segmentation",
+      "compress_args": [
+        "--segmentation",
+        "adaptive"
+      ]
+    },
+    {
+      "name": "mathzip-fast-recursive",
+      "base": "mathzip-fast",
+      "variant": "Recursive segmentation, depth 4",
+      "compress_args": [
+        "--segmentation",
+        "recursive",
+        "--max-tree-depth",
+        "4"
+      ]
+    },
+    "zstd-fast"
+  ],
+  "inputs": [
+    {
+      "corpus": "synthetic_recursive",
+      "root": "datasets/synthetic",
+      "input_license": "CC0-1.0",
+      "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+      "patterns": [
+        "constant_00/s0000065536_n000p000_*.bin",
+        "linear/s0000065536_n000p000_*.bin",
+        "linear/s0000065536_n005p000_*.bin",
+        "polynomial_d2/s0000065536_n000p000_*.bin",
+        "periodic/s0000065536_n000p000_*.bin",
+        "recurrence/s0000065536_n000p000_*.bin",
+        "piecewise_mixed/s0000065536_n001p000_*.bin",
+        "random/s0000065536_n000p000_*.bin"
+      ],
+      "required": true
+    },
+    {
+      "corpus": "canterbury_recursive",
+      "root": "datasets/data/canterbury",
+      "input_license": "Upstream files retain their original terms; see dataset manifest",
+      "input_provenance": "datasets/manifests/canterbury.json",
+      "patterns": [
+        "alice29.txt",
+        "sum"
+      ],
+      "required": true
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+[package]
+name = "mathzip-core"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+description = "Deterministic lossless mathematical modelling codec core"
+license = "MIT"
+readme = "README.md"
+
+[dependencies]
+crc32fast = "1.4"
+serde = { version = "1", features = ["derive"] }
+sha2 = "0.10"
+thiserror = "2"
+zstd = "0.13"
+
+[dev-dependencies]
+hex = "0.4"
+proptest = "1.6"

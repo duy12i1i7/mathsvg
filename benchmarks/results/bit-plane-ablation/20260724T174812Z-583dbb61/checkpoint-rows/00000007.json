@@ -1,0 +1,518 @@
+{
+  "completed_at_utc": "2026-07-24T17:48:17.222859+00:00",
+  "execution_interval_index": 0,
+  "expected_grid_index": 7,
+  "interval_active_seconds": 4.802313175998279,
+  "key": [
+    "synthetic_bit_plane_ablation",
+    "datasets/synthetic/lfsr8/s0000000031_n000p000_seed1297748005.bin",
+    "mathzip-balanced-bit-plane-independent-v2",
+    1
+  ],
+  "row": {
+    "actual_residual_coded_bytes": 32,
+    "archive_sha256": "f9486aa406682478683f78a768352379a8185c78a7e1ea3412eff8ab06a95655",
+    "bits_per_byte": 113.54838709677419,
+    "codec": "mathzip-balanced-bit-plane-independent-v2",
+    "codec_family": "mathzip",
+    "codec_level": "balanced",
+    "command_lines": [
+      "'<repo>/target/release/mathzip' compress --mode balanced --max-input-bytes 8589934592 --no-sync --force --models raw,constant,affine,polynomial,periodic,recurrence,piecewise-linear,run,sparse --residual-coders raw,rle,zero-run,sparse,bit-pack --transforms bit-plane-independent --segmentation adaptive --no-raw-fallback '<repo>/datasets/synthetic/lfsr8/s0000000031_n000p000_seed1297748005.bin' '<work>/archive.mz'",
+      "'<repo>/target/release/mathzip' compress --mode balanced --max-input-bytes 8589934592 --no-sync --force --models raw,constant,affine,polynomial,periodic,recurrence,piecewise-linear,run,sparse --residual-coders raw,rle,zero-run,sparse,bit-pack --transforms bit-plane-independent --segmentation adaptive --no-raw-fallback --metrics-output '<work>/metrics-probe.mz.metrics.json' '<repo>/datasets/synthetic/lfsr8/s0000000031_n000p000_seed1297748005.bin' '<work>/metrics-probe.mz'",
+      "'<repo>/target/release/mathzip' decompress --max-archive-bytes 17179869184 --max-output-bytes 8589934592 --max-segments 8388608 --no-sync --force '<work>/archive.mz' '<work>/restored.bin'"
+    ],
+    "compressed_bytes": 440,
+    "compression_cpu_seconds": 0.00339799999999979,
+    "compression_mbps": 0.0043018058142573565,
+    "compression_seconds": 0.007206276000943035,
+    "container_overhead_bytes": 120,
+    "corpus": "synthetic_bit_plane_ablation",
+    "decompression_cpu_seconds": 0.003282999999999703,
+    "decompression_mbps": 0.007750633633335284,
+    "decompression_seconds": 0.003999672990175895,
+    "deterministic_archive": true,
+    "error": null,
+    "estimated_residual_entropy": 4.875,
+    "expansion_percent": 1319.3548387096773,
+    "input_entropy_bits_per_byte": 4.954196310386874,
+    "input_license": "CC0-1.0",
+    "input_manifest": "datasets/synthetic/manifest.json",
+    "input_manifest_sha256": "c7188cafa911c31e5d80193ab1dae1d468dfe9e6deafecb9be709a46aae23de1",
+    "input_manifest_verified": true,
+    "input_name": "s0000000031_n000p000_seed1297748005.bin",
+    "input_path": "datasets/synthetic/lfsr8/s0000000031_n000p000_seed1297748005.bin",
+    "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+    "input_sha256": "cfdc61fc52c463c8a77811e53f534ba567e926fcea624535bda3441e6a708e29",
+    "math_segments_winning_raw": 0,
+    "math_segments_winning_zstd": 0,
+    "mathzip_inspection": {
+      "actual_residual_coded_bytes": 32,
+      "checksums": {
+        "archive": true,
+        "header": true,
+        "original": true,
+        "segments": true
+      },
+      "compressed_size": 440,
+      "compression_ratio": 0.07045454545454545,
+      "container_overhead_bytes": 120,
+      "estimated_residual_entropy": 4.875,
+      "format_version": 2,
+      "math_segments_winning_raw": 0,
+      "math_segments_winning_zstd": 0,
+      "mean_segment_size": 4.0,
+      "median_segment_size": 4.0,
+      "metadata_bytes": 408,
+      "model_distribution": {
+        "raw": 8
+      },
+      "model_parameter_bytes": 0,
+      "original_size": 31,
+      "partition_metadata_bytes": 288,
+      "payload_size": 324,
+      "raw_fallback_percentage": 100.0,
+      "raw_model_percentage": 100.0,
+      "residual_bytes": 32,
+      "residual_distribution": {
+        "raw": 8
+      },
+      "residual_mode_distribution": {
+        "add_modulo": 8
+      },
+      "segment_count": 8,
+      "segment_descriptor_bytes": 288,
+      "transform_count": 1,
+      "transform_metadata_bytes": 4,
+      "transformed_size": 32,
+      "transforms": [
+        {
+          "type": "bit_plane_padded"
+        }
+      ]
+    },
+    "mean_segment_size": 4.0,
+    "median_segment_size": 4.0,
+    "model_distribution": {
+      "raw": 8
+    },
+    "model_fitting_seconds": 2.0173e-05,
+    "model_parameter_bytes": 0,
+    "original_bytes": 31,
+    "partition_metadata_bytes": 288,
+    "peak_rss_bytes": 1157120.0,
+    "profile": "bit-plane-ablation",
+    "ratio": 0.07045454545454545,
+    "raw_fallback_percent": 100.0,
+    "raw_model_percent": 100.0,
+    "requested_repeats": 3,
+    "residual_bytes": 32,
+    "residual_coding_seconds": 4.3947e-05,
+    "residual_distribution": {
+      "raw": 8
+    },
+    "restored_sha256": "cfdc61fc52c463c8a77811e53f534ba567e926fcea624535bda3441e6a708e29",
+    "roundtrip_verified": true,
+    "run_id": "20260724T174812Z-583dbb61",
+    "savings": -13.193548387096774,
+    "savings_percent": -1319.3548387096773,
+    "schema_version": "mathzip-benchmark-results-v1",
+    "search_seconds": 6.6024e-05,
+    "segment_count": 8,
+    "status": "ok",
+    "successful_repeats": 3,
+    "tags": {
+      "family": "lfsr8",
+      "noise_density": 0.0,
+      "seed": 1297748005,
+      "size_requested": 31
+    },
+    "threads": 1,
+    "transform": [
+      {
+        "type": "bit_plane_padded"
+      }
+    ],
+    "trials": [
+      {
+        "archive_sha256": "f9486aa406682478683f78a768352379a8185c78a7e1ea3412eff8ab06a95655",
+        "compressed_bytes": 440,
+        "compression_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "balanced",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--models",
+          "raw,constant,affine,polynomial,periodic,recurrence,piecewise-linear,run,sparse",
+          "--residual-coders",
+          "raw,rle,zero-run,sparse,bit-pack",
+          "--transforms",
+          "bit-plane-independent",
+          "--segmentation",
+          "adaptive",
+          "--no-raw-fallback",
+          "<repo>/datasets/synthetic/lfsr8/s0000000031_n000p000_seed1297748005.bin",
+          "<work>/archive.mz"
+        ],
+        "compression_cpu_seconds": 0.00339799999999979,
+        "compression_metrics": {
+          "model_fitting_seconds": 2.7226e-05,
+          "residual_coding_seconds": 5.7713e-05,
+          "search_seconds": 7.8688e-05
+        },
+        "compression_metrics_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "balanced",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--models",
+          "raw,constant,affine,polynomial,periodic,recurrence,piecewise-linear,run,sparse",
+          "--residual-coders",
+          "raw,rle,zero-run,sparse,bit-pack",
+          "--transforms",
+          "bit-plane-independent",
+          "--segmentation",
+          "adaptive",
+          "--no-raw-fallback",
+          "--metrics-output",
+          "<work>/metrics-probe.mz.metrics.json",
+          "<repo>/datasets/synthetic/lfsr8/s0000000031_n000p000_seed1297748005.bin",
+          "<work>/metrics-probe.mz"
+        ],
+        "compression_metrics_stderr": "compressed 31 -> 440 bytes (ratio 0.0705:1) in 0.000s",
+        "compression_peak_rss_bytes": 442368,
+        "compression_seconds": 0.007267648004926741,
+        "compression_stderr": "compressed 31 -> 440 bytes (ratio 0.0705:1) in 0.000s",
+        "decompression_command": [
+          "<repo>/target/release/mathzip",
+          "decompress",
+          "--max-archive-bytes",
+          "17179869184",
+          "--max-output-bytes",
+          "8589934592",
+          "--max-segments",
+          "8388608",
+          "--no-sync",
+          "--force",
+          "<work>/archive.mz",
+          "<work>/restored.bin"
+        ],
+        "decompression_cpu_seconds": 0.003166000000000224,
+        "decompression_peak_rss_bytes": 1769472,
+        "decompression_seconds": 0.00381985999410972,
+        "decompression_stderr": "restored 31 bytes in 0.000s; original SHA-256 verified",
+        "error": null,
+        "index": 0,
+        "inspection": {
+          "actual_residual_coded_bytes": 32,
+          "checksums": {
+            "archive": true,
+            "header": true,
+            "original": true,
+            "segments": true
+          },
+          "compressed_size": 440,
+          "compression_ratio": 0.07045454545454545,
+          "container_overhead_bytes": 120,
+          "estimated_residual_entropy": 4.875,
+          "format_version": 2,
+          "math_segments_winning_raw": 0,
+          "math_segments_winning_zstd": 0,
+          "mean_segment_size": 4.0,
+          "median_segment_size": 4.0,
+          "metadata_bytes": 408,
+          "model_distribution": {
+            "raw": 8
+          },
+          "model_parameter_bytes": 0,
+          "original_size": 31,
+          "partition_metadata_bytes": 288,
+          "payload_size": 324,
+          "raw_fallback_percentage": 100.0,
+          "raw_model_percentage": 100.0,
+          "residual_bytes": 32,
+          "residual_distribution": {
+            "raw": 8
+          },
+          "residual_mode_distribution": {
+            "add_modulo": 8
+          },
+          "segment_count": 8,
+          "segment_descriptor_bytes": 288,
+          "transform_count": 1,
+          "transform_metadata_bytes": 4,
+          "transformed_size": 32,
+          "transforms": [
+            {
+              "type": "bit_plane_padded"
+            }
+          ]
+        },
+        "restored_sha256": "cfdc61fc52c463c8a77811e53f534ba567e926fcea624535bda3441e6a708e29",
+        "roundtrip_verified": true,
+        "status": "ok"
+      },
+      {
+        "archive_sha256": "f9486aa406682478683f78a768352379a8185c78a7e1ea3412eff8ab06a95655",
+        "compressed_bytes": 440,
+        "compression_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "balanced",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--models",
+          "raw,constant,affine,polynomial,periodic,recurrence,piecewise-linear,run,sparse",
+          "--residual-coders",
+          "raw,rle,zero-run,sparse,bit-pack",
+          "--transforms",
+          "bit-plane-independent",
+          "--segmentation",
+          "adaptive",
+          "--no-raw-fallback",
+          "<repo>/datasets/synthetic/lfsr8/s0000000031_n000p000_seed1297748005.bin",
+          "<work>/archive.mz"
+        ],
+        "compression_cpu_seconds": 0.004819999999999602,
+        "compression_metrics": {
+          "model_fitting_seconds": 2.0173e-05,
+          "residual_coding_seconds": 4.3947e-05,
+          "search_seconds": 6.6024e-05
+        },
+        "compression_metrics_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "balanced",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--models",
+          "raw,constant,affine,polynomial,periodic,recurrence,piecewise-linear,run,sparse",
+          "--residual-coders",
+          "raw,rle,zero-run,sparse,bit-pack",
+          "--transforms",
+          "bit-plane-independent",
+          "--segmentation",
+          "adaptive",
+          "--no-raw-fallback",
+          "--metrics-output",
+          "<work>/metrics-probe.mz.metrics.json",
+          "<repo>/datasets/synthetic/lfsr8/s0000000031_n000p000_seed1297748005.bin",
+          "<work>/metrics-probe.mz"
+        ],
+        "compression_metrics_stderr": "compressed 31 -> 440 bytes (ratio 0.0705:1) in 0.000s",
+        "compression_peak_rss_bytes": 1245184,
+        "compression_seconds": 0.007206276000943035,
+        "compression_stderr": "compressed 31 -> 440 bytes (ratio 0.0705:1) in 0.000s",
+        "decompression_command": [
+          "<repo>/target/release/mathzip",
+          "decompress",
+          "--max-archive-bytes",
+          "17179869184",
+          "--max-output-bytes",
+          "8589934592",
+          "--max-segments",
+          "8388608",
+          "--no-sync",
+          "--force",
+          "<work>/archive.mz",
+          "<work>/restored.bin"
+        ],
+        "decompression_cpu_seconds": 0.0033240000000001046,
+        "decompression_peak_rss_bytes": null,
+        "decompression_seconds": 0.004410788009408861,
+        "decompression_stderr": "restored 31 bytes in 0.000s; original SHA-256 verified",
+        "error": null,
+        "index": 1,
+        "inspection": {
+          "actual_residual_coded_bytes": 32,
+          "checksums": {
+            "archive": true,
+            "header": true,
+            "original": true,
+            "segments": true
+          },
+          "compressed_size": 440,
+          "compression_ratio": 0.07045454545454545,
+          "container_overhead_bytes": 120,
+          "estimated_residual_entropy": 4.875,
+          "format_version": 2,
+          "math_segments_winning_raw": 0,
+          "math_segments_winning_zstd": 0,
+          "mean_segment_size": 4.0,
+          "median_segment_size": 4.0,
+          "metadata_bytes": 408,
+          "model_distribution": {
+            "raw": 8
+          },
+          "model_parameter_bytes": 0,
+          "original_size": 31,
+          "partition_metadata_bytes": 288,
+          "payload_size": 324,
+          "raw_fallback_percentage": 100.0,
+          "raw_model_percentage": 100.0,
+          "residual_bytes": 32,
+          "residual_distribution": {
+            "raw": 8
+          },
+          "residual_mode_distribution": {
+            "add_modulo": 8
+          },
+          "segment_count": 8,
+          "segment_descriptor_bytes": 288,
+          "transform_count": 1,
+          "transform_metadata_bytes": 4,
+          "transformed_size": 32,
+          "transforms": [
+            {
+              "type": "bit_plane_padded"
+            }
+          ]
+        },
+        "restored_sha256": "cfdc61fc52c463c8a77811e53f534ba567e926fcea624535bda3441e6a708e29",
+        "roundtrip_verified": true,
+        "status": "ok"
+      },
+      {
+        "archive_sha256": "f9486aa406682478683f78a768352379a8185c78a7e1ea3412eff8ab06a95655",
+        "compressed_bytes": 440,
+        "compression_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "balanced",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--models",
+          "raw,constant,affine,polynomial,periodic,recurrence,piecewise-linear,run,sparse",
+          "--residual-coders",
+          "raw,rle,zero-run,sparse,bit-pack",
+          "--transforms",
+          "bit-plane-independent",
+          "--segmentation",
+          "adaptive",
+          "--no-raw-fallback",
+          "<repo>/datasets/synthetic/lfsr8/s0000000031_n000p000_seed1297748005.bin",
+          "<work>/archive.mz"
+        ],
+        "compression_cpu_seconds": 0.0033479999999999066,
+        "compression_metrics": {
+          "model_fitting_seconds": 1.9769e-05,
+          "residual_coding_seconds": 4.2914e-05,
+          "search_seconds": 6.1472e-05
+        },
+        "compression_metrics_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "balanced",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--models",
+          "raw,constant,affine,polynomial,periodic,recurrence,piecewise-linear,run,sparse",
+          "--residual-coders",
+          "raw,rle,zero-run,sparse,bit-pack",
+          "--transforms",
+          "bit-plane-independent",
+          "--segmentation",
+          "adaptive",
+          "--no-raw-fallback",
+          "--metrics-output",
+          "<work>/metrics-probe.mz.metrics.json",
+          "<repo>/datasets/synthetic/lfsr8/s0000000031_n000p000_seed1297748005.bin",
+          "<work>/metrics-probe.mz"
+        ],
+        "compression_metrics_stderr": "compressed 31 -> 440 bytes (ratio 0.0705:1) in 0.000s",
+        "compression_peak_rss_bytes": 405504,
+        "compression_seconds": 0.003906760990503244,
+        "compression_stderr": "compressed 31 -> 440 bytes (ratio 0.0705:1) in 0.000s",
+        "decompression_command": [
+          "<repo>/target/release/mathzip",
+          "decompress",
+          "--max-archive-bytes",
+          "17179869184",
+          "--max-output-bytes",
+          "8589934592",
+          "--max-segments",
+          "8388608",
+          "--no-sync",
+          "--force",
+          "<work>/archive.mz",
+          "<work>/restored.bin"
+        ],
+        "decompression_cpu_seconds": 0.003282999999999703,
+        "decompression_peak_rss_bytes": 544768,
+        "decompression_seconds": 0.003999672990175895,
+        "decompression_stderr": "restored 31 bytes in 0.000s; original SHA-256 verified",
+        "error": null,
+        "index": 2,
+        "inspection": {
+          "actual_residual_coded_bytes": 32,
+          "checksums": {
+            "archive": true,
+            "header": true,
+            "original": true,
+            "segments": true
+          },
+          "compressed_size": 440,
+          "compression_ratio": 0.07045454545454545,
+          "container_overhead_bytes": 120,
+          "estimated_residual_entropy": 4.875,
+          "format_version": 2,
+          "math_segments_winning_raw": 0,
+          "math_segments_winning_zstd": 0,
+          "mean_segment_size": 4.0,
+          "median_segment_size": 4.0,
+          "metadata_bytes": 408,
+          "model_distribution": {
+            "raw": 8
+          },
+          "model_parameter_bytes": 0,
+          "original_size": 31,
+          "partition_metadata_bytes": 288,
+          "payload_size": 324,
+          "raw_fallback_percentage": 100.0,
+          "raw_model_percentage": 100.0,
+          "residual_bytes": 32,
+          "residual_distribution": {
+            "raw": 8
+          },
+          "residual_mode_distribution": {
+            "add_modulo": 8
+          },
+          "segment_count": 8,
+          "segment_descriptor_bytes": 288,
+          "transform_count": 1,
+          "transform_metadata_bytes": 4,
+          "transformed_size": 32,
+          "transforms": [
+            {
+              "type": "bit_plane_padded"
+            }
+          ]
+        },
+        "restored_sha256": "cfdc61fc52c463c8a77811e53f534ba567e926fcea624535bda3441e6a708e29",
+        "roundtrip_verified": true,
+        "status": "ok"
+      }
+    ],
+    "variant": "Independently segmented padded bit planes (format v2)"
+  },
+  "schema_version": "mathzip-benchmark-checkpoint-row-v1"
+}

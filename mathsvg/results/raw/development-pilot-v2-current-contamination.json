@@ -1,0 +1,10 @@
+{
+  "experiment_id": "development-pilot-v2-current",
+  "evidence_status": "contaminated-incomplete-do-not-analyze",
+  "completed": false,
+  "recorded_rows": 291,
+  "raw_jsonl_sha256": "a05ac0f49a891936519de18a18f3f55adb77e32081a5cbd4354e6ec63b24d3ce",
+  "run_metadata_sha256": "7eeb1fee6108475f4013e7255a5a4e54ea24d0eb6d11404f5c4e781ab9f635ae",
+  "reason": "A separate debug determinism preflight accidentally executed for approximately 31 seconds while this timing/RSS run was active. The benchmark was then interrupted deliberately. Round-trip rows remain diagnostic only; none of these timings or memory measurements may support a benchmark, ablation, dominance, or acceptance-gate claim.",
+  "replacement_experiment_id": "development-pilot-v2-retry"
+}

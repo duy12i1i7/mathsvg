@@ -1,0 +1,85 @@
+{
+  "artifacts_sha256": {
+    "ablation_comparison.png": "5e7db6264ef72476dc5313861076c18b858b5c7101e64ee73c76190f89b8d3dd",
+    "bits_per_byte_by_dataset.png": "619173f38ea5519e4a63abf250039c14d808f0ab1e1cc7bb7f729731335303de",
+    "compression_ratio_by_dataset.png": "32b9e2d9027d91fc8b745d6af669275bdcba8b49dc1432419c5065db0eb21155",
+    "compression_throughput.png": "144fe7c0ae1f7f6dd38119ba00473feef2172baead9accd235cb5de685159da5",
+    "decompression_throughput.png": "ff3e4127b4fc26d4777b067a7d7a69b7cfd27c959ab5d16b89af033c2354cdc7",
+    "file_entropy_vs_mathzip_gain.png": "b70e927cfef73cd34eaf9ab03df099936056f606596989e79f71537d93495758",
+    "mathzip_gain_vs_zstd.png": "da58a114638c1f58670562c9b90dc1156860332af0f16ed633d1a6413d9a07d1",
+    "model_distribution.png": "402a8e80ca93e51a4b9044b3aef70864b7f3f0ce17dd87956ac025a566a45263",
+    "peak_memory.png": "a1ddd580ae566bef2263f7c9ec47742c236d189929d259420873c54274d8b65a",
+    "plot_data.json": "0db9eb7c7238314725b50940f535b95fc71aae1e3035f26a974d5cd738342477",
+    "ratio_vs_compression_speed.png": "740ae03788053f993e05f11099560ebabb405483f4157685e39ff950d9eceec2",
+    "ratio_vs_decompression_speed.png": "076633a72fc3e7908782a9262819d25cb05e0c4bdd9a5cdd8c284dbc9eb5edd0",
+    "residual_entropy_vs_encoded_size.png": "48c97eb7f3d4d37dd88b3cf7b0943b349bd7b84d9d88b07c2bc830a7fabcef7e",
+    "segment_size_histogram.png": "488ff0508777cb9336c5eb7a23bc69b9844ac6c1b3c09451fe3068974dcbe9c4",
+    "storage_breakdown.png": "0fcfb5993893066ff562e38ec52957acd8a86da2b8e8da01277c2f1e9cbba4ba",
+    "synthetic_noise_vs_ratio.png": "c7cc1c4c5a8a32c6153b1c7e8c231e2cd93a49c0d57a0d278c629a5eb09d89bf"
+  },
+  "comparison_choices": {
+    "ablation_comparison": {
+      "aggregation": "median ratio among successful rows",
+      "coverage": [
+        {
+          "median_successful_ratio": 1.7932511045582389,
+          "successful_rows": 14,
+          "threads": 1,
+          "total_rows": 14,
+          "variant": "Independently segmented padded bit planes (format v2)"
+        },
+        {
+          "median_successful_ratio": 1.901382842054859,
+          "successful_rows": 14,
+          "threads": 1,
+          "total_rows": 14,
+          "variant": "Packed bit-plane representation (format v1)"
+        }
+      ]
+    },
+    "file_entropy_vs_mathzip_gain": {
+      "baseline_codec": "zstd-default",
+      "mathzip_codec": "mathzip-balanced-bit-plane-independent-v2"
+    },
+    "mathzip_gain_vs_xz": {
+      "aggregation": "corpus/thread weighted total compressed bytes",
+      "baseline_codec": null,
+      "mathzip_codec": "mathzip-balanced-bit-plane-independent-v2"
+    },
+    "mathzip_gain_vs_zstd": {
+      "aggregation": "corpus/thread weighted total compressed bytes",
+      "baseline_codec": "zstd-default",
+      "mathzip_codec": "mathzip-balanced-bit-plane-independent-v2"
+    }
+  },
+  "failure_count": 0,
+  "generated": [
+    "compression_ratio_by_dataset.png",
+    "bits_per_byte_by_dataset.png",
+    "compression_throughput.png",
+    "decompression_throughput.png",
+    "ratio_vs_compression_speed.png",
+    "ratio_vs_decompression_speed.png",
+    "peak_memory.png",
+    "storage_breakdown.png",
+    "model_distribution.png",
+    "segment_size_histogram.png",
+    "residual_entropy_vs_encoded_size.png",
+    "ablation_comparison.png",
+    "synthetic_noise_vs_ratio.png",
+    "file_entropy_vs_mathzip_gain.png",
+    "mathzip_gain_vs_zstd.png"
+  ],
+  "plot_generator": "python/mathzip_bench/plots.py",
+  "plot_generator_sha256": "7a06354c6089971069ffa6c41ced95062c78d3e5c43a0a93f8e36356432013cc",
+  "profile": "bit-plane-ablation",
+  "result_count": 42,
+  "result_document_hash_method": "canonical-json-v1",
+  "result_document_sha256": "fcbba7e4c0bcbcfce20c542e4f9ac7bd402070e69aac88732f1e7de0bf0fa99f",
+  "run_id": "20260724T174812Z-583dbb61",
+  "schema_version": "mathzip-plot-manifest-v1",
+  "skipped_for_missing_metrics": [
+    "mathzip_gain_vs_xz"
+  ],
+  "status": "generated"
+}

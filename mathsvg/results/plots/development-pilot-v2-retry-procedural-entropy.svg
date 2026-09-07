@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1507" role="img" aria-labelledby="title desc">
+  <title id="title">Development pilot — procedural vs entropy attribution</title>
+  <desc id="desc">Development evidence only; warm-ups excluded; missing measurements are not replaced by zero.</desc>
+  <metadata>MathSVG development evidence; deterministic code-native SVG; measured successful TrialRecord rows only.</metadata>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="24" y="34" font-family="sans-serif" font-size="20" font-weight="700" fill="#17202a">Development pilot — procedural vs entropy attribution</text>
+  <text x="24" y="58" font-family="sans-serif" font-size="12" fill="#52606d">DEVELOPMENT EVIDENCE · measured rows only · warm-ups excluded</text>
+  <text x="24" y="78" font-family="sans-serif" font-size="11" fill="#6b7280">Gains and penalties are separate; exact measured zero remains zero, missing evidence remains not measured.</text>
+  <line x1="276" y1="93" x2="276" y2="1453" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="276" y="1485" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#6b7280">0k</text>
+  <line x1="417" y1="93" x2="417" y2="1453" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="417" y="1485" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#6b7280">733k</text>
+  <line x1="558" y1="93" x2="558" y2="1453" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="558" y="1485" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#6b7280">1465k</text>
+  <line x1="699" y1="93" x2="699" y2="1453" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="699" y="1485" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#6b7280">2198k</text>
+  <line x1="840" y1="93" x2="840" y2="1453" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="840" y="1485" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#6b7280">2930k</text>
+  <text x="558.000" y="1503" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#374151">exact counterfactual bytes</text>
+  <text x="264" y="123" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Balanced · 1t · procedural gain</text>
+  <rect x="276" y="110" width="25.23" height="18" rx="3" fill="#2a9d8f"/>
+  <text x="308.230" y="123" font-family="sans-serif" font-size="10" fill="#111827">131074 B</text>
+  <text x="264" y="165" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Balanced · 1t · entropy gain</text>
+  <rect x="276" y="152" width="0" height="18" rx="3" fill="#457b9d"/>
+  <text x="283.000" y="165" font-family="sans-serif" font-size="10" fill="#111827">0 B</text>
+  <text x="264" y="207" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Balanced · 1t · procedural penalty</text>
+  <rect x="276" y="194" width="0" height="18" rx="3" fill="#e76f51"/>
+  <text x="283.000" y="207" font-family="sans-serif" font-size="10" fill="#111827">0 B</text>
+  <text x="264" y="249" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Balanced · 1t · entropy penalty</text>
+  <rect x="276" y="236" width="0" height="18" rx="3" fill="#b56576"/>
+  <text x="283.000" y="249" font-family="sans-serif" font-size="10" fill="#111827">0 B</text>
+  <text x="264" y="291" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Balanced · 1t · procedural gain</text>
+  <rect x="276" y="278" width="0" height="18" rx="3" fill="#2a9d8f"/>
+  <text x="283.000" y="291" font-family="sans-serif" font-size="10" fill="#111827">0 B</text>
+  <text x="264" y="333" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Balanced · 1t · entropy gain</text>
+  <rect x="276" y="320" width="564" height="18" rx="3" fill="#457b9d"/>
+  <text x="847.000" y="333" font-family="sans-serif" font-size="10" fill="#111827">2930125 B</text>
+  <text x="264" y="375" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Balanced · 1t · procedural penalty</text>
+  <rect x="276" y="362" width="0" height="18" rx="3" fill="#e76f51"/>
+  <text x="283.000" y="375" font-family="sans-serif" font-size="10" fill="#111827">0 B</text>
+  <text x="264" y="417" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Balanced · 1t · entropy penalty</text>
+  <rect x="276" y="404" width="0" height="18" rx="3" fill="#b56576"/>
+  <text x="283.000" y="417" font-family="sans-serif" font-size="10" fill="#111827">0 B</text>
+  <text x="264" y="459" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Balanced · 1t · procedural gain</text>
+  <rect x="276" y="446" width="25.23" height="18" rx="3" fill="#2a9d8f"/>
+  <text x="308.230" y="459" font-family="sans-serif" font-size="10" fill="#111827">131074 B</text>
+  <text x="264" y="501" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Balanced · 1t · entropy gain</text>
+  <rect x="276" y="488" width="538.822" height="18" rx="3" fill="#457b9d"/>
+  <text x="821.822" y="501" font-family="sans-serif" font-size="10" fill="#111827">2799320 B</text>
+  <text x="264" y="543" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Balanced · 1t · procedural penalty</text>
+  <rect x="276" y="530" width="0" height="18" rx="3" fill="#e76f51"/>
+  <text x="283.000" y="543" font-family="sans-serif" font-size="10" fill="#111827">0 B</text>
+  <text x="264" y="585" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Balanced · 1t · entropy penalty</text>
+  <rect x="276" y="572" width="0" height="18" rx="3" fill="#b56576"/>
+  <text x="283.000" y="585" font-family="sans-serif" font-size="10" fill="#111827">0 B</text>
+  <text x="264" y="627" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Balanced · 1t · procedural gain</text>
+  <rect x="276" y="614" width="25.23" height="18" rx="3" fill="#2a9d8f"/>
+  <text x="308.230" y="627" font-family="sans-serif" font-size="10" fill="#111827">131074 B</text>
+  <text x="264" y="669" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Balanced · 1t · entropy gain</text>
+  <rect x="276" y="656" width="538.822" height="18" rx="3" fill="#457b9d"/>
+  <text x="821.822" y="669" font-family="sans-serif" font-size="10" fill="#111827">2799320 B</text>
+  <text x="264" y="711" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Balanced · 1t · procedural penalty</text>
+  <rect x="276" y="698" width="0" height="18" rx="3" fill="#e76f51"/>
+  <text x="283.000" y="711" font-family="sans-serif" font-size="10" fill="#111827">0 B</text>
+  <text x="264" y="753" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Balanced · 1t · entropy penalty</text>
+  <rect x="276" y="740" width="0" height="18" rx="3" fill="#b56576"/>
+  <text x="283.000" y="753" font-family="sans-serif" font-size="10" fill="#111827">0 B</text>
+  <text x="264" y="795" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Fast · 1t · procedural gain</text>
+  <rect x="276" y="782" width="25.23" height="18" rx="3" fill="#2a9d8f"/>
+  <text x="308.230" y="795" font-family="sans-serif" font-size="10" fill="#111827">131074 B</text>
+  <text x="264" y="837" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Fast · 1t · entropy gain</text>
+  <rect x="276" y="824" width="0" height="18" rx="3" fill="#457b9d"/>
+  <text x="283.000" y="837" font-family="sans-serif" font-size="10" fill="#111827">0 B</text>
+  <text x="264" y="879" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Fast · 1t · procedural penalty</text>
+  <rect x="276" y="866" width="0" height="18" rx="3" fill="#e76f51"/>
+  <text x="283.000" y="879" font-family="sans-serif" font-size="10" fill="#111827">0 B</text>
+  <text x="264" y="921" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Fast · 1t · entropy penalty</text>
+  <rect x="276" y="908" width="0" height="18" rx="3" fill="#b56576"/>
+  <text x="283.000" y="921" font-family="sans-serif" font-size="10" fill="#111827">0 B</text>
+  <text x="264" y="963" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Fast · 1t · procedural gain</text>
+  <rect x="276" y="950" width="0" height="18" rx="3" fill="#2a9d8f"/>
+  <text x="283.000" y="963" font-family="sans-serif" font-size="10" fill="#111827">0 B</text>
+  <text x="264" y="1005" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Fast · 1t · entropy gain</text>
+  <rect x="276" y="992" width="564" height="18" rx="3" fill="#457b9d"/>
+  <text x="847.000" y="1005" font-family="sans-serif" font-size="10" fill="#111827">2930125 B</text>
+  <text x="264" y="1047" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Fast · 1t · procedural penalty</text>
+  <rect x="276" y="1034" width="0" height="18" rx="3" fill="#e76f51"/>
+  <text x="283.000" y="1047" font-family="sans-serif" font-size="10" fill="#111827">0 B</text>
+  <text x="264" y="1089" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Fast · 1t · entropy penalty</text>
+  <rect x="276" y="1076" width="0" height="18" rx="3" fill="#b56576"/>
+  <text x="283.000" y="1089" font-family="sans-serif" font-size="10" fill="#111827">0 B</text>
+  <text x="264" y="1131" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Fast · 1t · procedural gain</text>
+  <rect x="276" y="1118" width="25.23" height="18" rx="3" fill="#2a9d8f"/>
+  <text x="308.230" y="1131" font-family="sans-serif" font-size="10" fill="#111827">131074 B</text>
+  <text x="264" y="1173" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Fast · 1t · entropy gain</text>
+  <rect x="276" y="1160" width="538.822" height="18" rx="3" fill="#457b9d"/>
+  <text x="821.822" y="1173" font-family="sans-serif" font-size="10" fill="#111827">2799320 B</text>
+  <text x="264" y="1215" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Fast · 1t · procedural penalty</text>
+  <rect x="276" y="1202" width="0" height="18" rx="3" fill="#e76f51"/>
+  <text x="283.000" y="1215" font-family="sans-serif" font-size="10" fill="#111827">0 B</text>
+  <text x="264" y="1257" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Fast · 1t · entropy penalty</text>
+  <rect x="276" y="1244" width="0" height="18" rx="3" fill="#b56576"/>
+  <text x="283.000" y="1257" font-family="sans-serif" font-size="10" fill="#111827">0 B</text>
+  <text x="264" y="1299" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Fast · 1t · procedural gain</text>
+  <rect x="276" y="1286" width="25.23" height="18" rx="3" fill="#2a9d8f"/>
+  <text x="308.230" y="1299" font-family="sans-serif" font-size="10" fill="#111827">131074 B</text>
+  <text x="264" y="1341" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Fast · 1t · entropy gain</text>
+  <rect x="276" y="1328" width="538.822" height="18" rx="3" fill="#457b9d"/>
+  <text x="821.822" y="1341" font-family="sans-serif" font-size="10" fill="#111827">2799320 B</text>
+  <text x="264" y="1383" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Fast · 1t · procedural penalty</text>
+  <rect x="276" y="1370" width="0" height="18" rx="3" fill="#e76f51"/>
+  <text x="283.000" y="1383" font-family="sans-serif" font-size="10" fill="#111827">0 B</text>
+  <text x="264" y="1425" text-anchor="end" font-family="sans-serif" font-size="11" fill="#1f2937">MathSVG Fast · 1t · entropy penalty</text>
+  <rect x="276" y="1412" width="0" height="18" rx="3" fill="#b56576"/>
+  <text x="283.000" y="1425" font-family="sans-serif" font-size="10" fill="#111827">0 B</text>
+</svg>

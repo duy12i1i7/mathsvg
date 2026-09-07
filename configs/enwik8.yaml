@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "profile": "enwik8",
+  "output_dir": "benchmarks/results/enwik8",
+  "datasets": [
+    {"name": "enwik8", "enabled": true}
+  ],
+  "benchmark": {
+    "warmups": 1,
+    "repeats": 3,
+    "timeout_seconds": 3600,
+    "threads": [1],
+    "collect_mathzip_inspection": true,
+    "record_absolute_paths": false
+  },
+  "codecs": [
+    "mathzip-fast",
+    "raw",
+    "gzip-fast",
+    "bzip2-fast",
+    "xz-fast",
+    "zstd-fast",
+    "lz4-fast",
+    "brotli-fast",
+    "7z-fast"
+  ],
+  "inputs": [
+    {
+      "corpus": "enwik8",
+      "root": "datasets/data/enwik8",
+      "input_license": "Derived from Wikipedia; consult the upstream dump and Wikimedia licensing terms",
+      "input_provenance": "datasets/manifests/enwik8.json",
+      "patterns": ["enwik8"],
+      "required": true
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "schema": "mathsvg-lzh-depth-stop-provenance-v1",
+  "experiment_id": "lz-parser-depth-v1",
+  "evidence_scope": "development-real-only",
+  "holdout_payload_inspected": false,
+  "source_identity": {
+    "base_git_commit": "36f84685dc00064dae9a239face7e8eff797ed28",
+    "worktree_state": "dirty",
+    "note": "The exact implementation and probe identities are pinned below; the predecessor commit alone does not reproduce the untracked MathSVG tree."
+  },
+  "raw_evidence": {
+    "path": "mathsvg/results/oracle/lz-parser-depth-v1-raw.json",
+    "bytes": 64610,
+    "sha256": "8e44bb058bfa33537ea1cd6ae5ab3807e450a6b65c8a07734a11fc38355773b2",
+    "schema": "mathsvg-lzh-chain-lazy-oracle-v1",
+    "sample_count": 8,
+    "block_count": 30,
+    "policies": [
+      "C32L",
+      "C64L"
+    ],
+    "warmups": 1,
+    "repetitions": 1
+  },
+  "probe_binary": {
+    "path": "mathsvg/python/oracle/lz_parser_probe/target/release/mathsvg-lz-parser-oracle-probe",
+    "bytes": 896912,
+    "sha256": "7564cb79d7428ca6ffbf5e71f4f927cde1bd0842837e516d497eb89dbaf08157"
+  },
+  "pinned_sources": [
+    {
+      "path": "mathsvg/crates/mathsvg-entropy/src/lib.rs",
+      "bytes": 91676,
+      "sha256": "e4fdac3a16609a57deff99f2a7b69feb47390aa0b0cf40dbaf8a151e62ba176e"
+    },
+    {
+      "path": "mathsvg/crates/mathsvg-entropy/src/huffman.rs",
+      "bytes": 35447,
+      "sha256": "9075174732afe9fa166e437894f83f99935cc88209e08aaa580541039e8afdb6"
+    },
+    {
+      "path": "mathsvg/python/oracle/lz_parser_probe/src/main.rs",
+      "bytes": 21411,
+      "sha256": "18c79034da36208ddfb2a6c4016ae963699010de6ccd2946cc450574ec86a523"
+    },
+    {
+      "path": "mathsvg/results/manifests/development.csv",
+      "bytes": 27837,
+      "sha256": "e94bcc95b681519f4784b11b410d59a703882ebfaa971e251b5c714be2ba59a2"
+    }
+  ],
+  "exact_size_sequence": [
+    {
+      "policy": "C4L",
+      "portfolio_full_archive_bytes": 12678404,
+      "saved_vs_g1_bytes": 749570,
+      "gain_vs_g1_fraction": 0.05582152601725324,
+      "evidence": "mathsvg/results/oracle/lz-parser-v1-raw.json"
+    },
+    {
+      "policy": "C8L",
+      "portfolio_full_archive_bytes": 12590452,
+      "saved_vs_previous_bytes": 87952,
+      "incremental_gain_vs_g1_fraction": 0.006549908422521521,
+      "evidence": "mathsvg/results/oracle/lz-parser-v1-raw.json"
+    },
+    {
+      "policy": "C16L",
+      "portfolio_full_archive_bytes": 12539589,
+      "saved_vs_previous_bytes": 50863,
+      "incremental_gain_vs_g1_fraction": 0.003787838731293343,
+      "evidence": "mathsvg/results/oracle/lz-parser-v1-raw.json"
+    },
+    {
+      "policy": "C32L",
+      "portfolio_full_archive_bytes": 12512238,
+      "saved_vs_previous_bytes": 27351,
+      "incremental_gain_vs_g1_fraction": 0.0020368672146669335,
+      "complete": true,
+      "budget_stop_blocks": 0,
+      "winning_blocks_vs_g1": 24,
+      "evidence": "mathsvg/results/oracle/lz-parser-depth-v1-raw.json"
+    },
+    {
+      "policy": "C64L",
+      "portfolio_full_archive_bytes": 12494909,
+      "saved_vs_previous_bytes": 17329,
+      "incremental_gain_vs_g1_fraction": 0.0012905148609909432,
+      "complete": true,
+      "budget_stop_blocks": 0,
+      "winning_blocks_vs_g1": 24,
+      "evidence": "mathsvg/results/oracle/lz-parser-depth-v1-raw.json"
+    }
+  ],
+  "selection": {
+    "policy": "sequential-incremental-exact-gain-v1",
+    "threshold_fraction_of_g1": 0.005,
+    "selected_policy": "C8L",
+    "decision": "stop-before-C16L",
+    "reason": "C4L to C8L gains 0.006549908423 of G1 and passes the 0.005 threshold; C8L to C16L gains only 0.003787838731. C32L and C64L have still smaller marginal gains, so deeper search does not reopen the stopped step."
+  },
+  "timing_evidence": {
+    "status": "unusable-concurrent-project-workload",
+    "reason": "A separate compiler-matrix build and test was active during the explicit C32L/C64L probe. Exact sizes, work counters, deterministic output and round trips remain usable; no timing value from this run is interpreted."
+  },
+  "limitations": [
+    "This finite depth probe does not prove that every possible LZ representation has zero headroom.",
+    "C32L and C64L are oracle-only and do not change the opcode-0x07 decoder or the built-in profile selection.",
+    "The run used one dirty-tree x86-64 development machine and did not inspect holdout payloads."
+  ]
+}

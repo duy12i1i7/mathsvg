@@ -1,0 +1,141 @@
+schema_version = 1
+status = "development"
+native_payload_forbidden = true
+
+[[baseline]]
+id = "raw"
+family = "general"
+required = true
+command_template = "cp {input} {output}"
+
+[[baseline]]
+id = "lz4"
+family = "general"
+required = true
+command_template = "lz4 -q -1 {input} {output}"
+
+[[baseline]]
+id = "snappy"
+family = "general"
+required = true
+command_template = "snzip -c {input}"
+
+[[baseline]]
+id = "gzip-6"
+family = "general"
+required = true
+command_template = "gzip -n -6 -c {input}"
+
+[[baseline]]
+id = "bzip2-9"
+family = "general"
+required = true
+command_template = "bzip2 -9 -c {input}"
+
+[[baseline]]
+id = "zstd-default"
+family = "general"
+required = true
+command_template = "zstd -q -3 -T1 -c {input}"
+
+[[baseline]]
+id = "zstd-19"
+family = "general"
+required = true
+command_template = "zstd -q -19 -T1 -c {input}"
+
+[[baseline]]
+id = "brotli-6"
+family = "general"
+required = true
+command_template = "brotli -q 6 -c {input}"
+
+[[baseline]]
+id = "brotli-11"
+family = "general"
+required = true
+command_template = "brotli -q 11 -c {input}"
+
+[[baseline]]
+id = "xz-9e"
+family = "general"
+required = true
+command_template = "xz -9e -T1 -c {input}"
+
+[[baseline]]
+id = "7zip-lzma2-ultra"
+family = "general"
+required = true
+command_template = "7z a -bd -mx=9 -m0=lzma2 -mmt=1 {output} {input}"
+
+[[baseline]]
+id = "zpaq"
+family = "general"
+required = true
+command_template = "zpaq a {output} {input} -to payload.bin -method 5 -threads 1 -noattributes"
+
+[[baseline]]
+id = "cmix-paq"
+family = "ratio-only"
+required = true
+availability = "unavailable"
+unavailable_reason = "no CMIX/PAQ executable and canonical command are available on this experiment host"
+command_template = ""
+
+[[baseline]]
+id = "flac"
+family = "audio"
+required = true
+command_template = "flac --silent --best --no-padding -f -o {output} {input}"
+
+[[baseline]]
+id = "png"
+family = "raster"
+required = true
+availability = "unavailable"
+unavailable_reason = "no canonical raw-raster-to-PNG adapter and matching raster workload are pinned"
+command_template = ""
+
+[[baseline]]
+id = "jpeg-ls"
+family = "medical-raster"
+required = true
+availability = "unavailable"
+unavailable_reason = "no canonical JPEG-LS executable and matching medical-raster workload are pinned"
+command_template = ""
+
+[[baseline]]
+id = "jpeg-xl-lossless"
+family = "raster"
+required = true
+command_template = "cjxl {input} {output} -d 0 -e 9"
+
+[[baseline]]
+id = "laz"
+family = "point-cloud"
+required = true
+command_template = "laszip -i {input} -o {output}"
+
+[[baseline]]
+id = "parquet-orc"
+family = "columnar"
+required = true
+availability = "unavailable"
+unavailable_reason = "no schema-preserving Parquet/ORC adapter is pinned for the byte-stream workloads"
+command_template = ""
+
+[[baseline]]
+id = "time-series-lossless"
+family = "time-series"
+required = true
+availability = "unavailable"
+unavailable_reason = "no canonical time-series codec and schema adapter are pinned"
+command_template = ""
+
+[[baseline]]
+id = "scientific-lossless"
+family = "scientific"
+required = true
+availability = "unavailable"
+unavailable_reason = "no canonical scientific codec, dtype, and dimension adapter are pinned"
+command_template = ""

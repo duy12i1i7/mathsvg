@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "profile": "git-copy-ablation",
+  "output_dir": "benchmarks/results/git-copy-ablation",
+  "datasets": [],
+  "benchmark": {
+    "warmups": 1,
+    "repeats": 3,
+    "timeout_seconds": 3600,
+    "threads": [1],
+    "collect_mathzip_inspection": true,
+    "record_absolute_paths": false
+  },
+  "codecs": [
+    {
+      "name": "mathzip-balanced-copy-on",
+      "base": "mathzip-balanced",
+      "variant": "Copy/reference enabled",
+      "compress_args": [
+        "--models",
+        "raw,constant,affine,polynomial,periodic,recurrence,piecewise-linear,run,sparse,copy",
+        "--residual-coders",
+        "raw,rle,zero-run,sparse,bit-pack",
+        "--transforms",
+        "identity,delta,xor,bit-plane,stride",
+        "--segmentation",
+        "adaptive"
+      ]
+    },
+    {
+      "name": "mathzip-balanced-copy-off",
+      "base": "mathzip-balanced",
+      "variant": "Copy/reference disabled",
+      "compress_args": [
+        "--models",
+        "raw,constant,affine,polynomial,periodic,recurrence,piecewise-linear,run,sparse,copy",
+        "--residual-coders",
+        "raw,rle,zero-run,sparse,bit-pack",
+        "--transforms",
+        "identity,delta,xor,bit-plane,stride",
+        "--segmentation",
+        "adaptive",
+        "--no-copy-model"
+      ]
+    },
+    "zstd-default"
+  ],
+  "inputs": [
+    {
+      "corpus": "git_snapshots_individual",
+      "root": "datasets/generated/git_snapshots",
+      "input_license": "CC0-1.0",
+      "input_provenance": "python/mathzip_bench/auxiliary.py and datasets/generated/git_snapshots/manifest.json",
+      "patterns": ["versions/**/*"],
+      "required": true
+    },
+    {
+      "corpus": "git_snapshots_combined",
+      "root": "datasets/generated/git_snapshots",
+      "input_license": "CC0-1.0",
+      "input_provenance": "python/mathzip_bench/auxiliary.py and datasets/generated/git_snapshots/manifest.json",
+      "patterns": ["combined/*.bin"],
+      "required": true
+    }
+  ]
+}

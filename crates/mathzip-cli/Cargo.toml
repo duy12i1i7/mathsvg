@@ -1,0 +1,20 @@
+[package]
+name = "mathzip-cli"
+description = "Command-line interface for the MathZip research codec"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "mathzip"
+path = "src/main.rs"
+
+[dependencies]
+anyhow.workspace = true
+clap.workspace = true
+hex.workspace = true
+mathzip-core.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+tempfile.workspace = true

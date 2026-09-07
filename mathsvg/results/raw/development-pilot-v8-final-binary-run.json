@@ -1,0 +1,429 @@
+{
+  "ablation_catalog": {
+    "path": "mathsvg/configs/ablation/catalog.toml",
+    "selected": true,
+    "sha256": "3cbfd95e79cbcb61fc2d120a83c22951e5b60acc6970b2b6b7f0efe363b84761"
+  },
+  "baseline_catalog": {
+    "path": "mathsvg/configs/baselines.toml",
+    "sha256": "430f84dc5fb23343ced8c25225ed6b465873033488ea718886a01060ba693324"
+  },
+  "baseline_inventory": {
+    "path": "mathsvg/results/manifests/baseline-inventory.json",
+    "sha256": "ba6469bd1cf0dd5864f96f564ab5fc5ad98350c314a961d91683b6e3392655e0"
+  },
+  "codecs": [
+    {
+      "ablation_id": "none",
+      "available": true,
+      "codec_id": "mathsvg",
+      "config_id": "balanced-v1",
+      "config_sha256": "70bb1e0dd999f0b072e68b38dc1ccb8bfc77175771bc5f1175f649a0aafa789e",
+      "decode_argv": [
+        "decompress",
+        "--max-archive-bytes",
+        "{max_archive_bytes}",
+        "--max-output-bytes",
+        "{max_output_bytes}",
+        "{archive}",
+        "{restored}"
+      ],
+      "decode_stdout": false,
+      "disabled_algorithms": [],
+      "encode_argv": [
+        "compress",
+        "--profile",
+        "balanced",
+        "--threads",
+        "1",
+        "--max-input-bytes",
+        "{max_input_bytes}",
+        "{input}",
+        "{archive}"
+      ],
+      "encode_stdout": false,
+      "executable": "/home/ase/zipp/target/release/mathsvg",
+      "executable_sha256": "8f1ca1238a4c2d6495b7cff729ce6ecb34da3f844a557ea7b90b0d9d52a10787",
+      "native_mathsvg": true,
+      "profile": "balanced",
+      "runtime_profile": {
+        "ablation": {
+          "disabled_algorithms": [],
+          "id": "none"
+        },
+        "backend_policy": {
+          "compression_search": "scalar",
+          "decoder_available": [
+            "scalar",
+            "simd",
+            "auto"
+          ],
+          "decoder_default": "scalar"
+        },
+        "container_version": 1,
+        "coordinate_search": {
+          "enabled": false,
+          "function_max_exceptions": 32,
+          "function_max_ledger_entries": 256,
+          "function_max_period": 16,
+          "function_work_budget": 262144,
+          "max_candidates": 32,
+          "max_channels": 16,
+          "max_peak_lags": 8,
+          "max_probe_bytes": 8192,
+          "max_probe_lag": 64
+        },
+        "dsl_version": 1,
+        "emission_gates": {
+          "coordinates": false,
+          "graph": false,
+          "interval_functions": false,
+          "residual": false,
+          "symbolic": false,
+          "whole_block_entropy": true,
+          "whole_block_functions": true
+        },
+        "entropy_search": {
+          "add_only_policy": "C4L",
+          "baseline_policy": "G1",
+          "chain_depth": 4,
+          "decoder_semantics_changed": false,
+          "maximum_additional_work_per_input_byte_per_walk": 13,
+          "maximum_policy_walks": 2,
+          "one_byte_lazy": true,
+          "parser_scratch_bytes": 524288,
+          "wire_opcode": 7
+        },
+        "format_limits": {
+          "max_block_output_bytes": 16777216,
+          "max_block_payload_bytes": 33554432,
+          "max_definitions": 262144,
+          "max_edges": 2097152,
+          "max_fan_out": 65536,
+          "max_graph_depth": 256,
+          "max_node_payload_bytes": 33554432,
+          "max_nodes": 1048576,
+          "max_parameter_bytes": 16777216,
+          "max_pattern_bytes": 16777216,
+          "max_recurrence_order": 16384,
+          "max_temporary_bytes": 67108864,
+          "max_work": 1099511627776
+        },
+        "function_search": {
+          "max_exceptions": 64,
+          "max_ledger_entries": 1024,
+          "max_period": 32,
+          "max_recurrence_order": 2,
+          "recurrence_coefficients": [
+            0,
+            1,
+            255
+          ],
+          "work_budget": 1048576
+        },
+        "implemented_catalogue": {
+          "coordinates": [
+            "identity",
+            "stride",
+            "byte_plane",
+            "bit_plane"
+          ],
+          "entropy": [
+            "raw",
+            "byte_rle",
+            "zero_run",
+            "sparse_zero",
+            "bit_pack",
+            "lz_tokens",
+            "canonical_huffman",
+            "lz_huffman"
+          ],
+          "experimental": [
+            "recursive_residual",
+            "shared_dag",
+            "symbolic_synthesis"
+          ],
+          "functions": [
+            "literal",
+            "entropy_literal",
+            "const",
+            "linear",
+            "periodic",
+            "recurrence",
+            "exceptions"
+          ]
+        },
+        "optimizer": {
+          "block_bytes": 1048576,
+          "max_candidates": 4096,
+          "max_ledger_entries": 16384,
+          "max_segments_per_block": 16,
+          "max_states": 65536,
+          "microblock_bytes": 4096,
+          "work_budget": 50000000
+        },
+        "parallel": {
+          "default_threads": 1,
+          "deterministic_source_order_merge": true,
+          "maximum_threads": 64
+        },
+        "profile": "balanced",
+        "residual_search": {
+          "domains": [
+            "add-mod-256",
+            "xor"
+          ],
+          "enabled": false,
+          "gate": "oracle-disabled",
+          "max_depth": 0,
+          "max_ledger_entries": 4096,
+          "max_projection_descriptors": 128,
+          "max_projection_period": 16,
+          "max_recurrence_order": 2,
+          "max_state_bytes": 67108864,
+          "max_states": 64,
+          "minimum_gain_bytes": 1,
+          "recurrence_coefficients": [
+            0,
+            1,
+            255
+          ],
+          "work_budget": 16777216
+        },
+        "schema_version": 1
+      },
+      "runtime_profile_sha256": "d2f471f0cb672e93d3bcc45dd98b2668e7e084c86fee4054490d93bf9d89cc94",
+      "threads": 1,
+      "unavailable_reason": "",
+      "version": "mathsvg 0.1.0"
+    },
+    {
+      "ablation_id": "none",
+      "available": true,
+      "codec_id": "gzip-6",
+      "config_id": "gzip-6",
+      "config_sha256": "bf920ab8461c6c60c8cc32db3d853f55655e60793cf7f64068847ad56c2b2e67",
+      "decode_argv": [
+        "-d",
+        "-c",
+        "{archive}"
+      ],
+      "decode_stdout": true,
+      "disabled_algorithms": [],
+      "encode_argv": [
+        "-n",
+        "-6",
+        "-c",
+        "{input}"
+      ],
+      "encode_stdout": true,
+      "executable": "/usr/bin/gzip",
+      "executable_sha256": "afea077ce127d4fa9ad410d3066ba2b54dea19c0b44f04adf56c72d5f7b7a9bb",
+      "native_mathsvg": false,
+      "profile": "",
+      "runtime_profile": null,
+      "runtime_profile_sha256": "",
+      "threads": 1,
+      "unavailable_reason": "",
+      "version": "gzip 1.12"
+    },
+    {
+      "ablation_id": "none",
+      "available": true,
+      "codec_id": "lz4",
+      "config_id": "lz4",
+      "config_sha256": "56c1b7390551d55bb056da7122b41ac3f7e4459570e4627ac278f7c91d669491",
+      "decode_argv": [
+        "-q",
+        "-d",
+        "{archive}",
+        "{restored}"
+      ],
+      "decode_stdout": false,
+      "disabled_algorithms": [],
+      "encode_argv": [
+        "-q",
+        "-1",
+        "{input}",
+        "{archive}"
+      ],
+      "encode_stdout": false,
+      "executable": "/home/ase/.local/mathzip-bench-tools/usr/bin/lz4",
+      "executable_sha256": "87c0d5d060fd36c685b98a38611b7bd6c4614d40b36d29be84edcd6c173f8160",
+      "native_mathsvg": false,
+      "profile": "",
+      "runtime_profile": null,
+      "runtime_profile_sha256": "",
+      "threads": 1,
+      "unavailable_reason": "",
+      "version": "*** LZ4 command line interface 64-bits v1.9.4, by Yann Collet ***"
+    },
+    {
+      "ablation_id": "none",
+      "available": true,
+      "codec_id": "xz-9e",
+      "config_id": "xz-9e",
+      "config_sha256": "1bd3a8a1a914bf55087f30b641adcacaac8d04f2cc5a9c21f3668bf2f6727da6",
+      "decode_argv": [
+        "-d",
+        "-c",
+        "{archive}"
+      ],
+      "decode_stdout": true,
+      "disabled_algorithms": [],
+      "encode_argv": [
+        "-9e",
+        "-T1",
+        "-c",
+        "{input}"
+      ],
+      "encode_stdout": true,
+      "executable": "/usr/bin/xz",
+      "executable_sha256": "b5b163eb273291934556377ab883b4b2a5d4da50bd0dc0a91774ecc234ccd8d0",
+      "native_mathsvg": false,
+      "profile": "",
+      "runtime_profile": null,
+      "runtime_profile_sha256": "",
+      "threads": 1,
+      "unavailable_reason": "",
+      "version": "xz (XZ Utils) 5.4.5"
+    },
+    {
+      "ablation_id": "none",
+      "available": true,
+      "codec_id": "zstd-default",
+      "config_id": "zstd-default",
+      "config_sha256": "8afdee0e1fe04f0a9c92a00ebbd438b50004de9dcdf47ce697a89ac0bdae40a5",
+      "decode_argv": [
+        "-q",
+        "-d",
+        "-c",
+        "{archive}"
+      ],
+      "decode_stdout": true,
+      "disabled_algorithms": [],
+      "encode_argv": [
+        "-q",
+        "-3",
+        "-T1",
+        "-c",
+        "{input}"
+      ],
+      "encode_stdout": true,
+      "executable": "/usr/bin/zstd",
+      "executable_sha256": "7c5468b370f7c47eda07281e3437fafc568f95d10420051e3aa522709f9342c5",
+      "native_mathsvg": false,
+      "profile": "",
+      "runtime_profile": null,
+      "runtime_profile_sha256": "",
+      "threads": 1,
+      "unavailable_reason": "",
+      "version": "*** Zstandard CLI (64-bit) v1.5.5, by Yann Collet ***"
+    }
+  ],
+  "experiment_id": "development-pilot-v8-final-binary",
+  "holdout_payload_opened": false,
+  "machine": {
+    "architecture": "x86_64",
+    "machine_id": "local-x86-64",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  },
+  "manifest": {
+    "canonical_sha256": "88ed376ce82fbd9301fe2fce71dd0e3a4af5f837450b50b8489d678b19d5fca7",
+    "file_sha256": "e94bcc95b681519f4784b11b410d59a703882ebfaa971e251b5c714be2ba59a2",
+    "path": "mathsvg/results/manifests/development.csv",
+    "selected_dataset_ids": [
+      "dev-canterbury-alice29-txt",
+      "dev-canterbury-kennedy-xls",
+      "dev-silesia-x-ray",
+      "dev-synthetic-constant-00",
+      "dev-synthetic-lfsr8",
+      "dev-synthetic-linear",
+      "dev-synthetic-periodic",
+      "dev-synthetic-piecewise-mixed",
+      "dev-synthetic-polynomial-d2",
+      "dev-synthetic-recurrence"
+    ],
+    "split": "development"
+  },
+  "measurement": {
+    "cpu": "GNU time %U + %S, decimal seconds",
+    "gnu_time_path": "/usr/bin/time",
+    "gnu_time_sha256": "3b11dec50514a8473e9f6efa7a34d584d0657538c09988f61b72d38ad4991a10",
+    "gnu_time_version": "time (GNU Time) UNKNOWN",
+    "host_preflight": {
+      "background_processes_quiesced": false,
+      "cpu_affinity_pinned": false,
+      "load_average": {
+        "fifteen_minutes": 7.693359375,
+        "five_minutes": 7.75830078125,
+        "one_minute": 7.89404296875
+      },
+      "logical_cpus": 16,
+      "resource_isolation": false
+    },
+    "limitations": [
+      "GNU time max RSS is not the sum of concurrently resident descendants",
+      "filesystem cache is not dropped between randomized trials",
+      "CPU frequency/governor is not controlled by this runner",
+      "host background processes are not quiesced and CPU affinity is not pinned",
+      "energy and hardware counters are not measured",
+      "wrapper spawn/collection overhead is included in wall time"
+    ],
+    "method": "gnu-time-v1-monotonic-wall",
+    "peak_rss": "GNU time %M multiplied by 1024",
+    "wall_clock": "time.monotonic_ns around GNU time wrapper"
+  },
+  "protocol": {
+    "expected_delta_fraction": null,
+    "interleaved": true,
+    "native_ablation_ids": [
+      "none"
+    ],
+    "native_limit_policy": {
+      "archive_headroom_bytes": 1048576,
+      "coordinate_padding_bytes": 7,
+      "manifest_integrity_checked_before_execution": true,
+      "max_archive": "2 * max_input_and_output + archive_headroom_bytes",
+      "max_input_and_output": "manifest_bytes + coordinate_padding_bytes",
+      "u64_arithmetic_checked": true
+    },
+    "native_thread_selectors": [
+      "1"
+    ],
+    "repetitions": 10,
+    "schedule_trials": 550,
+    "seed": 1297748005,
+    "warmups": 1
+  },
+  "result": {
+    "complete": true,
+    "raw_jsonl": "mathsvg/results/raw/development-pilot-v8-final-binary.jsonl",
+    "raw_jsonl_bytes": 1249440,
+    "raw_jsonl_sha256": "565efc74175413c9d4946fcde98e4791b954603cc2739e343fc71aaf078d6eaa",
+    "status_counts": {
+      "failed": 0,
+      "ok": 550,
+      "timeout": 0,
+      "unavailable": 0
+    },
+    "trial_rows": 550
+  },
+  "runner_performed_tuning": false,
+  "runner_sha256": "f2c995ef2bab2d3b19a81a25a5798309b83d556f0424c7645d3bad648ea9e140",
+  "schema_version": 1,
+  "source": {
+    "branch": "mathsvg-absolute",
+    "commit": "36f84685dc00064dae9a239face7e8eff797ed28",
+    "dirty": true,
+    "status_sha256": "0ea301148a94bd8f578ab6681fc7dd499517e656ee6e2eeebbc193847a38e052"
+  },
+  "source_after": {
+    "branch": "mathsvg-absolute",
+    "commit": "36f84685dc00064dae9a239face7e8eff797ed28",
+    "dirty": true,
+    "status_sha256": "0ea301148a94bd8f578ab6681fc7dd499517e656ee6e2eeebbc193847a38e052"
+  },
+  "source_stable_during_run": true
+}

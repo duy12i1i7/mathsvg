@@ -1,0 +1,22 @@
+schema_version = 1
+status = "development"
+
+[[ablation]]
+id = "no-whole-block-entropy"
+disable = ["whole-block-entropy"]
+
+[[ablation]]
+id = "no-whole-block-functions"
+disable = ["whole-block-functions"]
+
+[[ablation]]
+id = "no-interval-functions"
+disable = ["interval-functions"]
+
+[[ablation]]
+id = "no-coordinate"
+disable = ["coordinates"]
+
+[[ablation]]
+id = "no-interval-functions-or-coordinate"
+disable = ["interval-functions", "coordinates"]

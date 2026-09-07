@@ -1,0 +1,23 @@
+[package]
+name = "mathsvg-container"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "Strict version-1 MathSVG archive envelope"
+
+[dependencies]
+crc32fast = "1.4"
+mathsvg-core = { path = "../mathsvg-core" }
+mathsvg-dsl = { path = "../mathsvg-dsl" }
+sha2 = "0.10"
+
+[dev-dependencies]
+mathsvg-coordinates = { path = "../mathsvg-coordinates" }
+mathsvg-entropy = { path = "../mathsvg-entropy" }
+mathsvg-evaluator = { path = "../mathsvg-evaluator" }
+
+[lib]
+path = "src/lib.rs"
+
+[lints.rust]
+unsafe_code = "forbid"

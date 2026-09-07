@@ -1,0 +1,523 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mathzip.invalid/schema/benchmark-results-v1.json",
+  "title": "MathZip benchmark results v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "run_id",
+    "profile",
+    "status",
+    "started_at_utc",
+    "completed_at_utc",
+    "timing_protocol_compliant",
+    "publication_evidence_complete",
+    "publication_evidence_gaps",
+    "scientifically_compliant_run",
+    "methodology",
+    "source",
+    "system",
+    "codec_definitions",
+    "result_count",
+    "failure_count",
+    "results"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "mathzip-benchmark-results-v1"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "profile": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "complete",
+        "complete_with_failures"
+      ]
+    },
+    "scientifically_compliant_run": {
+      "type": "boolean"
+    },
+    "timing_protocol_compliant": {
+      "type": "boolean"
+    },
+    "publication_evidence_complete": {
+      "type": "boolean"
+    },
+    "publication_evidence_gaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "methodology": {
+      "type": "object"
+    },
+    "config": {
+      "type": "object",
+      "properties": {
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "sha256_after": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "stable_during_run": {
+          "type": "boolean"
+        },
+        "snapshot": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": true
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "source_revision",
+        "source_dirty",
+        "source_tree_sha256",
+        "source_file_count",
+        "source_revision_after",
+        "source_dirty_after",
+        "source_tree_sha256_after",
+        "source_file_count_after",
+        "source_stable_during_run"
+      ],
+      "properties": {
+        "source_revision": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_dirty": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "source_tree_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "source_file_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "source_revision_after": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_dirty_after": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "source_tree_sha256_after": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "source_file_count_after": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "source_stable_during_run": {
+          "type": "boolean"
+        },
+        "source_tree_manifest": {
+          "type": [
+            "array",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "system": {
+      "type": "object"
+    },
+    "codec_definitions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "expected_grid": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "key_fields",
+        "inputs",
+        "codecs",
+        "expected_result_count",
+        "sha256"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "mathzip-benchmark-expected-grid-v1"
+        },
+        "key_fields": {
+          "const": [
+            "corpus",
+            "input_path",
+            "codec",
+            "threads"
+          ]
+        },
+        "inputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "corpus",
+              "input_path"
+            ]
+          }
+        },
+        "codecs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "codec",
+              "threads"
+            ]
+          }
+        },
+        "expected_result_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "additionalProperties": true
+    },
+    "resume": {
+      "type": "object",
+      "required": [
+        "checkpoint_schema_version",
+        "resume_count",
+        "active_elapsed_seconds",
+        "execution_intervals",
+        "expected_result_count",
+        "checkpoint_rows_durable"
+      ],
+      "properties": {
+        "checkpoint_schema_version": {
+          "const": "mathzip-benchmark-checkpoint-v1"
+        },
+        "resume_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "active_elapsed_seconds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "execution_intervals": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "index",
+              "resumed",
+              "started_at_utc",
+              "checkpointed_through_utc",
+              "active_seconds",
+              "completed_at_utc",
+              "interrupted"
+            ],
+            "properties": {
+              "index": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "resumed": {
+                "type": "boolean"
+              },
+              "started_at_utc": {
+                "type": "string"
+              },
+              "checkpointed_through_utc": {
+                "type": "string"
+              },
+              "active_seconds": {
+                "type": "number",
+                "minimum": 0
+              },
+              "completed_at_utc": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "interrupted": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "expected_result_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "checkpoint_rows_durable": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": true
+    },
+    "result_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "failure_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/result"
+      }
+    }
+  },
+  "$defs": {
+    "nullableNumber": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "nullableInteger": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "trial": {
+      "type": "object",
+      "required": [
+        "index",
+        "status",
+        "roundtrip_verified",
+        "compression_command",
+        "decompression_command",
+        "compression_metrics"
+      ],
+      "properties": {
+        "index": {
+          "type": "integer"
+        },
+        "status": {
+          "type": "string"
+        },
+        "compressed_bytes": {
+          "$ref": "#/$defs/nullableInteger"
+        },
+        "compression_seconds": {
+          "$ref": "#/$defs/nullableNumber"
+        },
+        "decompression_seconds": {
+          "$ref": "#/$defs/nullableNumber"
+        },
+        "archive_sha256": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "restored_sha256": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "roundtrip_verified": {
+          "type": "boolean"
+        },
+        "compression_command": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "decompression_command": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "compression_metrics": {
+          "type": [
+            "object",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "result": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "run_id",
+        "profile",
+        "corpus",
+        "input_path",
+        "input_license",
+        "input_provenance",
+        "input_manifest",
+        "input_manifest_sha256",
+        "input_manifest_verified",
+        "codec",
+        "codec_family",
+        "codec_level",
+        "threads",
+        "status",
+        "successful_repeats",
+        "requested_repeats",
+        "roundtrip_verified",
+        "trials"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "mathzip-benchmark-results-v1"
+        },
+        "run_id": {
+          "type": "string"
+        },
+        "profile": {
+          "type": "string"
+        },
+        "corpus": {
+          "type": "string"
+        },
+        "input_path": {
+          "type": "string"
+        },
+        "input_license": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "input_provenance": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "input_manifest": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "input_manifest_sha256": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "input_manifest_verified": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "codec": {
+          "type": "string"
+        },
+        "codec_family": {
+          "type": "string"
+        },
+        "codec_level": {
+          "type": "string"
+        },
+        "threads": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "status": {
+          "type": "string"
+        },
+        "original_bytes": {
+          "$ref": "#/$defs/nullableInteger"
+        },
+        "compressed_bytes": {
+          "$ref": "#/$defs/nullableInteger"
+        },
+        "model_parameter_bytes": {
+          "$ref": "#/$defs/nullableInteger"
+        },
+        "partition_metadata_bytes": {
+          "$ref": "#/$defs/nullableInteger"
+        },
+        "residual_bytes": {
+          "$ref": "#/$defs/nullableInteger"
+        },
+        "container_overhead_bytes": {
+          "$ref": "#/$defs/nullableInteger"
+        },
+        "search_seconds": {
+          "$ref": "#/$defs/nullableNumber"
+        },
+        "model_fitting_seconds": {
+          "$ref": "#/$defs/nullableNumber"
+        },
+        "residual_coding_seconds": {
+          "$ref": "#/$defs/nullableNumber"
+        },
+        "ratio": {
+          "$ref": "#/$defs/nullableNumber"
+        },
+        "bits_per_byte": {
+          "$ref": "#/$defs/nullableNumber"
+        },
+        "successful_repeats": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "requested_repeats": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "roundtrip_verified": {
+          "type": "boolean"
+        },
+        "deterministic_archive": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "trials": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/trial"
+          }
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

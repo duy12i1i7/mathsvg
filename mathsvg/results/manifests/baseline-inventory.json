@@ -1,0 +1,223 @@
+{
+  "baselines": [
+    {
+      "executable_sha256": "6187dab32cd7b6291d96c54425a22915a6eeb39add6d95ee9008e1dbba427131",
+      "family": "general",
+      "id": "raw",
+      "requested_executable": "cp",
+      "resolved_executable": "/usr/bin/cp",
+      "status": "available",
+      "unavailable_reason": "",
+      "version": "cp (GNU coreutils) 9.4"
+    },
+    {
+      "executable_sha256": "87c0d5d060fd36c685b98a38611b7bd6c4614d40b36d29be84edcd6c173f8160",
+      "family": "general",
+      "id": "lz4",
+      "requested_executable": "lz4",
+      "resolved_executable": "/home/ase/.local/mathzip-bench-tools/usr/bin/lz4",
+      "status": "available",
+      "unavailable_reason": "",
+      "version": "*** LZ4 command line interface 64-bits v1.9.4, by Yann Collet ***"
+    },
+    {
+      "executable_sha256": "",
+      "family": "general",
+      "id": "snappy",
+      "requested_executable": "snzip",
+      "resolved_executable": "",
+      "status": "unavailable",
+      "unavailable_reason": "executable 'snzip' was not found",
+      "version": ""
+    },
+    {
+      "executable_sha256": "afea077ce127d4fa9ad410d3066ba2b54dea19c0b44f04adf56c72d5f7b7a9bb",
+      "family": "general",
+      "id": "gzip-6",
+      "requested_executable": "gzip",
+      "resolved_executable": "/usr/bin/gzip",
+      "status": "available",
+      "unavailable_reason": "",
+      "version": "gzip 1.12"
+    },
+    {
+      "executable_sha256": "8e728b8ed28f67c4b70e06366d9d9d7a97db6f7996bd481ad7a346b459f4e6ee",
+      "family": "general",
+      "id": "bzip2-9",
+      "requested_executable": "bzip2",
+      "resolved_executable": "/usr/bin/bzip2",
+      "status": "available",
+      "unavailable_reason": "",
+      "version": "bzip2, a block-sorting file compressor.  Version 1.0.8, 13-Jul-2019."
+    },
+    {
+      "executable_sha256": "7c5468b370f7c47eda07281e3437fafc568f95d10420051e3aa522709f9342c5",
+      "family": "general",
+      "id": "zstd-default",
+      "requested_executable": "zstd",
+      "resolved_executable": "/usr/bin/zstd",
+      "status": "available",
+      "unavailable_reason": "",
+      "version": "*** Zstandard CLI (64-bit) v1.5.5, by Yann Collet ***"
+    },
+    {
+      "executable_sha256": "7c5468b370f7c47eda07281e3437fafc568f95d10420051e3aa522709f9342c5",
+      "family": "general",
+      "id": "zstd-19",
+      "requested_executable": "zstd",
+      "resolved_executable": "/usr/bin/zstd",
+      "status": "available",
+      "unavailable_reason": "",
+      "version": "*** Zstandard CLI (64-bit) v1.5.5, by Yann Collet ***"
+    },
+    {
+      "executable_sha256": "01969d4716e4ecc585ab1302e0a0d4e0fa9619017ab17409a54173dac5fbacef",
+      "family": "general",
+      "id": "brotli-6",
+      "requested_executable": "brotli",
+      "resolved_executable": "/home/ase/.local/mathzip-bench-tools/usr/bin/brotli",
+      "status": "available",
+      "unavailable_reason": "",
+      "version": "brotli 1.1.0"
+    },
+    {
+      "executable_sha256": "01969d4716e4ecc585ab1302e0a0d4e0fa9619017ab17409a54173dac5fbacef",
+      "family": "general",
+      "id": "brotli-11",
+      "requested_executable": "brotli",
+      "resolved_executable": "/home/ase/.local/mathzip-bench-tools/usr/bin/brotli",
+      "status": "available",
+      "unavailable_reason": "",
+      "version": "brotli 1.1.0"
+    },
+    {
+      "executable_sha256": "b5b163eb273291934556377ab883b4b2a5d4da50bd0dc0a91774ecc234ccd8d0",
+      "family": "general",
+      "id": "xz-9e",
+      "requested_executable": "xz",
+      "resolved_executable": "/usr/bin/xz",
+      "status": "available",
+      "unavailable_reason": "",
+      "version": "xz (XZ Utils) 5.4.5"
+    },
+    {
+      "executable_sha256": "b2a12fa672bc38fc33af43a99fa499533253236feb30e4f755a73fb64f01861d",
+      "family": "general",
+      "id": "7zip-lzma2-ultra",
+      "requested_executable": "7z",
+      "resolved_executable": "/home/ase/.local/mathzip-bench-tools/usr/lib/7zip/7z",
+      "status": "available",
+      "unavailable_reason": "",
+      "version": "7-Zip 23.01 (x64) : Copyright (c) 1999-2023 Igor Pavlov : 2023-06-20"
+    },
+    {
+      "executable_sha256": "7d0d968162b925951ba8f7c09f1a3e5d5c803e4de3bca894391bb9995d7e5348",
+      "family": "general",
+      "id": "zpaq",
+      "requested_executable": "zpaq",
+      "resolved_executable": "/home/ase/zipp/.tools/ubuntu-noble/usr/bin/zpaq",
+      "status": "available",
+      "unavailable_reason": "",
+      "version": "zpaq v7.15 journaling archiver, compiled Jan  5 2021"
+    },
+    {
+      "executable_sha256": "",
+      "family": "ratio-only",
+      "id": "cmix-paq",
+      "requested_executable": "",
+      "resolved_executable": "",
+      "status": "unavailable",
+      "unavailable_reason": "no CMIX/PAQ executable and canonical command are available on this experiment host",
+      "version": ""
+    },
+    {
+      "executable_sha256": "18f78874b84ae7534c0ec3dd6236d306b3f635e39827a217df06ce20d148df14",
+      "family": "audio",
+      "id": "flac",
+      "requested_executable": "flac",
+      "resolved_executable": "/home/ase/zipp/.tools/ubuntu-noble/usr/bin/flac",
+      "status": "available",
+      "unavailable_reason": "",
+      "version": "flac 1.4.3"
+    },
+    {
+      "executable_sha256": "",
+      "family": "raster",
+      "id": "png",
+      "requested_executable": "",
+      "resolved_executable": "",
+      "status": "unavailable",
+      "unavailable_reason": "no canonical raw-raster-to-PNG adapter and matching raster workload are pinned",
+      "version": ""
+    },
+    {
+      "executable_sha256": "",
+      "family": "medical-raster",
+      "id": "jpeg-ls",
+      "requested_executable": "",
+      "resolved_executable": "",
+      "status": "unavailable",
+      "unavailable_reason": "no canonical JPEG-LS executable and matching medical-raster workload are pinned",
+      "version": ""
+    },
+    {
+      "executable_sha256": "",
+      "family": "raster",
+      "id": "jpeg-xl-lossless",
+      "requested_executable": "cjxl",
+      "resolved_executable": "",
+      "status": "unavailable",
+      "unavailable_reason": "executable 'cjxl' was not found",
+      "version": ""
+    },
+    {
+      "executable_sha256": "",
+      "family": "point-cloud",
+      "id": "laz",
+      "requested_executable": "laszip",
+      "resolved_executable": "",
+      "status": "unavailable",
+      "unavailable_reason": "executable 'laszip' was not found",
+      "version": ""
+    },
+    {
+      "executable_sha256": "",
+      "family": "columnar",
+      "id": "parquet-orc",
+      "requested_executable": "",
+      "resolved_executable": "",
+      "status": "unavailable",
+      "unavailable_reason": "no schema-preserving Parquet/ORC adapter is pinned for the byte-stream workloads",
+      "version": ""
+    },
+    {
+      "executable_sha256": "",
+      "family": "time-series",
+      "id": "time-series-lossless",
+      "requested_executable": "",
+      "resolved_executable": "",
+      "status": "unavailable",
+      "unavailable_reason": "no canonical time-series codec and schema adapter are pinned",
+      "version": ""
+    },
+    {
+      "executable_sha256": "",
+      "family": "scientific",
+      "id": "scientific-lossless",
+      "requested_executable": "",
+      "resolved_executable": "",
+      "status": "unavailable",
+      "unavailable_reason": "no canonical scientific codec, dtype, and dimension adapter are pinned",
+      "version": ""
+    }
+  ],
+  "catalog_sha256": "430f84dc5fb23343ced8c25225ed6b465873033488ea718886a01060ba693324",
+  "inventory_sha256": "34e3e5746a4aa608de3ced57675ce98d7a70e001bfe7cd24564205b9da8eac86",
+  "machine": {
+    "machine": "x86_64",
+    "python": "3.12.3",
+    "release": "7.0.0-28-generic",
+    "system": "Linux"
+  },
+  "schema_version": 1
+}

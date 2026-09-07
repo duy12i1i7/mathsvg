@@ -1,0 +1,534 @@
+{
+  "composition": {
+    "balance_eligibility": "origin=real AND primary=true",
+    "bytes": 1475488095,
+    "files": 109,
+    "non_synthetic_byte_fraction": 0.9991756897232031,
+    "non_synthetic_bytes": 1474271835,
+    "non_synthetic_file_fraction": 0.7889908256880734,
+    "non_synthetic_files": 86,
+    "passes_70_percent_rule": true
+  },
+  "duplicate_payload_groups": [],
+  "frozen_local_control_ids": [
+    "development-control-generated-jpeg",
+    "development-control-generated-mp4",
+    "development-control-generated-png",
+    "development-control-generated-zstd"
+  ],
+  "frozen_research_source_ids": [
+    "development-noaa-globaltemp-v5-1-0-netcdf",
+    "development-stanford-bunny-1994-bun000-ply",
+    "development-usgs-fs-2010-3086-pdf",
+    "development-usgs-ofr-2006-1216-geotiff",
+    "development-wikimedia-enwiki-20260701-protected-titles-sql",
+    "development-zenodo-uav-drone1-message-1752507115773",
+    "development-zenodo-uav-drone1-message-1752507288092",
+    "development-zenodo-uav-drone2-message-1752507693033",
+    "development-zenodo-uav-drone2-message-1752507889384",
+    "development-zenodo-uav-drone2-message-1752508085725",
+    "validation-control-ietf-flac-mono-audio",
+    "validation-control-libavif-v1-2-1-avif",
+    "validation-control-minimp3-ill2-layer3",
+    "validation-docker-official-hello-world-amd64-layer",
+    "validation-earthscope-iu-anmo-bhz-20100227-mseed",
+    "validation-fsdd-v1-0-9-0-george-0-wav",
+    "validation-geoserver-2-28-2-natural-earth-gpkg",
+    "validation-gnu-gnulib-20250729-git-bundle",
+    "validation-idc-cptac-sar-ct-dicom",
+    "validation-linux-v6-10-kernel-sched-core-c",
+    "validation-llvm-18-1-8-function-cpp",
+    "validation-nasa-hst-fos-y19g0309t-fits",
+    "validation-nyc-tlc-yellow-trip-2020-04-parquet",
+    "validation-zenodo-15978325-sem-tem-bmp"
+  ],
+  "holdout_payload_inspected": false,
+  "manifest_sha256": "37bb32037abcf3fc58a9d2aba2c2e7fdf503d2cc615465be503c4358a90f4a2b",
+  "requirement_source": "YeuCau.md section 20",
+  "rows": [
+    {
+      "evidence": "dev-canterbury-alice29-txt, dev-canterbury-asyoulik-txt, dev-canterbury-cp-html (+7 more)",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Canterbury",
+      "section": "standard-general-purpose",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "dev-calgary-bib, dev-calgary-book1, dev-calgary-book2 (+11 more)",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Calgary",
+      "section": "standard-general-purpose",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "dev-silesia-dickens, dev-silesia-mozilla, dev-silesia-mr (+9 more)",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Silesia",
+      "section": "standard-general-purpose",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "dev-enwik8-enwik8",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "enwik8",
+      "section": "standard-general-purpose",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "dev-enwik9-enwik9",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "enwik9",
+      "section": "standard-general-purpose",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "dev-pizza-chili-world-leaders",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Pizza & Chili",
+      "section": "standard-general-purpose",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "dev-enwik8-enwik8, dev-enwik9-enwik9",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Large Text Compression Benchmark subset",
+      "section": "standard-general-purpose",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "validation-linux-v6-10-kernel-sched-core-c",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Linux source",
+      "section": "real-world-mixed",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "validation-llvm-18-1-8-function-cpp",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "LLVM source",
+      "section": "real-world-mixed",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "validation-crates-io-serde-1-0-229-build-rs, validation-crates-io-serde-1-0-229-src-core-crate-root-rs, validation-crates-io-serde-1-0-229-src-core-de-ignored-any-rs (+22 more)",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Rust crates",
+      "section": "real-world-mixed",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "development-zenodo-uav-drone1-message-1752507115773, development-zenodo-uav-drone1-message-1752507288092, development-zenodo-uav-drone2-message-1752507693033 (+2 more)",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "JSON",
+      "section": "real-world-mixed",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "dev-silesia-xml",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "XML",
+      "section": "real-world-mixed",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "validation-uci-1081-gsalc-csv",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "CSV",
+      "section": "real-world-mixed",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "dev-silesia-mozilla",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Executables",
+      "section": "real-world-mixed",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "dev-silesia-ooffice",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Shared libraries",
+      "section": "real-world-mixed",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "validation-geoserver-2-28-2-natural-earth-gpkg",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "SQLite",
+      "section": "real-world-mixed",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "development-wikimedia-enwiki-20260701-protected-titles-sql",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Database dumps",
+      "section": "real-world-mixed",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "development-usgs-fs-2010-3086-pdf",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "PDF",
+      "section": "real-world-mixed",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "validation-docker-official-hello-world-amd64-layer",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Container layers",
+      "section": "real-world-mixed",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "validation-gnu-gnulib-20250729-git-bundle",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Git snapshots",
+      "section": "real-world-mixed",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "development-zenodo-uav-drone1-message-1752507115773, development-zenodo-uav-drone1-message-1752507288092, development-zenodo-uav-drone2-message-1752507693033 (+2 more)",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "UAV flight logs",
+      "section": "structured-real-world",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "development-zenodo-uav-drone1-message-1752507115773, development-zenodo-uav-drone1-message-1752507288092, development-zenodo-uav-drone2-message-1752507693033 (+2 more)",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Telemetry",
+      "section": "structured-real-world",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "validation-uci-1081-gsalc-csv",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Public sensor datasets",
+      "section": "structured-real-world",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "validation-fsdd-v1-0-9-0-george-0-wav",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "PCM/WAV",
+      "section": "structured-real-world",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "validation-zenodo-15978325-sem-tem-bmp",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "BMP",
+      "section": "structured-real-world",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "development-usgs-ofr-2006-1216-geotiff",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "TIFF raw",
+      "section": "structured-real-world",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "validation-idc-cptac-sar-ct-dicom",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "DICOM uncompressed",
+      "section": "structured-real-world",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "validation-nasa-hst-fos-y19g0309t-fits",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "FITS",
+      "section": "structured-real-world",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "development-usgs-ofr-2006-1216-geotiff",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Raster GIS",
+      "section": "structured-real-world",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "development-stanford-bunny-1994-bun000-ply",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "PLY/LAS",
+      "section": "structured-real-world",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "development-noaa-globaltemp-v5-1-0-netcdf",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Climate arrays",
+      "section": "structured-real-world",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "validation-earthscope-iu-anmo-bhz-20100227-mseed",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Seismic arrays",
+      "section": "structured-real-world",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "validation-nyc-tlc-yellow-trip-2020-04-parquet",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Integer columns",
+      "section": "structured-real-world",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "validation-nyc-tlc-yellow-trip-2020-04-parquet",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Float columns",
+      "section": "structured-real-world",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "validation-earthscope-iu-anmo-bhz-20100227-mseed",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Fixed-record binaries",
+      "section": "structured-real-world",
+      "status": "selected-real"
+    },
+    {
+      "evidence": "dev-control-cryptographic-random",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Cryptographic random",
+      "section": "incompressible-control",
+      "status": "selected-control"
+    },
+    {
+      "evidence": "dev-control-encrypted",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Encrypted data",
+      "section": "incompressible-control",
+      "status": "selected-control"
+    },
+    {
+      "evidence": "dev-control-gzip",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "gzip",
+      "section": "incompressible-control",
+      "status": "selected-control"
+    },
+    {
+      "evidence": "development-control-generated-zstd",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Zstd",
+      "section": "incompressible-control",
+      "status": "selected-control"
+    },
+    {
+      "evidence": "dev-control-xz",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "XZ",
+      "section": "incompressible-control",
+      "status": "selected-control"
+    },
+    {
+      "evidence": "dev-control-zip",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "ZIP",
+      "section": "incompressible-control",
+      "status": "selected-control"
+    },
+    {
+      "evidence": "development-control-generated-png",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "PNG",
+      "section": "incompressible-control",
+      "status": "selected-control"
+    },
+    {
+      "evidence": "development-control-generated-jpeg",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "JPEG",
+      "section": "incompressible-control",
+      "status": "selected-control"
+    },
+    {
+      "evidence": "validation-control-libavif-v1-2-1-avif",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "AVIF",
+      "section": "incompressible-control",
+      "status": "selected-control"
+    },
+    {
+      "evidence": "validation-control-minimp3-ill2-layer3",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "MP3",
+      "section": "incompressible-control",
+      "status": "selected-control"
+    },
+    {
+      "evidence": "validation-control-ietf-flac-mono-audio",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "FLAC",
+      "section": "incompressible-control",
+      "status": "selected-control"
+    },
+    {
+      "evidence": "development-control-generated-mp4",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "MP4/AV1",
+      "section": "incompressible-control",
+      "status": "selected-control"
+    },
+    {
+      "evidence": "dev-synthetic-constant-00",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Constant",
+      "section": "synthetic-diagnostic",
+      "status": "selected-synthetic"
+    },
+    {
+      "evidence": "dev-synthetic-linear",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Linear",
+      "section": "synthetic-diagnostic",
+      "status": "selected-synthetic"
+    },
+    {
+      "evidence": "dev-synthetic-polynomial-d2",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Polynomial",
+      "section": "synthetic-diagnostic",
+      "status": "selected-synthetic"
+    },
+    {
+      "evidence": "dev-synthetic-periodic",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Periodic",
+      "section": "synthetic-diagnostic",
+      "status": "selected-synthetic"
+    },
+    {
+      "evidence": "dev-synthetic-recurrence",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Recurrence",
+      "section": "synthetic-diagnostic",
+      "status": "selected-synthetic"
+    },
+    {
+      "evidence": "dev-synthetic-lfsr8",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "LFSR",
+      "section": "synthetic-diagnostic",
+      "status": "selected-synthetic"
+    },
+    {
+      "evidence": "dev-synthetic-piecewise-mixed",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Piecewise",
+      "section": "synthetic-diagnostic",
+      "status": "selected-synthetic"
+    },
+    {
+      "evidence": "dev-synthetic-linear-noise-0p001",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Sparse exceptions",
+      "section": "synthetic-diagnostic",
+      "status": "selected-synthetic"
+    },
+    {
+      "evidence": "dev-synthetic-linear-noise-0p001, dev-synthetic-linear-noise-0p25",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Multiple noise levels",
+      "section": "synthetic-diagnostic",
+      "status": "selected-synthetic"
+    },
+    {
+      "evidence": "dev-synthetic-piecewise-mixed",
+      "meets_requirement": true,
+      "note": "Selected in development/validation manifest.",
+      "requirement": "Mixed structured/random",
+      "section": "synthetic-diagnostic",
+      "status": "selected-synthetic"
+    }
+  ],
+  "schema_version": 1,
+  "sections": {
+    "incompressible-control": {
+      "met": 12,
+      "missing_or_partial": 0,
+      "requirements": 12
+    },
+    "real-world-mixed": {
+      "met": 13,
+      "missing_or_partial": 0,
+      "requirements": 13
+    },
+    "standard-general-purpose": {
+      "met": 7,
+      "missing_or_partial": 0,
+      "requirements": 7
+    },
+    "structured-real-world": {
+      "met": 15,
+      "missing_or_partial": 0,
+      "requirements": 15
+    },
+    "synthetic-diagnostic": {
+      "met": 10,
+      "missing_or_partial": 0,
+      "requirements": 10
+    }
+  }
+}

@@ -1,0 +1,25 @@
+[package]
+name = "mathsvg-native-oracle-probe"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+mathsvg-container = { path = "../../../crates/mathsvg-container" }
+mathsvg-coordinates = { path = "../../../crates/mathsvg-coordinates" }
+mathsvg-core = { path = "../../../crates/mathsvg-core" }
+mathsvg-dsl = { path = "../../../crates/mathsvg-dsl" }
+mathsvg-evaluator = { path = "../../../crates/mathsvg-evaluator" }
+mathsvg-functions = { path = "../../../crates/mathsvg-functions" }
+mathsvg-graph = { path = "../../../crates/mathsvg-graph" }
+mathsvg-optimizer = { path = "../../../crates/mathsvg-optimizer" }
+mathsvg-residual = { path = "../../../crates/mathsvg-residual" }
+mathsvg-symbolic = { path = "../../../crates/mathsvg-symbolic" }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+sha2 = "0.10"
+
+[workspace]
+
+[lints.rust]
+unsafe_code = "forbid"

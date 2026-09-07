@@ -1,0 +1,13 @@
+target
+.venv
+venv
+__pycache__
+datasets/cache
+datasets/downloads
+datasets/extracted
+datasets/generated
+benchmarks/raw
+benchmarks/results
+benchmarks/plots
+*.mz
+*.restored

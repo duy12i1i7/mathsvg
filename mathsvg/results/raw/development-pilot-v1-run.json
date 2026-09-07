@@ -1,0 +1,515 @@
+{
+  "baseline_catalog": {
+    "path": "mathsvg/configs/baselines.toml",
+    "sha256": "1c2acd5aba3b4841a1a7f69a7d24a9d0e8befc919a43edb52322901bea7866dd"
+  },
+  "baseline_inventory": {
+    "path": "mathsvg/results/manifests/baseline-inventory.json",
+    "sha256": "7be88e92bff9fab5fd8057bd76f9f28a862ba952ff2c0fac74a2df3bc0cc0973"
+  },
+  "codecs": [
+    {
+      "available": true,
+      "codec_id": "mathsvg",
+      "config_id": "balanced-v1",
+      "config_sha256": "868158562c5b878e5e45fdc62613fcc2efdf1ddc8def7e218346fe551ff82cb7",
+      "decode_argv": [
+        "decompress",
+        "--max-archive-bytes",
+        "{max_archive_bytes}",
+        "--max-output-bytes",
+        "{max_output_bytes}",
+        "{archive}",
+        "{restored}"
+      ],
+      "decode_stdout": false,
+      "encode_argv": [
+        "compress",
+        "--profile",
+        "balanced",
+        "--threads",
+        "1",
+        "--max-input-bytes",
+        "{max_input_bytes}",
+        "{input}",
+        "{archive}"
+      ],
+      "encode_stdout": false,
+      "executable": "/home/ase/zipp/target/release/mathsvg",
+      "executable_sha256": "a91bd7ed31c78b88c8e42d19af79bd2aea2a2ed24f4e41abd0e8cfbb8ccf2f32",
+      "native_mathsvg": true,
+      "profile": "balanced",
+      "runtime_profile": {
+        "backend_policy": {
+          "compression_search": "scalar",
+          "decoder_available": [
+            "scalar",
+            "simd",
+            "auto"
+          ],
+          "decoder_default": "scalar"
+        },
+        "container_version": 1,
+        "coordinate_search": {
+          "enabled": true,
+          "function_max_exceptions": 32,
+          "function_max_ledger_entries": 256,
+          "function_max_period": 16,
+          "function_work_budget": 262144,
+          "max_candidates": 32,
+          "max_channels": 16,
+          "max_peak_lags": 8,
+          "max_probe_bytes": 8192,
+          "max_probe_lag": 64
+        },
+        "dsl_version": 1,
+        "emission_gates": {
+          "coordinates": true,
+          "graph": false,
+          "residual": false,
+          "symbolic": false,
+          "whole_block_entropy": true
+        },
+        "format_limits": {
+          "max_block_output_bytes": 16777216,
+          "max_block_payload_bytes": 33554432,
+          "max_definitions": 262144,
+          "max_edges": 2097152,
+          "max_fan_out": 65536,
+          "max_graph_depth": 256,
+          "max_node_payload_bytes": 33554432,
+          "max_nodes": 1048576,
+          "max_parameter_bytes": 16777216,
+          "max_pattern_bytes": 16777216,
+          "max_recurrence_order": 16384,
+          "max_temporary_bytes": 67108864,
+          "max_work": 1099511627776
+        },
+        "function_search": {
+          "max_exceptions": 64,
+          "max_ledger_entries": 1024,
+          "max_period": 32,
+          "max_recurrence_order": 2,
+          "recurrence_coefficients": [
+            0,
+            1,
+            255
+          ],
+          "work_budget": 1048576
+        },
+        "implemented_catalogue": {
+          "coordinates": [
+            "identity",
+            "stride",
+            "byte_plane",
+            "bit_plane"
+          ],
+          "entropy": [
+            "raw",
+            "byte_rle",
+            "zero_run",
+            "sparse_zero",
+            "bit_pack",
+            "lz_tokens"
+          ],
+          "experimental": [
+            "recursive_residual",
+            "shared_dag",
+            "symbolic_synthesis"
+          ],
+          "functions": [
+            "literal",
+            "entropy_literal",
+            "const",
+            "linear",
+            "periodic",
+            "recurrence",
+            "exceptions"
+          ]
+        },
+        "optimizer": {
+          "block_bytes": 1048576,
+          "max_candidates": 4096,
+          "max_ledger_entries": 16384,
+          "max_segments_per_block": 16,
+          "max_states": 65536,
+          "microblock_bytes": 4096,
+          "work_budget": 50000000
+        },
+        "parallel": {
+          "default_threads": 1,
+          "deterministic_source_order_merge": true,
+          "maximum_threads": 64
+        },
+        "profile": "balanced",
+        "schema_version": 1
+      },
+      "runtime_profile_sha256": "780ae974ccd8074d60d3dc97483b8992bf2b43e2e52a40843a8302890303941e",
+      "threads": 1,
+      "unavailable_reason": "",
+      "version": "mathsvg 0.1.0"
+    },
+    {
+      "available": true,
+      "codec_id": "mathsvg",
+      "config_id": "fast-v1",
+      "config_sha256": "11b86480168b3ebaf7804fd406249ff952cb8d13db49070654e1db28b10a167c",
+      "decode_argv": [
+        "decompress",
+        "--max-archive-bytes",
+        "{max_archive_bytes}",
+        "--max-output-bytes",
+        "{max_output_bytes}",
+        "{archive}",
+        "{restored}"
+      ],
+      "decode_stdout": false,
+      "encode_argv": [
+        "compress",
+        "--profile",
+        "fast",
+        "--threads",
+        "1",
+        "--max-input-bytes",
+        "{max_input_bytes}",
+        "{input}",
+        "{archive}"
+      ],
+      "encode_stdout": false,
+      "executable": "/home/ase/zipp/target/release/mathsvg",
+      "executable_sha256": "a91bd7ed31c78b88c8e42d19af79bd2aea2a2ed24f4e41abd0e8cfbb8ccf2f32",
+      "native_mathsvg": true,
+      "profile": "fast",
+      "runtime_profile": {
+        "backend_policy": {
+          "compression_search": "scalar",
+          "decoder_available": [
+            "scalar",
+            "simd",
+            "auto"
+          ],
+          "decoder_default": "scalar"
+        },
+        "container_version": 1,
+        "coordinate_search": {
+          "enabled": true,
+          "function_max_exceptions": 32,
+          "function_max_ledger_entries": 256,
+          "function_max_period": 16,
+          "function_work_budget": 65536,
+          "max_candidates": 16,
+          "max_channels": 16,
+          "max_peak_lags": 8,
+          "max_probe_bytes": 8192,
+          "max_probe_lag": 64
+        },
+        "dsl_version": 1,
+        "emission_gates": {
+          "coordinates": true,
+          "graph": false,
+          "residual": false,
+          "symbolic": false,
+          "whole_block_entropy": true
+        },
+        "format_limits": {
+          "max_block_output_bytes": 16777216,
+          "max_block_payload_bytes": 33554432,
+          "max_definitions": 262144,
+          "max_edges": 2097152,
+          "max_fan_out": 65536,
+          "max_graph_depth": 256,
+          "max_node_payload_bytes": 33554432,
+          "max_nodes": 1048576,
+          "max_parameter_bytes": 16777216,
+          "max_pattern_bytes": 16777216,
+          "max_recurrence_order": 16384,
+          "max_temporary_bytes": 67108864,
+          "max_work": 1099511627776
+        },
+        "function_search": {
+          "max_exceptions": 64,
+          "max_ledger_entries": 1024,
+          "max_period": 32,
+          "max_recurrence_order": 2,
+          "recurrence_coefficients": [
+            0,
+            1,
+            255
+          ],
+          "work_budget": 1048576
+        },
+        "implemented_catalogue": {
+          "coordinates": [
+            "identity",
+            "stride",
+            "byte_plane",
+            "bit_plane"
+          ],
+          "entropy": [
+            "raw",
+            "byte_rle",
+            "zero_run",
+            "sparse_zero",
+            "bit_pack",
+            "lz_tokens"
+          ],
+          "experimental": [
+            "recursive_residual",
+            "shared_dag",
+            "symbolic_synthesis"
+          ],
+          "functions": [
+            "literal",
+            "entropy_literal",
+            "const",
+            "linear",
+            "periodic",
+            "recurrence",
+            "exceptions"
+          ]
+        },
+        "optimizer": {
+          "block_bytes": 1048576,
+          "max_candidates": 256,
+          "max_ledger_entries": 1024,
+          "max_segments_per_block": 8,
+          "max_states": 4096,
+          "microblock_bytes": 4096,
+          "work_budget": 13000000
+        },
+        "parallel": {
+          "default_threads": 1,
+          "deterministic_source_order_merge": true,
+          "maximum_threads": 64
+        },
+        "profile": "fast",
+        "schema_version": 1
+      },
+      "runtime_profile_sha256": "eb0a4e6112ee8a2d19ec12c3ce63fa4a7368da9e69d64f03a48d88e8c549d264",
+      "threads": 1,
+      "unavailable_reason": "",
+      "version": "mathsvg 0.1.0"
+    },
+    {
+      "available": true,
+      "codec_id": "gzip-6",
+      "config_id": "gzip-6",
+      "config_sha256": "bbce9bcf961d3776dbf6532339f78d1b7d963a992e373f029f9137abb741e782",
+      "decode_argv": [
+        "-d",
+        "-c",
+        "{archive}"
+      ],
+      "decode_stdout": true,
+      "encode_argv": [
+        "-n",
+        "-6",
+        "-c",
+        "{input}"
+      ],
+      "encode_stdout": true,
+      "executable": "/usr/bin/gzip",
+      "executable_sha256": "afea077ce127d4fa9ad410d3066ba2b54dea19c0b44f04adf56c72d5f7b7a9bb",
+      "native_mathsvg": false,
+      "profile": "",
+      "runtime_profile": null,
+      "runtime_profile_sha256": "",
+      "threads": 1,
+      "unavailable_reason": "",
+      "version": "gzip 1.12"
+    },
+    {
+      "available": true,
+      "codec_id": "lz4",
+      "config_id": "lz4",
+      "config_sha256": "1ff2ceff0d36b2f9ced1d110a9f2113d3faaa5dbf4328bdfec0f120bfce3755e",
+      "decode_argv": [
+        "-q",
+        "-d",
+        "{archive}",
+        "{restored}"
+      ],
+      "decode_stdout": false,
+      "encode_argv": [
+        "-q",
+        "-1",
+        "{input}",
+        "{archive}"
+      ],
+      "encode_stdout": false,
+      "executable": "/home/ase/.local/mathzip-bench-tools/usr/bin/lz4",
+      "executable_sha256": "87c0d5d060fd36c685b98a38611b7bd6c4614d40b36d29be84edcd6c173f8160",
+      "native_mathsvg": false,
+      "profile": "",
+      "runtime_profile": null,
+      "runtime_profile_sha256": "",
+      "threads": 1,
+      "unavailable_reason": "",
+      "version": "*** LZ4 command line interface 64-bits v1.9.4, by Yann Collet ***"
+    },
+    {
+      "available": true,
+      "codec_id": "raw",
+      "config_id": "raw",
+      "config_sha256": "d43cc6d50259b3f14efc7e144539e6293ac122442a2a7b5da9f6caa662e26f7e",
+      "decode_argv": [
+        "--",
+        "{archive}",
+        "{restored}"
+      ],
+      "decode_stdout": false,
+      "encode_argv": [
+        "--",
+        "{input}",
+        "{archive}"
+      ],
+      "encode_stdout": false,
+      "executable": "/usr/bin/cp",
+      "executable_sha256": "6187dab32cd7b6291d96c54425a22915a6eeb39add6d95ee9008e1dbba427131",
+      "native_mathsvg": false,
+      "profile": "",
+      "runtime_profile": null,
+      "runtime_profile_sha256": "",
+      "threads": 1,
+      "unavailable_reason": "",
+      "version": "cp (GNU coreutils) 9.4"
+    },
+    {
+      "available": true,
+      "codec_id": "xz-9e",
+      "config_id": "xz-9e",
+      "config_sha256": "264b9bc8095b4cea59244fed3bda782059c28c2834ccb61b1022ae1e33055525",
+      "decode_argv": [
+        "-d",
+        "-c",
+        "{archive}"
+      ],
+      "decode_stdout": true,
+      "encode_argv": [
+        "-9e",
+        "-T1",
+        "-c",
+        "{input}"
+      ],
+      "encode_stdout": true,
+      "executable": "/usr/bin/xz",
+      "executable_sha256": "b5b163eb273291934556377ab883b4b2a5d4da50bd0dc0a91774ecc234ccd8d0",
+      "native_mathsvg": false,
+      "profile": "",
+      "runtime_profile": null,
+      "runtime_profile_sha256": "",
+      "threads": 1,
+      "unavailable_reason": "",
+      "version": "xz (XZ Utils) 5.4.5"
+    },
+    {
+      "available": true,
+      "codec_id": "zstd-default",
+      "config_id": "zstd-default",
+      "config_sha256": "5963e40349734d7d4267506922da735f1af9b3be159a19282b098cc483441a9b",
+      "decode_argv": [
+        "-q",
+        "-d",
+        "-c",
+        "{archive}"
+      ],
+      "decode_stdout": true,
+      "encode_argv": [
+        "-q",
+        "-3",
+        "-T1",
+        "-c",
+        "{input}"
+      ],
+      "encode_stdout": true,
+      "executable": "/usr/bin/zstd",
+      "executable_sha256": "7c5468b370f7c47eda07281e3437fafc568f95d10420051e3aa522709f9342c5",
+      "native_mathsvg": false,
+      "profile": "",
+      "runtime_profile": null,
+      "runtime_profile_sha256": "",
+      "threads": 1,
+      "unavailable_reason": "",
+      "version": "*** Zstandard CLI (64-bit) v1.5.5, by Yann Collet ***"
+    }
+  ],
+  "experiment_id": "development-pilot-v1",
+  "holdout_payload_opened": false,
+  "machine": {
+    "architecture": "x86_64",
+    "machine_id": "local-x86-64",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  },
+  "manifest": {
+    "canonical_sha256": "b1d7dba75560d44d8e234e4205e09487f93678fb8688cac6a0905486c969c2ca",
+    "file_sha256": "f9b97c29cb9ea0b6d72fb6408a6e7e717a46844fc4f6dd7c146fbfbbb8c20340",
+    "path": "mathsvg/results/manifests/development.csv",
+    "selected_dataset_ids": [
+      "dev-canterbury-alice29-txt",
+      "dev-canterbury-kennedy-xls",
+      "dev-silesia-x-ray",
+      "dev-synthetic-linear",
+      "dev-synthetic-periodic",
+      "dev-synthetic-random"
+    ],
+    "split": "development"
+  },
+  "measurement": {
+    "cpu": "GNU time %U + %S, decimal seconds",
+    "gnu_time_path": "/usr/bin/time",
+    "gnu_time_sha256": "3b11dec50514a8473e9f6efa7a34d584d0657538c09988f61b72d38ad4991a10",
+    "gnu_time_version": "time (GNU Time) UNKNOWN",
+    "limitations": [
+      "GNU time max RSS is not the sum of concurrently resident descendants",
+      "filesystem cache is not dropped between randomized trials",
+      "CPU frequency/governor is not controlled by this runner",
+      "energy and hardware counters are not measured",
+      "wrapper spawn/collection overhead is included in wall time"
+    ],
+    "method": "gnu-time-v1-monotonic-wall",
+    "peak_rss": "GNU time %M multiplied by 1024",
+    "wall_clock": "time.monotonic_ns around GNU time wrapper"
+  },
+  "protocol": {
+    "expected_delta_fraction": 0.02,
+    "interleaved": true,
+    "native_limit_policy": {
+      "archive_headroom_bytes": 1048576,
+      "coordinate_padding_bytes": 7,
+      "manifest_integrity_checked_before_execution": true,
+      "max_archive": "2 * max_input_and_output + archive_headroom_bytes",
+      "max_input_and_output": "manifest_bytes + coordinate_padding_bytes",
+      "u64_arithmetic_checked": true
+    },
+    "native_thread_selectors": [
+      "1"
+    ],
+    "repetitions": 5,
+    "schedule_trials": 252,
+    "seed": 1297748005,
+    "warmups": 1
+  },
+  "result": {
+    "complete": true,
+    "raw_jsonl": "mathsvg/results/raw/development-pilot-v1.jsonl",
+    "raw_jsonl_bytes": 566539,
+    "raw_jsonl_sha256": "09ba5f899146499e475152452b4a4680b295d16e2cb4bb44f999436644e4b0b2",
+    "status_counts": {
+      "failed": 0,
+      "ok": 252,
+      "timeout": 0,
+      "unavailable": 0
+    },
+    "trial_rows": 252
+  },
+  "runner_performed_tuning": false,
+  "runner_sha256": "57d064addecba1be7c845122d529b7687eb033a32b80951915da65504c4a502d",
+  "schema_version": 1,
+  "source": {
+    "branch": "mathsvg-absolute",
+    "commit": "36f84685dc00064dae9a239face7e8eff797ed28",
+    "dirty": true,
+    "status_sha256": "aaa77f9cf471b7163acd9259d37747a090f365b4a2ac1e171ab5e334ebbc8961"
+  }
+}

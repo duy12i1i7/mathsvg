@@ -1,0 +1,81 @@
+{
+  "schema": "mathsvg-local-compiler-matrix-v1",
+  "experiment_id": "compiler-matrix-local-v1",
+  "status": "development-pass-global-gate-incomplete",
+  "evidence_scope": "development",
+  "holdout_payload_inspected": false,
+  "source_identity": {
+    "base_git_commit": "36f84685dc00064dae9a239face7e8eff797ed28",
+    "worktree_state": "dirty",
+    "rust_sources_changed_during_matrix": false,
+    "note": "Both compilers built the same local Rust source/configuration state. The dirty untracked MathSVG tree prevents this from being a publishable clean-freeze claim."
+  },
+  "machine": {
+    "machine_id": "local-x86-64",
+    "architecture": "x86_64",
+    "target": "x86_64-unknown-linux-gnu",
+    "independent_second_machine": false,
+    "arm64": false
+  },
+  "toolchains": [
+    {
+      "id": "stable-1.97.1",
+      "rustc_version": "rustc 1.97.1 (8bab26f4f 2026-07-14)",
+      "rustc_commit": "8bab26f4f68e0e26f0bb7960be334d5b520ea452",
+      "llvm_version": "22.1.6",
+      "rustc_path": "/home/ase/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/rustc",
+      "rustc_bytes": 645000,
+      "rustc_sha256": "d3a664c970a9fd8361b64194861bebc1ae37b9054e5ee3400dc1c9e691797eea",
+      "cargo_path": "/home/ase/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo",
+      "cargo_bytes": 42839824,
+      "cargo_sha256": "828980723df339d62434390e9fb8ef8831036583343ae2316b7ab5646b5c1953",
+      "release_binary_bytes": 1740448,
+      "release_binary_sha256": "997217bcf5afe23ed4db02d2659111bebe4a16632bb36f27ef181784546603aa"
+    },
+    {
+      "id": "rust-1.85.1",
+      "rustc_version": "rustc 1.85.1 (4eb161250 2025-03-15)",
+      "rustc_commit": "4eb161250e340c8f48f66e2b929ef4a5bed7c181",
+      "llvm_version": "19.1.7",
+      "rustc_path": "/home/ase/.rustup/toolchains/1.85-x86_64-unknown-linux-gnu/bin/rustc",
+      "rustc_bytes": 643384,
+      "rustc_sha256": "f8d033fd72e878ec60493788c8bffec2e6c154dcab6f0cb4c145af8ada26a7ed",
+      "cargo_path": "/home/ase/.rustup/toolchains/1.85-x86_64-unknown-linux-gnu/bin/cargo",
+      "cargo_bytes": 35341752,
+      "cargo_sha256": "87e9ff02f95ea17d877e7c4eeb0f365f50fe3827f5afec132131ff3b8031a57e",
+      "release_binary_bytes": 1866272,
+      "release_binary_sha256": "4870968bfb209f552b4e852531e43678c1fbb48819f381468b95944dd15cd2ef"
+    }
+  ],
+  "workspace_test": {
+    "toolchain": "rust-1.85.1",
+    "command": "CARGO_TARGET_DIR=/tmp/mathsvg-rustc185-target-OpDNOE cargo +1.85-x86_64-unknown-linux-gnu test --workspace --release",
+    "working_directory": "mathsvg",
+    "exit_code": 0,
+    "passed": 290,
+    "failed": 0,
+    "ignored": 2,
+    "ignored_reason": "Two explicitly development-only oracle scans are opt-in."
+  },
+  "archive_comparison": {
+    "input": "datasets/data/canterbury/alice29.txt",
+    "input_bytes": 152089,
+    "input_sha256": "7467306ee0feed4971260f3c87421154a05be571d944e9cb021a5713700c38f0",
+    "command_template": "{binary} compress --profile balanced --threads 1 {input} {archive}",
+    "archive_bytes": 72196,
+    "stable_archive_sha256": "ab9b07b3e308c3f6428b1d7de448e5eff558d1d45947fe9b4bbb69b3894b8916",
+    "rust_1_85_archive_sha256": "ab9b07b3e308c3f6428b1d7de448e5eff558d1d45947fe9b4bbb69b3894b8916",
+    "archive_byte_identical": true,
+    "stable_self_decode": "pass",
+    "rust_1_85_self_decode": "pass",
+    "stable_decodes_rust_1_85_archive": "pass",
+    "rust_1_85_decodes_stable_archive": "pass",
+    "all_restored_sha256": "7467306ee0feed4971260f3c87421154a05be571d944e9cb021a5713700c38f0"
+  },
+  "limitations": [
+    "Both compilers ran on the same physical x86-64 host.",
+    "The archive comparison is a one-input development spot check, not the full 100-repetition Gate 1 matrix.",
+    "ARM64 and an independent second machine remain unavailable.",
+    "The source tree is dirty, so the global publishable correctness gate remains incomplete."
+  ]
+}

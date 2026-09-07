@@ -1,0 +1,15 @@
+[package]
+name = "mathsvg-coordinates"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "Bounded reversible coordinate transforms and deterministic discovery for MathSVG"
+
+[dependencies]
+mathsvg-core = { path = "../mathsvg-core" }
+
+[lib]
+path = "src/lib.rs"
+
+[lints.rust]
+unsafe_code = "forbid"

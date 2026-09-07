@@ -1,0 +1,12 @@
+[package]
+name = "mathsvg-entropy"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "Deterministic native leaf coders for MathSVG"
+
+[lib]
+path = "src/lib.rs"
+
+[lints.rust]
+unsafe_code = "forbid"

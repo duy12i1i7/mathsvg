@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "profile": "quick",
+  "output_dir": "benchmarks/results/quick",
+  "datasets": [
+    {"name": "canterbury", "enabled": true},
+    {"name": "calgary", "enabled": true},
+    {"name": "silesia", "enabled": true},
+    {"name": "enwik8", "enabled": false}
+  ],
+  "synthetic": {
+    "output": "datasets/synthetic",
+    "seed": 1297748005,
+    "sizes": [0, 1, 31, 256, 4096, 65536],
+    "noise_densities": [0.0, 0.001, 0.01, 0.05, 0.1, 0.25]
+  },
+  "benchmark": {
+    "warmups": 1,
+    "repeats": 3,
+    "timeout_seconds": 120,
+    "threads": [1],
+    "collect_mathzip_inspection": true,
+    "record_absolute_paths": false
+  },
+  "codecs": [
+    "mathzip-fast",
+    "raw",
+    "gzip-fast",
+    "bzip2-fast",
+    "xz-fast",
+    "zstd-fast",
+    "lz4-fast",
+    "brotli-fast",
+    "7z-fast"
+  ],
+  "inputs": [
+    {
+      "corpus": "synthetic",
+      "root": "datasets/synthetic",
+      "input_license": "CC0-1.0",
+      "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+      "patterns": [
+        "constant_00/s0000004096_n000p000_*.bin",
+        "constant_00/s0000004096_n005p000_*.bin",
+        "constant_ff/s0000004096_n000p000_*.bin",
+        "linear/s0000004096_n000p000_*.bin",
+        "linear/s0000004096_n005p000_*.bin",
+        "polynomial_d2/s0000004096_n000p000_*.bin",
+        "periodic/s0000004096_n000p000_*.bin",
+        "periodic/s0000004096_n005p000_*.bin",
+        "multi_periodic/s0000004096_n000p000_*.bin",
+        "recurrence/s0000004096_n000p000_*.bin",
+        "lfsr8/s0000004096_n000p000_*.bin",
+        "piecewise_mixed/s0000004096_n000p000_*.bin",
+        "random/s0000004096_n000p000_*.bin",
+        "encrypted/s0000004096_n000p000_*.bin",
+        "already_compressed/s0000004096_*"
+      ],
+      "required": true
+    },
+    {
+      "corpus": "canterbury_files",
+      "root": "datasets/data/canterbury",
+      "input_license": "Upstream files retain their original terms; see dataset manifest",
+      "input_provenance": "datasets/manifests/canterbury.json",
+      "patterns": ["*"],
+      "exclude": ["dataset.json", "combined.manifest.json", "combined.bin"],
+      "required": true
+    },
+    {
+      "corpus": "canterbury_combined",
+      "root": "datasets/data/canterbury",
+      "input_license": "Upstream files retain their original terms; see dataset manifest",
+      "input_provenance": "datasets/manifests/canterbury.json",
+      "patterns": ["combined.bin"],
+      "required": true
+    },
+    {
+      "corpus": "calgary_files",
+      "root": "datasets/data/calgary",
+      "input_license": "Upstream files retain their original terms; see dataset manifest",
+      "input_provenance": "datasets/manifests/calgary.json",
+      "patterns": ["*"],
+      "exclude": ["dataset.json", "combined.manifest.json", "combined.bin"],
+      "required": true
+    },
+    {
+      "corpus": "calgary_combined",
+      "root": "datasets/data/calgary",
+      "input_license": "Upstream files retain their original terms; see dataset manifest",
+      "input_provenance": "datasets/manifests/calgary.json",
+      "patterns": ["combined.bin"],
+      "required": true
+    },
+    {
+      "corpus": "silesia_quick_subset",
+      "root": "datasets/data/silesia",
+      "input_license": "Per-file upstream terms; see Silesia provenance",
+      "input_provenance": "datasets/manifests/silesia.json",
+      "patterns": ["dickens", "mozilla", "nci", "xml"],
+      "required": true
+    },
+    {
+      "corpus": "enwik8",
+      "root": "datasets/data/enwik8",
+      "input_license": "Wikipedia source-dump terms",
+      "input_provenance": "datasets/manifests/enwik8.json",
+      "patterns": ["enwik8"],
+      "required": false,
+      "enabled": false
+    }
+  ]
+}

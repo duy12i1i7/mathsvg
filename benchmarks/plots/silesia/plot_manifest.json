@@ -1,0 +1,69 @@
+{
+  "artifacts_sha256": {
+    "bits_per_byte_by_dataset.png": "a34b7400c5e042fa3fbe855b3a7de724394129faab098fcdc7bca4e43bb89206",
+    "compression_ratio_by_dataset.png": "4dbd869815e04eb59dd03fb3ee901f99f2db6af3fde459ccb5a3c95197b467b5",
+    "compression_throughput.png": "8b1923de2bbcf9708c61a225602656f46fe0b7045c2488f923d8ee09bfc48c00",
+    "decompression_throughput.png": "961b8880a0e9021858d70b95de6ab6053e063439d397043722caf90ac094a150",
+    "file_entropy_vs_mathzip_gain.png": "aa96d9229f3da7bd16723ddf711b8cb3a058aa3f9a2d730f688a0a168c09f68b",
+    "mathzip_gain_vs_xz.png": "d52f7149333520e8516126843765ca7e5ae2fef6b42e8779fae63b4d9b550eb3",
+    "mathzip_gain_vs_zstd.png": "484a2398780e6c97769c66f2b6f535f8fe253020ca43ec7ffc3ab22dbbae6c52",
+    "model_distribution.png": "6a7187f4627f185e625584cbc156495ca1482ef8888e4cdeea74766895b28576",
+    "peak_memory.png": "aec7fdc03269972bfca9c879954c7f8e121f604d5856eb8227fb20d3a799ae40",
+    "plot_data.json": "da084886e7578352508aac40111ae5e716805e32e6aa9793fda7cda2c8da6ac3",
+    "ratio_vs_compression_speed.png": "ca978c37ff33b5c85be4c6bfac8bc81ce64c4f0324851ebfbb34768d27c03200",
+    "ratio_vs_decompression_speed.png": "3d49816ee07e19a10af3415c3e20c430b110d3fff8625886bb5fd94e9e212934",
+    "residual_entropy_vs_encoded_size.png": "e165d5c937ae446f4e2989534025cd289ca2d2f08bac08502c3e9ef431db6204",
+    "segment_size_histogram.png": "4f8206781050a4023e8091a847f1bb8d8db8d15af05755cf5b4e20321222b5c8",
+    "storage_breakdown.png": "ee2a3c95294b3ebc084a0301eb90bdb2606ace70be0ea3a70a9694800ba1ffd9"
+  },
+  "comparison_choices": {
+    "ablation_comparison": {
+      "aggregation": "median ratio among successful rows",
+      "coverage": []
+    },
+    "file_entropy_vs_mathzip_gain": {
+      "baseline_codec": "zstd-fast",
+      "mathzip_codec": "mathzip-fast"
+    },
+    "mathzip_gain_vs_xz": {
+      "aggregation": "corpus/thread weighted total compressed bytes",
+      "baseline_codec": "xz-fast",
+      "mathzip_codec": "mathzip-fast"
+    },
+    "mathzip_gain_vs_zstd": {
+      "aggregation": "corpus/thread weighted total compressed bytes",
+      "baseline_codec": "zstd-fast",
+      "mathzip_codec": "mathzip-fast"
+    }
+  },
+  "failure_count": 0,
+  "generated": [
+    "compression_ratio_by_dataset.png",
+    "bits_per_byte_by_dataset.png",
+    "compression_throughput.png",
+    "decompression_throughput.png",
+    "ratio_vs_compression_speed.png",
+    "ratio_vs_decompression_speed.png",
+    "peak_memory.png",
+    "storage_breakdown.png",
+    "model_distribution.png",
+    "segment_size_histogram.png",
+    "residual_entropy_vs_encoded_size.png",
+    "file_entropy_vs_mathzip_gain.png",
+    "mathzip_gain_vs_zstd.png",
+    "mathzip_gain_vs_xz.png"
+  ],
+  "plot_generator": "python/mathzip_bench/plots.py",
+  "plot_generator_sha256": "7a06354c6089971069ffa6c41ced95062c78d3e5c43a0a93f8e36356432013cc",
+  "profile": "silesia",
+  "result_count": 108,
+  "result_document_hash_method": "canonical-json-v1",
+  "result_document_sha256": "9d1b9ba62763c147e5f852a6fe45339161bd29fddcd6b1e10d1dbea581ff95f5",
+  "run_id": "20260724T165449Z-4ef6e508",
+  "schema_version": "mathzip-plot-manifest-v1",
+  "skipped_for_missing_metrics": [
+    "ablation_comparison",
+    "synthetic_noise_vs_ratio"
+  ],
+  "status": "generated"
+}

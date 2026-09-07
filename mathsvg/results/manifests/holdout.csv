@@ -1,0 +1,3 @@
+split,dataset_id,split_group,origin,primary,domain,source,license,sha256,bytes,sealed,path,legacy_observed
+holdout,holdout-arrow-uas-flight-telemetry,figshare-31931241-v3-arrow-uas,real,true,structured-uav-telemetry-csv,https://doi.org/10.6084/m9.figshare.31931241.v3,CC BY 4.0,e8037d5b14c318fc3daa618023b7bf81f5159f0e40485c0d68c35e910f0d1104,300788,true,datasets/data/holdout/sealed/arrow-uas-flight-data.csv,false
+holdout,holdout-hydromoth-dolphin-pcm,zenodo-15657853-hydromoth-audio,real,true,structured-audio-pcm-wav,https://doi.org/10.5281/zenodo.15657853,CC BY 4.0,bed17976cc529ced23e409cd1214c3c8c482180b6356f79e3169a8ae7db010b1,30000802,true,datasets/data/holdout/sealed/dolphin-hydromoth-250khz.wav,false

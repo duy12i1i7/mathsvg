@@ -1,0 +1,27 @@
+   Compiling mathsvg-core v0.1.0 (/home/ase/zipp/mathsvg/crates/mathsvg-core)
+   Compiling mathsvg-entropy v0.1.0 (/home/ase/zipp/mathsvg/crates/mathsvg-entropy)
+   Compiling mathsvg-kernels v0.1.0 (/home/ase/zipp/mathsvg/crates/mathsvg-kernels)
+   Compiling mathzip-core v0.1.0 (/home/ase/zipp/crates/mathzip-core)
+   Compiling mathsvg-coordinates v0.1.0 (/home/ase/zipp/mathsvg/crates/mathsvg-coordinates)
+   Compiling mathsvg-dsl v0.1.0 (/home/ase/zipp/mathsvg/crates/mathsvg-dsl)
+   Compiling mathsvg-evaluator v0.1.0 (/home/ase/zipp/mathsvg/crates/mathsvg-evaluator)
+   Compiling mathsvg-container v0.1.0 (/home/ase/zipp/mathsvg/crates/mathsvg-container)
+   Compiling mathzip-fuzz v0.0.0 (/home/ase/zipp/fuzz)
+    Finished `release` profile [optimized + debuginfo] target(s) in 16.05s
+    Finished `release` profile [optimized + debuginfo] target(s) in 0.06s
+     Running `fuzz/target/x86_64-unknown-linux-gnu/release/mathsvg_decode -artifact_prefix=/home/ase/zipp/fuzz/artifacts/mathsvg_decode/ -runs=10000 -max_len=65536 -timeout=10 -rss_limit_mb=2048 -print_final_stats=1 -verbosity=0 -artifact_prefix=/tmp/mathsvg-fuzz-campaign-rr7ncw1w/mathsvg_decode/artifacts/ /tmp/mathsvg-fuzz-campaign-rr7ncw1w/mathsvg_decode/corpus`
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO:        4 files found in /tmp/mathsvg-fuzz-campaign-rr7ncw1w/mathsvg_decode/corpus
+INFO: seed corpus: files: 4 min: 5b max: 507b total: 1482b rss: 32Mb
+###### Recommended dictionary. ######
+"\377\377\377\377\377\377\377\377" # Uses: 178
+"\002\000" # Uses: 203
+"\261W\324\301\250\251\006r\336\263\250\323Y&\356\334\377\177\322\344\265g\007\274\014\373N\024\204\362\367|" # Uses: 146
+"\343\3625\244\224Ql\375~\377\346\376\300\230\011_jd\034\270e\3265\011\341\325\025\031\355\273=\304" # Uses: 126
+"\3109\237\014\362\314)\301\330:gYL[\265\254\303KA\300\001'\360\2603\315H)\323\026o\003" # Uses: 123
+###### End of recommended dictionary. ######
+stat::number_of_executed_units: 10000
+stat::average_exec_per_sec:     0
+stat::new_units_added:          48
+stat::slowest_unit_time_sec:    0
+stat::peak_rss_mb:              47

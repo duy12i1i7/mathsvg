@@ -1,0 +1,406 @@
+{
+  "ablation_catalog": {
+    "path": "mathsvg/configs/ablation/catalog.toml",
+    "selected": true,
+    "sha256": "0d41232c5473b8547fa86a26819eba1bc47444258e67e79fd612a6c85ddbfb0f"
+  },
+  "baseline_catalog": {
+    "path": "mathsvg/configs/baselines.toml",
+    "sha256": "430f84dc5fb23343ced8c25225ed6b465873033488ea718886a01060ba693324"
+  },
+  "baseline_inventory": {
+    "path": "mathsvg/results/manifests/baseline-inventory.json",
+    "sha256": "8eaf8559c0798bed08ca8a6b920d795c0716cd2a0002e4546aa21977d9e4c295"
+  },
+  "codecs": [
+    {
+      "ablation_id": "none",
+      "available": true,
+      "codec_id": "mathsvg",
+      "config_id": "balanced-v1",
+      "config_sha256": "ab1a6fea843e305b09fbe834657f0edbca10ba12baddfc940f90efa8ef5ce4f5",
+      "decode_argv": [
+        "decompress",
+        "--max-archive-bytes",
+        "{max_archive_bytes}",
+        "--max-output-bytes",
+        "{max_output_bytes}",
+        "{archive}",
+        "{restored}"
+      ],
+      "decode_stdout": false,
+      "disabled_algorithms": [],
+      "encode_argv": [
+        "compress",
+        "--profile",
+        "balanced",
+        "--threads",
+        "1",
+        "--max-input-bytes",
+        "{max_input_bytes}",
+        "{input}",
+        "{archive}"
+      ],
+      "encode_stdout": false,
+      "executable": "/home/ase/zipp/target/release/mathsvg",
+      "executable_sha256": "cf043a438526f9d43144bf55c5cbfb3b69a3a9c91333d3c91f35be3b5f922663",
+      "native_mathsvg": true,
+      "profile": "balanced",
+      "runtime_profile": {
+        "ablation": {
+          "disabled_algorithms": [],
+          "id": "none"
+        },
+        "backend_policy": {
+          "compression_search": "scalar",
+          "decoder_available": [
+            "scalar",
+            "simd",
+            "auto"
+          ],
+          "decoder_default": "scalar"
+        },
+        "container_version": 1,
+        "coordinate_search": {
+          "enabled": true,
+          "function_max_exceptions": 32,
+          "function_max_ledger_entries": 256,
+          "function_max_period": 16,
+          "function_work_budget": 262144,
+          "max_candidates": 32,
+          "max_channels": 16,
+          "max_peak_lags": 8,
+          "max_probe_bytes": 8192,
+          "max_probe_lag": 64
+        },
+        "dsl_version": 1,
+        "emission_gates": {
+          "coordinates": true,
+          "graph": false,
+          "residual": false,
+          "symbolic": false,
+          "whole_block_entropy": true,
+          "whole_block_functions": true
+        },
+        "entropy_search": {
+          "add_only_policy": "C4L",
+          "baseline_policy": "G1",
+          "chain_depth": 4,
+          "decoder_semantics_changed": false,
+          "maximum_additional_work_per_input_byte_per_walk": 13,
+          "maximum_policy_walks": 2,
+          "one_byte_lazy": true,
+          "parser_scratch_bytes": 524288,
+          "wire_opcode": 7
+        },
+        "format_limits": {
+          "max_block_output_bytes": 16777216,
+          "max_block_payload_bytes": 33554432,
+          "max_definitions": 262144,
+          "max_edges": 2097152,
+          "max_fan_out": 65536,
+          "max_graph_depth": 256,
+          "max_node_payload_bytes": 33554432,
+          "max_nodes": 1048576,
+          "max_parameter_bytes": 16777216,
+          "max_pattern_bytes": 16777216,
+          "max_recurrence_order": 16384,
+          "max_temporary_bytes": 67108864,
+          "max_work": 1099511627776
+        },
+        "function_search": {
+          "max_exceptions": 64,
+          "max_ledger_entries": 1024,
+          "max_period": 32,
+          "max_recurrence_order": 2,
+          "recurrence_coefficients": [
+            0,
+            1,
+            255
+          ],
+          "work_budget": 1048576
+        },
+        "implemented_catalogue": {
+          "coordinates": [
+            "identity",
+            "stride",
+            "byte_plane",
+            "bit_plane"
+          ],
+          "entropy": [
+            "raw",
+            "byte_rle",
+            "zero_run",
+            "sparse_zero",
+            "bit_pack",
+            "lz_tokens",
+            "canonical_huffman",
+            "lz_huffman"
+          ],
+          "experimental": [
+            "recursive_residual",
+            "shared_dag",
+            "symbolic_synthesis"
+          ],
+          "functions": [
+            "literal",
+            "entropy_literal",
+            "const",
+            "linear",
+            "periodic",
+            "recurrence",
+            "exceptions"
+          ]
+        },
+        "optimizer": {
+          "block_bytes": 1048576,
+          "max_candidates": 4096,
+          "max_ledger_entries": 16384,
+          "max_segments_per_block": 16,
+          "max_states": 65536,
+          "microblock_bytes": 4096,
+          "work_budget": 50000000
+        },
+        "parallel": {
+          "default_threads": 1,
+          "deterministic_source_order_merge": true,
+          "maximum_threads": 64
+        },
+        "profile": "balanced",
+        "schema_version": 1
+      },
+      "runtime_profile_sha256": "e36c2d58d9be2fd0b03c42b74f5ff70f15ca3eb93d9024a726a37d2a35c12b2a",
+      "threads": 1,
+      "unavailable_reason": "",
+      "version": "mathsvg 0.1.0"
+    },
+    {
+      "ablation_id": "none",
+      "available": true,
+      "codec_id": "gzip-6",
+      "config_id": "gzip-6",
+      "config_sha256": "bf920ab8461c6c60c8cc32db3d853f55655e60793cf7f64068847ad56c2b2e67",
+      "decode_argv": [
+        "-d",
+        "-c",
+        "{archive}"
+      ],
+      "decode_stdout": true,
+      "disabled_algorithms": [],
+      "encode_argv": [
+        "-n",
+        "-6",
+        "-c",
+        "{input}"
+      ],
+      "encode_stdout": true,
+      "executable": "/usr/bin/gzip",
+      "executable_sha256": "afea077ce127d4fa9ad410d3066ba2b54dea19c0b44f04adf56c72d5f7b7a9bb",
+      "native_mathsvg": false,
+      "profile": "",
+      "runtime_profile": null,
+      "runtime_profile_sha256": "",
+      "threads": 1,
+      "unavailable_reason": "",
+      "version": "gzip 1.12"
+    },
+    {
+      "ablation_id": "none",
+      "available": true,
+      "codec_id": "lz4",
+      "config_id": "lz4",
+      "config_sha256": "56c1b7390551d55bb056da7122b41ac3f7e4459570e4627ac278f7c91d669491",
+      "decode_argv": [
+        "-q",
+        "-d",
+        "{archive}",
+        "{restored}"
+      ],
+      "decode_stdout": false,
+      "disabled_algorithms": [],
+      "encode_argv": [
+        "-q",
+        "-1",
+        "{input}",
+        "{archive}"
+      ],
+      "encode_stdout": false,
+      "executable": "/home/ase/.local/mathzip-bench-tools/usr/bin/lz4",
+      "executable_sha256": "87c0d5d060fd36c685b98a38611b7bd6c4614d40b36d29be84edcd6c173f8160",
+      "native_mathsvg": false,
+      "profile": "",
+      "runtime_profile": null,
+      "runtime_profile_sha256": "",
+      "threads": 1,
+      "unavailable_reason": "",
+      "version": "*** LZ4 command line interface 64-bits v1.9.4, by Yann Collet ***"
+    },
+    {
+      "ablation_id": "none",
+      "available": true,
+      "codec_id": "xz-9e",
+      "config_id": "xz-9e",
+      "config_sha256": "1bd3a8a1a914bf55087f30b641adcacaac8d04f2cc5a9c21f3668bf2f6727da6",
+      "decode_argv": [
+        "-d",
+        "-c",
+        "{archive}"
+      ],
+      "decode_stdout": true,
+      "disabled_algorithms": [],
+      "encode_argv": [
+        "-9e",
+        "-T1",
+        "-c",
+        "{input}"
+      ],
+      "encode_stdout": true,
+      "executable": "/usr/bin/xz",
+      "executable_sha256": "b5b163eb273291934556377ab883b4b2a5d4da50bd0dc0a91774ecc234ccd8d0",
+      "native_mathsvg": false,
+      "profile": "",
+      "runtime_profile": null,
+      "runtime_profile_sha256": "",
+      "threads": 1,
+      "unavailable_reason": "",
+      "version": "xz (XZ Utils) 5.4.5"
+    },
+    {
+      "ablation_id": "none",
+      "available": true,
+      "codec_id": "zstd-default",
+      "config_id": "zstd-default",
+      "config_sha256": "8afdee0e1fe04f0a9c92a00ebbd438b50004de9dcdf47ce697a89ac0bdae40a5",
+      "decode_argv": [
+        "-q",
+        "-d",
+        "-c",
+        "{archive}"
+      ],
+      "decode_stdout": true,
+      "disabled_algorithms": [],
+      "encode_argv": [
+        "-q",
+        "-3",
+        "-T1",
+        "-c",
+        "{input}"
+      ],
+      "encode_stdout": true,
+      "executable": "/usr/bin/zstd",
+      "executable_sha256": "7c5468b370f7c47eda07281e3437fafc568f95d10420051e3aa522709f9342c5",
+      "native_mathsvg": false,
+      "profile": "",
+      "runtime_profile": null,
+      "runtime_profile_sha256": "",
+      "threads": 1,
+      "unavailable_reason": "",
+      "version": "*** Zstandard CLI (64-bit) v1.5.5, by Yann Collet ***"
+    }
+  ],
+  "experiment_id": "development-pilot-v4-stable",
+  "holdout_payload_opened": false,
+  "machine": {
+    "architecture": "x86_64",
+    "machine_id": "local-x86-64",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  },
+  "manifest": {
+    "canonical_sha256": "88ed376ce82fbd9301fe2fce71dd0e3a4af5f837450b50b8489d678b19d5fca7",
+    "file_sha256": "e94bcc95b681519f4784b11b410d59a703882ebfaa971e251b5c714be2ba59a2",
+    "path": "mathsvg/results/manifests/development.csv",
+    "selected_dataset_ids": [
+      "dev-canterbury-alice29-txt",
+      "dev-canterbury-kennedy-xls",
+      "dev-silesia-x-ray",
+      "dev-synthetic-constant-00",
+      "dev-synthetic-lfsr8",
+      "dev-synthetic-linear",
+      "dev-synthetic-periodic",
+      "dev-synthetic-piecewise-mixed",
+      "dev-synthetic-polynomial-d2",
+      "dev-synthetic-recurrence"
+    ],
+    "split": "development"
+  },
+  "measurement": {
+    "cpu": "GNU time %U + %S, decimal seconds",
+    "gnu_time_path": "/usr/bin/time",
+    "gnu_time_sha256": "3b11dec50514a8473e9f6efa7a34d584d0657538c09988f61b72d38ad4991a10",
+    "gnu_time_version": "time (GNU Time) UNKNOWN",
+    "host_preflight": {
+      "background_processes_quiesced": false,
+      "cpu_affinity_pinned": false,
+      "load_average": {
+        "fifteen_minutes": 5.45263671875,
+        "five_minutes": 6.00927734375,
+        "one_minute": 4.8984375
+      },
+      "logical_cpus": 16,
+      "resource_isolation": false
+    },
+    "limitations": [
+      "GNU time max RSS is not the sum of concurrently resident descendants",
+      "filesystem cache is not dropped between randomized trials",
+      "CPU frequency/governor is not controlled by this runner",
+      "host background processes are not quiesced and CPU affinity is not pinned",
+      "energy and hardware counters are not measured",
+      "wrapper spawn/collection overhead is included in wall time"
+    ],
+    "method": "gnu-time-v1-monotonic-wall",
+    "peak_rss": "GNU time %M multiplied by 1024",
+    "wall_clock": "time.monotonic_ns around GNU time wrapper"
+  },
+  "protocol": {
+    "expected_delta_fraction": null,
+    "interleaved": true,
+    "native_ablation_ids": [
+      "none"
+    ],
+    "native_limit_policy": {
+      "archive_headroom_bytes": 1048576,
+      "coordinate_padding_bytes": 7,
+      "manifest_integrity_checked_before_execution": true,
+      "max_archive": "2 * max_input_and_output + archive_headroom_bytes",
+      "max_input_and_output": "manifest_bytes + coordinate_padding_bytes",
+      "u64_arithmetic_checked": true
+    },
+    "native_thread_selectors": [
+      "1"
+    ],
+    "repetitions": 10,
+    "schedule_trials": 550,
+    "seed": 1297748005,
+    "warmups": 1
+  },
+  "result": {
+    "complete": true,
+    "raw_jsonl": "mathsvg/results/raw/development-pilot-v4-stable.jsonl",
+    "raw_jsonl_bytes": 1246389,
+    "raw_jsonl_sha256": "2a4614828cbb221a3cc13a95584e28fbb5419ff53d10caaada2f18e8dd0dd229",
+    "status_counts": {
+      "failed": 0,
+      "ok": 550,
+      "timeout": 0,
+      "unavailable": 0
+    },
+    "trial_rows": 550
+  },
+  "runner_performed_tuning": false,
+  "runner_sha256": "79bf2db5e45a345330a1ff4ebbe076cb75f545f64c1becf687ff0283171e7dd8",
+  "schema_version": 1,
+  "source": {
+    "branch": "mathsvg-absolute",
+    "commit": "36f84685dc00064dae9a239face7e8eff797ed28",
+    "dirty": true,
+    "status_sha256": "5c789883a5d212ac374818733261b101c5b7eff2f6b898ad519c0c2baff71bb3"
+  },
+  "source_after": {
+    "branch": "mathsvg-absolute",
+    "commit": "36f84685dc00064dae9a239face7e8eff797ed28",
+    "dirty": true,
+    "status_sha256": "5c789883a5d212ac374818733261b101c5b7eff2f6b898ad519c0c2baff71bb3"
+  },
+  "source_stable_during_run": true
+}

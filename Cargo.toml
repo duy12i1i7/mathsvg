@@ -1,0 +1,63 @@
+[workspace]
+members = [
+    "crates/mathzip-core",
+    "crates/mathzip-cli",
+    "crates/mathzip-bench",
+    "mathsvg/crates/mathsvg-core",
+    "mathsvg/crates/mathsvg-dsl",
+    "mathsvg/crates/mathsvg-entropy",
+    "mathsvg/crates/mathsvg-evaluator",
+    "mathsvg/crates/mathsvg-functions",
+    "mathsvg/crates/mathsvg-container",
+    "mathsvg/crates/mathsvg-coordinates",
+    "mathsvg/crates/mathsvg-residual",
+    "mathsvg/crates/mathsvg-graph",
+    "mathsvg/crates/mathsvg-optimizer",
+    "mathsvg/crates/mathsvg-symbolic",
+    "mathsvg/crates/mathsvg-kernels",
+    "mathsvg/crates/mathsvg-simd",
+    "mathsvg/crates/mathsvg-stream",
+    "mathsvg/crates/mathsvg-cli",
+    "mathsvg/crates/mathsvg-bench",
+]
+resolver = "2"
+exclude = ["fuzz"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+license = "MIT"
+authors = ["MathZip contributors"]
+
+[workspace.dependencies]
+anyhow = "1.0"
+clap = { version = "4.5", features = ["derive"] }
+crc32fast = "1.4"
+hex = "0.4"
+mathzip-core = { path = "crates/mathzip-core" }
+mathsvg-core = { path = "mathsvg/crates/mathsvg-core" }
+mathsvg-dsl = { path = "mathsvg/crates/mathsvg-dsl" }
+mathsvg-entropy = { path = "mathsvg/crates/mathsvg-entropy" }
+mathsvg-evaluator = { path = "mathsvg/crates/mathsvg-evaluator" }
+mathsvg-functions = { path = "mathsvg/crates/mathsvg-functions" }
+mathsvg-container = { path = "mathsvg/crates/mathsvg-container" }
+mathsvg-coordinates = { path = "mathsvg/crates/mathsvg-coordinates" }
+mathsvg-residual = { path = "mathsvg/crates/mathsvg-residual" }
+mathsvg-graph = { path = "mathsvg/crates/mathsvg-graph" }
+mathsvg-optimizer = { path = "mathsvg/crates/mathsvg-optimizer" }
+mathsvg-symbolic = { path = "mathsvg/crates/mathsvg-symbolic" }
+mathsvg-kernels = { path = "mathsvg/crates/mathsvg-kernels" }
+mathsvg-stream = { path = "mathsvg/crates/mathsvg-stream" }
+proptest = "1.7"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+sha2 = "0.10"
+tempfile = "3.20"
+thiserror = "2.0"
+zstd = "0.13"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = true

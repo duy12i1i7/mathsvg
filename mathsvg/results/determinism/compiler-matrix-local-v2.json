@@ -1,0 +1,81 @@
+{
+  "archive_comparison": {
+    "all_restored_sha256": "7467306ee0feed4971260f3c87421154a05be571d944e9cb021a5713700c38f0",
+    "archive_byte_identical": true,
+    "archive_bytes": 72196,
+    "command_template": "{binary} compress --profile balanced --threads 1 {input} {archive}",
+    "input": "datasets/data/canterbury/alice29.txt",
+    "input_bytes": 152089,
+    "input_sha256": "7467306ee0feed4971260f3c87421154a05be571d944e9cb021a5713700c38f0",
+    "rust_1_85_archive_sha256": "ab9b07b3e308c3f6428b1d7de448e5eff558d1d45947fe9b4bbb69b3894b8916",
+    "rust_1_85_decodes_stable_archive": "pass",
+    "rust_1_85_self_decode": "pass",
+    "stable_archive_sha256": "ab9b07b3e308c3f6428b1d7de448e5eff558d1d45947fe9b4bbb69b3894b8916",
+    "stable_decodes_rust_1_85_archive": "pass",
+    "stable_self_decode": "pass"
+  },
+  "evidence_scope": "development",
+  "experiment_id": "compiler-matrix-local-v2",
+  "holdout_payload_inspected": false,
+  "limitations": [
+    "Both compilers ran on the same physical host.",
+    "The archive comparison is a one-input development spot check, not the full 100-repetition Gate 1 matrix.",
+    "ARM64 and an independent second machine remain unavailable.",
+    "The source tree is dirty, so the global publishable correctness gate remains incomplete."
+  ],
+  "machine": {
+    "architecture": "x86_64",
+    "arm64": false,
+    "independent_second_machine": false,
+    "machine_id": "local-x86-64",
+    "target": "x86_64-unknown-linux-gnu"
+  },
+  "schema": "mathsvg-local-compiler-matrix-v1",
+  "source_identity": {
+    "base_git_commit": "36f84685dc00064dae9a239face7e8eff797ed28",
+    "note": "Both compilers built the same workspace source/configuration content snapshot 1f6bbe151097d90b5601849c4289ab2ef2162bd9ad944ad65ed2d29fda1cd457.",
+    "rust_sources_changed_during_matrix": false,
+    "worktree_state": "dirty"
+  },
+  "status": "development-pass-global-gate-incomplete",
+  "toolchains": [
+    {
+      "cargo_bytes": 42839824,
+      "cargo_path": "/home/ase/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo",
+      "cargo_sha256": "828980723df339d62434390e9fb8ef8831036583343ae2316b7ab5646b5c1953",
+      "id": "stable-1.97.1",
+      "llvm_version": "22.1.6",
+      "release_binary_bytes": 1740432,
+      "release_binary_sha256": "87709b813b8a43bf1daefec0720edb5cc19514800c17e2f8426e1ed06212516c",
+      "rustc_bytes": 645000,
+      "rustc_commit": "8bab26f4f68e0e26f0bb7960be334d5b520ea452",
+      "rustc_path": "/home/ase/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/rustc",
+      "rustc_sha256": "d3a664c970a9fd8361b64194861bebc1ae37b9054e5ee3400dc1c9e691797eea",
+      "rustc_version": "rustc 1.97.1 (8bab26f4f 2026-07-14)"
+    },
+    {
+      "cargo_bytes": 35341752,
+      "cargo_path": "/home/ase/.rustup/toolchains/1.85-x86_64-unknown-linux-gnu/bin/cargo",
+      "cargo_sha256": "87e9ff02f95ea17d877e7c4eeb0f365f50fe3827f5afec132131ff3b8031a57e",
+      "id": "rust-1.85.1",
+      "llvm_version": "19.1.7",
+      "release_binary_bytes": 1866272,
+      "release_binary_sha256": "2b0fe136a3cd5ad430552beec34a8f820c2eaf702b4411b02d66de462cacffef",
+      "rustc_bytes": 643384,
+      "rustc_commit": "4eb161250e340c8f48f66e2b929ef4a5bed7c181",
+      "rustc_path": "/home/ase/.rustup/toolchains/1.85-x86_64-unknown-linux-gnu/bin/rustc",
+      "rustc_sha256": "f8d033fd72e878ec60493788c8bffec2e6c154dcab6f0cb4c145af8ada26a7ed",
+      "rustc_version": "rustc 1.85.1 (4eb161250 2025-03-15)"
+    }
+  ],
+  "workspace_test": {
+    "command": "'CARGO_TARGET_DIR={workdir}/target-rust-1.85' RUSTC=/home/ase/.rustup/toolchains/1.85-x86_64-unknown-linux-gnu/bin/rustc RUSTDOC=/home/ase/.rustup/toolchains/1.85-x86_64-unknown-linux-gnu/bin/rustdoc /home/ase/.rustup/toolchains/1.85-x86_64-unknown-linux-gnu/bin/cargo test --locked --offline --workspace --release",
+    "exit_code": 0,
+    "failed": 0,
+    "ignored": 2,
+    "ignored_reason": "Two explicitly development-only oracle scans are opt-in.",
+    "passed": 293,
+    "toolchain": "rust-1.85.1",
+    "working_directory": "."
+  }
+}

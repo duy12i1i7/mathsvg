@@ -1,0 +1,444 @@
+{
+  "codec_definitions": [
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "163fc78cbadc0fdb5888781080baade7b576811d"
+      },
+      "compression_command_template": [
+        "<repo>/target/release/mathzip",
+        "compress",
+        "--mode",
+        "balanced",
+        "--max-input-bytes",
+        "8589934592",
+        "--no-sync",
+        "--force",
+        "--models",
+        "raw,constant,affine,polynomial,periodic,recurrence,piecewise-linear,run,sparse,copy",
+        "--residual-coders",
+        "raw,rle,zero-run,sparse,bit-pack",
+        "--transforms",
+        "identity,delta,xor,bit-plane,stride",
+        "--segmentation",
+        "adaptive",
+        "{input}",
+        "{archive}"
+      ],
+      "decompression_command_template": [
+        "<repo>/target/release/mathzip",
+        "decompress",
+        "--max-archive-bytes",
+        "17179869184",
+        "--max-output-bytes",
+        "8589934592",
+        "--max-segments",
+        "8388608",
+        "--no-sync",
+        "--force",
+        "{archive}",
+        "{restored}"
+      ],
+      "executable": "<repo>/target/release/mathzip",
+      "executable_sha256": "c4cc0e9b8a8469f70e5c9d594b127f5bf2eb6ad6a402388bb4595772197c2437",
+      "family": "mathzip",
+      "level": "balanced",
+      "name": "mathzip-balanced-copy-on",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "Copy/reference enabled"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "163fc78cbadc0fdb5888781080baade7b576811d"
+      },
+      "compression_command_template": [
+        "<repo>/target/release/mathzip",
+        "compress",
+        "--mode",
+        "balanced",
+        "--max-input-bytes",
+        "8589934592",
+        "--no-sync",
+        "--force",
+        "--models",
+        "raw,constant,affine,polynomial,periodic,recurrence,piecewise-linear,run,sparse,copy",
+        "--residual-coders",
+        "raw,rle,zero-run,sparse,bit-pack",
+        "--transforms",
+        "identity,delta,xor,bit-plane,stride",
+        "--segmentation",
+        "adaptive",
+        "--no-copy-model",
+        "{input}",
+        "{archive}"
+      ],
+      "decompression_command_template": [
+        "<repo>/target/release/mathzip",
+        "decompress",
+        "--max-archive-bytes",
+        "17179869184",
+        "--max-output-bytes",
+        "8589934592",
+        "--max-segments",
+        "8388608",
+        "--no-sync",
+        "--force",
+        "{archive}",
+        "{restored}"
+      ],
+      "executable": "<repo>/target/release/mathzip",
+      "executable_sha256": "c4cc0e9b8a8469f70e5c9d594b127f5bf2eb6ad6a402388bb4595772197c2437",
+      "family": "mathzip",
+      "level": "balanced",
+      "name": "mathzip-balanced-copy-off",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "Copy/reference disabled"
+    },
+    {
+      "available": true,
+      "compression_command_template": [
+        "<external>/zstd",
+        "-q",
+        "-f",
+        "-T1",
+        "-3",
+        "-c",
+        "{input}"
+      ],
+      "decompression_command_template": [
+        "<external>/zstd",
+        "-q",
+        "-d",
+        "-c",
+        "{archive}"
+      ],
+      "executable": "<external>/zstd",
+      "executable_sha256": "7c5468b370f7c47eda07281e3437fafc568f95d10420051e3aa522709f9342c5",
+      "family": "zstd",
+      "level": "default",
+      "name": "zstd-default",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": ""
+    }
+  ],
+  "codecs": [
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "163fc78cbadc0fdb5888781080baade7b576811d"
+      },
+      "codec": "mathzip-balanced-copy-on",
+      "executable_path_sha256": "f407543aa5b03eece467b942a235f70bb47cca3d8974befce366cd2a81475d59",
+      "executable_sha256": "c4cc0e9b8a8469f70e5c9d594b127f5bf2eb6ad6a402388bb4595772197c2437",
+      "family": "mathzip",
+      "level": "balanced",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "Copy/reference enabled"
+    },
+    {
+      "available": true,
+      "build_info": {
+        "package_version": "0.1.0",
+        "source_dirty": false,
+        "source_revision": "163fc78cbadc0fdb5888781080baade7b576811d"
+      },
+      "codec": "mathzip-balanced-copy-off",
+      "executable_path_sha256": "f407543aa5b03eece467b942a235f70bb47cca3d8974befce366cd2a81475d59",
+      "executable_sha256": "c4cc0e9b8a8469f70e5c9d594b127f5bf2eb6ad6a402388bb4595772197c2437",
+      "family": "mathzip",
+      "level": "balanced",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": "Copy/reference disabled"
+    },
+    {
+      "available": true,
+      "build_info": null,
+      "codec": "zstd-default",
+      "executable_path_sha256": "2dba966a29744162c7d83f3696368dd6bb8a02ae694cae6a195eb86a21f09611",
+      "executable_sha256": "7c5468b370f7c47eda07281e3437fafc568f95d10420051e3aa522709f9342c5",
+      "family": "zstd",
+      "level": "default",
+      "threads": 1,
+      "unavailable_reason": null,
+      "variant": ""
+    }
+  ],
+  "config_sha256": "c825d7e1b243c870e8342966cd0d5198453850e6588e969c9eb08aa669554965",
+  "config_snapshot": {
+    "benchmark": {
+      "collect_mathzip_inspection": true,
+      "record_absolute_paths": false,
+      "repeats": 3,
+      "threads": [
+        1
+      ],
+      "timeout_seconds": 3600,
+      "warmups": 1
+    },
+    "codecs": [
+      {
+        "base": "mathzip-balanced",
+        "compress_args": [
+          "--models",
+          "raw,constant,affine,polynomial,periodic,recurrence,piecewise-linear,run,sparse,copy",
+          "--residual-coders",
+          "raw,rle,zero-run,sparse,bit-pack",
+          "--transforms",
+          "identity,delta,xor,bit-plane,stride",
+          "--segmentation",
+          "adaptive"
+        ],
+        "name": "mathzip-balanced-copy-on",
+        "variant": "Copy/reference enabled"
+      },
+      {
+        "base": "mathzip-balanced",
+        "compress_args": [
+          "--models",
+          "raw,constant,affine,polynomial,periodic,recurrence,piecewise-linear,run,sparse,copy",
+          "--residual-coders",
+          "raw,rle,zero-run,sparse,bit-pack",
+          "--transforms",
+          "identity,delta,xor,bit-plane,stride",
+          "--segmentation",
+          "adaptive",
+          "--no-copy-model"
+        ],
+        "name": "mathzip-balanced-copy-off",
+        "variant": "Copy/reference disabled"
+      },
+      "zstd-default"
+    ],
+    "datasets": [],
+    "inputs": [
+      {
+        "corpus": "git_snapshots_individual",
+        "input_license": "CC0-1.0",
+        "input_provenance": "python/mathzip_bench/auxiliary.py and datasets/generated/git_snapshots/manifest.json",
+        "patterns": [
+          "versions/**/*"
+        ],
+        "required": true,
+        "root": "datasets/generated/git_snapshots"
+      },
+      {
+        "corpus": "git_snapshots_combined",
+        "input_license": "CC0-1.0",
+        "input_provenance": "python/mathzip_bench/auxiliary.py and datasets/generated/git_snapshots/manifest.json",
+        "patterns": [
+          "combined/*.bin"
+        ],
+        "required": true,
+        "root": "datasets/generated/git_snapshots"
+      }
+    ],
+    "output_dir": "benchmarks/results/git-copy-ablation",
+    "profile": "git-copy-ablation",
+    "schema_version": 1
+  },
+  "expected_grid_sha256": "ebf4c7483b772fe0f5b24db914ba5a2f152567bd7e3b51ea2f48df4fe930567e",
+  "host": {
+    "cpu_model": "Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz",
+    "execution_state_sha256": "171099918ff6326b92a04c253616b28f60081dce68d24cc6f528b75e47605280",
+    "hostname_sha256": "2b9c15eb89efe0e0ad2c7b3279bf92247e35e4a92160ca8678d974e11a10ac6b",
+    "logical_cores": 16,
+    "os": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "physical_cores": 16,
+    "ram_bytes": 16715317248
+  },
+  "initial_source_metadata": {
+    "git_dirty": false,
+    "git_revision": "163fc78cbadc0fdb5888781080baade7b576811d",
+    "git_status_entry_count": 0,
+    "revision_available": true,
+    "selection_method": "git ls-files (tracked plus untracked, Git-ignored excluded)",
+    "source_dirty": false,
+    "source_file_count": 640,
+    "source_revision": "163fc78cbadc0fdb5888781080baade7b576811d",
+    "source_tree_manifest": null,
+    "source_tree_manifest_reason": "omitted because a Git revision identifies the clean base; tree hash still recorded",
+    "source_tree_sha256": "6397e3d01b12d567f54c378f036e785ee107916f8d9ab873b13f41a1031e0fd2"
+  },
+  "initial_system_metadata": {
+    "architecture": "x86_64",
+    "cargo_version": "cargo 1.97.1 (c980f4866 2026-06-30)",
+    "cc_version": "cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "collected_at_utc": "2026-07-24T14:08:10.914290+00:00",
+    "compressors": {
+      "7z": {
+        "path": null,
+        "version": null
+      },
+      "7zz": {
+        "path": null,
+        "version": null
+      },
+      "brotli": {
+        "path": null,
+        "version": null
+      },
+      "bzip2": {
+        "path": "<external>/bzip2",
+        "version": "bzip2, a block-sorting file compressor.  Version 1.0.8, 13-Jul-2019."
+      },
+      "gzip": {
+        "path": "<external>/gzip",
+        "version": "gzip 1.12"
+      },
+      "lz4": {
+        "path": null,
+        "version": null
+      },
+      "xz": {
+        "path": "<external>/xz",
+        "version": "xz (XZ Utils) 5.4.5"
+      },
+      "zstd": {
+        "path": "<external>/zstd",
+        "version": "*** Zstandard CLI (64-bit) v1.5.5, by Yann Collet ***"
+      }
+    },
+    "container": {
+      "cgroup": "0::/init.scope",
+      "detected": false,
+      "image_digest": null,
+      "image_digest_capture": "unavailable: runtime did not expose an image digest"
+    },
+    "cpu_affinity": {
+      "logical_cpu_count": 16,
+      "logical_cpu_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "cpu_governors": null,
+    "cpu_model": "Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz",
+    "hostname": "redacted",
+    "kernel": "7.0.0-28-generic",
+    "logical_cores": 16,
+    "metric_unavailable": [
+      {
+        "field": "cpu_governors",
+        "reason": "cpufreq governor files unavailable"
+      },
+      {
+        "field": "container.image_digest",
+        "reason": "container runtime did not expose an image digest"
+      }
+    ],
+    "os": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "physical_cores": 16,
+    "power_supplies": [
+      {
+        "capacity": null,
+        "name": "ACAD",
+        "online": "1",
+        "status": null,
+        "type": "Mains"
+      }
+    ],
+    "python_executable": "<external>/python3",
+    "python_version": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+    "ram_bytes": 16715317248,
+    "relevant_environment": {
+      "BZIP": null,
+      "BZIP2": null,
+      "CFLAGS": null,
+      "CPPFLAGS": null,
+      "CXXFLAGS": null,
+      "GLIBC_TUNABLES": null,
+      "GZIP": null,
+      "LANG": "C.UTF-8",
+      "LC_ALL": "C.UTF-8",
+      "LC_NUMERIC": null,
+      "LDFLAGS": null,
+      "LD_LIBRARY_PATH": null,
+      "LD_PRELOAD": null,
+      "MALLOC_ARENA_MAX": null,
+      "MALLOC_CONF": null,
+      "MATHZIP_THREADS": null,
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "PYTHONHASHSEED": null,
+      "RAYON_NUM_THREADS": null,
+      "RUSTDOCFLAGS": null,
+      "RUSTFLAGS": null,
+      "TZ": null,
+      "XZ_DEFAULTS": null,
+      "XZ_OPT": null,
+      "ZSTD_NBTHREADS": null
+    },
+    "rustc_version": "rustc 1.97.1 (8bab26f4f 2026-07-14)",
+    "storage": {
+      "filesystem_type": "ext4",
+      "free_bytes": 70776274944,
+      "measured_path": "<repo>/.",
+      "mount_point": "<external>/",
+      "mount_source": "<external>/sda2",
+      "total_bytes": 104384327680,
+      "used_bytes": 29086601216
+    },
+    "swap_bytes": 4054839296
+  },
+  "methodology_policy": {
+    "allow_short_run": false,
+    "codec_thread_keys": [
+      [
+        "mathzip-balanced-copy-on",
+        1
+      ],
+      [
+        "mathzip-balanced-copy-off",
+        1
+      ],
+      [
+        "zstd-default",
+        1
+      ]
+    ],
+    "collect_mathzip_inspection": true,
+    "configured_threads": [
+      1
+    ],
+    "record_absolute_paths": false,
+    "repeats": 3,
+    "require_publication_evidence": true,
+    "selected_codecs": null,
+    "timeout_seconds_per_operation": 3600.0,
+    "warmups": 1
+  },
+  "schema_version": "mathzip-benchmark-run-identity-v1",
+  "source": {
+    "source_dirty": false,
+    "source_file_count": 640,
+    "source_revision": "163fc78cbadc0fdb5888781080baade7b576811d",
+    "source_tree_sha256": "6397e3d01b12d567f54c378f036e785ee107916f8d9ab873b13f41a1031e0fd2"
+  }
+}

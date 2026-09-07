@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "name": "silesia",
+  "description": "The 12-file Silesia compression corpus.",
+  "homepage": "https://sun.aei.polsl.pl/~sdeor/index.php?page=silesia",
+  "license": "The corpus aggregates independently sourced files. Consult the upstream Silesia description for per-file provenance and redistribution terms.",
+  "archive": {
+    "urls": [
+      "https://www.mattmahoney.net/dc/silesia.zip"
+    ],
+    "filename": "silesia.zip",
+    "type": "zip",
+    "size_bytes": 67633896,
+    "max_download_bytes": 68000000,
+    "max_uncompressed_bytes": 220000000,
+    "max_entries": 32,
+    "max_compression_ratio": 1000,
+    "checksums": {
+      "sha256": "7d1dd71bfecda66a0ca30d863ed031809f67ecf12717a60fe72c1cc39e28434e"
+    },
+    "members": [
+      "dickens",
+      "mozilla",
+      "mr",
+      "nci",
+      "ooffice",
+      "osdb",
+      "reymont",
+      "samba",
+      "sao",
+      "webster",
+      "x-ray",
+      "xml"
+    ]
+  }
+}

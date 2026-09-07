@@ -1,0 +1,486 @@
+{
+  "ablation_catalog": {
+    "path": "mathsvg/configs/ablation/catalog.toml",
+    "selected": true,
+    "sha256": "153553ae0338b0fc4eb8051931dabbb8cf482d2ada9c8a6b7853ea0a2a28681c"
+  },
+  "baseline_catalog": {
+    "path": "mathsvg/configs/baselines.toml",
+    "sha256": "430f84dc5fb23343ced8c25225ed6b465873033488ea718886a01060ba693324"
+  },
+  "baseline_inventory": {
+    "path": "mathsvg/results/manifests/baseline-inventory.json",
+    "sha256": "8eaf8559c0798bed08ca8a6b920d795c0716cd2a0002e4546aa21977d9e4c295"
+  },
+  "codecs": [
+    {
+      "ablation_id": "no-residual",
+      "available": true,
+      "codec_id": "mathsvg",
+      "config_id": "structured-ablation-no-residual-v1",
+      "config_sha256": "eeca827242fbd6cf1d4701f0d39e3c164058ca5408cd95a8cbd7360b2bf6430d",
+      "decode_argv": [
+        "decompress",
+        "--max-archive-bytes",
+        "{max_archive_bytes}",
+        "--max-output-bytes",
+        "{max_output_bytes}",
+        "{archive}",
+        "{restored}"
+      ],
+      "decode_stdout": false,
+      "disabled_algorithms": [
+        "residual"
+      ],
+      "encode_argv": [
+        "compress",
+        "--profile",
+        "structured",
+        "--threads",
+        "1",
+        "--disable",
+        "residual",
+        "--max-input-bytes",
+        "{max_input_bytes}",
+        "{input}",
+        "{archive}"
+      ],
+      "encode_stdout": false,
+      "executable": "/home/ase/zipp/target/release/mathsvg",
+      "executable_sha256": "3ad382b39a954aa8130f48c8058e4a3216d165db22f6acecb37a2c57b28ce1b7",
+      "native_mathsvg": true,
+      "profile": "structured",
+      "runtime_profile": {
+        "ablation": {
+          "disabled_algorithms": [
+            "residual"
+          ],
+          "id": "without-residual"
+        },
+        "backend_policy": {
+          "compression_search": "scalar",
+          "decoder_available": [
+            "scalar",
+            "simd",
+            "auto"
+          ],
+          "decoder_default": "scalar"
+        },
+        "container_version": 1,
+        "coordinate_search": {
+          "enabled": true,
+          "function_max_exceptions": 32,
+          "function_max_ledger_entries": 256,
+          "function_max_period": 16,
+          "function_work_budget": 1048576,
+          "max_candidates": 64,
+          "max_channels": 16,
+          "max_peak_lags": 8,
+          "max_probe_bytes": 8192,
+          "max_probe_lag": 64
+        },
+        "dsl_version": 1,
+        "emission_gates": {
+          "coordinates": true,
+          "graph": false,
+          "residual": false,
+          "symbolic": false,
+          "whole_block_entropy": true,
+          "whole_block_functions": true
+        },
+        "entropy_search": {
+          "add_only_policy": "C4L",
+          "baseline_policy": "G1",
+          "chain_depth": 4,
+          "decoder_semantics_changed": false,
+          "maximum_additional_work_per_input_byte_per_walk": 13,
+          "maximum_policy_walks": 2,
+          "one_byte_lazy": true,
+          "parser_scratch_bytes": 524288,
+          "wire_opcode": 7
+        },
+        "format_limits": {
+          "max_block_output_bytes": 16777216,
+          "max_block_payload_bytes": 33554432,
+          "max_definitions": 262144,
+          "max_edges": 2097152,
+          "max_fan_out": 65536,
+          "max_graph_depth": 256,
+          "max_node_payload_bytes": 33554432,
+          "max_nodes": 1048576,
+          "max_parameter_bytes": 16777216,
+          "max_pattern_bytes": 16777216,
+          "max_recurrence_order": 16384,
+          "max_temporary_bytes": 67108864,
+          "max_work": 1099511627776
+        },
+        "function_search": {
+          "max_exceptions": 64,
+          "max_ledger_entries": 1024,
+          "max_period": 32,
+          "max_recurrence_order": 2,
+          "recurrence_coefficients": [
+            0,
+            1,
+            255
+          ],
+          "work_budget": 1048576
+        },
+        "implemented_catalogue": {
+          "coordinates": [
+            "identity",
+            "stride",
+            "byte_plane",
+            "bit_plane"
+          ],
+          "entropy": [
+            "raw",
+            "byte_rle",
+            "zero_run",
+            "sparse_zero",
+            "bit_pack",
+            "lz_tokens",
+            "canonical_huffman",
+            "lz_huffman"
+          ],
+          "experimental": [
+            "recursive_residual",
+            "shared_dag",
+            "symbolic_synthesis"
+          ],
+          "functions": [
+            "literal",
+            "entropy_literal",
+            "const",
+            "linear",
+            "periodic",
+            "recurrence",
+            "exceptions"
+          ]
+        },
+        "optimizer": {
+          "block_bytes": 1048576,
+          "max_candidates": 16384,
+          "max_ledger_entries": 65536,
+          "max_segments_per_block": 32,
+          "max_states": 131072,
+          "microblock_bytes": 4096,
+          "work_budget": 300000000
+        },
+        "parallel": {
+          "default_threads": 1,
+          "deterministic_source_order_merge": true,
+          "maximum_threads": 64
+        },
+        "profile": "structured",
+        "residual_search": {
+          "domains": [
+            "add-mod-256",
+            "xor"
+          ],
+          "enabled": false,
+          "gate": "experimental",
+          "max_depth": 2,
+          "max_ledger_entries": 4096,
+          "max_projection_descriptors": 128,
+          "max_projection_period": 16,
+          "max_recurrence_order": 2,
+          "max_state_bytes": 67108864,
+          "max_states": 64,
+          "minimum_gain_bytes": 1,
+          "recurrence_coefficients": [
+            0,
+            1,
+            255
+          ],
+          "work_budget": 16777216
+        },
+        "schema_version": 1
+      },
+      "runtime_profile_sha256": "c87adfde57cbbe2cd113993812d003789240176dc9e674a23eaebf91ee699025",
+      "threads": 1,
+      "unavailable_reason": "",
+      "version": "mathsvg 0.1.0"
+    },
+    {
+      "ablation_id": "none",
+      "available": true,
+      "codec_id": "mathsvg",
+      "config_id": "structured-v1",
+      "config_sha256": "2adf32cfafd76389969db2d6d6d9eb6d5a015b71e78e2c1805afb08c654eb13b",
+      "decode_argv": [
+        "decompress",
+        "--max-archive-bytes",
+        "{max_archive_bytes}",
+        "--max-output-bytes",
+        "{max_output_bytes}",
+        "{archive}",
+        "{restored}"
+      ],
+      "decode_stdout": false,
+      "disabled_algorithms": [],
+      "encode_argv": [
+        "compress",
+        "--profile",
+        "structured",
+        "--threads",
+        "1",
+        "--max-input-bytes",
+        "{max_input_bytes}",
+        "{input}",
+        "{archive}"
+      ],
+      "encode_stdout": false,
+      "executable": "/home/ase/zipp/target/release/mathsvg",
+      "executable_sha256": "3ad382b39a954aa8130f48c8058e4a3216d165db22f6acecb37a2c57b28ce1b7",
+      "native_mathsvg": true,
+      "profile": "structured",
+      "runtime_profile": {
+        "ablation": {
+          "disabled_algorithms": [],
+          "id": "none"
+        },
+        "backend_policy": {
+          "compression_search": "scalar",
+          "decoder_available": [
+            "scalar",
+            "simd",
+            "auto"
+          ],
+          "decoder_default": "scalar"
+        },
+        "container_version": 1,
+        "coordinate_search": {
+          "enabled": true,
+          "function_max_exceptions": 32,
+          "function_max_ledger_entries": 256,
+          "function_max_period": 16,
+          "function_work_budget": 1048576,
+          "max_candidates": 64,
+          "max_channels": 16,
+          "max_peak_lags": 8,
+          "max_probe_bytes": 8192,
+          "max_probe_lag": 64
+        },
+        "dsl_version": 1,
+        "emission_gates": {
+          "coordinates": true,
+          "graph": false,
+          "residual": true,
+          "symbolic": false,
+          "whole_block_entropy": true,
+          "whole_block_functions": true
+        },
+        "entropy_search": {
+          "add_only_policy": "C4L",
+          "baseline_policy": "G1",
+          "chain_depth": 4,
+          "decoder_semantics_changed": false,
+          "maximum_additional_work_per_input_byte_per_walk": 13,
+          "maximum_policy_walks": 2,
+          "one_byte_lazy": true,
+          "parser_scratch_bytes": 524288,
+          "wire_opcode": 7
+        },
+        "format_limits": {
+          "max_block_output_bytes": 16777216,
+          "max_block_payload_bytes": 33554432,
+          "max_definitions": 262144,
+          "max_edges": 2097152,
+          "max_fan_out": 65536,
+          "max_graph_depth": 256,
+          "max_node_payload_bytes": 33554432,
+          "max_nodes": 1048576,
+          "max_parameter_bytes": 16777216,
+          "max_pattern_bytes": 16777216,
+          "max_recurrence_order": 16384,
+          "max_temporary_bytes": 67108864,
+          "max_work": 1099511627776
+        },
+        "function_search": {
+          "max_exceptions": 64,
+          "max_ledger_entries": 1024,
+          "max_period": 32,
+          "max_recurrence_order": 2,
+          "recurrence_coefficients": [
+            0,
+            1,
+            255
+          ],
+          "work_budget": 1048576
+        },
+        "implemented_catalogue": {
+          "coordinates": [
+            "identity",
+            "stride",
+            "byte_plane",
+            "bit_plane"
+          ],
+          "entropy": [
+            "raw",
+            "byte_rle",
+            "zero_run",
+            "sparse_zero",
+            "bit_pack",
+            "lz_tokens",
+            "canonical_huffman",
+            "lz_huffman"
+          ],
+          "experimental": [
+            "recursive_residual",
+            "shared_dag",
+            "symbolic_synthesis"
+          ],
+          "functions": [
+            "literal",
+            "entropy_literal",
+            "const",
+            "linear",
+            "periodic",
+            "recurrence",
+            "exceptions"
+          ]
+        },
+        "optimizer": {
+          "block_bytes": 1048576,
+          "max_candidates": 16384,
+          "max_ledger_entries": 65536,
+          "max_segments_per_block": 32,
+          "max_states": 131072,
+          "microblock_bytes": 4096,
+          "work_budget": 300000000
+        },
+        "parallel": {
+          "default_threads": 1,
+          "deterministic_source_order_merge": true,
+          "maximum_threads": 64
+        },
+        "profile": "structured",
+        "residual_search": {
+          "domains": [
+            "add-mod-256",
+            "xor"
+          ],
+          "enabled": true,
+          "gate": "experimental",
+          "max_depth": 2,
+          "max_ledger_entries": 4096,
+          "max_projection_descriptors": 128,
+          "max_projection_period": 16,
+          "max_recurrence_order": 2,
+          "max_state_bytes": 67108864,
+          "max_states": 64,
+          "minimum_gain_bytes": 1,
+          "recurrence_coefficients": [
+            0,
+            1,
+            255
+          ],
+          "work_budget": 16777216
+        },
+        "schema_version": 1
+      },
+      "runtime_profile_sha256": "7a0eb73740c2e12ecfbe88d7872168ebdeee2514fb00973bbe5e93af77f52173",
+      "threads": 1,
+      "unavailable_reason": "",
+      "version": "mathsvg 0.1.0"
+    }
+  ],
+  "experiment_id": "development-arpl-integration-v2",
+  "holdout_payload_opened": false,
+  "machine": {
+    "architecture": "x86_64",
+    "machine_id": "local-x86-64",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  },
+  "manifest": {
+    "canonical_sha256": "88ed376ce82fbd9301fe2fce71dd0e3a4af5f837450b50b8489d678b19d5fca7",
+    "file_sha256": "e94bcc95b681519f4784b11b410d59a703882ebfaa971e251b5c714be2ba59a2",
+    "path": "mathsvg/results/manifests/development.csv",
+    "selected_dataset_ids": [
+      "dev-calgary-progc"
+    ],
+    "split": "development"
+  },
+  "measurement": {
+    "cpu": "GNU time %U + %S, decimal seconds",
+    "gnu_time_path": "/usr/bin/time",
+    "gnu_time_sha256": "3b11dec50514a8473e9f6efa7a34d584d0657538c09988f61b72d38ad4991a10",
+    "gnu_time_version": "time (GNU Time) UNKNOWN",
+    "host_preflight": {
+      "background_processes_quiesced": false,
+      "cpu_affinity_pinned": false,
+      "load_average": {
+        "fifteen_minutes": 6.22314453125,
+        "five_minutes": 6.62646484375,
+        "one_minute": 8.23876953125
+      },
+      "logical_cpus": 16,
+      "resource_isolation": false
+    },
+    "limitations": [
+      "GNU time max RSS is not the sum of concurrently resident descendants",
+      "filesystem cache is not dropped between randomized trials",
+      "CPU frequency/governor is not controlled by this runner",
+      "host background processes are not quiesced and CPU affinity is not pinned",
+      "energy and hardware counters are not measured",
+      "wrapper spawn/collection overhead is included in wall time"
+    ],
+    "method": "gnu-time-v1-monotonic-wall",
+    "peak_rss": "GNU time %M multiplied by 1024",
+    "wall_clock": "time.monotonic_ns around GNU time wrapper"
+  },
+  "protocol": {
+    "expected_delta_fraction": null,
+    "interleaved": true,
+    "native_ablation_ids": [
+      "none",
+      "no-residual"
+    ],
+    "native_limit_policy": {
+      "archive_headroom_bytes": 1048576,
+      "coordinate_padding_bytes": 7,
+      "manifest_integrity_checked_before_execution": true,
+      "max_archive": "2 * max_input_and_output + archive_headroom_bytes",
+      "max_input_and_output": "manifest_bytes + coordinate_padding_bytes",
+      "u64_arithmetic_checked": true
+    },
+    "native_thread_selectors": [
+      "1"
+    ],
+    "repetitions": 10,
+    "schedule_trials": 22,
+    "seed": 1297748005,
+    "warmups": 1
+  },
+  "result": {
+    "complete": true,
+    "raw_jsonl": "mathsvg/results/raw/development-arpl-integration-v2.jsonl",
+    "raw_jsonl_bytes": 49258,
+    "raw_jsonl_sha256": "0579f30c08417ecd94925f9bb3b06b4a2ff6c1dfc814575415c1e588bafdc4d2",
+    "status_counts": {
+      "failed": 0,
+      "ok": 22,
+      "timeout": 0,
+      "unavailable": 0
+    },
+    "trial_rows": 22
+  },
+  "runner_performed_tuning": false,
+  "runner_sha256": "ba92b3d8c1325c92af5de62b4ea3e4f5c2ca55c4f90902a16e2227c665f08e5f",
+  "schema_version": 1,
+  "source": {
+    "branch": "mathsvg-absolute",
+    "commit": "36f84685dc00064dae9a239face7e8eff797ed28",
+    "dirty": true,
+    "status_sha256": "a303ab9179dbef260fdd2f4d62ae2f54a13a8c69d565040ba424bb877077e4cd"
+  },
+  "source_after": {
+    "branch": "mathsvg-absolute",
+    "commit": "36f84685dc00064dae9a239face7e8eff797ed28",
+    "dirty": true,
+    "status_sha256": "a303ab9179dbef260fdd2f4d62ae2f54a13a8c69d565040ba424bb877077e4cd"
+  },
+  "source_stable_during_run": true
+}

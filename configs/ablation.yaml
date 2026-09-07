@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "profile": "ablation",
+  "output_dir": "benchmarks/results/ablation",
+  "datasets": [
+    {"name": "canterbury", "enabled": true}
+  ],
+  "benchmark": {
+    "warmups": 1,
+    "repeats": 3,
+    "timeout_seconds": 600,
+    "threads": [1],
+    "collect_mathzip_inspection": true,
+    "mathzip_metrics_mode": "inline",
+    "record_absolute_paths": false
+  },
+  "codecs": [
+    {
+      "name": "ablation-01-raw-only",
+      "base": "mathzip-balanced",
+      "variant": "01 raw only",
+      "compress_args": ["--models", "raw", "--residual-coders", "raw", "--transforms", "identity", "--segmentation", "fixed"]
+    },
+    {
+      "name": "ablation-02-residual-only",
+      "base": "mathzip-balanced",
+      "variant": "02 residual coder only",
+      "compress_args": ["--models", "raw", "--residual-coders", "raw,rle,zero-run,sparse,bit-pack", "--transforms", "identity", "--segmentation", "fixed"]
+    },
+    {
+      "name": "ablation-03-fixed-constant",
+      "base": "mathzip-balanced",
+      "variant": "03 fixed segmentation + constant",
+      "compress_args": ["--models", "raw,constant", "--transforms", "identity", "--segmentation", "fixed", "--segment-size", "4096"]
+    },
+    {
+      "name": "ablation-04-fixed-all-models",
+      "base": "mathzip-balanced",
+      "variant": "04 fixed segmentation + all models",
+      "compress_args": ["--models", "raw,constant,affine,polynomial,periodic,recurrence,piecewise-linear,run,sparse,copy", "--transforms", "identity", "--segmentation", "fixed", "--segment-size", "4096"]
+    },
+    {
+      "name": "ablation-05-adaptive-constant",
+      "base": "mathzip-balanced",
+      "variant": "05 adaptive segmentation + constant",
+      "compress_args": ["--models", "raw,constant", "--transforms", "identity", "--segmentation", "adaptive"]
+    },
+    {
+      "name": "ablation-06-adaptive-linear",
+      "base": "mathzip-balanced",
+      "variant": "06 adaptive + constant/linear",
+      "compress_args": ["--models", "raw,constant,affine", "--transforms", "identity", "--segmentation", "adaptive"]
+    },
+    {
+      "name": "ablation-07-add-polynomial",
+      "base": "mathzip-balanced",
+      "variant": "07 add polynomial",
+      "compress_args": ["--models", "raw,constant,affine,polynomial", "--transforms", "identity", "--segmentation", "adaptive"]
+    },
+    {
+      "name": "ablation-08-add-periodic",
+      "base": "mathzip-balanced",
+      "variant": "08 add periodic",
+      "compress_args": ["--models", "raw,constant,affine,polynomial,periodic", "--transforms", "identity", "--segmentation", "adaptive"]
+    },
+    {
+      "name": "ablation-09-add-recurrence",
+      "base": "mathzip-balanced",
+      "variant": "09 add recurrence",
+      "compress_args": ["--models", "raw,constant,affine,polynomial,periodic,recurrence", "--transforms", "identity", "--segmentation", "adaptive"]
+    },
+    {
+      "name": "ablation-10-add-bit-plane",
+      "base": "mathzip-balanced",
+      "variant": "10 add bit-plane",
+      "compress_args": ["--models", "raw,constant,affine,polynomial,periodic,recurrence", "--transforms", "identity,bit-plane", "--segmentation", "adaptive"]
+    },
+    {
+      "name": "ablation-11-add-stride",
+      "base": "mathzip-balanced",
+      "variant": "11 add stride transpose",
+      "compress_args": ["--models", "raw,constant,affine,polynomial,periodic,recurrence", "--transforms", "identity,bit-plane,stride", "--segmentation", "adaptive"]
+    },
+    {
+      "name": "ablation-12-add-copy",
+      "base": "mathzip-balanced",
+      "variant": "12 add copy/reference",
+      "compress_args": ["--models", "raw,constant,affine,polynomial,periodic,recurrence,copy", "--transforms", "identity,bit-plane,stride", "--segmentation", "adaptive"]
+    },
+    {
+      "name": "ablation-13-custom-residual",
+      "base": "mathzip-balanced",
+      "variant": "13 custom residual coders",
+      "compress_args": ["--residual-coders", "raw,rle,zero-run,sparse,bit-pack"]
+    },
+    {
+      "name": "ablation-14-zstd-residual",
+      "base": "mathzip-balanced",
+      "variant": "14 Zstd residual coder",
+      "compress_args": ["--residual-coders", "zstd"]
+    },
+    {
+      "name": "ablation-15-no-transform",
+      "base": "mathzip-balanced",
+      "variant": "15 identity transform only",
+      "compress_args": ["--transforms", "identity"]
+    },
+    {
+      "name": "ablation-16-no-adaptive-partition",
+      "base": "mathzip-balanced",
+      "variant": "16 fixed partition",
+      "compress_args": ["--segmentation", "fixed", "--segment-size", "4096"]
+    },
+    {
+      "name": "ablation-17-no-raw-fallback",
+      "base": "mathzip-balanced",
+      "variant": "17 no raw fallback",
+      "compress_args": ["--no-raw-fallback"]
+    },
+    {
+      "name": "ablation-18-fast",
+      "base": "mathzip-fast",
+      "variant": "18 fast mode"
+    },
+    {
+      "name": "ablation-19-balanced",
+      "base": "mathzip-balanced",
+      "variant": "19 balanced mode"
+    },
+    {
+      "name": "ablation-20-max",
+      "base": "mathzip-max",
+      "variant": "20 max mode"
+    },
+    "zstd-default"
+  ],
+  "inputs": [
+    {
+      "corpus": "synthetic_ablation",
+      "root": "datasets/synthetic",
+      "input_license": "CC0-1.0",
+      "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic/manifest.json",
+      "patterns": [
+        "constant_00/s0000065536_n000p000_*.bin",
+        "linear/s0000065536_n000p000_*.bin",
+        "linear/s0000065536_n005p000_*.bin",
+        "polynomial_d2/s0000065536_n000p000_*.bin",
+        "periodic/s0000065536_n000p000_*.bin",
+        "recurrence/s0000065536_n000p000_*.bin",
+        "piecewise_mixed/s0000065536_n001p000_*.bin",
+        "random/s0000065536_n000p000_*.bin"
+      ],
+      "required": true
+    },
+    {
+      "corpus": "canterbury_ablation",
+      "root": "datasets/data/canterbury",
+      "input_license": "Upstream files retain their original terms; see dataset manifest",
+      "input_provenance": "datasets/manifests/canterbury.json",
+      "patterns": ["alice29.txt", "kennedy.xls", "ptt5", "sum"],
+      "required": true
+    }
+  ]
+}

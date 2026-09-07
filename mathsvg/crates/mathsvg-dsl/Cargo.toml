@@ -1,0 +1,17 @@
+[package]
+name = "mathsvg-dsl"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "Canonical native procedural DAG syntax for MathSVG"
+
+[dependencies]
+mathsvg-core = { path = "../mathsvg-core" }
+mathsvg-coordinates = { path = "../mathsvg-coordinates" }
+mathsvg-entropy = { path = "../mathsvg-entropy" }
+
+[lib]
+path = "src/lib.rs"
+
+[lints.rust]
+unsafe_code = "forbid"

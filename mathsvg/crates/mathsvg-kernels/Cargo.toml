@@ -1,0 +1,12 @@
+[package]
+name = "mathsvg-kernels"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "Bit-exact scalar and native SIMD byte kernels for MathSVG"
+
+[lib]
+path = "src/lib.rs"
+
+[lints.rust]
+unsafe_op_in_unsafe_fn = "deny"

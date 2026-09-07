@@ -1,0 +1,87 @@
+{
+  "archive_sha256": "ab9b07b3e308c3f6428b1d7de448e5eff558d1d45947fe9b4bbb69b3894b8916",
+  "builds": {
+    "debug": {
+      "measurement_config_sha256": "687262fbe6a3ead64bfc61fc9a8decd58b21329d585c33087d91a5d6c6e5a368",
+      "path": "/home/ase/zipp/target/debug/mathsvg",
+      "runtime_profile_sha256": "fa64abd558df84770ecfd51bf3fa85437860d285d90e06218ea194b36be5d790",
+      "sha256": "d0ea91c10a191dad92805f2aa74270789a5962b56edb08addd8708a7fb18e965",
+      "version": "mathsvg 0.1.0"
+    },
+    "release": {
+      "measurement_config_sha256": "687262fbe6a3ead64bfc61fc9a8decd58b21329d585c33087d91a5d6c6e5a368",
+      "path": "/home/ase/zipp/target/release/mathsvg",
+      "runtime_profile_sha256": "fa64abd558df84770ecfd51bf3fa85437860d285d90e06218ea194b36be5d790",
+      "sha256": "87709b813b8a43bf1daefec0720edb5cc19514800c17e2f8426e1ed06212516c",
+      "version": "mathsvg 0.1.0"
+    }
+  },
+  "compiler": {
+    "blocker": "no build-time manifest cryptographically links this compiler identity to both pre-existing binaries",
+    "path": "/home/ase/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/rustc",
+    "provenance_status": "unverified",
+    "sha256": "d3a664c970a9fd8361b64194861bebc1ae37b9054e5ee3400dc1c9e691797eea",
+    "version": "rustc 1.97.1 (8bab26f4f 2026-07-14) | binary: rustc | commit-hash: 8bab26f4f68e0e26f0bb7960be334d5b520ea452 | commit-date: 2026-07-14 | host: x86_64-unknown-linux-gnu | release: 1.97.1 | LLVM version: 22.1.6"
+  },
+  "csv_path": "mathsvg/results/determinism/determinism-development-v5-c8l-final.csv",
+  "csv_sha256": "0b3c7a6245dbeab1a550e4f97c4f1f6257db06ac6eeaa50dfe82e78bac6b2079",
+  "evidence_scope": "development",
+  "evidence_status": "incomplete",
+  "experiment_id": "determinism-development-v5-c8l-final",
+  "failed_rows": 0,
+  "holdout_payload_inspected": false,
+  "immutable_inputs_sha256": "10fad70a365ab861280c94ad4431cc1b217b4d3f7966512e33609f30f309ce58",
+  "immutable_inputs_stable": true,
+  "input": {
+    "bytes": 152089,
+    "dataset_id": "dev-canterbury-alice29-txt",
+    "manifest_canonical_sha256": "88ed376ce82fbd9301fe2fce71dd0e3a4af5f837450b50b8489d678b19d5fca7",
+    "manifest_file_sha256": "e94bcc95b681519f4784b11b410d59a703882ebfaa971e251b5c714be2ba59a2",
+    "manifest_path": "mathsvg/results/manifests/development.csv",
+    "path": "datasets/data/canterbury/alice29.txt",
+    "sha256": "7467306ee0feed4971260f3c87421154a05be571d944e9cb021a5713700c38f0",
+    "split": "development"
+  },
+  "limitations": [
+    "the selected compiler executable is identified, but this development runner has no cryptographic build attestation linking it to the pre-existing debug/release binaries",
+    "the campaign covers one machine and one architecture",
+    "dirty-source evidence cannot satisfy the publishable gate"
+  ],
+  "machine": {
+    "architecture": "x86_64",
+    "machine_id": "local-x86-64",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39"
+  },
+  "matrix_reasons": [
+    "source tree is dirty",
+    "fewer than two compiler binaries are represented",
+    "fewer than two compiler versions are represented",
+    "fewer than two architectures are represented",
+    "fewer than two machines are represented"
+  ],
+  "matrix_status": "incomplete",
+  "ok_rows": 3200,
+  "profile": {
+    "config_path": "mathsvg/configs/balanced/profile.toml",
+    "config_sha256": "bb8b4389c468a5b4521fddc578c083b7ede64aa95a328a623887eb4f1073bf35",
+    "name": "balanced",
+    "runtime_profile_sha256": "fa64abd558df84770ecfd51bf3fa85437860d285d90e06218ea194b36be5d790"
+  },
+  "rows": 3200,
+  "schema_version": 1,
+  "source_after": {
+    "branch": "mathsvg-absolute",
+    "commit": "36f84685dc00064dae9a239face7e8eff797ed28",
+    "dirty": true,
+    "status_sha256": "25779ecaf72571054bea49ddf763ffc08c0de95d16d64b4ba13e2ad01b0348fc"
+  },
+  "source_before": {
+    "branch": "mathsvg-absolute",
+    "commit": "36f84685dc00064dae9a239face7e8eff797ed28",
+    "dirty": true,
+    "status_sha256": "25779ecaf72571054bea49ddf763ffc08c0de95d16d64b4ba13e2ad01b0348fc"
+  },
+  "source_stable_during_campaign": true,
+  "timeout_rows": 0,
+  "unavailable_rows": 0
+}

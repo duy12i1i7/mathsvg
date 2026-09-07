@@ -1,0 +1,20 @@
+[package]
+name = "mathsvg-lz-parser-oracle-probe"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+mathsvg-container = { path = "../../../crates/mathsvg-container" }
+mathsvg-core = { path = "../../../crates/mathsvg-core" }
+mathsvg-dsl = { path = "../../../crates/mathsvg-dsl" }
+mathsvg-entropy = { path = "../../../crates/mathsvg-entropy" }
+mathsvg-evaluator = { path = "../../../crates/mathsvg-evaluator" }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+sha2 = "0.10"
+
+[workspace]
+
+[lints.rust]
+unsafe_code = "forbid"

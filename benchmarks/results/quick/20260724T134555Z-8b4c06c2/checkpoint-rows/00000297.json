@@ -1,0 +1,498 @@
+{
+  "completed_at_utc": "2026-07-24T13:46:43.410287+00:00",
+  "execution_interval_index": 0,
+  "expected_grid_index": 297,
+  "interval_active_seconds": 48.13268089799385,
+  "key": [
+    "canterbury_combined",
+    "datasets/data/canterbury/combined.bin",
+    "mathzip-fast",
+    1
+  ],
+  "row": {
+    "actual_residual_coded_bytes": 2236173,
+    "archive_sha256": "525f4d0ea32b7397a51cdf3b1911737f1d604c96934a9abb07f613c1a8c6f138",
+    "bits_per_byte": 6.38338057993784,
+    "codec": "mathzip-fast",
+    "codec_family": "mathzip",
+    "codec_level": "fast",
+    "command_lines": [
+      "'<repo>/target/release/mathzip' compress --mode fast --max-input-bytes 8589934592 --no-sync --force '<repo>/datasets/data/canterbury/combined.bin' '<work>/archive.mz'",
+      "'<repo>/target/release/mathzip' compress --mode fast --max-input-bytes 8589934592 --no-sync --force --metrics-output '<work>/metrics-probe.mz.metrics.json' '<repo>/datasets/data/canterbury/combined.bin' '<work>/metrics-probe.mz'",
+      "'<repo>/target/release/mathzip' decompress --max-archive-bytes 17179869184 --max-output-bytes 8589934592 --max-segments 8388608 --no-sync --force '<work>/archive.mz' '<work>/restored.bin'"
+    ],
+    "compressed_bytes": 2242788,
+    "compression_cpu_seconds": 1.7487110000000001,
+    "compression_mbps": 1.6057725169989372,
+    "compression_seconds": 1.7504247770120855,
+    "container_overhead_bytes": 120,
+    "corpus": "canterbury_combined",
+    "decompression_cpu_seconds": 0.07280999999999693,
+    "decompression_mbps": 37.727941895372744,
+    "decompression_seconds": 0.0745013870036928,
+    "deterministic_archive": true,
+    "error": null,
+    "estimated_residual_entropy": 5.841359554791087,
+    "expansion_percent": 0.0,
+    "input_entropy_bits_per_byte": 4.711679495819222,
+    "input_license": "Upstream files retain their original terms; see dataset manifest",
+    "input_manifest": "datasets/data/canterbury/dataset.json",
+    "input_manifest_sha256": "30daaac9157db37ceda0cc444f6c9c304e91cf17e0164d0a12bc354539937151",
+    "input_manifest_verified": true,
+    "input_name": "combined.bin",
+    "input_path": "datasets/data/canterbury/combined.bin",
+    "input_provenance": "datasets/manifests/canterbury.json",
+    "input_sha256": "0737d6c25a3337923a1429471546118448f07133e55c8f43fadde7984384982c",
+    "math_segments_winning_raw": 35,
+    "math_segments_winning_zstd": 0,
+    "mathzip_inspection": {
+      "actual_residual_coded_bytes": 2236173,
+      "checksums": {
+        "archive": true,
+        "header": true,
+        "original": true,
+        "segments": true
+      },
+      "compressed_size": 2242788,
+      "compression_ratio": 1.2532544315378895,
+      "container_overhead_bytes": 120,
+      "estimated_residual_entropy": 5.841359554791087,
+      "format_version": 1,
+      "math_segments_winning_raw": 35,
+      "math_segments_winning_zstd": 0,
+      "mean_segment_size": 16341.767441860466,
+      "median_segment_size": 16384.0,
+      "metadata_bytes": 6312,
+      "model_distribution": {
+        "constant": 1,
+        "periodic": 32,
+        "raw": 137,
+        "recurrence": 2
+      },
+      "model_parameter_bytes": 303,
+      "original_size": 2810784,
+      "partition_metadata_bytes": 6192,
+      "payload_size": 2242672,
+      "raw_fallback_percentage": 18.652731764518368,
+      "raw_model_percentage": 79.59857463255803,
+      "residual_bytes": 2236173,
+      "residual_distribution": {
+        "bit_pack": 72,
+        "raw": 32,
+        "rle": 1,
+        "sparse": 3,
+        "zero_run": 64
+      },
+      "residual_mode_distribution": {
+        "add_modulo": 171,
+        "xor": 1
+      },
+      "segment_count": 172,
+      "segment_descriptor_bytes": 6192,
+      "transform_count": 1,
+      "transform_metadata_bytes": 4,
+      "transformed_size": 2810784,
+      "transforms": [
+        {
+          "type": "xor"
+        }
+      ]
+    },
+    "mean_segment_size": 16341.767441860466,
+    "median_segment_size": 16384.0,
+    "model_distribution": {
+      "constant": 1,
+      "periodic": 32,
+      "raw": 137,
+      "recurrence": 2
+    },
+    "model_fitting_seconds": 0.033633454,
+    "model_parameter_bytes": 303,
+    "original_bytes": 2810784,
+    "partition_metadata_bytes": 6192,
+    "peak_rss_bytes": 21389312.0,
+    "profile": "quick",
+    "ratio": 1.2532544315378895,
+    "raw_fallback_percent": 18.652731764518368,
+    "raw_model_percent": 79.59857463255803,
+    "requested_repeats": 3,
+    "residual_bytes": 2236173,
+    "residual_coding_seconds": 1.513180426,
+    "residual_distribution": {
+      "bit_pack": 72,
+      "raw": 32,
+      "rle": 1,
+      "sparse": 3,
+      "zero_run": 64
+    },
+    "restored_sha256": "0737d6c25a3337923a1429471546118448f07133e55c8f43fadde7984384982c",
+    "roundtrip_verified": true,
+    "run_id": "20260724T134555Z-8b4c06c2",
+    "savings": 0.20207742750777002,
+    "savings_percent": 20.207742750777,
+    "schema_version": "mathzip-benchmark-results-v1",
+    "search_seconds": 0.191303057,
+    "segment_count": 172,
+    "status": "ok",
+    "successful_repeats": 3,
+    "tags": {},
+    "threads": 1,
+    "transform": [
+      {
+        "type": "xor"
+      }
+    ],
+    "trials": [
+      {
+        "archive_sha256": "525f4d0ea32b7397a51cdf3b1911737f1d604c96934a9abb07f613c1a8c6f138",
+        "compressed_bytes": 2242788,
+        "compression_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "<repo>/datasets/data/canterbury/combined.bin",
+          "<work>/archive.mz"
+        ],
+        "compression_cpu_seconds": 1.755073999999997,
+        "compression_metrics": {
+          "model_fitting_seconds": 0.033633454,
+          "residual_coding_seconds": 1.511504814,
+          "search_seconds": 0.194032599
+        },
+        "compression_metrics_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--metrics-output",
+          "<work>/metrics-probe.mz.metrics.json",
+          "<repo>/datasets/data/canterbury/combined.bin",
+          "<work>/metrics-probe.mz"
+        ],
+        "compression_metrics_stderr": "compressed 2810784 -> 2242788 bytes (ratio 1.2533:1) in 1.739s",
+        "compression_peak_rss_bytes": 21389312,
+        "compression_seconds": 1.7572730829997454,
+        "compression_stderr": "compressed 2810784 -> 2242788 bytes (ratio 1.2533:1) in 1.744s",
+        "decompression_command": [
+          "<repo>/target/release/mathzip",
+          "decompress",
+          "--max-archive-bytes",
+          "17179869184",
+          "--max-output-bytes",
+          "8589934592",
+          "--max-segments",
+          "8388608",
+          "--no-sync",
+          "--force",
+          "<work>/archive.mz",
+          "<work>/restored.bin"
+        ],
+        "decompression_cpu_seconds": 0.07402700000000095,
+        "decompression_peak_rss_bytes": 8585216,
+        "decompression_seconds": 0.0757249540038174,
+        "decompression_stderr": "restored 2810784 bytes in 0.066s; original SHA-256 verified",
+        "error": null,
+        "index": 0,
+        "inspection": {
+          "actual_residual_coded_bytes": 2236173,
+          "checksums": {
+            "archive": true,
+            "header": true,
+            "original": true,
+            "segments": true
+          },
+          "compressed_size": 2242788,
+          "compression_ratio": 1.2532544315378895,
+          "container_overhead_bytes": 120,
+          "estimated_residual_entropy": 5.841359554791087,
+          "format_version": 1,
+          "math_segments_winning_raw": 35,
+          "math_segments_winning_zstd": 0,
+          "mean_segment_size": 16341.767441860466,
+          "median_segment_size": 16384.0,
+          "metadata_bytes": 6312,
+          "model_distribution": {
+            "constant": 1,
+            "periodic": 32,
+            "raw": 137,
+            "recurrence": 2
+          },
+          "model_parameter_bytes": 303,
+          "original_size": 2810784,
+          "partition_metadata_bytes": 6192,
+          "payload_size": 2242672,
+          "raw_fallback_percentage": 18.652731764518368,
+          "raw_model_percentage": 79.59857463255803,
+          "residual_bytes": 2236173,
+          "residual_distribution": {
+            "bit_pack": 72,
+            "raw": 32,
+            "rle": 1,
+            "sparse": 3,
+            "zero_run": 64
+          },
+          "residual_mode_distribution": {
+            "add_modulo": 171,
+            "xor": 1
+          },
+          "segment_count": 172,
+          "segment_descriptor_bytes": 6192,
+          "transform_count": 1,
+          "transform_metadata_bytes": 4,
+          "transformed_size": 2810784,
+          "transforms": [
+            {
+              "type": "xor"
+            }
+          ]
+        },
+        "restored_sha256": "0737d6c25a3337923a1429471546118448f07133e55c8f43fadde7984384982c",
+        "roundtrip_verified": true,
+        "status": "ok"
+      },
+      {
+        "archive_sha256": "525f4d0ea32b7397a51cdf3b1911737f1d604c96934a9abb07f613c1a8c6f138",
+        "compressed_bytes": 2242788,
+        "compression_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "<repo>/datasets/data/canterbury/combined.bin",
+          "<work>/archive.mz"
+        ],
+        "compression_cpu_seconds": 1.748351999999997,
+        "compression_metrics": {
+          "model_fitting_seconds": 0.033569035,
+          "residual_coding_seconds": 1.513180426,
+          "search_seconds": 0.191303057
+        },
+        "compression_metrics_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--metrics-output",
+          "<work>/metrics-probe.mz.metrics.json",
+          "<repo>/datasets/data/canterbury/combined.bin",
+          "<work>/metrics-probe.mz"
+        ],
+        "compression_metrics_stderr": "compressed 2810784 -> 2242788 bytes (ratio 1.2533:1) in 1.738s",
+        "compression_peak_rss_bytes": 21450752,
+        "compression_seconds": 1.7493756339972606,
+        "compression_stderr": "compressed 2810784 -> 2242788 bytes (ratio 1.2533:1) in 1.736s",
+        "decompression_command": [
+          "<repo>/target/release/mathzip",
+          "decompress",
+          "--max-archive-bytes",
+          "17179869184",
+          "--max-output-bytes",
+          "8589934592",
+          "--max-segments",
+          "8388608",
+          "--no-sync",
+          "--force",
+          "<work>/archive.mz",
+          "<work>/restored.bin"
+        ],
+        "decompression_cpu_seconds": 0.07263999999999982,
+        "decompression_peak_rss_bytes": 8523776,
+        "decompression_seconds": 0.07330131498747505,
+        "decompression_stderr": "restored 2810784 bytes in 0.064s; original SHA-256 verified",
+        "error": null,
+        "index": 1,
+        "inspection": {
+          "actual_residual_coded_bytes": 2236173,
+          "checksums": {
+            "archive": true,
+            "header": true,
+            "original": true,
+            "segments": true
+          },
+          "compressed_size": 2242788,
+          "compression_ratio": 1.2532544315378895,
+          "container_overhead_bytes": 120,
+          "estimated_residual_entropy": 5.841359554791087,
+          "format_version": 1,
+          "math_segments_winning_raw": 35,
+          "math_segments_winning_zstd": 0,
+          "mean_segment_size": 16341.767441860466,
+          "median_segment_size": 16384.0,
+          "metadata_bytes": 6312,
+          "model_distribution": {
+            "constant": 1,
+            "periodic": 32,
+            "raw": 137,
+            "recurrence": 2
+          },
+          "model_parameter_bytes": 303,
+          "original_size": 2810784,
+          "partition_metadata_bytes": 6192,
+          "payload_size": 2242672,
+          "raw_fallback_percentage": 18.652731764518368,
+          "raw_model_percentage": 79.59857463255803,
+          "residual_bytes": 2236173,
+          "residual_distribution": {
+            "bit_pack": 72,
+            "raw": 32,
+            "rle": 1,
+            "sparse": 3,
+            "zero_run": 64
+          },
+          "residual_mode_distribution": {
+            "add_modulo": 171,
+            "xor": 1
+          },
+          "segment_count": 172,
+          "segment_descriptor_bytes": 6192,
+          "transform_count": 1,
+          "transform_metadata_bytes": 4,
+          "transformed_size": 2810784,
+          "transforms": [
+            {
+              "type": "xor"
+            }
+          ]
+        },
+        "restored_sha256": "0737d6c25a3337923a1429471546118448f07133e55c8f43fadde7984384982c",
+        "roundtrip_verified": true,
+        "status": "ok"
+      },
+      {
+        "archive_sha256": "525f4d0ea32b7397a51cdf3b1911737f1d604c96934a9abb07f613c1a8c6f138",
+        "compressed_bytes": 2242788,
+        "compression_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "<repo>/datasets/data/canterbury/combined.bin",
+          "<work>/archive.mz"
+        ],
+        "compression_cpu_seconds": 1.7487110000000001,
+        "compression_metrics": {
+          "model_fitting_seconds": 0.03371217,
+          "residual_coding_seconds": 1.513665966,
+          "search_seconds": 0.190611277
+        },
+        "compression_metrics_command": [
+          "<repo>/target/release/mathzip",
+          "compress",
+          "--mode",
+          "fast",
+          "--max-input-bytes",
+          "8589934592",
+          "--no-sync",
+          "--force",
+          "--metrics-output",
+          "<work>/metrics-probe.mz.metrics.json",
+          "<repo>/datasets/data/canterbury/combined.bin",
+          "<work>/metrics-probe.mz"
+        ],
+        "compression_metrics_stderr": "compressed 2810784 -> 2242788 bytes (ratio 1.2533:1) in 1.738s",
+        "compression_peak_rss_bytes": 21336064,
+        "compression_seconds": 1.7504247770120855,
+        "compression_stderr": "compressed 2810784 -> 2242788 bytes (ratio 1.2533:1) in 1.736s",
+        "decompression_command": [
+          "<repo>/target/release/mathzip",
+          "decompress",
+          "--max-archive-bytes",
+          "17179869184",
+          "--max-output-bytes",
+          "8589934592",
+          "--max-segments",
+          "8388608",
+          "--no-sync",
+          "--force",
+          "<work>/archive.mz",
+          "<work>/restored.bin"
+        ],
+        "decompression_cpu_seconds": 0.07280999999999693,
+        "decompression_peak_rss_bytes": 9125888,
+        "decompression_seconds": 0.0745013870036928,
+        "decompression_stderr": "restored 2810784 bytes in 0.064s; original SHA-256 verified",
+        "error": null,
+        "index": 2,
+        "inspection": {
+          "actual_residual_coded_bytes": 2236173,
+          "checksums": {
+            "archive": true,
+            "header": true,
+            "original": true,
+            "segments": true
+          },
+          "compressed_size": 2242788,
+          "compression_ratio": 1.2532544315378895,
+          "container_overhead_bytes": 120,
+          "estimated_residual_entropy": 5.841359554791087,
+          "format_version": 1,
+          "math_segments_winning_raw": 35,
+          "math_segments_winning_zstd": 0,
+          "mean_segment_size": 16341.767441860466,
+          "median_segment_size": 16384.0,
+          "metadata_bytes": 6312,
+          "model_distribution": {
+            "constant": 1,
+            "periodic": 32,
+            "raw": 137,
+            "recurrence": 2
+          },
+          "model_parameter_bytes": 303,
+          "original_size": 2810784,
+          "partition_metadata_bytes": 6192,
+          "payload_size": 2242672,
+          "raw_fallback_percentage": 18.652731764518368,
+          "raw_model_percentage": 79.59857463255803,
+          "residual_bytes": 2236173,
+          "residual_distribution": {
+            "bit_pack": 72,
+            "raw": 32,
+            "rle": 1,
+            "sparse": 3,
+            "zero_run": 64
+          },
+          "residual_mode_distribution": {
+            "add_modulo": 171,
+            "xor": 1
+          },
+          "segment_count": 172,
+          "segment_descriptor_bytes": 6192,
+          "transform_count": 1,
+          "transform_metadata_bytes": 4,
+          "transformed_size": 2810784,
+          "transforms": [
+            {
+              "type": "xor"
+            }
+          ]
+        },
+        "restored_sha256": "0737d6c25a3337923a1429471546118448f07133e55c8f43fadde7984384982c",
+        "roundtrip_verified": true,
+        "status": "ok"
+      }
+    ],
+    "variant": ""
+  },
+  "schema_version": "mathzip-benchmark-checkpoint-row-v1"
+}

@@ -1,0 +1,75 @@
+{
+  "all": {
+    "balance_eligibility": "origin=real AND primary=true",
+    "bytes": 30301590,
+    "files": 2,
+    "non_synthetic_byte_fraction": 1.0,
+    "non_synthetic_bytes": 30301590,
+    "non_synthetic_file_fraction": 1.0,
+    "non_synthetic_files": 2,
+    "passes_70_percent_rule": true
+  },
+  "benchmark_opened": false,
+  "by_split": {
+    "development": {
+      "balance_eligibility": "origin=real AND primary=true",
+      "bytes": 0,
+      "files": 0,
+      "non_synthetic_byte_fraction": 0.0,
+      "non_synthetic_bytes": 0,
+      "non_synthetic_file_fraction": 0.0,
+      "non_synthetic_files": 0,
+      "passes_70_percent_rule": false
+    },
+    "holdout": {
+      "balance_eligibility": "origin=real AND primary=true",
+      "bytes": 30301590,
+      "files": 2,
+      "non_synthetic_byte_fraction": 1.0,
+      "non_synthetic_bytes": 30301590,
+      "non_synthetic_file_fraction": 1.0,
+      "non_synthetic_files": 2,
+      "passes_70_percent_rule": true
+    },
+    "validation": {
+      "balance_eligibility": "origin=real AND primary=true",
+      "bytes": 0,
+      "files": 0,
+      "non_synthetic_byte_fraction": 0.0,
+      "non_synthetic_bytes": 0,
+      "non_synthetic_file_fraction": 0.0,
+      "non_synthetic_files": 0,
+      "passes_70_percent_rule": false
+    }
+  },
+  "cryptographic_integrity_verified": true,
+  "holdout_payload_inspected": false,
+  "manifest_file_sha256": "1fb69b53a2207e7dc23fae8fc433463a9b9e887aa0d0bf155b084638704108d7",
+  "manifest_sha256": "6661896f299564c7ce9973598aeac474c5282a62f4f3748ea806237539b7f41f",
+  "materialization_state": "sealed-before-freeze",
+  "schema_version": 1,
+  "semantic_payload_inspected": false,
+  "sources": [
+    {
+      "bytes": 300788,
+      "dataset_id": "holdout-arrow-uas-flight-telemetry",
+      "doi": "10.6084/m9.figshare.31931241.v3",
+      "license": "CC BY 4.0",
+      "local_path": "datasets/data/holdout/sealed/arrow-uas-flight-data.csv",
+      "local_sha256": "e8037d5b14c318fc3daa618023b7bf81f5159f0e40485c0d68c35e910f0d1104",
+      "source_file_id": "65325534",
+      "source_file_name": "AKDOTPF Flight Data 07-15-2023 - 01-15-2025.csv",
+      "source_md5": "c835515ae4a36bd04d4c55b612c354ab"
+    },
+    {
+      "bytes": 30000802,
+      "dataset_id": "holdout-hydromoth-dolphin-pcm",
+      "doi": "10.5281/zenodo.15657853",
+      "license": "CC BY 4.0",
+      "local_path": "datasets/data/holdout/sealed/dolphin-hydromoth-250khz.wav",
+      "local_sha256": "bed17976cc529ced23e409cd1214c3c8c482180b6356f79e3169a8ae7db010b1",
+      "source_file_name": "006_06_094030_250kHz.WAV",
+      "source_md5": "aefbf8e0aea4fbc4df8882fffeb94f6c"
+    }
+  ]
+}

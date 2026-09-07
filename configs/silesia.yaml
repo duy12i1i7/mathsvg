@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "profile": "silesia",
+  "output_dir": "benchmarks/results/silesia",
+  "datasets": [
+    {"name": "silesia", "enabled": true}
+  ],
+  "benchmark": {
+    "warmups": 1,
+    "repeats": 3,
+    "timeout_seconds": 3600,
+    "threads": [1],
+    "collect_mathzip_inspection": true,
+    "record_absolute_paths": false
+  },
+  "codecs": [
+    "mathzip-fast",
+    "raw",
+    "gzip-fast",
+    "bzip2-fast",
+    "xz-fast",
+    "zstd-fast",
+    "lz4-fast",
+    "brotli-fast",
+    "7z-fast"
+  ],
+  "inputs": [
+    {
+      "corpus": "silesia",
+      "root": "datasets/data/silesia",
+      "input_license": "Per-file upstream terms; see Silesia provenance",
+      "input_provenance": "datasets/manifests/silesia.json",
+      "patterns": [
+        "dickens",
+        "mozilla",
+        "mr",
+        "nci",
+        "ooffice",
+        "osdb",
+        "reymont",
+        "samba",
+        "sao",
+        "webster",
+        "x-ray",
+        "xml"
+      ],
+      "required": true
+    }
+  ]
+}

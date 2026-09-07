@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "profile": "full",
+  "output_dir": "benchmarks/results/full",
+  "datasets": [
+    {"name": "canterbury", "enabled": true},
+    {"name": "calgary", "enabled": true},
+    {"name": "silesia", "enabled": true},
+    {"name": "enwik8", "enabled": true},
+    {"name": "enwik9", "enabled": true},
+    {"name": "pizza_chili", "enabled": true}
+  ],
+  "synthetic": {
+    "output": "datasets/synthetic_full",
+    "seed": 1297748005,
+    "sizes": [0, 1, 31, 256, 4096, 65536, 1048576],
+    "noise_densities": [0.0, 0.001, 0.01, 0.05, 0.1, 0.25]
+  },
+  "benchmark": {
+    "warmups": 1,
+    "repeats": 3,
+    "timeout_seconds": 5400,
+    "threads": [1, 4],
+    "collect_mathzip_inspection": true,
+    "mathzip_metrics_mode": "inline",
+    "record_absolute_paths": false
+  },
+  "codecs": [
+    "mathzip-fast",
+    "mathzip-balanced",
+    "mathzip-max",
+    "raw",
+    "gzip-fast",
+    "gzip-default",
+    "gzip-max",
+    "bzip2-fast",
+    "bzip2-default",
+    "bzip2-max",
+    {"name": "xz-fast", "multi_thread": true},
+    {"name": "xz-default", "multi_thread": true},
+    {"name": "xz-max", "multi_thread": true},
+    {"name": "zstd-fast", "multi_thread": true},
+    {"name": "zstd-default", "multi_thread": true},
+    {"name": "zstd-max", "multi_thread": true},
+    "lz4-fast",
+    "lz4-default",
+    "lz4-max",
+    "brotli-fast",
+    "brotli-default",
+    "brotli-max",
+    {"name": "7z-fast", "multi_thread": true},
+    {"name": "7z-default", "multi_thread": true},
+    {"name": "7z-max", "multi_thread": true}
+  ],
+  "inputs": [
+    {
+      "corpus": "synthetic",
+      "root": "datasets/synthetic_full",
+      "input_license": "CC0-1.0",
+      "input_provenance": "python/mathzip_bench/synthetic.py and datasets/synthetic_full/manifest.json",
+      "patterns": ["**/*"],
+      "exclude": ["manifest.json", "manifest.csv"],
+      "required": true
+    },
+    {
+      "corpus": "canterbury_files",
+      "root": "datasets/data/canterbury",
+      "input_license": "Upstream files retain their original terms; see dataset manifest",
+      "input_provenance": "datasets/manifests/canterbury.json",
+      "patterns": ["*"],
+      "exclude": ["dataset.json", "combined.manifest.json", "combined.bin"],
+      "required": true
+    },
+    {
+      "corpus": "canterbury_combined",
+      "root": "datasets/data/canterbury",
+      "input_license": "Upstream files retain their original terms; see dataset manifest",
+      "input_provenance": "datasets/manifests/canterbury.json",
+      "patterns": ["combined.bin"],
+      "required": true
+    },
+    {
+      "corpus": "calgary_files",
+      "root": "datasets/data/calgary",
+      "input_license": "Upstream files retain their original terms; see dataset manifest",
+      "input_provenance": "datasets/manifests/calgary.json",
+      "patterns": ["*"],
+      "exclude": ["dataset.json", "combined.manifest.json", "combined.bin"],
+      "required": true
+    },
+    {
+      "corpus": "calgary_combined",
+      "root": "datasets/data/calgary",
+      "input_license": "Upstream files retain their original terms; see dataset manifest",
+      "input_provenance": "datasets/manifests/calgary.json",
+      "patterns": ["combined.bin"],
+      "required": true
+    },
+    {
+      "corpus": "silesia",
+      "root": "datasets/data/silesia",
+      "input_license": "Per-file upstream terms; see Silesia provenance",
+      "input_provenance": "datasets/manifests/silesia.json",
+      "patterns": ["dickens", "mozilla", "mr", "nci", "ooffice", "osdb", "reymont", "samba", "sao", "webster", "x-ray", "xml"],
+      "required": true
+    },
+    {
+      "corpus": "enwik8",
+      "root": "datasets/data/enwik8",
+      "input_license": "Wikipedia source-dump terms",
+      "input_provenance": "datasets/manifests/enwik8.json",
+      "patterns": ["enwik8"],
+      "required": true
+    },
+    {
+      "corpus": "enwik9",
+      "root": "datasets/data/enwik9",
+      "input_license": "Wikipedia source-dump terms",
+      "input_provenance": "datasets/manifests/enwik9.json",
+      "patterns": ["enwik9"],
+      "required": true
+    },
+    {
+      "corpus": "pizza_chili_repetitive_subset",
+      "root": "datasets/data/pizza_chili",
+      "input_license": "Upstream Pizza & Chili source terms",
+      "input_provenance": "datasets/manifests/pizza_chili.json",
+      "patterns": ["world_leaders"],
+      "required": true
+    },
+    {
+      "corpus": "mixed_generated",
+      "root": "datasets/generated/mixed",
+      "input_license": "CC0-1.0 generated source/data; toolchain outputs derive from CC0 source",
+      "input_provenance": "python/mathzip_bench/auxiliary.py and datasets/generated/mixed/manifest.json",
+      "patterns": ["files/**/*"],
+      "required": true
+    },
+    {
+      "corpus": "git_snapshots_individual",
+      "root": "datasets/generated/git_snapshots",
+      "input_license": "CC0-1.0",
+      "input_provenance": "python/mathzip_bench/auxiliary.py and datasets/generated/git_snapshots/manifest.json",
+      "patterns": ["versions/**/*"],
+      "required": true
+    },
+    {
+      "corpus": "git_snapshots_combined",
+      "root": "datasets/generated/git_snapshots",
+      "input_license": "CC0-1.0",
+      "input_provenance": "python/mathzip_bench/auxiliary.py and datasets/generated/git_snapshots/manifest.json",
+      "patterns": ["combined/*.bin"],
+      "required": true
+    }
+  ]
+}

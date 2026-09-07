@@ -1,0 +1,18 @@
+    Finished `release` profile [optimized + debuginfo] target(s) in 0.47s
+    Finished `release` profile [optimized + debuginfo] target(s) in 0.06s
+     Running `fuzz/target/x86_64-unknown-linux-gnu/release/mathsvg_decode -artifact_prefix=/home/ase/zipp/fuzz/artifacts/mathsvg_decode/ -runs=10000 -max_len=65536 -timeout=10 -rss_limit_mb=2048 -print_final_stats=1 -verbosity=0 -artifact_prefix=/tmp/mathsvg-fuzz-campaign-re2h7r3m/mathsvg_decode/artifacts/ /tmp/mathsvg-fuzz-campaign-re2h7r3m/mathsvg_decode/corpus`
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO:        4 files found in /tmp/mathsvg-fuzz-campaign-re2h7r3m/mathsvg_decode/corpus
+INFO: seed corpus: files: 4 min: 5b max: 507b total: 1482b rss: 32Mb
+###### Recommended dictionary. ######
+"\000\000\000\000\000\000\200\000" # Uses: 270
+"\240\214\217\030\251\327\012\013[\206\030\240l\330\247z\227p\272os\331t\234\017\010\000N\322PR," # Uses: 208
+"\3276\024\263" # Uses: 234
+"\001\000\000\000\000\000\001\362" # Uses: 64
+"\306\001\000\000\000\000\000\000" # Uses: 43
+###### End of recommended dictionary. ######
+stat::number_of_executed_units: 10000
+stat::average_exec_per_sec:     0
+stat::new_units_added:          66
+stat::slowest_unit_time_sec:    0
+stat::peak_rss_mb:              48

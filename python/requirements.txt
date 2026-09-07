@@ -1,0 +1,7 @@
+# Optional: checked-in configs are JSON-compatible YAML, so the benchmark and
+# verifier themselves run on the Python standard library alone.
+PyYAML>=6.0,<7
+
+# Required only for rendering PNG/SVG plots. Without it, generate_plots.py
+# writes validated plot-data JSON plus a skip manifest.
+matplotlib>=3.8,<4
